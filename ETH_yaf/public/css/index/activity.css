@@ -1,0 +1,173 @@
+/*  抢购活动/开始预约  */
+html body ,.box{height: 120vh;}
+.head{background: url(/public/images/index/bg.png) no-repeat top center;background-size: cover;margin-top: -1px;}
+
+.after-login{text-align: center;margin-top: 60px;}
+.after-login ul{width: 936px;display: inline-block;box-shadow: 0 0 25px rgba(89,89,89,.35);}
+.after-login ul li{height: 48px;line-height: 48px;border-bottom: 1px solid rgb(243, 243, 243);color: #091928;font-size: 14px;}
+.af-title{background: #DE0484;color: #fff;font-size: 16px;}
+.appointment{margin-left: 198px;text-align: left;width: 480px;margin-right: 33px;}
+.r-btn{font-size: 14px;color: #fff;height: 22px;width: 48px;display: inline-block;line-height: 22px;text-align: center;border-radius:2px;margin-right: 34px;cursor: pointer;}
+.revoke{background: #74C7ED;}
+.open{background: #17BF98;}
+.after-login ul li:first-child{color: #fff;font-size: 16px;border-bottom: 0;}
+.after-login ul li:last-child{line-height: 20px;border-bottom: 0;color: #657788;font-size: 12px;padding: 14px 0;}
+
+.sale-box{text-align: center;}
+.icon-sale{width: 132px;height: 115px;background: url(/public/images/index/icon-sale.png) no-repeat center;display: inline-block;margin-top: 40px;}
+.activity-text{margin-top: 50px;font-size:60px;color: #fff;text-shadow: 1px 1px 0 #DE0484, 2px 2px 0 #DE0484, 3px 3px 0 #DE0484, 4px 4px 0 #DE0484;}
+.usdt-num{color: #FEC04E;font-size: 26px;font-weight: 400;margin-top: 30px;position: relative;}
+.gold-icon{width: 111px;height: 111px;background: url(/public/images/index/gold-icon.png) no-repeat center;display: inline-block;vertical-align: middle;margin-right: 10px;}
+.bar-icon{width: 315px;height: 3px;background: url(/public/images/index/bar-icon.png) no-repeat center;display: inline-block;position: absolute;left: 50%;margin-left: -100px;top: 80px;}
+.im-subscribe{width: 220px;height: 60px;line-height: 60px;background: #17BF98;margin-top: 34px;display: inline-block;color: #fff;border-radius: 32px;font-size: 24px;font-weight: 400;box-shadow: 0 0 25px rgba(255, 255, 255, 0.35);}
+.introduce-box{margin-top: 28px;}
+.icon-introduce{width: 14px;height: 14px;background: url(/public/images/index/icon-introduce.png) no-repeat center;display: inline-block;}
+.introduce-text{font-size: 16px;color: #DE0484;cursor: pointer;}
+
+/*  拼团  */
+.assemble{margin-top: 80px;text-align: center;}
+.assemble progress{width: 220px;height: 12px;color:#f00;background:#fff;border-radius: 0.1rem;margin-right: 10px;vertical-align: middle;}
+.assemble progress::-webkit-progress-bar{background-color: #f6a8a6;border-radius: 30px;}
+.assemble progress::-webkit-progress-value{background: #e02f25;border-radius: 30px;}
+.assemble button{-webkit-animation: free_download 1s linear alternate infinite;animation: free_download 1s linear alternate infinite;}
+@-webkit-keyframes free_download{0%{-webkit-transform:scale(0.8);} 100%{-webkit-transform:scale(1);} }
+@keyframes free_download{0%{transform:scale(0.9);} 100%{transform:scale(1);} }
+
+
+.subscribe-statistics{text-align: center;margin-top: 100px;margin-bottom: 100px;}
+.su-title{color: #222;font-size: 24px;font-weight: 600;}
+.you-subscribe{position: relative;font-size: 16px;color: #133351;font-weight: 600;margin-top: 29px;}
+.online{width: 30px;height: 2px;background: #133351;display: inline-block;position: absolute;left: 50%;margin-left: -15px;top: 22px;}
+.you-rank-list{font-size: 22px;margin-top: 30px;color: #657788;}
+table.reference{border-collapse: collapse;margin-bottom: 4px;display: inline-block;margin-top: 28px;}
+table.reference tr{background: rgba(101,119,136,0);}
+table.reference td{line-height: 20px;border: 1px solid rgb(243, 243, 243);padding: 12px 2px;vertical-align: middle;font-size: 14px;color: #657788;}
+table.reference .th{height: 56px;font-size: 14px;color: #fff;}
+table.reference .th th{width: 147px;}
+table.you-s .th{background: #0C4982;border: 1px solid #0C4982;}
+table.official-r .th{background: #17BF98;border: 1px solid #17BF98;}
+table.official-r .th th{width: 195px;}
+table.rank-distribution .th{background: #62A6E5;border: 1px solid #62A6E5;}
+table.rank-distribution .th th{width: 390px;}
+table.distribution .th{background: #6A3EC4;border: 1px solid #6A3EC4;}
+table.distribution .th th{width: 500px;}
+
+.more-box{margin-top: 20px;}
+.icon-time{width: 14px;height: 14px;background: url(/public/images/index/icon-time.png) no-repeat center;display: inline-block;}
+.text-time{font-size: 16px;color: #DE0484;margin-left: 10px;cursor: pointer;font-weight: 600;}
+.r-more-icon{width: 15px;height: 15px;background: url(/public/images/index/r-more-icon.png) no-repeat center;display: inline-block;vertical-align: bottom;margin-left: 6px;}
+.rowspan{width: 140px;}
+
+.rank{position: relative;width: 100%;line-height: 54px;color: #091928;font-weight: 400;height: 54px;font-size: 22px;}
+.rank-title{position: absolute;left: 50%;margin-left: -145px;width: 290px;height: 54px;background: linear-gradient(to left, #DE0484, #DE0484) left top no-repeat, linear-gradient(to bottom, #DE0484, #DE0484) left top no-repeat, linear-gradient(to left, #DE0484, #DE0484) right top no-repeat, linear-gradient(to bottom, #DE0484, #DE0484) right top no-repeat, linear-gradient(to left, #DE0484, #DE0484) left bottom no-repeat, linear-gradient(to bottom, #DE0484, #DE0484) left bottom no-repeat, linear-gradient(to left, #DE0484, #DE0484) right bottom no-repeat, linear-gradient(to left, #DE0484, #DE0484) right bottom no-repeat;background-size: 1px 8px, 8px 1px, 1px 8px, 8px 1px;}
+.rule-text{margin-top: 30px;color: #657788;font-size: 18px;margin-bottom: 10px;}
+.icon-down{width: 32px;height: 32px;background: url(/public/images/index/icon-down.png) no-repeat center;display: inline-block;}
+.dsc-rule{font-size: 16px;color: #657788;margin-top: 20px;}
+
+
+.note-box{margin-bottom: 100px;}
+.note{display: inline-block;width: 900px;font-size: 14px;color: #657788;text-align: left;line-height: 20px;}
+
+.polygon1{width: 94px;height: 94px;background: url(/public/images/index/polygon1.png) no-repeat center;display: inline-block;position: absolute;top: 1200px;right: 2px;z-index: -1;}
+.polygon2{width: 409px;height: 445px;background: url(/public/images/index/polygon2.png) no-repeat center;display: inline-block;position: absolute;top: 1530px;right: -100px;z-index: -1;}
+.polygon3{width: 229px;height: 228px;background: url(/public/images/index/polygon3.png) no-repeat center;display: inline-block;position: absolute;top: 1888px;right: 1px;z-index: -1;}
+.polygon4{width: 229px;height: 228px;background: url(/public/images/index/polygon3.png) no-repeat center;display: inline-block;position: absolute;top: 1000px;left: -50px;z-index: -1;}
+.polygon5{width: 590px;height: 682px;background: url(/public/images/index/polygon5.png) no-repeat center;display: inline-block;position: absolute;top: 1300px;left: -300px;z-index: -1;}
+
+
+/*  popup  */
+.popup-box{width: 580px;height: 384px;border-radius:4px;background: #F5F5F5;position: fixed;left: 0;right: 0;bottom: 0;top: 0;margin: auto;display: none;box-shadow: 0 0 25px rgba(89,89,89,.35);z-index: 99;}
+.popup-title{margin: 31px;color: #091928;font-size:20px;font-weight:600;}
+.popup-body{margin: 31px;}
+.body-t{color: #17BF98;font-size:14px;font-weight:400;margin-bottom: 15px;}
+.body-money{width: 460px;border:1px solid rgba(81,160,235,1);height:48px;padding: 0 30px;color: #091928;font-size:24px;font-weight:600;}
+.body-money::-webkit-input-placeholder{color: #091928;}
+.body-balance{color: #091928;font-size:14px;font-weight:400;margin: 13px 0 18px;}
+.balance-box{margin-left: 9px;}
+.balance-box p{width: 110px;height: 48px;background:rgba(255,255,255,1);border-radius:2px;color: #000;font-size:24px;line-height: 48px;font-weight:400;text-align: center;margin-right: 20px;cursor: pointer;}
+.balance-box .b-active{background: #17BF98;color: #fff;}
+.balance-box p:last-child{margin-right: 0;}
+.popup-foot{margin: 0 31px 31px;float: right;}
+.cancel{color: #091928;cursor: pointer;}
+.sure-buy{background: #17BF98;border-radius:2px;width:130px;height:48px;display: inline-block;color: #fff;line-height: 48px;text-align: center;font-size:16px;margin-left: 60px;cursor: pointer;}
+
+/*  您的预约历史记录  */
+.appointment-box{width: 1220px;height: 450px;background:rgba(255,255,255,1);position: fixed;left: 0;right: 0;bottom: 0;top: 0;margin: auto;box-shadow: 0 0 10px rgba(89,89,89,.35);z-index: 999;border-radius:4px;display: none;}
+.appointment-title{line-height: 48px;color: #091928;font-size: 20px;background: #F5F5F5;border-top-left-radius: 4px;border-top-right-radius: 4px;text-align: center;}
+.appointment-title i{width: 40px;height: 40px;background: url(/public/images/index/close-icon.png) no-repeat center;display: inline-block;position: absolute;right: 5px;top: 4px;cursor: pointer;}
+.appointment-body{margin: 20px;overflow-y: scroll;}
+table.appointment-ref{border-collapse: collapse;height: 360px;display: inline-block;text-align: center;}
+table.appointment-ref tr{background: rgba(101,119,136,0);}
+table.appointment-ref td{line-height: 20px;padding: 12px 2px;border: 1px solid rgb(243, 243, 243);vertical-align: middle;font-size: 12px;color: #657788;}
+table.appointment-ref .th{height: 56px;font-size: 14px;color: #fff;background: #0C4982;border: 1px solid #0C4982;}
+table.appointment-ref .th th{width: 198px;}
+
+
+/*  官方历史预约活动  */
+.official-box{width: 1220px;height: 400px;background:rgba(255,255,255,1);position: fixed;left: 0;right: 0;bottom: 0;top: 0;margin: auto;box-shadow: 0 0 10px rgba(89,89,89,.35);z-index: 999;border-radius:4px;display: none;}
+
+.r-list{font-size: 24px;}
+.minmun{font-size: 15px;margin-top: 70px;color: #797979;}
+.profit-text{color: #fff;font-size: 22px;margin-top: 50px;font-weight: 400;}
+
+.hot-icon{width: 40px;height: 40px;background: url(/public/images/index/hot-icon.png) no-repeat center;display: inline-block;position: relative;right: -3px;top: -25px;}
+
+
+
+/*  您的邀请码  */
+.yaoqingBox{display: none;}
+.my-code-box{background: #fff;box-shadow: 0 0 10px rgba(89,89,89,.35);width: 734px;height: 250px;position: fixed;left: 0;right: 0;bottom: 0;top: 0;margin: auto;z-index: 999;border-radius: 4px;}
+.per-title {height: 70px;line-height: 70px;position: relative;margin-top: 20px;}
+.per-title .p-online {display: inline-block;width: 4px;height: 16px;background: #51A0EB;position: absolute;left: 0;top: 28px;}
+.per-title .p-text {font-size: 20px;color: #fff;margin-left: 13px;}
+.c-pwd-text{color: #404040;font-size: 16px;margin-top: 20px;margin-bottom: 4px;text-align: left;}
+.c-btn{position: absolute;bottom: 30px;right: 30px;width: 100px;height: 34px;background: #17BF98;font-size: 14px;color: #fff;text-align: center;line-height: 34px;cursor: pointer;}
+.code-text input{font-size: 18px;color: #17BF98;margin-right: 20px;width: 600px;height: 34px;}
+.copy-btn{font-size: 16px;color: #fff;width: 74px;height: 34px;background: #17bf98;text-align: center;line-height: 34px;cursor: pointer;border-radius: 2px;}
+.copy-icon{width: 12px;height: 16px;background: url(/public/images/index/copy-icon.png) no-repeat center;display: inline-block;position: relative;top: 2px;margin-right: 4px;}
+
+
+table.reference3{border-collapse: collapse;display: inline-block;width: 1170px;margin-top: -15px;height: 330px;overflow: hidden;overflow-y: scroll;}
+table.reference3 tr{background: #091928;}
+table.reference3 td{max-width: 400px;height: 60px;font-size: 14px;color: #BAC7D9;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;text-align: left;padding: 0 40px;}
+table.reference3 th{width: 400px;height: 60px;font-size: 14px;color: #BAC7D9;text-align: left;padding: 0 40px;}
+.fund-box{margin-bottom: 100px;}
+.tran-ul li{width: 381px;height: 40px;border: 1px solid #4e6b94;line-height: 40px;text-align: center;margin: 50px 10px 30px 0;font-size: 15px;color: #4e6b94;cursor: pointer;}
+.tran-ul li:last-child{margin-right: 0;}
+.tran-ul .tran-active{border: 1px solid #62a6e5;background: #62a6e5;color: #fff;}
+.act .reference3{display: none;}
+.current .reference3{display: block;}
+
+
+
+/*  拼团记录  */
+table.app-date{max-height: 140px;}
+table.app-date td{font-size: 14px;color: #657788;border: 0;}
+
+/*  一键拼团  */
+.onekey{background: #F5F5F5;position: fixed;left: 0;right: 0;top: 0;bottom: 0;margin: auto;width: 1200px;height: 622px;border-radius: 4px;box-shadow: 0 0 25px rgba(89,89,89,.35);display: none;}
+table.oneas{border-collapse: collapse;display: inline-block;width: 1170px;margin-top: -15px;height: 330px;overflow: hidden;overflow-y: scroll;border-bottom: 1px solid #ddd;}
+table.oneas tr{background: rgba(101,119,136,0);}
+table.oneas td{max-width: 400px;height: 56px;font-size: 14px;color: #222222;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;text-align: left;padding: 0 40px;}
+table.oneas th{width: 400px;height: 56px;font-size: 14px;color: #fff;text-align: left;padding: 0 40px;}
+.fund-box{margin-bottom: 100px;}
+.onekeybtn{text-align: center;}
+.onekeybtn button{width: 180px;height: 44px;background: #C71622;color: #fff;font-size: 16px;border-radius:22px;margin: 31px 0;box-shadow: 0 6px 0 0 rgb(165, 7, 18);}
+.onekeybtn button{-webkit-animation: free_download 1s linear alternate infinite;animation: free_download 1s linear alternate infinite;}
+@-webkit-keyframes free_download{0%{-webkit-transform:scale(0.8);} 100%{-webkit-transform:scale(1);} }
+@keyframes free_download{0%{transform:scale(0.9);} 100%{transform:scale(1);} }
+.yq-rule{margin-top: 10px;font-size: 20px;color: #BAC7D9;margin-bottom: 10px;}
+.gf-reward{font-size: 14px;color: #BAC7D9;line-height: 24px;}
+.b-example{font-size: 14px;color: #BAC7D9;line-height: 24px;text-indent: 2em;}
+.yq-rule-box{padding: 10px 40px;margin-top: 50px;background: #0a3777;}
+
+.tran-ul li{width: 381px;height: 40px;border: 1px solid #C71622;line-height: 40px;text-align: center;margin: 44px 10px 14px 0;font-size: 15px;color: #222222;cursor: pointer;}
+.tran-ul li:last-child{margin-right: 0;}
+.tran-ul .tran-active{border: 1px solid #C71622;background: #C71622;color: #fff;}
+
+.act .oneas{display: none;}
+.current .oneas{display: block;}
+
+
+
+

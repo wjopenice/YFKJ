@@ -1,0 +1,21 @@
+geth.account
+geth.account()
+eth.account()
+eth.accounts()
+eth.accounts
+eth.newAccount('123')
+eth.accounts
+eth.accounts[0]
+eth.getBalance(eth.accounts[1])
+miner.start()
+geth account list
+geth account new
+miner.start()
+eth.accounts
+geth account list
+eth.accounts
+eth.getBalance(eth.accounts[0])
+eth.getBalance(eth.accounts[1])
+miner.start()
+eth.getBalance(eth.accounts[0])
+miner.start()

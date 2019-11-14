@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>xcoinpay</title>
+    <meta name="keywords" content="FomoXYT官网，FomoXYT，预约活动，区块链">
+    <meta name="description" content="FomoXYT，区块链，交易所，虚拟币交易">
+    <link rel="shortcut icon" href="/public/images/xcoinpay.ico">
+    <link rel="stylesheet" href="/public/css/index/main.css">
+    <link rel="stylesheet" href="/public/css/index/youinvitation.css">
+</head>
+<body>
+    <div class="box">
+        <!--  head  -->
+        <?php load_view("inc/pc_nav");?>
+        <!--  个人中心导航  -->
+        <?php load_view("inc/user_left");?>
+
+        <!--  您的邀请  -->
+        <div class="fund-box personal-box">
+            <!--  fund management  -->
+            <div class="warp-1200">
+                <div class="yq-rule-box">
+                    <p class="yq-rule">* 邀请规则</p>
+                    <p class="gf-reward">官方奖励：您的三级内，每次获得DYX打折额度，您可以得到一级DYX打折额度的5%，拿到二级DYX打折额度的3%，拿到三级DYX打折额度的2%，这部分额度由官方奖励，您的下级将不损失任何额度。</p>
+                    <p class="gf-reward">例如：</p>
+                    <p class="b-example">您的下一级，本期拿到DYX打折额度100个DYX，那么官方奖励您5个DYX。</p>
+                    <p class="b-example">您的下二级，本期拿到DYX打折额度100个DYX，那么官方奖励您3个DYX。</p>
+                    <p class="b-example">您的下三级，本期拿到DYX打折额度100个DYX，那么官方奖励您2个DYX。</p>
+                    <p class="gf-reward">注：</p>
+                    <p class="b-example">1、您的账户必须满足储备有至少1000usdt的资金，才能拿到下级的奖励。</p>
+                    <p class="b-example">2、推广几人拿几代，例如您直推一人只能拿到一级奖励，直推二人能拿到二级奖励，直推了三人，能拿三级。</p>
+                </div>
+            </div>
+
+            <!--  我的邀请码和链接  -->
+            <div class="warp-1200">
+                <div class="per-title"><span class="p-online"></span><span class="p-text">我的邀请码和邀请链接</span></div>
+                <div class="my-code-box">
+                    <p class="c-pwd-text" style="margin-top: 16px;">我的邀请码</p>
+                    <div class="code-t-box ov"><p class="code-text fl"><input type="text" id="linkVal" value="<?=$userdata['sign']?>" readonly></p><p class="fl copy-btn pr" id="copyBoard"><i class="copy-icon"></i>复制</p></div>
+                    <p class="c-pwd-text" style="margin-top: 16px;">邀请链接</p>
+                    <div class="code-t-box ov"><p class="code-text fl"><input type="text" id="linkVal2" value="http://www.xcoinpay.io/index/register?invitation_code=<?=$userdata['sign']?>" readonly></p><p class="fl copy-btn pr" id="copyBoard2"><i class="copy-icon"></i>复制</p></div>
+                </div>
+            </div>
+
+            <div class="warp-1200">
+                <ul class="ov tran-ul">
+                    <li class="fl tran-active"><span class="p-text">一级用户共<?=$oneData['num']?>人/</span><span>共收益xx个DYX/</span><span>xx个USDT</span></li>
+                    <li class="fl"><span class="p-text">二级用户共<?=$twoData['num']?>人/</span><span>共收益xx个DYX/</span><span>xx个USDT</span></li>
+                    <li class="fl"><span class="p-text">三级用户共<?=$threeData['num']?>人/</span><span>共收益xx个DYX/</span><span>xx个USDT</span></li>
+                </ul>
+            </div>
+            <div class="warp-1200 act current">
+                <table class="reference">
+                    <tbody>
+                    <tr>                                  　　
+                        <th>用户手机号</th>
+                        <th>注册时间</th>
+                        <th>贡献收益（DYX）</th>
+                        <th>贡献收益（USDT）</th>
+                    </tr>
+                    <?php foreach($oneData['data'] as $k=>$v): ?>
+                    <tr>
+                        <td class="td-curr"><?=$v['tel']?></td>
+                        <td><?=$v['create_time']?></td>
+                        <td><?=empty($v['contribution_income'])?"0":$v['contribution_income']*0.1;?></td>
+                        <td>0</td>
+                    </tr>
+                    <?php endforeach; ?>
+                    </tbody>
+                </table>
+            </div>
+
+            <!--  Bidding record  -->
+            <div class="warp-1200 act" style="margin-top: -16px;">
+                <table class="reference">
+                    <tbody>
+                    <tr>                                  　　
+                        <th>用户手机号</th>
+                        <th>注册时间</th>
+                        <th>贡献收益（DYX）</th>
+                        <th>贡献收益（USDT）</th>
+                    </tr>
+                    <?php foreach($twoData['data'] as $k=>$v): ?>
+                        <tr>
+                            <td class="td-curr"><?=$v['tel']?></td>
+                            <td><?=$v['create_time']?></td>
+                            <td><?=empty($v['contribution_income'])?"0":$v['contribution_income']*0.05;?></td>
+                            <td>0</td>
+                        </tr>
+                    <?php endforeach; ?>
+                    </tbody>
+                </table>
+            </div>
+
+            <!--  Financial records  -->
+            <div class="warp-1200 act" style="margin-top: -16px;">
+                <table class="reference">
+                    <tbody>
+                    <tr>                                  　　
+                        <th>用户手机号</th>
+                        <th>注册时间</th>
+                        <th>贡献收益（DYX）</th>
+                        <th>贡献收益（USDT）</th>
+                    </tr>
+                    <?php foreach($threeData['data'] as $k=>$v): ?>
+                        <tr>
+                            <td class="td-curr"><?=$v['tel']?></td>
+                            <td><?=$v['create_time']?></td>
+                            <td><?=empty($v['contribution_income'])?"0":$v['contribution_income']*0.05;?></td>
+                            <td>0</td>
+                        </tr>
+                    <?php endforeach; ?>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="/public/js/jquery.min.js"></script>
+    <script>
+        $(function() {
+            //邀请码复制
+            $("#copyBoard").click(function(){
+                var Url1 = $("#linkVal");
+                Url1.select();//选择对象
+                document.execCommand("Copy"); // 执行浏览器复制命令
+                layer.msg("已复制好，去粘贴吧");
+            });
+
+            //邀请链接复制
+            $("#copyBoard2").click(function(){
+                var Url1 = $("#linkVal2");
+                Url1.select();//选择对象
+                document.execCommand("Copy"); // 执行浏览器复制命令
+                layer.msg("已复制好，去粘贴吧");
+            });
+
+
+            $(".tran-ul li").click(function (){
+                //获取点击的元素给其添加样式，讲其兄弟元素的样式移除
+                $(this).addClass("tran-active").siblings().removeClass("tran-active");
+                //获取选中元素的下标
+                var index = $(this).index();
+                $(".act").eq(index).addClass("current").siblings().removeClass("current");
+            });
+
+        })
+    </script>
+</body>
+</html>
+

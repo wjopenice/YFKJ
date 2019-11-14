@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>xcoinpay</title>
+    <meta name="keywords" content="XCoinPay官网，XCoinPay区块链，区块链XCoinPay柔支付，区块链柔支付，柔支付，FomoXYT官网，FomoXYT，预约活动，区块链">
+    <meta name="description" content="XCoinPay，XCoinPay，区块链，交易所，虚拟币交易">
+    <link rel="shortcut icon" href="/public/images/xcoinpay.ico">
+    <link rel="stylesheet" href="/public/css/index/main.css">
+    <link rel="stylesheet" href="/public/css/website/bpactive.css">
+</head>
+<body>
+    <div class="box">
+
+        <!--  公共头部  -->
+        <?php load_view("inc/pc_nav");?>
+
+        <!--  霸屏活动  -->
+        <div class="bp-active"><i class="bp-banner"></i></div>
+
+        <!--  活动奖励  -->
+        <div class="bp-box">
+            <div class="warp-1200 bp-b bp-f">
+                <div class="rule-box">
+                    <i class="r-t-icon"></i>
+                    <i class="left-beautiful-spot"></i>
+                    <i class="right-beautiful-spot"></i>
+                    <div class="s-rule-b">
+                        <div class="detail-text">
+                            <p><span></span>您每天完成1次朋友圈广告任务，总共可得到价值125DYX</p>
+                            <p><span></span>分享好友A加入霸屏行动，每天好友A完成1次朋友圈广告任务，您总共得到价值63DYX</p>
+                            <p><span></span>好友A分享好友B加入霸屏计划，每天好友B完成1次朋友圈广告任务，您总共得到价值21DYX</p>
+                            <p><span></span>好友B分享好友C加入霸屏计划，每天好友C完成1次朋友圈广告任务，您总共得到价值11DYX</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--  门槛与规则  -->
+            <div class="warp-1200 bp-b">
+                <div class="rule-box th-box">
+                    <i class="th-icon"></i>
+                    <div class="s-rule-b">
+                        <div class="detail-text">
+                            <p><span></span>微信好友不少于1000人，币圈群不少于10个，朋友圈内关于区块链的信息不少于5条</p>
+<!--                            <p><span></span>账户余额内DYX余额大于10000，方可参与</p>-->
+                            <p style="color: #d21717"><span></span>添加官方客服微信在朋友圈获得素材</p>
+                            <p><span></span>申请成功后，请前往用户中心完成任务</p>
+                            <p><span></span>提交审核图片给官方客服，客服通过您的申请后，即可获得空投</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--  申请加入  -->
+            <?php if($status == -1): ?>
+                <div class="warp-1200 join-btn">
+                    <a class="im-subscribe" id="j-btn" href="javascript:void(0);" data-usdt="<?=$dyx?>">申请加入</a>
+                </div>
+            <?php elseif($status == 1): ?>
+                <div class="warp-1200 join-btn wait-box ov">
+                    <div class="fl customer-icon">
+                        <img src="/public/images/website/customer-icon.png" height="51" width="51" alt="">
+                        <p class="customer">客服</p>
+                    </div>
+                    <div class="fl wechat-code">
+                        <ul class="ov">
+                            <li class="fl">
+                                <p>官方微信一</p>
+                                <img src="/public/images/website/erweima1.jpg" alt="">
+                            </li>
+                            <li class="fl">
+                                <p>官方微信二</p>
+                                <img src="/public/images/website/kefu_wechat.jpg" alt="">
+                            </li>
+                        </ul>
+                        <p class="wechat-art">如果添加微信无人通过，请添加QQ</p>
+                    </div>
+                    <div class="fl qq-code">
+                        <p style="margin-top: 70px;">审核QQ：1615397245</p>
+                    </div>
+                    <div class="result fl"><a href="/user/xinbaping?type=xinbaping">审核通过，点击请到个人中心完成任务</a></div>
+                </div>
+            <?php else: ?>
+                <div class="warp-1200 join-btn wait-box ov">
+                    <div class="fl customer-icon">
+                        <img src="/public/images/website/customer-icon.png" height="51" width="51" alt="">
+                        <p class="customer">客服</p>
+                    </div>
+                    <div class="fl wechat-code">
+                        <ul class="ov">
+                            <li class="fl">
+                                <p>微信二维码1</p>
+                                <img src="/public/images/website/erweima1.jpg" alt="">
+                            </li>
+                            <li class="fl">
+                                <p>微信二维码2</p>
+                                <img src="/public/images/website/kefu_wechat.jpg" alt="">
+                            </li>
+                        </ul>
+                        <p class="wechat-art">如果添加微信无人通过，请添加QQ</p>
+                    </div>
+                    <div class="fl qq-code">
+                        <p style="margin-top: 70px;">审核QQ：1615397245</p>
+                    </div>
+                    <div class="result fl wait-re"><a href="javascript:void(0);">等待审核</a></div>
+                </div>
+            <?php endif; ?>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="/public/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/public/js/layer.js" charset="utf-8"></script>
+    <script>
+        $(function(){
+            $("#j-btn").click(function(){
+                var usdt = parseFloat($(this).data("usdt"));
+                var user = '<?=$user?>';
+                // if(usdt < 10000){
+                //     layer.msg('剩余最低参与资金10000dyx', {
+                //         time: 20000, //20s后自动关闭
+                //         btn: ['充值', '取消'],
+                //         yes:function () {
+                //             window.location.href='/user/personalcenter';
+                //         }
+                //     });
+                //     return false;
+                // }
+
+                $.post("/ajax/ajaxpascreen",{user:user},function(msg){
+                    if(msg.code == -1){
+                        layer.msg(msg.message);
+                        setTimeout(function () {
+                            window.location.href = "/index/login";
+                        },1000);
+                    }else{
+                        if(msg.code == 1){
+                            layer.msg(msg.message);
+                            setTimeout(function () {
+                                window.location.href = "/user/xinbaping?type=xinbaping";
+                                //window.location.href = location.href
+                            },1000);
+                        }else{
+                            layer.msg(msg.message);
+                        }
+                    }
+                },"json");
+            });
+        });
+
+        // $(function(){
+        //     $("#j-btn").click(function(){
+        //         layer.alert('暂未开放');
+        //     })
+        // })
+    </script>
+</body>
+</html>

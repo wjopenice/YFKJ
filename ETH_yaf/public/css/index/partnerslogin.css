@@ -1,0 +1,12 @@
+html,body ,.box{height: 120vh;background: #0E2648;}
+/*  先登录，登录成功后再显示内容  */
+.popup-box{width: 414px;height: 228px;background:rgba(255,255,255,1);position: fixed;top: 0;right: 0;bottom: 0;left: 0;margin: auto;border-radius:4px;box-shadow: 0 0 25px rgba(89,89,89,.35);z-index: 999;}
+.popup-title{line-height: 48px;color: #333;font-size: 14px;padding-left: 20px;background: #F5F5F5;border-top-left-radius: 4px;border-top-right-radius: 4px;}
+.btcqr-body{margin: 30px 20px;text-align: center;}
+.btcqr-img{display: inline-block;width: 150px;height: 150px;background: #333;}
+.btcqr-body p{margin-top: 10px;font-size: 14px;}
+.popup-body{margin: 30px;}
+.p-pwd-box{margin-bottom: 30px;}
+.p-pwd-box input{width: 342px;height: 40px;border: 1px solid #51A0EB;padding-left: 10px;font-size: 14px;color: #51A0EB;}
+.call-btn{color: #091928;font-size: 16px;margin-right: 60px;}
+.withdraw-btn{width: 130px;height: 48px;background: #17BF98;display: inline-block;text-align: center;line-height: 48px;color: #fff;font-size: 16px;border-radius: 2px;}

@@ -1,0 +1,157 @@
+/*  banner样式  */
+html, body, .box {height: 120vh;width: 100%;}
+.review-box{background: url(/public/images/website/website-bg.png) no-repeat center;height: 723px;position: relative;top: -1px;left: -1px;background-size: 101% 101%;width: 100%}
+.sale-box{text-align: center;}
+.review-text{width: 963px;height: 299px;background: url(/public/images/website/review-text.png) no-repeat center;display: inline-block;margin-top: 40px;margin-right: 88px;}
+.decentralization-text{width: 642px;height: 51px;background: url(/public/images/website/decentralization-text.png) no-repeat center;display: inline-block;margin-top: -90px;}
+.xc-title{font-size: 18px;line-height: 24px;color: #fff;margin-top: 34px;margin-bottom: 74px;}
+.xc-ul{width: 700px;margin: 0 auto;}
+.xc-ul li{width: 33.3%;text-align: center;cursor: pointer;}
+.xc-ul li p{font-size: 20px;color: #fff;margin-top: 23px;font-weight: 500;}
+
+/*  柔支付网络样式  */
+.warp-1220{width: 1170px;margin: auto;}
+.pay-box{text-align: center;}
+.pay-network{font-size: 30px;color: #091928;margin: 130px 0 20px;}
+.pay-introduce{color: #657788;font-size: 16px;line-height: 30px;}
+.pay-network-ul{padding-top: 60px;display: inline-block;}
+.pay-network-ul li{width: 170px;height: 240px;padding: 20px;margin-bottom: 240px;margin-right: 27px;box-shadow:0 10px 25px 0 rgba(0, 0, 0, 0.1);border-radius: 6px;border: 1px solid #fff;}
+.pay-network-ul li img{margin-top: 8px;}
+.ul-p{margin-top: 34px;font-size: 22px;color: #091928;font-weight: 400;margin-bottom: 20px;}
+.li-p{color: #686868;font-size: 14px;line-height: 24px;}
+.pay-network-ul li:last-child{margin-right: 0;}
+.pay-network-ul li:hover{border: 1px solid #17BF98;box-shadow: 0 60px 25px 0 rgba(0, 0, 0, 0.1);}
+
+/*  XCoinPay开放平台（商家版）  */
+.open-business{margin-bottom: 150px;}
+.open-up-text{color: #091928;font-size: 30px;margin-top: 76px;}
+.programme{color: #17BF98;font-size: 15px;margin: 18px 0 56px;}
+.pro-box i{width: 54px;}
+.exchang-icon{width: 34px;height: 34px;background: url(/public/images/website/exchang-icon.png) no-repeat left;display: inline-block;}
+.merchant-icon{width: 36px;height: 36px;background: url(/public/images/website/merchant-icon.png) no-repeat left;display: inline-block;}
+.otc-icon{width: 43px;height: 35px;background: url(/public/images/website/OTC-icon.png) no-repeat left;display: inline-block;}
+.pro-div{margin-bottom: 40px;}
+.solve-box{width: 416px;margin-right: 28px;}
+.solve-box p{font-size: 18px;color: #657788;line-height: 26px;}
+.solve-box span{font-size: 15px;color: #657788;line-height: 26px;}
+
+.otc-box ,.mer-box ,.exc-box ,.wallet-box ,.roupay-box{width: 354px;height: 270px;border:1px solid rgba(232,232,232,1);text-align: center;box-shadow:0 8px 30px 0 rgba(0, 0, 0, 0.1);background: #fff;}
+.otc-box img{margin-top: 34px;}
+.otc-box p{color: #78909C;font-size: 12px;margin-top: 17px;padding: 0 40px;}
+
+.mer-box img{margin-top: 55px;}
+.mer-box p{color: #78909C;font-size: 12px;margin-top: 20px;padding: 0 40px;text-align: left;line-height: 16px;}
+
+.exc-box img{margin-top: 34px;}
+.exc-box p{color: #78909C;font-size: 12px;margin-top: 17px;padding: 0 40px;text-align: left;line-height: 16px;}
+.case-box{width: 672px;position: relative}
+.otc-box{position: absolute;top: 0;left: 0;z-index: 98;}
+.mer-box{position: absolute;top: 89px;left: 150px;z-index: 99;}
+.exc-box{position: absolute;top: 178px;left: 316px;z-index: 100;}
+
+/*  XCoinPay手机钱包——区块链世界的选择  */
+.wallet-roupay-box{margin-bottom: 213px;}
+.w-rou-box{width: 570px;position: relative;height: 356px;}
+.wallet-box img{margin-top: 54px;}
+.wallet-box p{color: #51A0EB;font-size: 18px;margin-top: 18px;}
+.wallet-box{position: absolute;top: 0;left: 0;z-index: 98;}
+
+.roupay-box img{margin-top: 55px;}
+.roupay-box p{color: #51A0EB;font-size: 18px;margin-top: 18px;}
+.roupay-box{position: absolute;top: 84px;left: 216px;z-index: 99;}
+
+.wallet-art-box{margin-left: 28px;width: 571px;}
+.wallet-art-text{color: #091928;font-size: 30px;margin-top: 80px;margin-bottom: 24px;}
+.wallet-art{color: #657788;font-size: 15px;line-height: 26px;}
+.wallet-art1{margin-bottom: 24px;}
+
+/*  钱包类产品对比  */
+.wallet-product{background: #F5F6FB;text-align: center;}
+.wallet-product p{color: #11314E;font-size: 30px;padding: 89px 0 46px;}
+.wallet-product img{margin-bottom: 81px;width: 1170px;}
+
+/*  团队与顾问  */
+.team-box{background: #10B38D;height: 468px;text-align: center;}
+.team-t{font-size: 24px;color: #fff;padding: 83px 0 14px;}
+.team-b{color: #90F1DA;font-size: 14px;}
+.head-img-box{display: inline-block;position: absolute;bottom: -422px;width: 672px;left: 50%;margin-left: -336px;z-index: 101;}
+.head-img{width: 168px;height: 168px;display: inline-block;cursor: pointer;position: relative;}
+.head-img p{position: absolute;bottom: 0;color: #fff;width: 168px;left: 50%;margin-left: -84px;font-size: 18px;}
+.h-active1{background: url(/public/images/website/zhou_big.png) no-repeat center;background-size: 114px 114px;}
+.h-active2{background: url(/public/images/website/ma_big.png) no-repeat center;background-size: 114px 114px;}
+.h-active3{background: url(/public/images/website/zhao_big.png) no-repeat center;background-size: 168px 168px;}
+.h-active4{background: url(/public/images/website/huang_big.png) no-repeat center;background-size: 114px 114px;}
+.head-introduce{position: relative;}
+
+.intro{display: block;padding: 40px;width: 320px;height: 160px;background: #fff;font-size: 15px;line-height: 22px;color: #515151;box-shadow:0 10px 20px 0 rgba(155,179,203,0.1);border-radius: 6px;text-align: left;}
+.triangle{margin-left: 10px;width: 0;height: 0;border-width: 10px;border-style: solid;border-color: #ffffff transparent transparent transparent;position: absolute;bottom: -18px;right: 180px;}
+.intro1{position: absolute;top: 8px;left: 124px;}
+.intro2{position: absolute;top: 8px;left: 288px;}
+.intro3{position: absolute;top: 8px;left: 458px;}
+.intro4{position: absolute;top: 8px;right: 142px;}
+
+.intro{display: none;}
+.i-active{display: block;}
+
+
+/*  订阅  */
+.subscribe{height: 350px;background: #091928;}
+.sub-be{height: 350px;}
+.su-box{position: absolute;bottom: 0;left: 0;background: #17BF98;height: 196px;width: 100%;border-bottom-left-radius: 80px;border-top-right-radius: 80px;}
+.dynamic{font-size: 20px;color: #fff;margin: 59px 0 19px 62px;}
+.mailbox input{width: 343px;height: 43px;background: #fff;font-size: 13px;color: #72889C;border-radius: 28px;margin-left: 62px;padding-left: 20px;}
+.mailbox input::-webkit-input-placeholder {color: #72889C;}
+.mailbox button{width: 130px;height: 43px;text-align: center;line-height: 43px;font-size: 15px;color: #fff;background: #091928;border-radius: 28px;margin-left: 8px;cursor: pointer;margin-right: 76px;}
+.s-info1{color: #091928;font-size: 19px;margin-top: 76px;font-weight: 400;}
+.s-info2{color: #fff;font-size: 19px;margin-top: 6px;font-weight: 400;}
+
+/*  问题答疑  */
+.question{background: #091928;padding-top: 90px;margin-top: -1px;}
+.question-w{background: #fff;border-radius: 6px;}
+.question-p{padding: 30px;}
+.question-t{text-align: center;margin-bottom: 30px;font-size: 24px;color: #222;}
+.question-ul{font-size: 18px;color: #383838;}
+.question-ul li{cursor: pointer;margin-bottom: 20px;margin-left: 50px;}
+
+
+
+/*  尾部  */
+.footer{background: #091928;height: 316px;margin-top: -3px;}
+.logo-big{margin: 89px 120px 0 20px;}
+.account-num{margin-top: 89px;margin-right: 220px;}
+.official{font-size: 18px;color: #fff;margin-bottom: 25px;}
+.account1{color: #fff;font-size: 14px;line-height: 24px;}
+.qrcode1{width: 128px;text-align: center;margin-right: 100px;}
+.qrcode2{text-align: center;}
+.qrcode-box img{width: 72px;height: 72px;background: #333;display: inline-block;margin-bottom: 19px;}
+.qrcode-box p{font-size: 14px;color: #3F5B75;}
+
+.telegram{width: 20px;height: 21px;background: url(/public/images/website/telegram_icon.png) no-repeat left;display: inline-block;vertical-align: text-bottom;margin-right: 6px;}
+.twitter{width: 20px;height: 21px;background: url(/public/images/website/twitter_icon.png) no-repeat left;display: inline-block;vertical-align: text-bottom;margin-right: 6px;}
+.facebook{width: 20px;height: 21px;background: url(/public/images/website/facebook_icon.png) no-repeat left;display: inline-block;vertical-align: text-bottom;margin-right: 6px;}
+.microblog{width: 20px;height: 21px;background: url(/public/images/website/weibo.png) no-repeat left;display: inline-block;vertical-align: text-bottom;margin-right: 6px;}
+.qrcode-box .official-group{width: 68px;height: 68px;background: #fff;padding: 2px;}
+
+
+
+
+/*  专利弹窗  */
+.popup{width: 400px;height: 300px;border-radius:4px;background: #F5F5F5;position: fixed;right: 0;bottom: 0;top: 0;left: 0;margin: auto;box-shadow: 0 0 25px rgba(89,89,89,.35);z-index: 99;display: none;}
+.popup-title{line-height: 48px;height: 48px;}
+.popup .cancel{width: 40px;height: 40px;background: url(/public/images/index/close-icon.png) no-repeat center;display: inline-block;position: absolute;right: 5px;top: 4px;cursor: pointer;}
+.popup-body{margin: 20px;}
+.popup-body p{padding: 10px 0;}
+.popup-body p a{font-size: 24px;line-height: 35px;padding-bottom: 2px;border-bottom: 1.5px solid #17BF98;color: #17BF98;}
+
+
+/*  问题答疑弹窗  */
+.question-popup{width: 600px;height: 400px;border-radius:4px;background: #F5F5F5;position: fixed;left: 0;right: 0;top: 0;bottom: 0;margin: auto;box-shadow: 0 0 25px rgba(89,89,89,.35);z-index: 120;display: block;}
+.question-popup .cancel{width: 40px;height: 40px;background: url(/public/images/index/close-icon.png) no-repeat center;display: inline-block;position: absolute;right: 5px;top: 4px;cursor: pointer;}
+.p-title{margin: 0 30px 20px;line-height: 24px;color: #fff;font-size: 18px;background: #40ad8c;padding: 10px;}
+.p-body{font-size: 15px;color: #666;margin: 0 30px 30px;line-height: 22px;}
+
+
+/*  用户首次进入网址弹窗  */
+.layui-layer-content{padding: 10px 20px 20px;font-size: 16px;line-height: 24px;color: #222;text-indent: 2em;}
+.layui-layer-title{font-size: 18px;}
+

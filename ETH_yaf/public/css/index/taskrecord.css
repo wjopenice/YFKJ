@@ -1,0 +1,20 @@
+html,body ,.box{height: 120vh;background: #0E2648;}
+
+.tran-ul li{width: 160px;height: 40px;border: 1px solid #4e6b94;line-height: 40px;text-align: center;margin: 50px 30px 30px 0;font-size: 16px;color: #4e6b94;cursor: pointer;}
+.tran-ul .tran-active{border: 1px solid #2b67a0;background: #2b67a0;color: #8dbdff;}
+
+.record-box ul{background: #091928;}
+.record-box ul li{font-size: 16px;color: #BAC7D9;padding: 16px 70px;}
+
+.record-box{display: none;}
+.t-active{display: block;}
+
+
+
+
+
+
+
+
+
+

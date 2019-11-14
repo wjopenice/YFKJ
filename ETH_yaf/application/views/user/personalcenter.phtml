@@ -1,0 +1,961 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>xcoinpay</title>
+    <meta name="keywords" content="FomoXYT官网，FomoXYT，预约活动，区块链">
+    <meta name="description" content="FomoXYT，区块链，交易所，虚拟币交易">
+    <link rel="shortcut icon" href="/public/images/xcoinpay.ico">
+    <link rel="stylesheet" href="/public/css/index/main.css">
+    <link rel="stylesheet" href="/public/css/index/personalcenter.css">
+</head>
+<body>
+    <div class="box">
+        <!--  head  -->
+        <?php load_view("inc/pc_nav");?>
+        <!--  个人中心导航  -->
+        <?php load_view("inc/user_left");?>
+
+        <div>
+            <!--  资金管理  -->
+            <div class="fund-box personal-box">
+                <!--  资金管理  -->
+                <div class="warp-1200">
+                    <div class="per-title"><span class="p-online"></span><span class="p-text">资金管理</span></div>
+                    <table class="reference">
+                        <tbody>
+                        <tr>                                  　　
+                            <th>币种</th>
+                            <th>总额</th>
+                            <th>可用余额</th>
+                            <th>冻结余额</th>
+                            <th>操作</th>
+                        </tr>
+                        <tr>
+                            <td title="DYX" class="td-curr">DYX</td>
+                            <td id="dyxprice" title="<?=$userdata['token_num']?>"><?=$userdata['token_num']?></td>
+                            <td title="<?=$userdata['token_available_balance']?>"><?=$userdata['token_available_balance']?></td>
+                            <td title="<?=$userdata['token_freeze_balance']?>"><?=$userdata['token_freeze_balance']?></td>
+                            <td><a id="dyx-btn" href="javascript:void(0);">充值</a><a id="dyx-cash" href="javascript:void(0);">提现</a></td>
+                        </tr>
+                        <tr>
+                            <td title="USDT" class="td-curr">USDT-erc20</td>
+                            <td id="usdtprice" title="<?=$userdata['usdt_num']?>"><?=$userdata['usdt_num']?></td>
+                            <td title="<?=$userdata['usdt_available_balance']?>"><?=$userdata['usdt_available_balance']?></td>
+                            <td title="<?=$userdata['usdt_freeze_balance']?>"><?=$userdata['usdt_freeze_balance']?></td>
+                            <td><a id="usdt-btn" href="javascript:void(0);">充值</a><a id="usdt-cash" href="javascript:void(0);">提现</a></td>
+                        </tr>
+                        <tr>
+                            <td title="XYT" class="td-curr">XYT</td>
+                            <td title="<?=$userdata['xyt_num']?>"><?=$userdata['xyt_num']?></td>
+                            <td title="<?=$userdata['xyt_available_balance']?>"><?=$userdata['xyt_available_balance']?></td>
+                            <td title="<?=$userdata['xyt_freeze_balance']?>"><?=$userdata['xyt_freeze_balance']?></td>
+                            <td><a id="xyt-btn" href="javascript:void(0);">充值</a><a id="xyt-cash" href="javascript:void(0);">提现</a></td>
+                        </tr>
+                        <tr>
+                            <td title="BTC">BTC</td>
+                            <td title="<?=$userdata['btc_num']?>"><?=$userdata['btc_num']?></td>
+                            <td title="<?=$userdata['btc_num']?>"><?=$userdata['btc_num']?></td>
+                            <td title="0.000">0.000</td>
+                            <td><a href="javascript:void(0);"></a><a class="btcembody" href="javascript:void(0);">提现</a></td>
+                        </tr>
+                        <tr>
+                            <td title="拍卖场分红股数量">拍卖场分红股</td>
+                            <td title="0.000">0.000</td>
+                            <td title="0.000">0.000</td>
+                            <td title="0.000">0.000</td>
+                            <td></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!--  活期宝  -->
+                <div class="warp-1200">
+                    <div class="per-title"><span class="p-online"></span><span class="p-text">我的活期宝</span></div>
+                    <table class="reference" style="height: 110px;">
+                        <tbody>
+                        <tr>                                  　
+                            <th>总额（DYX）</th>
+                            <th>累计收益（DYX）</th>
+                            <th>可提币（DYX）</th>
+                            <th>操作</th>
+                        </tr>
+                        <tr>
+                            <td><?=$life_dyx['total']?> DYX</td>
+                            <td><?=$life_dyx['yl_dyx']?> DYX</td>
+                            <td><?=$life_dyx['tx_dyx']?> DYX</td>
+                            <td><a id="baozhuanru" href="javascript:void(0);">转入</a><a id="baozhuanchu" href="javascript:void(0);">转出</a></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!--  月理财套餐  -->
+                <div class="warp-1200">
+                    <div class="per-title"><span class="p-online"></span><span class="p-text">我的月理财套餐</span><p class="fr pr more-box" id="licai"><span class="more-text">查看理财记录</span><span class="p-more"></span></p></div>
+                    <table class="reference" style="height: 110px;">
+                        <tbody>
+                        <tr>                                  　
+                            <th>总额（DYX）</th>
+                            <th>累计收益（DYX）</th>
+                            <th>可提币（DYX）</th>
+                            <th>操作</th>
+                        </tr>
+                        <tr>
+                            <td><?=$month_dyx['total']?> DYX</td>
+                            <td><?=$month_dyx['yl_dyx']?> DYX</td>
+                            <td><?=$month_dyx['tx_dyx']?> DYX</td>
+                            <td><a id="yuezhuanru" href="javascript:void(0);">转入</a><a id="yuezhuanchu" href="javascript:alert('月理财未到账');">转出</a></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!--  您兑换的群主额度  -->
+<!--                <div class="warp-1200">-->
+<!--                    <div class="per-title"><span class="p-online"></span><span class="p-text">您兑换的群主额度</span></div>-->
+<!--                    <table class="reference">-->
+<!--                        <tbody>-->
+<!--                        <tr>                                  　　-->
+<!--                            <th>兑换比例</th>-->
+<!--                            <th>您的兑换数量</th>-->
+<!--                            <th>获得DYX数量</th>-->
+<!--                            <th>已解锁数量</th>-->
+<!--                            <th>剩余待解锁数量</th>-->
+<!--                            <th>预计解锁时间</th>-->
+<!--                            <th>解锁记录</th>-->
+<!--                        </tr>-->
+<!--                        --><?php //foreach ($offering_data as $k=>$v): ?>
+<!--                        <tr>-->
+<!--                            --><?php
+//                            $new_time1 = strtotime(date("2019-09-18 12:12:12"));
+//                            $new_time2 = strtotime(date("2019-09-21 20:30:00"));
+//                            if($v['create_time']>$new_time2){
+//                                $str = "1usdt=250.000个DYX";
+//                            }else if($v['create_time']<$new_time2 && $v['create_time']>$new_time1){
+//                                $str = "1usdt=500.000个DYX";
+//                            }else{
+//                                $str = "1usdt=555.555个DYX";
+//                            }
+//                            ?>
+<!--                            <td title="--><?//=$str?><!--" class="td-curr">--><?//=$str?><!--</td>-->
+<!--                            <td title="--><?//=$v['usdt_num']?><!--usdt">--><?//=$v['usdt_num']?><!--usdt</td>-->
+<!--                            <td title="--><?//=$v['dyx_num']?><!--dyx">--><?//=$v['dyx_num']?><!--dyx</td>-->
+<!--                            <td title="--><?//=$v['unlock_dyx_num']?><!--">--><?//=$v['unlock_dyx_num']?><!--dyx</td>-->
+<!--                            <td title="--><?//=$v['lock_dyx_num']?><!--dyx">--><?//=$v['lock_dyx_num']?><!--dyx</td>-->
+<!--                            <td title="--><?//=$v['unlock_time']?><!--天">--><?//=($v['unlock_time']==0)?"已解锁":$v['unlock_time']."天"?><!--</td>-->
+<!--                            <td><a class="look-btn" href="javascript:void(0);">查看</a></td>-->
+<!--                        </tr>-->
+<!--                        --><?php //endforeach; ?>
+<!--                        </tbody>-->
+<!--                    </table>-->
+<!--                </div>-->
+
+
+                <!--  竞拍参与记录  -->
+                <!--<div class="warp-1200">
+                    <div class="per-title"><span class="p-online"></span><span class="p-text">竞拍参与记录</span><p class="fr pr more-box"><span class="more-text">更多</span><span class="p-more"></span></p></div>
+                    <table class="reference bidding">
+                        <tbody>
+                        <tr>                                  　　
+                            <th>时间</th>
+                            <th>场次</th>
+                            <th>您的最高出价</th>
+                            <th>最终结果</th>
+                            <th>获得btc</th>
+                            <th>获得新代币</th>
+                            <th>获得分红股</th>
+                            <th>冻结XYT数量</th>
+                            <th>解锁时间</th>
+                        </tr>
+                        <tr>
+                            <td title="暂无数据">暂无数据</td>
+                            <td title="暂无数据">暂无数据</td>
+                            <td title="暂无数据">暂无数据</td>
+                            <td title="暂无数据">暂无数据</td>
+                            <td title="暂无数据">暂无数据</td>
+                            <td title="暂无数据">暂无数据</td>
+                            <td title="暂无数据">暂无数据</td>
+                            <td title="暂无数据">暂无数据</td>
+                            <td title="暂无数据">暂无数据</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>-->
+
+                <!--  财务记录  -->
+                <div class="warp-1200">
+                    <div class="per-title"><span class="p-online"></span><span class="p-text">财务记录</span><!--<p class="fr pr more-box"><span class="more-text">更多</span><span class="p-more"></span></p>--></div>
+                    <table class="reference financial">
+                        <tbody>
+                        <?php foreach ($uselog_data as $k1=>$v1): ?>
+                        <tr><td title=""><?=date("Y-m-d H:i:s",$v1['create_time'])?>&nbsp;&nbsp;<?=$v1['type']?>&nbsp;：&nbsp;<?=$v1['info']?></td></tr>
+                        <?php endforeach; ?>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--  DYX充值弹窗  -->
+    <div class="popup-box" id="dyx-rec">
+        <div class="popup-title"><span>充值</span><i class="cancel"></i></div>
+        <div class="popup-body">
+            <p class="p-addrb">充币地址</p>
+            <input type="text" class="link linkVal" value="<?=$userdata['token_address']?>" readonly>
+            <div class="ov l-addr"><p class="fr"><a href="javascript:void(0)" onclick="copyToClipboard(this)">复制地址</a><a class="qr-hover" href="javascript:void(0)">展示二维码<img src="<?=$qrcode?>" alt="" class="qrcode"></a></p></div>
+            <p class="reminder">温馨提示</p>
+            <div class="art-box"><p><i class="art-icon"></i><span class="art-b">禁止向DYX地址充值除DYX之外的资产，任何充入DYX地址的非DYX资产将不可找回。使用DYX地址充值需要<span style="color: #FF0000;">&nbsp;&nbsp;12&nbsp;&nbsp;</span>个网络确认才能到账。</span></p></div>
+        </div>
+    </div>
+
+    <!--  USDT-erc20充值弹窗  -->
+    <div class="popup-box" id="usdt-rec">
+        <div class="popup-title"><span>充值</span><i class="cancel"></i></div>
+        <div class="popup-body">
+            <p class="p-addrb">充币地址</p>
+            <input type="text" class="link linkVal" value="<?=$userdata['token_address']?>" readonly>
+            <div class="ov l-addr"><p class="fr"><a href="javascript:void(0)" onclick="copyToClipboard(this)">复制地址</a><a class="qr-hover" href="javascript:void(0)">展示二维码<img src="<?=$qrcode?>" alt="" class="qrcode"></a></p></div>
+            <p class="reminder">温馨提示</p>
+            <div class="art-box">
+                <p><i class="art-icon"></i><span class="art-b">1、请转账ERC20的USDT，如果转账OMNI的USDT将不可找回，请谨慎操作。</span></p>
+                <p><i class="art-icon"></i><span class="art-b">2、禁止向USDT地址充值除USDT之外的资产，任何充入USDT地址的非USDT资产将不可找回。</span></p>
+                <p><i class="art-icon"></i><span class="art-b">3、使用USDT地址充值需要<span style="color: #FF0000;">&nbsp;&nbsp;12&nbsp;&nbsp;</span>个网络确认才能到账。</span></p>
+            </div>
+        </div>
+    </div>
+
+    <!--  XYT充值弹窗  -->
+    <!--<div class="popup-box" id="xyt-rec">
+        <div class="popup-title"><span>充值</span><i class="cancel"></i></div>
+        <div class="popup-body">
+            <p class="p-addrb">充币地址</p>
+            <input type="text" class="link linkVal" value="<?/*=$userdata['token_address']*/?>" readonly>
+            <div class="ov l-addr"><p class="fr"><a href="javascript:void(0)" onclick="copyToClipboard(this)">复制地址</a><a class="qr-hover" href="javascript:void(0)">展示二维码<img src="<?/*=$qrcode*/?>" alt="" class="qrcode"></a></p></div>
+            <p class="reminder">温馨提示</p>
+            <div class="art-box"><p><i class="art-icon"></i><span class="art-b">禁止向XYT地址充值除XYT之外的资产，任何充入XYT地址的非XYT资产将不可找回。使用XYT地址充值需要<span style="color: #FF0000;">&nbsp;&nbsp;12&nbsp;&nbsp;</span>个网络确认才能到账。</span></p></div>
+        </div>
+    </div>-->
+
+    <!--  DYX提现弹窗  -->
+    <div class="reflect" id="dyx-with">
+        <div class="popup-title"><span>提现</span><i class="cancel"></i></div>
+        <div class="r-body">
+            <p class="r-title">请输入提币地址</p>
+            <div class="currency-box">
+                <div id="select">
+                    <div class="curr-box ov" style="border: 0;">
+                        <div class="input-box fl ov"><input id="dyxaddress" type="text" name="withaddress" value="" class="curr-num fl" placeholder="请输入提币地址"></div><p class="ident fr">DYX</p>
+                    </div>
+                </div>
+            </div>
+            <p class="r-title"><span style="color: red;">最低提现资金1000DYX起提</span>，请输入数量</p>
+            <div class="curr-box ov">
+                <div class="input-box fl ov">
+                    <input type="text" id="curr-num-t1" class="curr-num fl" placeholder="0">
+                    <span id="all_reflect" class="all-reflect fr">全部提取</span>
+                </div><p class="ident fr">DYX</p>
+            </div>
+            <p class="available">可用：<?=$userdata['token_available_balance']?> DYX</p>
+            <p class="r-title">实际到账</p>
+            <div class="curr-box ov actual">
+                <div class="input-box fl ov" id="actual1"></div><p class="ident fr">DYX</p>
+            </div>
+            <!--<p class="available">手续费：0.5%</p>-->
+            <p class="available" style="color: red;">ZG交易所交易最小充值金额为3623.2DYX，小于最小金额的充值将不会上账目且无法退回</p>
+        </div>
+        <div class="r-foot ov">
+            <div class="fr">
+                <!--<a class="call-off" href="javascript:void(0);">取消</a>-->
+                <a id="dyxbtn"  class="withdraw-btn" onclick="dyxsend()">确认提币</a>
+            </div>
+        </div>
+    </div>
+
+    <!--  USDT-erc20提现弹窗  -->
+    <div class="reflect" id="usdt-with">
+        <div class="popup-title"><span>提现</span><i class="cancel"></i></div>
+        <div class="r-body">
+            <p class="r-title">请输入提币地址</p>
+            <div class="currency-box">
+                <div id="select">
+                    <div class="curr-box ov" style="border: 0;">
+                        <div class="input-box fl ov"><input id="usdtaddress" type="text" name="withaddress" value="" class="curr-num fl" placeholder="请输入提币地址"></div><p class="ident fr">USDT-erc20</p>
+                    </div>
+                </div>
+            </div>
+            <p class="r-title">请输入数量</p>
+            <div class="curr-box ov">
+                <div class="input-box fl ov">
+                    <input type="text" id="curr-num-t2" class="curr-num fl" placeholder="0">
+                    <span id="u_all_reflect" class="all-reflect fr">全部提取</span>
+                </div><p class="ident fr">USDT-erc20</p>
+            </div>
+            <p class="available">可用：<?=$userdata['usdt_available_balance']?> USDT</p>
+            <p class="r-title">实际到账</p>
+            <div class="curr-box ov actual">
+                <div class="input-box fl ov" id="actual2"></div><p class="ident fr">USDT-erc20</p>
+            </div>
+            <!--<p class="available">手续费：0.5%</p>-->
+        </div>
+        <div class="r-foot ov">
+            <div class="fr">
+                <!--<a class="call-off" id="c-off" href="javascript:void(0);">取消</a>-->
+                <a id="usdtbtn" class="withdraw-btn" onclick="usdtsend()">确认提币</a>
+            </div>
+        </div>
+    </div>
+
+    <!--  XYT提现弹窗  -->
+    <!--<div class="reflect" id="xyt-with">
+        <div class="popup-title"><span>提现</span><i class="cancel"></i></div>
+        <div class="r-body">
+            <p class="r-title">请输入提币地址</p>
+            <div class="currency-box">
+                <div id="select">
+                    <div class="curr-box ov" style="border: 0;">
+                        <div class="input-box fl ov"><input type="text" name="withaddress" value="" class="curr-num fl" placeholder="请输入提币地址"></div><p class="ident fr">XYT</p>
+                    </div>
+                </div>
+            </div>
+            <p class="r-title">请输入数量</p>
+            <div class="curr-box ov">
+                <div class="input-box fl ov"><input type="text" class="curr-num curr-num-t fl" placeholder="0"><span class="all-reflect fr">全部提取</span></div><p class="ident fr">XYT</p>
+            </div>
+            <p class="available">可用：0 XYT</p>
+            <p class="r-title">实际到账</p>
+            <div class="curr-box ov actual">
+                <div class="input-box fl ov" id="actual"></div><p class="ident fr">XYT</p>
+            </div>
+            <p class="available">手续费：0.5%</p>
+        </div>
+        <div class="r-foot ov">
+            <div class="fr">
+                <a class="call-off" href="javascript:void(0);">取消</a>
+                <a class="withdraw-btn" href="javascript:void(0);">确认提币</a>
+            </div>
+        </div>
+    </div>-->
+
+    <!--  添加地址弹窗  -->
+    <!--<div class="address-reflect">
+        <div class="popup-title"><span>新增提币地址</span><i class="r-cancel"></i></div>
+        <div class="r-body">
+            <p class="r-title address-ti">请输入提币地址</p>
+            <div class="curr-box"><div class="input-box address-i"><input type="text" id="withaddress"></div></div>
+            <p class="r-title address-ti">请输入备注</p>
+            <div class="curr-box"><div class="input-box address-i"><input type="text" id="withinfo"></div></div>
+        </div>
+        <div class="r-foot address-f ov">
+            <div class="fr">
+                <a class="call-btn" href="javascript:void(0);">取消</a>
+                <a class="withdraw-btn" href="javascript:void(0);" onclick="append_add()">确认地址</a>
+            </div>
+        </div>
+    </div>-->
+
+    <!--  BTC提现  -->
+    <div class="btcqr" id="btc-case">
+        <div class="popup-title"><span>BTC提现</span><i class="cancel"></i></div>
+        <div class="btcqr-body">
+            <img src="/public/images/index/btc-cash.png" width="445" height="440" alt="" class="btcqr-img">
+            <p>请联系客服进行提现</p>
+        </div>
+    </div>
+
+    <!--  更多竞拍参与记录  -->
+    <div class="appointment-box">
+        <div class="appointment-title"><span>更多竞拍参与记录</span><i class="cancel"></i></div>
+        <div class="appointment-body">
+            <table class="appointment-ref">
+                <tbody>
+                <tr class="th">                                  　　
+                    <th>时间</th>
+                    <th>场次</th>
+                    <th>您的最高出价</th>
+                    <th>最终结果</th>
+                    <th>获得btc</th>
+                    <th>获得新代币</th>
+                    <th>获得分红股</th>
+                    <th>冻结XYT数量</th>
+                    <th>解锁时间</th>
+                </tr>
+                <tr>
+                    <td title="2019-07-18">2019-07-18</td>
+                    <td title="第10场拍卖">第10场拍卖</td>
+                    <td title="90000">90000</td>
+                    <td title="买单者">买单者</td>
+                    <td title="0.02">0.02</td>
+                    <td title="900">900</td>
+                    <td title="10">10</td>
+                    <td title="5000">5000</td>
+                    <td title="2019-12-01">2019-12-01</td>
+                </tr>
+                <tr>
+                    <td title="2019-07-18">2019-07-18</td>
+                    <td title="第21场拍卖">第21场拍卖</td>
+                    <td title="90000">90000</td>
+                    <td title="获胜者">获胜者</td>
+                    <td title="0.02">0.02</td>
+                    <td title="900">900</td>
+                    <td title="10">10</td>
+                    <td title="5000">5000</td>
+                    <td title="2019-12-01">2019-12-01</td>
+                </tr>
+                <tr>
+                    <td title="2019-07-18">2019-07-18</td>
+                    <td title="第23场拍卖">第23场拍卖</td>
+                    <td title="90000">90000</td>
+                    <td title="无结果">无结果</td>
+                    <td title="0.02">0.02</td>
+                    <td title="900">900</td>
+                    <td title="10">10</td>
+                    <td title="5000">5000</td>
+                    <td title="2019-12-01">2019-12-01</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!--  查看更多解锁记录  -->
+    <div class="btcqr" id="look-btn">
+        <div class="popup-title"><span>解锁记录</span><i class="cancel"></i></div>
+        <div class="appointment-body">
+            <table class="appointment-ref app-date">
+                <tbody>
+                <tr class="th date">
+                    <th>解锁时间</th>
+                    <th>解锁数量</th>
+                </tr>
+                <tr>
+                    <td>暂无数据</td>
+                    <td>暂无数据</td>
+                </tr>
+                <tr>
+                    <td>暂无数据</td>
+                    <td>暂无数据</td>
+                </tr>
+                <tr>
+                    <td>暂无数据</td>
+                    <td>暂无数据</td>
+                </tr>
+                <tr>
+                    <td>暂无数据</td>
+                    <td>暂无数据</td>
+                </tr>
+                <tr>
+                    <td>暂无数据</td>
+                    <td>暂无数据</td>
+                </tr>
+                <tr>
+                    <td>暂无数据</td>
+                    <td>暂无数据</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+    <!--  活期宝转入弹窗  -->
+    <div class="reflect" id="baoInto" style="height: 260px;">
+        <div class="popup-title"><span>个人账户转入活期宝</span><i class="cancel"></i></div>
+        <div class="r-body">
+            <p class="r-title">请输入数量</p>
+            <div class="curr-box ov">
+                <div class="input-box fl ov">
+                    <input type="text" id="curr_z" class="curr-num fl" placeholder="0">
+                    <span id="all_zhuanru" class="all-reflect fr">全部转入</span>
+                </div><p class="ident fr">DYX</p>
+            </div>
+            <p class="available">可用：<?=$userdata['token_available_balance']?> DYX</p>
+        </div>
+        <div class="r-foot ov">
+            <div class="fr">
+                <!--<a class="call-off" id="c-off" href="javascript:void(0);">取消</a>-->
+                <a class="withdraw-btn" onclick="sFn()">确认转入</a>
+            </div>
+        </div>
+    </div>
+
+    <!--  活期宝转出弹窗  -->
+    <div class="reflect" id="baoOut" style="height: 260px;">
+        <div class="popup-title"><span>活期宝转出个人账户</span><i class="cancel"></i></div>
+        <div class="r-body">
+            <p class="r-title">请输入数量</p>
+            <div class="curr-box ov">
+                <div class="input-box fl ov">
+                    <input type="text" id="curr_c" class="curr-num fl" placeholder="0">
+                    <span id="all_zhuangchu" class="all-reflect fr">全部转出</span>
+                </div><p class="ident fr">DYX</p>
+            </div>
+            <p class="available">可用：<?=$life_dyx['tx_dyx']?> DYX</p>
+        </div>
+        <div class="r-foot ov">
+            <div class="fr">
+                <!--<a class="call-off" id="c-off" href="javascript:void(0);">取消</a>-->
+                <a class="withdraw-btn" onclick="cFn()">确认转出</a>
+            </div>
+        </div>
+    </div>
+
+    <!--  月理财套餐转入弹窗  -->
+    <div class="reflect" id="yueInto" style="height: 260px;">
+        <div class="popup-title"><span>个人账户转入月理财套餐</span><i class="cancel"></i></div>
+        <div class="r-body">
+            <p class="r-title">请输入数量</p>
+            <div class="curr-box ov">
+                <div class="input-box fl ov">
+                    <input type="text" id="yue_z" class="curr-num fl" placeholder="0">
+                    <span id="yue_zhuangru" class="all-reflect fr">全部转入</span>
+                </div><p class="ident fr">DYX</p>
+            </div>
+            <p class="available">可用：<?=$userdata['token_available_balance']?> DYX</p>
+        </div>
+        <div class="r-foot ov">
+            <div class="fr">
+                <!--<a class="call-off" id="c-off" href="javascript:void(0);">取消</a>-->
+                <a class="withdraw-btn" onclick="yuerFn()">确认转入</a>
+            </div>
+        </div>
+    </div>
+
+    <!--  月理财套餐转出弹窗  -->
+    <div class="reflect" id="yueOut" style="height: 260px;">
+        <div class="popup-title"><span>月理财套餐转出个人账户</span><i class="cancel"></i></div>
+        <div class="r-body">
+            <p class="r-title">请输入数量</p>
+            <div class="curr-box ov">
+                <div class="input-box fl ov">
+                    <input type="text" id="yue_c" class="curr-num fl" placeholder="0">
+                    <span id="yue_zhuangchu" class="all-reflect fr">全部转出</span>
+                </div><p class="ident fr">DYX</p>
+            </div>
+            <p class="available">可用：<?=$month_dyx['tx_dyx']?> DYX</p>
+        </div>
+        <div class="r-foot ov">
+            <div class="fr">
+                <!--<a class="call-off" id="c-off" href="javascript:void(0);">取消</a>-->
+                <a class="withdraw-btn" onclick="yuecFn()">确认转出</a>
+            </div>
+        </div>
+    </div>
+
+    <!--  查看理财记录  -->
+    <div class="official-box" id="affairs">
+        <div class="appointment-title"><span>查看理财记录</span><i class="cancel"></i></div>
+        <div class="appointment-body">
+            <table class="appointment-ref appointment-refe">
+                <tbody>
+                <tr class="th">
+                    <th>期次</th>
+                    <th>转入数量</th>
+                    <th>转出数量</th>
+                    <th>转入时间</th>
+                    <th>解锁时间</th>
+                    <th>收益</th>
+                </tr>
+                <?php foreach($month_dyx_log as $k=>$v): ?>
+                <tr>
+                    <td style="color: blue;">第 <?=$v['month_id']?> 次</td>
+                    <td style="color: green;">+ <?=$v['start_dyx']?> DYX</td>
+                    <td style="color: red;">- <?=$v['end_dyx']?> DYX</td>
+                    <td style="color: blue;"><?=date("Y-m-d H:i:s",$v['start_time'])?></td>
+                    <?php if($v['unlock_time'] > time()): ?>
+                        <td style="color: red;"><?=date("Y-m-d H:i:s",$v['unlock_time'])?></td>
+                    <?php else: ?>
+                        <td style="color: green;"><?=date("Y-m-d H:i:s",$v['unlock_time'])?></td>
+                    <?php endif; ?>
+                    <td style="color: green;"><?=$v['income_dyx']?> DYX</td>
+                </tr>
+                <?php endforeach; ?>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="/public/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/public/js/layer.js" charset="utf-8"></script>
+    <script>
+        //复制
+        function copyToClipboard(){
+            var Url1 = $(".linkVal");
+            Url1.select();//选择对象
+            document.execCommand("Copy"); // 执行浏览器复制命令
+            layer.msg("已复制好，去粘贴吧");
+        }
+
+        function dyxsend(){
+            var dyxprice = parseFloat($("#dyxprice").text());
+            var dyxaddress = $("#dyxaddress").val();
+            var currnumt1 = parseFloat($("#curr-num-t1").val());
+            if(dyxprice - currnumt1 < 0){
+                layer.alert('提现资金不够');
+                return false;
+            }
+
+            if(currnumt1 < 1000){
+                layer.alert('小于最低提现资金1000');
+                return false;
+            }
+
+            var actual1 = parseFloat($("#actual1").text());
+            var user = "<?=$user?>";
+            $("#dyx-with").fadeOut();
+            $.post("/user/ajaxdyx",{d:dyxaddress,c:currnumt1,a:actual1,u:user},function(msg){
+                layer.alert(msg.message);
+                setTimeout(function () {
+                    window.location.href = location.href
+                },1000);
+            },"json");
+        }
+
+        function usdtsend(){
+            var usdtprice = parseFloat($("#usdtprice").text());
+            var usdtaddress = $("#usdtaddress").val();
+            var currnumt2 = parseFloat($("#curr-num-t2").val());
+            if(usdtprice - currnumt2 < 0){
+                layer.alert('提现资金不够');
+                return false;
+            }
+            var actual2 = parseFloat($("#actual2").text());
+            var user = "<?=$user?>";
+            $("#usdt-with").fadeOut();
+            $.post("/user/ajaxusdt",{d:usdtaddress,c:currnumt2,a:actual2,u:user},function(msg){
+                layer.alert(msg.message);
+                setTimeout(function () {
+                    window.location.href = location.href
+                },300);
+            },"json");
+        }
+
+        //活期宝转入
+        function sFn(){
+            var dyx_num = $("#curr_z").val();
+            var user = '<?=$user?>';
+            var total_dyx = parseFloat(<?=$userdata['token_available_balance']?>);
+            if(dyx_num <= 0){
+                $("#baoInto").fadeOut();
+                layer.alert('当前转入金额不足！');
+                return true;
+            }else if(dyx_num > total_dyx ){
+                $("#baoInto").fadeOut();
+                layer.alert('当前转入金额大于可用余额！');
+                return true;
+            }else{
+                $("#baoInto").fadeOut();
+                $.post("/user/life",{d:dyx_num,u:user,t:1,yl:0},function(msg){
+                    layer.alert(msg);
+                    setTimeout(function () {
+                        window.location.href = location.href
+                    },300);
+                });
+            }
+        }
+
+        //活期宝转出
+        function cFn(){
+            var dyx_num = $("#curr_c").val();
+            var user = '<?=$user?>';
+            var yl_dyx = parseFloat(<?=$life_dyx['yl_dyx']?>);
+            var total_dyx = parseFloat(<?=$life_dyx['tx_dyx']?>);
+            if(dyx_num <= 0){
+                $("#baoOut").fadeOut();
+                layer.alert('当前转出金额不足！');
+                return true;
+            }else if(dyx_num > total_dyx){
+                $("#baoOut").fadeOut();
+                layer.alert('当前转入金额大于可用余额！');
+                return true;
+            }else{
+                $("#baoOut").fadeOut();
+                $.post("/user/life",{d:dyx_num,u:user,t:2,yl:yl_dyx},function(msg){
+                    layer.alert(msg);
+//                    setTimeout(function () {
+//                        window.location.href = location.href
+//                    },300);
+                });
+            }
+        }
+
+        //月理财转入
+        function yuerFn(){
+            var dyx_num = $("#yue_z").val();
+            var user = '<?=$user?>';
+            var total_dyx = parseFloat(<?=$userdata['token_available_balance']?>);
+            if(dyx_num <= 0){
+                $("#yueInto").fadeOut();
+                layer.alert('当前转入金额不足！');
+            }else if(dyx_num > total_dyx){
+                $("#baoOut").fadeOut();
+                layer.alert('当前转入金额大于可用余额！');
+                return true;
+            }else{
+                $("#yueInto").fadeOut();
+                $.post("/user/month",{d:dyx_num,u:user,t:1,yl:0},function(msg){
+                    layer.alert(msg);
+                    setTimeout(function () {
+                        window.location.href = location.href
+                    },300);
+                });
+            }
+        }
+
+        //月理财转出
+        function yuecFn(){
+            var dyx_num =  $("#yue_c").val();
+            var user = '<?=$user?>';
+            var yl_dyx = parseFloat(<?=$month_dyx['yl_dyx']?>);
+            var total_dyx = parseFloat(<?=$month_dyx['tx_dyx']?>);
+            if(dyx_num <= 0){
+                $("#yueOut").fadeOut();
+                layer.alert('当前转出金额不足！');
+            }else if(dyx_num > total_dyx){
+                $("#baoOut").fadeOut();
+                layer.alert('当前转入金额大于可用余额！');
+                return true;
+            }else{
+                $("#yueOut").fadeOut();
+                $.post("/user/month",{d:dyx_num,u:user,t:2,yl:yl_dyx},function(msg){
+                    layer.alert(msg);
+                    setTimeout(function () {
+                        window.location.href = location.href
+                    },300);
+                });
+            }
+        }
+        
+        function putlife() {
+            var user = '<?=$user?>';
+            $.post("/ajax/editlife",{u:user},function(msg){
+                 console.log(msg);
+            });
+        }
+
+
+        $(function(){
+            //DYX充值弹窗
+            $("#dyx-btn").click(function(){
+                $("#dyx-rec").fadeIn();
+            });
+            $(".cancel").click(function(){
+                $("#dyx-rec").fadeOut();
+            });
+
+            //活期宝转入弹窗
+            $("#baozhuanru").click(function(){
+                $("#baoInto").fadeIn();
+            });
+            $(".cancel").click(function(){
+                $("#baoInto").fadeOut();
+            });
+
+            //活期宝转出弹窗
+            $("#baozhuanchu").click(function(){
+                $("#baoOut").fadeIn();
+            });
+            $(".cancel").click(function(){
+                $("#baoOut").fadeOut();
+            });
+
+            //月理财套餐转入弹窗
+            $("#yuezhuanru").click(function(){
+                $("#yueInto").fadeIn();
+            });
+            $(".cancel").click(function(){
+                $("#yueInto").fadeOut();
+            });
+
+            //月理财套餐转出弹窗
+            $("#yuezhuanchu").click(function(){
+                $("#yueOut").fadeIn();
+            });
+            $(".cancel").click(function(){
+                $("#yueOut").fadeOut();
+            });
+
+            //月理财记录弹窗
+            $("#licai").click(function(){
+                $("#affairs").fadeIn();
+            });
+            $(".cancel").click(function(){
+                $("#affairs").fadeOut();
+            });
+
+            //USDT-erc20充值弹窗
+            $("#usdt-btn").click(function(){
+                $("#usdt-rec").fadeIn();
+            });
+            $(".cancel").click(function(){
+                $("#usdt-rec").fadeOut();
+            });
+
+
+            //XYT充值弹窗
+            $("#xyt-btn").click(function(){
+                layer.alert('暂未开放')
+                //$("#xyt-rec").fadeIn();
+            });
+            /*$(".cancel").click(function(){
+                $("#xyt-rec").fadeOut();
+            });*/
+
+
+            //我的活期宝转入
+            var all_zhuangru = parseFloat(<?=$userdata['token_available_balance']?>);
+            $("#all_zhuanru").click(function(){
+                $("#curr_z").val(all_zhuangru);
+            });
+
+            //我的活期宝转出
+            var all_zhuangchu = parseFloat(<?=$life_dyx['tx_dyx']?>);
+            $("#all_zhuangchu").click(function(){
+                $("#curr_c").val(all_zhuangchu);
+            });
+
+            //我的月理财转入
+            var yue_zhuangru = parseFloat(<?=$userdata['token_available_balance']?>);
+            $("#yue_zhuangru").click(function(){
+                $("#yue_z").val(yue_zhuangru);
+            });
+
+            //我的月理财转出
+            var yue_zhuangchu = parseFloat(<?=$month_dyx['tx_dyx']?>);
+            $("#yue_zhuangchu").click(function(){
+                $("#yue_c").val(yue_zhuangchu);
+            });
+
+           //DYX提现弹窗
+            $("#dyx-cash").click(function(){
+                $("#dyx-with").fadeIn();
+             });
+            $(".cancel").click(function(){
+                $("#dyx-with").fadeOut();
+            });
+
+            //DYX全部提现
+            var all_r = <?=$userdata['token_available_balance']?>;
+            var all_num = <?=$userdata['token_available_balance']?>;
+            $("#all_reflect").click(function(){
+                $("#curr-num-t1").val(all_r);
+                $("#actual1").html(all_num.toFixed(3))
+
+            });
+
+            //USDT-erc20提现弹窗
+            $("#usdt-cash").click(function(){
+                $("#usdt-with").fadeIn();
+            });
+            $(".cancel ,#c-off").click(function(){
+                $("#usdt-with").fadeOut();
+            });
+
+            //USDT-erc20全部提现
+            var u_all_r = <?=$userdata['usdt_available_balance']?>;
+            var u_all_num = <?=$userdata['usdt_available_balance']?>;
+            $("#u_all_reflect").click(function(){
+                $("#curr-num-t2").val(u_all_r);
+                $("#actual2").html(u_all_num.toFixed(3))
+            });
+
+            //XYT提现弹窗
+            $("#xyt-cash").click(function(){
+                layer.alert('暂未开放')
+                //$("#xyt-with").fadeIn();
+            });
+            /*$(".cancel").click(function(){
+                $("#xyt-with").fadeOut();
+            });*/
+
+
+            //点击添加客服微信
+            $(".btcembody").click(function(){
+                $("#btc-case").fadeIn();
+            });
+            $(".cancel").click(function(){
+                $("#btc-case").fadeOut();
+            });
+
+            //更多竞拍参与记录
+           /* $(".more-box").click(function(){
+                $(".appointment-box").fadeIn();
+            });
+            $(".cancel").click(function(){
+                $(".appointment-box").fadeOut();
+            });*/
+
+            //dyx输入提取数量计算实际到账
+            /*$(document).on("keyup",'#curr-num-t1',function(){
+                let usdt = $("#curr-num-t1").val();
+                let acnum = usdt-usdt*0.005;
+                $("#actual1").html(acnum.toFixed(3));
+            });*/
+            $(document).on("keyup",'#curr-num-t1',function(){
+                let usdt = $("#curr-num-t1").val();
+                $("#actual1").html(usdt);
+            });
+
+
+            //USDT-erc20输入提取数量计算实际到账
+            /*$(document).on("keyup",'#curr-num-t2',function(){
+                let usdt = $("#curr-num-t2").val();
+                //let acnum = usdt-usdt*0.005;
+                $("#actual2").html(usdt.toFixed(3));
+            });*/
+            $(document).on("keyup",'#curr-num-t2',function(){
+                let usdt = $("#curr-num-t2").val();
+                $("#actual2").html(usdt);
+            });
+
+            //点击查看更多解锁记录
+            $(".look-btn").click(function(){
+                $("#look-btn").fadeIn();
+            });
+            $(".cancel").click(function(){
+                $("#look-btn").fadeOut();
+            });
+
+            //点击提币地址
+            /*$(".add-addr").click(function(){
+                $(".address-reflect").fadeIn();
+            });
+            $(".r-cancel ,.call-btn").click(function(){
+                $(".address-reflect").fadeOut();
+            });*/
+
+            //提币地址删除
+            /*$(".del-icon").click(function(){
+                $(this).parent("li").remove();
+            });*/
+
+            //选择提币地址
+            /*$(".c-select-box").bind("click",function(){
+                var ul = $(this).siblings('ul')
+                if(ul.is(":hidden")){
+                    ul.slideDown('400', function() {
+                        $(this).find("li").bind("click",function(){
+                            var selectLi=$(this).text();
+                            $("#select span").text(selectLi);
+                            $("#select ul").slideUp(200);
+                        });
+                        ul.mouseleave(function() {
+                            $('#select ul').slideUp(200)
+                        });
+                    });
+                }else{
+                    $(this).siblings('ul').slideUp(200)
+                }
+            });*/
+
+            putlife()
+        });
+
+    </script>
+
+</body>
+</html>

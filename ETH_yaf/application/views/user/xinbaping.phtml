@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>xcoinpay</title>
+    <meta name="keywords" content="FomoXYT官网，FomoXYT，预约活动，区块链">
+    <meta name="description" content="FomoXYT，区块链，交易所，虚拟币交易">
+    <link rel="shortcut icon" href="/public/images/xcoinpay.ico">
+    <link rel="stylesheet" href="/public/css/index/main.css">
+    <link rel="stylesheet" href="/public/css/index/xinbaping.css">
+</head>
+<body>
+    <div class="box">
+        <!--  head  -->
+        <?php load_view("inc/pc_nav");?>
+
+        <!--  个人中心导航  -->
+        <?php load_view("inc/user_left");?>
+
+        <!--  霸屏行动  -->
+        <div class="baping-box">
+            <!--  任务中心  -->
+            <div class="warp-1200">
+                <div class="per-title"><span class="p-online"></span><span class="p-text">任务中心</span></div>
+                <div class="receive-box">
+                    <p class="re-label">操作说明</p>
+                    <p class="re-title">1、请在官方客服微信朋友圈获取素材。</p>
+<!--                    <p class="re-title">2、上传内容只能转发在<span style="color: red;">币圈</span>群6条（DYX群除外）、币圈人数不得少于<span style="color: red;">100人</span>、每天转发的币<span style="color: red;">圈群不得重复</span>。每日只能领取一次空投。</p>-->
+                    <p class="re-title">2、转发币圈群3条（DYX群除外，群人数不得少于100人），每天转发的币圈群不得重复，每日只能领取一次空投。</p>
+					<p class="re-title">3、<span style="color:red;">注：若活动中发现撤回、删除等操作，官方有权没收个人空投奖励。</span></p>
+                    <p class="re-title">4、加客服微信，可以进官方群</p>
+                    <p class="re-title">官方客服微信五：yangcheng433e</p>
+                    <p class="re-title">官方客服微信六：FTH37489608</p>
+                    <!--  上传图片  -->
+                    <?php
+                    if(is_null($user_result['status'])){
+                        $strpic = "/public/images/website/upload-btn.png";
+                        $strtext = "我已转发，上传截图";
+                        $str2 = "display: block;";
+                    }else if($user_result['status'] == 0){
+                        $strpic = "/public/images/website/bap0.png";
+                        $strtext = "已经提交，等待官方审核";
+                        $str2 = "display: none;";
+                    }else if($user_result['status'] == 1){
+                        $strpic = "/public/images/website/bap1.png";
+                        $strtext = "任务已经完成，无需上传此张图片";
+                        $str2 = "display: none;";
+                    }else if($user_result['status'] == 2){
+                        $strpic = "/public/images/website/bap2.png";
+                        $strtext = "任务审核驳回，请重新上传";
+                        $str2 = "display: block;";
+                    }
+                    ?>
+
+                    <div class="ov imgbox-d">
+                        <div class="fl imgone pr">
+                            <input type="file" style="<?=$str2?>" onchange="selectFile(this,event,'pic1')">
+                            <div class="upload-btn">
+                                <img src="<?=$strpic?>" width="70" height="70" alt="" >
+                                <p><?=$strtext?></p>
+                            </div>
+                        </div>
+                        <div class="fl imgone pr">
+                            <input type="file" style="<?=$str2?>" onchange="selectFile(this,event,'pic2')">
+                            <div class="upload-btn">
+                                <img src="<?=$strpic?>" width="70" height="70" alt="" >
+                                <p><?=$strtext?></p>
+                            </div>
+                        </div>
+                        <div class="fl imgone pr">
+                            <input type="file" style="<?=$str2?>" onchange="selectFile(this,event,'pic3')">
+                            <div class="upload-btn">
+                                <img src="<?=$strpic?>" width="70" height="70" alt="" >
+                                <p><?=$strtext?></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ov imgbox-d">
+                        <div class="fl imgone pr">
+                            <input type="file" style="<?=$str2?>" onchange="selectFile(this,event,'pic4')">
+                            <div class="upload-btn">
+                                <img src="<?=$strpic?>" width="70" height="70" alt="" >
+                                <p><?=$strtext?></p>
+                            </div>
+                        </div>
+                        <div class="fl imgone pr">
+                            <input type="file" style="<?=$str2?>" onchange="selectFile(this,event,'pic5')">
+                            <div class="upload-btn">
+                                <img src="<?=$strpic?>" width="70" height="70" alt="" >
+                                <p><?=$strtext?></p>
+                            </div>
+                        </div>
+                        <div class="fl imgone pr">
+                            <input type="file" style="<?=$str2?>" onchange="selectFile(this,event,'pic6')">
+                            <div class="upload-btn">
+                                <img src="<?=$strpic?>" width="70" height="70" alt="" >
+                                <p><?=$strtext?></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ov" style="text-align: center;margin-top: 60px;">
+                        <input type="hidden" id="pic1hidden" value="<?=$user_result['pic1']?>">
+                        <input type="hidden" id="pic2hidden" value="<?=$user_result['pic2']?>">
+                        <input type="hidden" id="pic3hidden" value="<?=$user_result['pic3']?>">
+                        <input type="hidden" id="pic4hidden" value="<?=$user_result['pic4']?>">
+                        <input type="hidden" id="pic5hidden" value="<?=$user_result['pic5']?>">
+                        <input type="hidden" id="pic6hidden" value="<?=$user_result['pic6']?>">
+
+
+                        <?php if(is_null($user_result['status'])): ?>
+                            <p class="sure-btn dyx_btn" onclick="dyx_btn()">确认上传</p>
+                        <?php elseif($user_result['status'] == 2): ?>
+                            <p class="sure-btn dyx_btn" onclick="dyx_btn()">确认上传</p>
+                        <?php endif; ?>
+                    </div>
+                    <p class="re-label">任务状态</p>
+                    <div class="today">
+                        <!--  未做任务  -->
+                        <?php if($user_result['status'] == 0 && !is_null($user_result['status'])): ?>
+                            <ul>
+                                <li><span>任务状态：</span><span style="color: #f75050;">待审核</span></li>
+                                <li><span>开始时间：</span><span><?=$user_result['create_time']?></span></li>
+                                <li><span>审核结果：</span><span>暂无收益</span></li>
+                            </ul>
+                        <?php endif; ?>
+                        <?php if($user_result['status'] == 1): ?>
+                            <ul>
+                                <li><span>任务状态：</span><span style="color: #50f7d2;">审核通过</span></li>
+                                <li><span>时间：</span><span><?=$user_result['create_time']?></span></li>
+                                <li><span>审核结果：</span><span>审核通过</span></li>
+                                <li><span>收益：</span><span>奖励1个DYX</span></li>
+                            </ul>
+                        <?php endif; ?>
+                        <?php if($user_result['status'] == 2): ?>
+                            <ul>
+                                <li><span>任务状态：</span><span style="color: #f75050;">未通过</span></li>
+                                <li><span>时间：</span><span><?=$user_result['create_time']?></span></li>
+                                <li><span>审核结果：</span><span>暂无收益</span></li>
+                                <li><span>审核员备注：</span><span style="width: 800px;display: inline-block;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;"><?=$user_result['auditors_note']?></span></li>
+                            </ul>
+                        <?php endif; ?>
+                        <!--<p>今日任务未完成</p>-->
+                        <!--  做任务  -->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script type="text/javascript" src="/public/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/public/js/layer.js" charset="utf-8"></script>
+
+    <script>
+        //读取图片和提交后端
+        let form = new FormData();//通过HTML表单创建FormData对象
+        let upload;
+        let inputhidden;
+        function selectFile(tag,e,type){
+            var that = $(tag);
+            let files = e.currentTarget.files;
+            if(files.length == 0){
+                return;
+            }
+            let file = files[0];
+            //把上传的图片显示出来
+            let reader = new FileReader();
+            // 将文件以Data URL形式进行读入页面
+            reader.readAsBinaryString(file);
+            /* reader.onload = function(f){
+             //var index = $(tag).index();
+             upload = $(tag).next("div");
+             let src = "data:" + file.type + ";base64," + window.btoa(this.result);
+             };*/
+            form.append('file',file);
+            //提交
+            let httpRequest;
+            //ie7+ 主流浏览器
+            if(window.XMLHttpRequest){
+                //alert("ie7+ 主流浏览器");
+                httpRequest = new XMLHttpRequest();
+            }else if(window.ActiveXObject){
+                //alert("ie7-");
+                httpRequest = new ActiveXObject("Microsoft.XMLHTTP");
+            }else{
+                alert("主流浏览器");
+            }
+            httpRequest.open("post","/ajax/upload",true);
+            //httpRequest.setRequestHeader("Content-Type","application/x-www-form-urlencoded;charset=utf-8");
+            httpRequest.send(form);
+            httpRequest.onreadystatechange =()=> {
+                // 信息已经返回，可以开始处理
+                if (httpRequest.readyState == 4) {
+                    // 页面正常，可以开始处理信息
+                    if (httpRequest.status == 200) {
+                        let resdata = eval("("+httpRequest.responseText+")");
+
+                        if(resdata.msg == "ok"){
+                            /*$("#"+type).attr("src","/public"+resdata.data);*/
+                            $("#"+type+"hidden").val("/public"+resdata.data);
+                            $("#"+type).val(resdata.data);
+                            upload = $(tag).next("div");
+                            upload.html("<img class='book-pic' src ='/public"+resdata.data+"'/>");
+                            $("#"+type).val(resdata.data);
+
+                        }
+                    }
+                }
+            }
+        }
+        var status = '<?=$status?>';
+        if(status == -1){
+            layer.msg('您还不是DYX霸屏会员');
+            setTimeout(function () {
+                window.location.href = "/website/bpactive";
+            },1000);
+
+        }else if(status == 0){
+            layer.msg('请等待审核');
+            setTimeout(function () {
+                window.history.back();
+            },1000);
+        }else{
+            layer.msg('请完成任务上传图片即可');
+        }
+
+        function dyx_btn(){
+            var pichidden1 = $("#pic1hidden").val();
+            var pichidden2 = $("#pic2hidden").val();
+            var pichidden3 = $("#pic3hidden").val();
+            var pichidden4 = $("#pic4hidden").val();
+            var pichidden5 = $("#pic5hidden").val();
+            var pichidden6 = $("#pic6hidden").val();
+
+            var pic = {
+                "pic1":pichidden1,
+                "pic2":pichidden2,
+                "pic3":pichidden3,
+                "pic4":pichidden4,
+                "pic5":pichidden5,
+                "pic6":pichidden6
+            }
+
+            var username = '<?=$user?>';
+            if(pichidden1 == "" && pichidden2 == "" && pichidden3 == "" && pichidden4 == "" && pichidden5 == "" && pichidden6 == ""){
+                layer.msg("缺少图片资源");
+                return false;
+            }
+            $.post("/ajax/dyxupload2",{p:JSON.stringify(pic),u:username},function(msg){
+                layer.msg(msg.msg);
+                setTimeout(function () {
+                    window.location.href = location.href;
+                },1000);
+            },"json");
+        }
+        </script>
+
+</body>
+</html>

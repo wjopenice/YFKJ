@@ -1,0 +1,134 @@
+admin.nodeInfo.protocols.eth
+eth.accounts
+ll
+eth.accounts
+eth.getBalance(eth.accounts[0])
+eth.getBalance(eth.accounts[1])
+miner.start()
+miner.stop()
+eth.getBalance(eth.accounts[0])
+eth.accounts
+amount = web3.toWei(1,'ether')
+eth.sendTransaction({from:eth.accounts[0],to:eth.accounts[1],value:amount})
+eth.getBalance(eth.accounts[1])
+eth.getBalance(eth.accounts[0])
+eth.getBalance(eth.accounts[1])
+miner.start()
+miner.stop()
+eth.getBalance(eth.accounts[1])
+eth.accouts
+eth.accounts
+eth.getBalance(eth.accounts[0])
+eth.accounts
+miner.start()
+miner.stop()
+web3.utils.isAddress('0xc1912fee45d61c87cc5ea59dae31190fffff232d');
+web3.utils.isAddress('0xc1912fee45d61c87cc5ea59dae31190fffff232d')
+admin.peers.forEach(function(p) {console.log(p.network.remoteAddress);})
+eth.getBalance(eth.accounts[0])
+eth.accounts
+amount = web3.toWei(1,'ether')
+eth.sendTransaction({from:eth.accounts[0],to:eth.accounts[1],value:amount})
+eth.getBalance(eth.accounts[0])
+eth.getBalance(eth.accounts[1])
+eth.accounts
+amount = web3.toWei(1,'ether')
+eth.sendTransaction({from:eth.accounts[0],to:eth.accounts[1],value:amount})
+eth.getBalance(eth.accounts[1])
+miner.setEtherbase(eth.accounts[0])
+eth.coinbase
+miner.start(1)
+miner.stop()
+balance = web3.fromWei(eth.getBalance(eth.accounts[0]), "ether")
+eth.sendTransaction({from: eth.accounts[0], to : eth.accounts[1], value: web3.toWei(10, "ether")})
+txpool.status
+txpool.inspect.pending
+miner.start(1); admin.sleepBlocks(1); miner.stop();
+txpool.inspect.pending
+balance = web3.fromWei(eth.getBalance(eth.accounts[0]), "ether")
+balance = web3.fromWei(eth.getBalance(eth.accounts[1]), "ether")
+eth.getTransaction("0x4edf43809d4c5603a2dfd8496ddb056d1725ffd80e8afaf95132447f19168548")
+eth.accounts
+eth.getBlock(108)
+eth.getTransaction("0x4edf43809d4c5603a2dfd8496ddb056d1725ffd80e8afaf95132447f19168548")
+balance = web3.fromWei(eth.getBalance(eth.accounts[1]), "ether")
+eth.sendTransaction({from: eth.accounts[0], to : eth.accounts[1], value: web3.toWei(10, "ether")})
+miner.start(1); admin.sleepBlocks(1); miner.stop();
+eth.getTransaction("0xaface4320ffad7a8bde54cb0aa9a3e86da2f93c173c1418cae9f32df9b16d238")
+eth.getBlock(303)
+eth.getBlock(0)
+eth.accounts
+balance = web3.fromWei(eth.getBalance(eth.accounts[1]), "ether")
+eth.syncing
+eth.blockNumber
+net.peerCount
+tail nohup.out
+eth.syncing
+geth
+eth
+net.peerCount
+eth.syncing
+eth.coinbase
+eth.accounts
+eth.blockNumber
+eth.getBalance("0xb0bccc869c02f56eaaef4ff7bcb4bcd3985bf050")
+eth.sign("0xb0bccc869c02f56eaaef4ff7bcb4bcd3985bf050",web3.sha3("abc"))
+eth.
+eth.sign("0xb0bccc869c02f56eaaef4ff7bcb4bcd3985bf050",web3.sha3("abc"))
+eth.sendTransaction({from:"0xb0bccc869c02f56eaaef4ff7bcb4bcd3985bf050",to:"0x7c6840d3a8041952b2712017fe420851ac13661c",value:web3.toWei(10,"ether")})
+eth.sendRawTransaction("0x24c0ae47a8122275486f4d909a02561f1f791d32151babedede12b983fe0e089")
+txpool.status
+txpool.inspect.pending
+txpool.status
+miner.start(0)
+txpool.status
+miner.start(0)
+txpool.status
+eth.accounts
+txpool.status
+miner.start(0)
+miner.start(1); admin.sleepBlocks(1); miner.stop();
+txpool.status
+eth.sendRawTransaction("0x24c0ae47a8122275486f4d909a02561f1f791d32151babedede12b983fe0e089")
+eth.getTransaction("0x24c0ae47a8122275486f4d909a02561f1f791d32151babedede12b983fe0e089")
+eth.getBlock(304)
+eth.getTransaction("0x24c0ae47a8122275486f4d909a02561f1f791d32151babedede12b983fe0e089")
+eth.sendRawTransaction("0x24c0ae47a8122275486f4d909a02561f1f791d32151babedede12b983fe0e089")
+eth.sendRawTransaction("0x77a79687f82debe16cf4f4db0a1c673d02d490ab07a8e5a694c81095e0400d3550286fc6a558e4031267edbfaa92aa316d0b543428e0f14ec9b383283995af621c")
+admin.peers
+debug.traceTransaction("0x2059dd53ecac9827faad14d364f9e04b1d5fe5b506e3acc886eff7a6f88a696a")
+debug.traceTransaction("0x24c0ae47a8122275486f4d909a02561f1f791d32151babedede12b983fe0e089")
+debug.traceTransaction("0xe962086ba1f912b7b7aa50ccb3dcfa49c63ed36ed97cb9ea07bab88a0d8c7ec6")
+miner.setGasPrice(2)
+txpool.content
+eth.accounts
+eth.blockNumber
+eth.getBalance(eth.accounts[0])
+miner.start(1)
+miner.start(0)
+miner.start(1)
+miner.start(0)
+eth.getBalance(eth.accounts[1])
+eth.getBalance(eth.accounts[2])
+eth.getBalance(eth.accounts[3])
+eth.getBalance(eth.accounts[4])
+miner.start(1); admin.sleepBlocks(1); miner.stop();
+txpool.status
+miner.setEtherbase(eth.accounts[0])
+eth.coinbase
+eth.accounts
+miner.start(1)
+miner.start(0)
+eth.sendTransaction({from: eth.accounts[0], to : eth.accounts[1], value: web3.toWei(10, "ether")})
+txpool.status
+txpool.inspect.pending
+miner.start(1); admin.sleepBlocks(1); miner.stop();
+txpool.inspect.pending
+balance = web3.fromWei(eth.getBalance(eth.accounts[0]), "ether")
+balance = web3.fromWei(eth.getBalance(eth.accounts[1]), "ether")
+eth.getTransaction("0x796eed25625f1d879de25b5f5a543f954cd86d82594a1b6b3fd5fc01d0461539")
+eth.blockNumber
+geth attach ipc:/home/wwwroot/ETH_yaf/ethereum/geth.ipc
+eth.syncing
+eth.blockNumber
+net.peerCount

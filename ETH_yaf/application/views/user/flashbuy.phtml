@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>xcoinpay</title>
+    <meta name="keywords" content="FomoXYT官网，FomoXYT，预约活动，区块链">
+    <meta name="description" content="FomoXYT，区块链，交易所，虚拟币交易">
+    <link rel="shortcut icon" href="/public/images/xcoinpay.ico">
+    <link rel="stylesheet" href="/public/css/index/main.css">
+    <link rel="stylesheet" href="/public/css/index/userads.css">
+</head>
+<body>
+<div class="box">
+    <!--  head  -->
+    <?php load_view("inc/pc_nav");?>
+
+    <!--  个人中心导航  -->
+    <?php load_view("inc/user_left");?>
+
+    <!--  user administration  -->
+    <div class="userad-box">
+        <div class="warp-1200">
+            <div class="per-title"><span class="p-online"></span><span class="p-text">币闪购</span></div>
+            <div class="ov">
+                <div class="u-box u-changepwd pr fl">
+                    <div class="u-pad-box">
+                        <p><label for="" style="color: #fff;">金额：</label>
+                            <input type="hidden" name="name" value="usdt-erc20" />
+                            <input type="text" id="money" name="cny" placeholder="请输入人民币" style="border: 1px solid #fff;height: 40px;width: 340px;padding-left: 10px;color: #fff;" required>
+                            <input type="hidden" name="address" value="<?=$user_info['usdt_address']?>" />
+                        </p>
+                        <button type="submit" class="c-btn" onclick="gogo()">确定</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<script type="text/javascript" src="/public/js/jquery.min.js"></script>
+<script type="text/javascript" src="/public/js/layer.js" charset="utf-8"></script>
+<script>
+    function gogo() {
+        var money = $('#money').val();
+        window.open('https://buy.flashbuy.io/#/trade?name=usdt-erc20&cny='+money+'&address=<?=$user_info['usdt_address']?>')
+    }
+</script>
+</body>
+</html>

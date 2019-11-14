@@ -1,0 +1,50 @@
+.box{height: 120vh;}
+.bp-box{background: #11084D;margin-top: -2px;padding-bottom: 100px;}
+.bp-active{background: #11084D;}
+.bp-banner{display: inline-block;width: 100%;height: 560px;background: url(/public/images/website/bpactive-banner.png) no-repeat center;background-size: contain;}
+
+/*  活动奖励  */
+.bp-box .bp-b{text-align: center;margin-top: -1px;padding-top: 150px;}
+.rule-box{width: 1030px;height: 357px;background: #6142EE;border-radius:16px;display: inline-block;position: relative;top: -30px;}
+.s-rule-b{width: 970px;height: 256px;background: #11084D;border-radius:16px;display: inline-block;margin-top: 22px;position: relative;}
+.r-t-icon{width: 282px;height: 105px;background: url(/public/images/website/image_huod.png) no-repeat center;display: inline-block;position: absolute;left: 50%;margin-left: -141px;top: -30px;z-index: 99;}
+.detail-text{margin: 68px 55px;font-size: 14px;color: #fff;line-height: 18px;text-align: left;}
+.detail-text p{margin-bottom: 23px;}
+.detail-text p span {width: 4px;height: 18px;background: #F38C26;border-radius: 2px;display: inline-block;position: absolute;left: 41px;margin-right: 10px;}
+.left-beautiful-spot{width: 69px;height: 21px;background: url(/public/images/website/beautiful-spot-icon.png) no-repeat center;display: inline-block;position: absolute;left: 300px;bottom: 29px;z-index: 99;}
+.right-beautiful-spot{width: 69px;height: 21px;background: url(/public/images/website/beautiful-spot-icon.png) no-repeat center;display: inline-block;position: absolute;right: 300px;bottom: 29px;z-index: 99;}
+
+/*  门槛与规则  */
+.bp-box .bp-f{padding-top: 0px;}
+.th-box{height: 300px;}
+.th-icon{width: 282px;height: 105px;background: url(/public/images/website/threshold-icon.png) no-repeat center;display: inline-block;position: absolute;left: 50%;margin-left: -141px;top: -30px;z-index: 99;}
+.join-btn{text-align: center;}
+.im-subscribe {width: 220px;height: 60px;line-height: 60px;background: #17BF98;display: inline-block;color: #fff;border-radius: 32px;font-weight: 400;font-size: 24px;box-shadow: 0 0 25px rgba(255, 255, 255, 0.35);margin: 50px 0 100px;}
+
+.wait-box{height: 210px;border: 1px solid #D0CDEA;width: 1030px;margin-top: 80px;}
+.customer-icon{margin: 30px;width: 120px;height: 160px;text-align: center;border-right: 1px dashed #7067B0;padding-right: 30px;}
+.customer-icon img{margin-top: 21px;}
+.customer{color: #FFFFFF;font-size: 18px;margin-top: 7px;}
+.wechat-code{height: 180px;}
+.wechat-code ul li{margin-left: 40px;margin-top: 40px;color: #fff;}
+.wechat-code img{width: 90px;height: 90px;background: #333;display: inline-block;margin-top: 15px;}
+.wechat-art{color: #fff;font-size: 12px;margin-top: 18px;margin-left: 40px;}
+.qq-code{font-size: 14px;color: #fff;margin-left: 50px;height: 180px;}
+.result{width: 200px;margin: 66px 87px 66px 68px;line-height: 24px;}
+.result a{font-size: 18px;color: #17BF98;display: block}
+.wait-re{margin: 78px 87px 78px 68px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

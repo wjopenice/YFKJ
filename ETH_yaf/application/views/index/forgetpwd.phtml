@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>xcoinpay</title>
+    <meta name="keywords" content="FomoXYT官网，FomoXYT，预约活动，区块链">
+    <meta name="description" content="FomoXYT，区块链，交易所，虚拟币交易">
+    <link rel="shortcut icon" href="/public/images/xcoinpay.ico">
+    <link rel="stylesheet" href="/public/css/index/main.css">
+    <link rel="stylesheet" href="/public/css/index/forgetpwd.css">
+</head>
+<body>
+    <div class="box">
+        <!--  head  -->
+        <?php load_view("inc/user_top");?>
+
+        <!--  form  -->
+        <div class="form-box">
+            <div class="form-warp">
+                <i class="login-logo"></i>
+                <form class="data-box" action="/index/forgetpwd" method="post">
+                    <p class="forget-title">忘记密码</p>
+                    <div class="f-one">
+                        <div><input type="number" id="username" placeholder="请输入手机号" name="username" value=""></div>
+                        <div class="verification-box">
+                            <input type="number" id="codesms" name="" class="verification fl" placeholder="请输入短信验证码">
+                            <button type="button" class="ver-code feachBtn fr">获取验证码</button>
+                        </div>
+                    </div>
+                    <div class="f-two" style="display: none;">
+                        <div><input type="password" placeholder="请输入新密码" id="pwd" name="pwd"  value=""></div>
+                        <div><input type="password" placeholder="请再次输入新密码" id="repwd" name="userpass"  value=""></div>
+                    </div>
+                    <input type="submit" id="btn" class="submit-btn next-btn" value="下一步" />
+                    <p class="have-num">已有账号，<a class="right-login" href="/index/login">马上登录</a></p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <script type="text/javascript" src="/public/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/public/js/layer.js" charset="utf-8"></script>
+    <script type="text/javascript" src="/public/js/cookie.js" charset="utf-8"></script>
+    <script>
+        $(function(){
+            //点击获取验证码和倒计时
+            $('.feachBtn').click(function() {
+                let user = $("#username").val();
+                let exp = /^1[3-9]\d{9}$/;
+                if(exp.test(user)){
+                    let count = 60;
+                    const countDown = setInterval(() => {
+                        if (count === 0) {
+                            $('.feachBtn').text('重新发送').removeAttr('disabled');
+                            $('.feachBtn').css({
+                                background: '#0faf8a',
+                                color: '#fff',
+                            });
+                            clearInterval(countDown);
+                        } else {
+                            $('.feachBtn').attr('disabled', true);
+                            $('.feachBtn').css({
+                                background: '#d8d8d8',
+                                color: '#707070',
+                            });
+                            $('.feachBtn').text('重新获取'+'('+count+')');
+                        }
+                        count--;
+                    }, 1000);
+                        $.post("/index/pwdtelcode",{tel:user},function (msg) {
+                            layer.msg(msg.message);
+                        },"json");
+                }else{
+                    layer.msg('请输入正确的手机号');
+                    return false;
+                }
+            });
+
+            $("#codesms").change(function () {
+                let tel = $("#username").val();
+                let codesms = $(this).val();
+                $.post("/index/ajaxsms",{tel:tel,lockcode:codesms},function (msg) {
+                    if(msg.code == 0){
+                        layer.msg(msg.message);
+                        $(".verification-box").remove();
+                        setCookie("sms","1","1","i");
+                    }else{
+                        layer.msg(msg.message);
+                    }
+                },"json");
+            });
+
+            $("#btn").click(function () {
+                let tel = $("#username").val();
+                if(tel == ""){
+                    layer.msg('手机号不能为空');
+                    return false;
+                }
+                if(getCookie("sms")==1){
+                    $(".f-one").css("display","none");
+                    $(".f-two").css("display","block");
+                    $(this).val("完成");
+                }else{
+                    layer.msg('请完成验证步骤');
+                    return false;
+                }
+                let pwd = $("#pwd").val();
+                if(pwd == ""){
+                    layer.msg('密码不能为空');
+                    return false;
+                }
+                let repwd = $("#repwd").val();
+                if(pwd != repwd){
+                    layer.msg('两次密码不一致');
+                    return false;
+                }
+                $(".data-box").submit();
+            });
+
+
+        })
+
+
+    </script>
+</body>
+</html>

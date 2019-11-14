@@ -1,0 +1,55 @@
+html,body ,.box{height: 120vh;background: #0E2648;}
+.warp-1200{width: 1170px;margin: 0 auto;}
+.per-title{height: 70px;line-height: 70px;position: relative;margin-top: 20px;}
+.p-online{display: inline-block;width: 4px;height: 16px;background: #51A0EB;position: absolute;left: 0;top: 28px;}
+.p-text{font-size:20px;color: #fff;margin-left: 13px;}
+
+
+
+table.reference{border-collapse: collapse;display: inline-block;background: #091928;width: 1170px;margin-top: -15px;}
+table.reference tr{background: rgba(101,119,136,0);}
+table.reference td{max-width: 150px;height: 48px;font-size: 14px;color: #BAC7D9;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;text-align: left;}
+table.reference th{width: 348px;height: 48px;font-size: 14px;color: #BAC7D9;text-align: left;}
+table.reference th:last-child{width: 100px;}
+table.reference th:first-child{padding-left: 76px;}
+table.reference td:first-child{padding-left: 76px;}
+table.reference td a{color: #17BF98;font-size: 14px;display: inline-block;width: 54px;text-align: left;}
+
+table.money-order{margin-bottom: 100px;}
+.more-box{cursor: pointer;}
+.more-text{color: #5A8AB9;font-size: 16px;display: inline-block;margin-right: 20px;}
+.p-more{width: 15px;height: 15px;background: url(/public/images/index/p-more.png) no-repeat center;display: inline-block;position: absolute;right: 0;top: 28px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,468 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>xcoinpay</title>
+    <meta name="keywords" content="FomoXYT官网，FomoXYT，预约活动，区块链">
+    <meta name="description" content="FomoXYT，区块链，交易所，虚拟币交易">
+    <link rel="shortcut icon" href="/public/images/xcoinpay.ico">
+    <link rel="stylesheet" href="/public/css/index/main.css">
+    <link rel="stylesheet" href="/public/css/index/activity.css">
+</head>
+<body>
+    <div class="box">
+        <!--  nav box  -->
+        <?php load_view("inc/pc_nav");?>
+
+        <div class="head">
+
+            <!--  subscribe box  -->
+            <div class="subscribe-box">
+                <div class="sale-box">
+                    <i class="icon-sale"></i>
+                    <p class="activity-text">第<?=$usersys_discount[0]['discount_num']?>期DYX拼多多模式<i class="hot-icon"></i>，现在开始预约！</p>
+                    <p class="profit-text">DYX拼多多模式以交易所现价的85折抢购DYX代币，保本盈利！</p>
+                    <p class="profit-text" style="margin-top: 10px;">每期收益率最低7.06%！每周进行1—3期，胜在稳定！</p>
+                    <p class="usdt-num"><i class="gold-icon"></i><span>目前已预约USDT数量：<?=($total_price+15000)?></span><i class="bar-icon"></i></p>
+                    <a class="im-subscribe" href="javascript:void(0);" id="popup">预约拼团</a>
+                    <p class="introduce-box"><span class="introduce-text" onclick="window.location.href='/index/index'">活动规则详解</span></p>
+                </div>
+            </div>
+        </div>
+
+        <!--  登录后显示，未登录隐藏  -->
+        <div class="after-login">
+            <ul>
+                <li class="af-title">您的预约详情</li>
+                <li class="ov"><p class="appointment fl">账户可用余额：<span id="user_usdt"><?=$userdata['usdt_available_balance']?></span> USDT</p></li>
+                <li class="ov"><p class="appointment fl">本期手动预约USDT：<span id="dis_price"><?=$usersys_discount[0]['dis_price']?></span>个</p><p class="fl"><span class="revoke r-btn" id="dis_price_remove" onclick="remove('sys')">撤销</span></p></li>
+                <li class="ov"><p class="appointment fl">连续预约USDT：<span id="link_price"><?=$usersys_discount[0]['link_price']?></span>个</p><p class="fl"><span class="revoke r-btn" id="link_price_remove" onclick="remove('open')">撤销</span><span class="open r-btn" id="popupx">开启</span></p></li>
+                <li class="ov"><p class="appointment fl">连续预约功能详解：开启连续预约功能后，资金是一直处于预约额度状态，不用每期都手动预约额度。您可以把一部分美金转入连续预约状态，也可以随时撤销。</p></li>
+            </ul>
+        </div>
+
+        <!--  你的预约 -->
+        <div class="subscribe-statistics warp-1200">
+            <p class="su-title">第<?=$usersys_discount[0]['discount_num']?>期85折抢购活动，额度<?=empty($usersys_discount[0]['unlock_price'])?"未放出":"已经放出" ?>，请查看下列数据</p>
+            <div class="you-subscribe">您的预约<span class="online"></span></div>
+            <table class="reference you-s">
+                <tbody>
+                <tr class="th">
+                    <th>期次</th>
+                    <th>锁定交易所价格</th>
+                    <th>锁定85折价格</th>
+                    <th>本期放出额度</th>
+                    <th>折合代币数量</th>
+                    <th>您预约的额度</th>
+                    <th>最终获得额度和代币数量</th>
+                    <th>系统卖出价格(xx usdt)和币数量</th>
+                    <th>最终收益率</th>
+                    <th>状态</th>
+                </tr>
+                <tr>
+                    <?php
+                    $user_activity_price = $usersys_discount[0]['dis_price']+$usersys_discount[0]['link_price'];
+                    $user_num = (float)$total_level*$usersys_discount[0]['lock85_price'];
+                    $user_sys = $user_num - $user_num*0.1;
+                    ?>
+                    <td>第<?=$usersys_discount[0]['discount_num']?>期</td>
+                    <td><?=$usersys_discount[0]['lock_exchange_price']?></td>
+                    <td><?=$usersys_discount[0]['lock85_price']?></td>
+                    <td><?=$usersys_discount[0]['unlock_price']?>usdt</td>
+                    <td><?=$usersys_discount[0]['success_price']?>个</td>
+                    <td><?=$user_activity_price?>个</td>
+                    <td><?=$total_level?>,<?=$user_num?>个</td>
+                    <td><?=$usersys_discount[0]['system_price']?>,<?=$user_sys?>个</td>
+                    <td><?=$usersys_discount[0]['income']?></td>
+                    <td><?=$usersys_discount[0]['status']==1?"已完结":"未完结"?></td>
+                </tr>
+                </tbody>
+            </table>
+            <p style="font-size: 16px;color: #657788;margin: 30px 0;">注：锁定交易所价格和85折价格，以官方放额度瞬间，取流动性和深度最好的交易所的DYX价格为准，进行锁定。</p>
+            <div class="more-box"><i class="icon-time"></i><span class="text-time you-time">您的预约历史记录</span><i class="r-more-icon"></i></div>
+        </div>
+
+
+        <!--  排名计算与额度发放规则  -->
+        <div class="subscribe-statistics warp-1200" style="margin-top: 100px;">
+            <div class="you-subscribe">您的当前排名：第<?=$user_group['level']?>名<span class="online"></span></div>
+            <p class="dsc-rule" style="margin-top: 30px;">排名越高，抢到打折币的几率和额度就越大，排名计算详情如下</p>
+            <table class="reference rank-distribution">
+                <tbody>
+                <tr class="th">
+                    <th>类别</th>
+                    <th>您的排名</th>
+                    <th>您的数量</th>
+                    <th>预计可成功抢购的额度比例</th>
+                </tr>
+                <tr>
+                    <td>个人持币排名</td>
+                    <td><?=$user_order['order']?>名</td>
+                    <td>个人持币<?=$user_order['dyx']?>个</td>
+                    <td rowspan="3" class="rowspan"><?=$total_level?></td>
+                </tr>
+                <tr>
+                    <td>团队持币排名</td>
+                    <td><?=$user_group['level']?>名</td>
+                    <td>团队持币<?=$user_group['money_total']?>个</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!--  您的邀请码  -->
+        <div class="subscribe-statistics warp-1200">
+            <div class="you-subscribe">您的邀请<span class="online"></span></div>
+            <div class="my-code-box">
+                <p class="c-pwd-text" style="margin-top: 16px;">我的邀请码</p>
+                <div class="code-t-box ov"><p class="code-text fl"><input type="text" id="linkVal" value="<?=$userdata['sign']?>" readonly></p><p class="fl copy-btn pr" id="copyBoard"><i class="copy-icon"></i>复制</p></div>
+                <p class="c-pwd-text" style="margin-top: 16px;">邀请链接</p>
+                <div class="code-t-box ov"><p class="code-text fl"><input type="text" id="linkVal2" value="http://www.xcoinpay.io/index/register?invitation_code=<?=$userdata['sign']?>" readonly></p><p class="fl copy-btn pr" id="copyBoard2"><i class="copy-icon"></i>复制</p></div>
+            </div>
+            <div class="warp-1200">
+                <ul class="ov tran-ul">
+                    <li class="fl tran-active"><span class="p-text">一级用户共<?=$oneData['num']?>人/</span><span>共收益xx个DYX/</span><span>xx个USDT</span></li>
+                    <li class="fl"><span class="p-text">二级用户共<?=$twoData['num']?>人/</span><span>共收益xx个DYX/</span><span>xx个USDT</span></li>
+                    <li class="fl"><span class="p-text">三级用户共<?=$threeData['num']?>人/</span><span>共收益xx个DYX/</span><span>xx个USDT</span></li>
+                </ul>
+            </div>
+            <div class="warp-1200 act current">
+                <table class="reference3">
+                    <tbody>
+                    <tr>                                  　　
+                        <th>用户手机号</th>
+                        <th>注册时间</th>
+                        <th>贡献收益（DYX）</th>
+                        <th>贡献收益（USDT）</th>
+                    </tr>
+                    <?php foreach($oneData['data'] as $k=>$v): ?>
+                        <tr>
+                            <td class="td-curr"><?=$v['tel']?></td>
+                            <td><?=$v['create_time']?></td>
+                            <td><?=empty($v['contribution_income'])?"0":$v['contribution_income']*0.1;?></td>
+                            <td>0</td>
+                        </tr>
+                    <?php endforeach; ?>
+                    </tbody>
+                </table>
+            </div>
+            <div class="warp-1200 act" style="margin-top: -16px;">
+                <table class="reference3">
+                    <tbody>
+                    <tr>                                  　　
+                        <th>用户手机号</th>
+                        <th>注册时间</th>
+                        <th>贡献收益（DYX）</th>
+                        <th>贡献收益（USDT）</th>
+                    </tr>
+                    <?php foreach($twoData['data'] as $k=>$v): ?>
+                        <tr>
+                            <td><?=$v['tel']?></td>
+                            <td><?=$v['create_time']?></td>
+                            <td><?=empty($v['contribution_income'])?"0":$v['contribution_income']*0.05;?></td>
+                            <td>0</td>
+                        </tr>
+                    <?php endforeach; ?>
+                    </tbody>
+                </table>
+            </div>
+            <div class="warp-1200 act" style="margin-top: -16px;">
+                <table class="reference3">
+                    <tbody>
+                    <tr>                                  　　
+                        <th>用户手机号</th>
+                        <th>注册时间</th>
+                        <th>贡献收益（DYX）</th>
+                        <th>贡献收益（USDT）</th>
+                    </tr>
+                    <?php foreach($threeData['data'] as $k=>$v): ?>
+                        <tr>
+                            <td><?=$v['tel']?></td>
+                            <td><?=$v['create_time']?></td>
+                            <td><?=empty($v['contribution_income'])?"0":$v['contribution_income']*0.05;?></td>
+                            <td>0</td>
+                        </tr>
+                    <?php endforeach; ?>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+        <!--  官方历史活动  -->
+        <div class="subscribe-statistics warp-1200">
+            <div class="you-subscribe">官方历史活动记录<span class="online"></span></div>
+            <table class="reference official-r">
+                <tbody>
+                <tr class="th">
+                    <th>期次</th>
+                    <th>锁定交易所价格</th>
+                    <th>锁定85折价格</th>
+                    <th>总放出额度</th>
+                    <th>折合代币数量</th>
+                    <th>系统卖出价格(xx usdt)和币数量</th>
+                    <th>最终收益率</th>
+                    <th>状态</th>
+                </tr>
+                <tr>
+                    <td>第<?=$result[0]['discount_num']?>期</td>
+                    <td><?=$result[0]['lock_exchange_price']?></td>
+                    <td><?=$result[0]['lock85_price']?> usdt</td>
+                    <td><?=$result[0]['unlock_price']?> usdt</td>
+                    <td><?=$result[0]['success_price']?> 个代币</td>
+                    <td><?=$result[0]['system_price']?></td>
+                    <td><?=$result[0]['income']?></td>
+                    <td><?=$result[0]['status']==1?"已完结":"未完结"?></td>
+                </tr>
+                </tbody>
+            </table>
+            <div class="more-box"><i class="icon-time"></i><span class="text-time official-time">更多官方历史活动记录</span><i class="r-more-icon"></i></div>
+        </div>
+    </div>
+
+    <!--  立即预约弹窗  -->
+    <div class="popup-box" id="sys">
+        <div class="popup-title">预约DYX</div>
+        <div class="popup-body">
+            <p class="body-t">≈ <span id="token_type">0</span> USDT</p>
+            <input type="number" class="body-money" id="money-num" placeholder="0" value="" step="10">
+            <p class="body-balance">账户余额：<?=$userdata['usdt_available_balance']?> USDT</p>
+            <p class="minmun"><span style="color: red;">*</span>最低预约资金3usdt</p>
+        </div>
+        <div class="popup-foot">
+            <span class="cancel">取消</span>
+            <span class="sure-buy" onclick="reserve('sys')">确定预约</span>
+        </div>
+    </div>
+
+    <!--  开启弹窗  -->
+    <div class="popup-box" id="open">
+        <div class="popup-title">预约DYX</div>
+        <div class="popup-body">
+            <p class="body-t">≈ <span id="token_type2">0</span> USDT</p>
+            <input type="number" class="body-money" id="money-num-open" placeholder="0" value="" step="10">
+            <p class="body-balance">账户余额：<?=$userdata['usdt_available_balance']?> USDT</p>
+            <p class="minmun"><span style="color: red;">*</span>最低预约资金3usdt</p>
+        </div>
+        <div class="popup-foot">
+            <span class="cancel">取消</span>
+            <span class="sure-buy" onclick="reserve('open')">确定预约</span>
+        </div>
+    </div>
+
+    <!--  预约历史记录弹窗  -->
+    <div class="appointment-box">
+        <div class="appointment-title"><span>您的预约历史记录</span><i class="cancel"></i></div>
+        <div class="appointment-body">
+            <table class="appointment-ref">
+                <tbody>
+                <tr class="th">
+                    <th>期次</th>
+                    <th>锁定交易所价格</th>
+                    <th>锁定85折价格</th>
+                    <th>本期放出额度</th>
+                    <th>折合代币数量</th>
+                    <th>您预约的额度</th>
+                    <th>最终获得额度和代币数量</th>
+                    <th>系统卖出价格(xx usdt)和币数量</th>
+                    <th>最终收益率</th>
+                    <th>状态</th>
+                </tr>
+                <?php foreach ($usersys_discount as $key=>$value):?>
+                    <?php if($key != 0):?>
+                        <tr>
+                            <td>第<?=$value['discount_num']?>期</td>
+                            <td><?=$value['lock_exchange_price']?></td>
+                            <td><?=$value['lock85_price']?></td>
+                            <td><?=$value['unlock_price']?></td>
+                            <td><?=$value['success_price']?></td>
+                            <td><?=$value['dis_price']?></td>
+                            <td><?=$value['dis_amount']?></td>
+                            <td><?=$value['dis_system_price']?></td>
+                            <td><?=$value['dis_income']?></td>
+                            <td><?=$value['status']==1?"已完结":"未完结"?></td>
+                        </tr>
+                    <?php endif;?>
+                <?php endforeach; ?>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!--  官方历史预约活动  -->
+    <div class="official-box">
+        <div class="appointment-title"><span>官方历史活动记录</span><i class="cancel"></i></div>
+        <div class="appointment-body">
+            <table class="appointment-ref">
+                <tbody>
+                <tr class="th">
+                    <th>期次</th>
+                    <th>锁定交易所价格</th>
+                    <th>锁定85折价格</th>
+                    <th>总放出额度</th>
+                    <th>折合代币数量</th>
+                    <th>系统卖出价格(xx usdt)和币数量</th>
+                    <th>最终收益率</th>
+                    <th>状态</th>
+                </tr>
+                <?php foreach($result as $key=>$value): ?>
+                    <tr>
+                        <td>第<?=$value['discount_num']?>期</td>
+                        <td><?=$value['lock_exchange_price']?></td>
+                        <td><?=$value['lock85_price']?> usdt</td>
+                        <td><?=$value['unlock_price']?> usdt</td>
+                        <td><?=$value['success_price']?> 个代币</td>
+                        <td><?=$value['system_price']?></td>
+                        <td><?=$value['income']?></td>
+                        <td><?=$value['status']==1?"已完结":"未完结"?></td>
+                    </tr>
+                <?php endforeach; ?>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+    <script type="text/javascript" src="/public/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/public/js/layer.js" charset="utf-8"></script>
+    <script>
+        //预约
+        function reserve(type) {
+            var user_total = "<?=$userdata['usdt_available_balance']?>";
+            var usdt = 0;
+            var dis_price = 0;
+            if(type == 'sys'){
+                usdt = parseInt($("#money-num").val());
+                if(usdt < 3){
+                    layer.msg('预约金额不能小于3枚');
+                    return false;
+                }
+                dis_price =  parseInt($("#dis_price").text());
+            }else{
+                usdt = parseInt($("#money-num-open").val());
+                dis_price =  parseInt($("#link_price").text());
+                if(usdt < 3){
+                    layer.msg('预约金额不能小于3枚');
+                    return false;
+                }
+            }
+            if(usdt > user_total){
+                layer.msg('余额不足请充值', {
+                    time: 20000, //20s后自动关闭
+                    btn: ['充值', '取消'],
+                    yes:function () {
+                        window.location.href='/user/personalcenter';
+                    }
+                });
+            }else{
+                var data = user_total - usdt*0.85;
+                var num = parseInt('<?=$usersys_discount[0]['discount_num']?>');
+                usdt = dis_price + usdt;
+                $.post("/index/activityajax",{data:data,usdt:usdt,type:type,dis:dis_price,num:num},function (msg) {
+                    if(msg.code == 1){
+                        layer.msg('预约成功');
+                        setTimeout(function () {
+                            window.location.href = location.href
+                        },1000);
+
+                    }else{
+                        layer.msg('预约失败');
+                    }
+                },"json");
+            }
+        }
+        //撤销
+        function remove(type){
+            var user_total = parseInt($("#user_usdt").text());
+            var dis_price = 0;
+            if(type == 'sys'){
+                dis_price =  parseInt($("#dis_price").text());
+            }else{
+                dis_price =  parseInt($("#link_price").text());
+            }
+            var usdt = user_total + dis_price*0.85;
+            var num = parseInt('<?=$usersys_discount[0]['discount_num']?>');
+            $.post("/index/activityajax",{data:usdt,usdt:0,type:type,dis:dis_price,num:num},function (msg) {
+                if(msg.code == 1){
+                    layer.msg('撤销成功');
+                    setTimeout(function () {
+                        window.location.href = location.href
+                    },1000);
+                }else{
+                    layer.msg('撤销失败');
+                }
+            },"json");
+        }
+        $(function(){
+            //立即预约
+            $("#popup").click(function(){
+                $("#sys").fadeIn();
+            });
+            $(".cancel").click(function(){
+                $("#sys").fadeOut();
+            });
+            //立即预约
+            $("#popupx").click(function(){
+                $("#open").fadeIn();
+            });
+            $(".cancel").click(function(){
+                $("#open").fadeOut();
+            });
+            //您的预约历史记录
+            $(".you-time").click(function(){
+                $(".appointment-box").fadeIn();
+            });
+            $(".cancel").click(function(){
+                $(".appointment-box").fadeOut();
+            });
+            //官方历史活动
+            $(".official-time").click(function(){
+                $(".official-box").fadeIn();
+            });
+            $(".cancel").click(function(){
+                $(".official-box").fadeOut();
+            });
+            //键入其他金额
+            $(document).on("keyup",'.body-money',function(){
+                //$(".balance-box").find("p").removeClass('b-active');
+                let usdt = $("#money-num").val()*0.85;
+                $("#token_type").html(usdt);
+            });
+
+            $(document).on("keyup",'.body-money',function(){
+                //$(".balance-box").find("p").removeClass('b-active');
+                let usdt = $("#money-num-open").val()*0.85;
+                $("#token_type2").html(usdt);
+            });
+
+            //邀请码复制
+            $("#copyBoard").click(function(){
+                var Url1 = $("#linkVal");
+                Url1.select();//选择对象
+                document.execCommand("Copy"); // 执行浏览器复制命令
+                layer.msg("已复制好，去粘贴吧");
+            });
+
+            //邀请链接复制
+            $("#copyBoard2").click(function(){
+                var Url1 = $("#linkVal2");
+                Url1.select();//选择对象
+                document.execCommand("Copy"); // 执行浏览器复制命令
+                layer.msg("已复制好，去粘贴吧");
+            });
+
+            $(".tran-ul li").click(function (){
+                //获取点击的元素给其添加样式，讲其兄弟元素的样式移除
+                $(this).addClass("tran-active").siblings().removeClass("tran-active");
+                //获取选中元素的下标
+                var index = $(this).index();
+                $(".act").eq(index).addClass("current").siblings().removeClass("current");
+            });
+
+
+        });
+    </script>
+</body>
+</html>

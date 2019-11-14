@@ -1,0 +1,66 @@
+<?php
+$user = !empty($_SESSION['user'])?$_SESSION['user']:"";
+$urltype = !empty($_GET['cut'])?$_GET['cut']:"personalcenter";
+?>
+<div class="nav-bar">
+    <div class="main">
+        <a href="/website/index" class="logo">云翻</a>
+        <div class="fr">
+            <ul class="nav-btn fl">
+                <li class="fl fomoxyt-li nav-li pr">
+                    <!--<i class="fomo-logo fl"></i>-->
+                    <a class="fl nav-li-a <?php if($urltype == 'fomodyx'){echo 'pactive';} ?>" href="/website/fomodyx?cut=fomodyx">FOMO拍卖DYX</a>
+                    <!--<span class="drop-icon"></span>
+                    <ul class="fomo-ul">
+                        <li class="en"><a href="javascript:alert('暂未开放');" class="creamy-white">FOMOXYT</a></li>
+                        <li class="en"><a href="javascript:alert('暂未开放');" class="creamy-white">FOMODYX</a></li>
+                    </ul>-->
+                </li>
+                <li class="fl discount-li nav-li pr">
+                    <!--<i class="ba-icon fl"></i>-->
+                    <a class="fl nav-li-a <?php if($urltype == 'bpactive'){echo 'pactive';} ?>" href="/website/<?=empty($user)?"bpactive":"bpactive"?>?cut=bpactive">霸屏行动</a>
+                    <i class="hot-icon-small"></i>
+                </li>
+<!--                <li class="fl discount-li nav-li pr">-->
+                    <!--<i class="offering-icon fl"></i>-->
+<!--                    <a class="fl nav-li-a --><?php //if($urltype == 'offering'){echo 'pactive';} ?><!--" href="/website/--><?//=empty($user)?"offering":"offering"?><!--?cut=offering">DYX群主额度福利</a>-->
+                    <!--<i class="hot-icon-small"></i>-->
+<!--                </li>-->
+                <li class="fl discount-li nav-li pr">
+                    <!--<i class="discount-icon-small fl"></i>-->
+                    <a class="fl nav-li-a <?php if($urltype == 'index'){echo 'pactive';} ?>" href="javascript:void(0);">DYX拼多多模式</a>
+                    <i class="hot-icon-small"></i>
+                    <span class="drop-icon"></span>
+                    <ul class="dis-ul">
+                        <li class="en"><a href="/index/index?cut=index" class="creamy-white">规则介绍</a></li>
+                        <li class="en"><a href="/index/activity?cut=index" class="creamy-white">参与活动</a></li>
+                        <li class="en"><a href="/index/ranklist?cut=index" class="creamy-white">DYX持币排名排行榜</a></li>
+<!-- /index/activity-->
+                    </ul>
+                </li>
+                <li class="fl discount-li nav-li pr">
+                    <!--<i class="offering-icon fl"></i>-->
+                    <a class="fl nav-li-a <?php if($urltype == 'managemoney'){echo 'pactive';} ?>" href="/website/managemoney?cut=managemoney">DYX理财</a>
+                    <i class="hot-icon-small"></i>
+                </li>
+            </ul>
+            <?php if(empty($user)):?>
+                <ul class="login-box">
+                    <li><a href="/index/login">登录</a></li>
+                    <li class="select"><a href="/index/register">注册</a></li>
+                </ul>
+            <?php else: ?>
+                <!--  登录后状态  -->
+                <div class="logged-in">
+                    <span onclick="window.location.href='/user/personalcenter'">您好，<?=$user?>【个人中心】</span>
+                    <span class="drop-icon"></span>
+                    <ul class="user-item">
+                        <li class="en"><a href="/index/logout" class="creamy-white">退出</a></li>
+                    </ul>
+                </div>
+            <?php endif; ?>
+        </div>
+    </div>
+</div>
+
+<div style="position: fixed;top: 0;right: 0;z-index: 999"><script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? "https://" : "http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1278028697'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s9.cnzz.com/z_stat.php%3Fid%3D1278028697%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script></div>

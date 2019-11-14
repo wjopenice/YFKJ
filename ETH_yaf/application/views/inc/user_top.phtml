@@ -1,0 +1,20 @@
+<div class="nav-bar">
+    <div class="main">
+        <a href="/website/index" class="logo">云翻</a>
+        <?php if(empty($user)):?>
+            <ul class="login-box">
+                <li><a href="/index/login">登录</a></li>
+                <li class="select"><a href="/index/register">注册</a></li>
+            </ul>
+        <?php else: ?>
+            <!--  登录后状态  -->
+            <div class="logged-in">
+                <span onclick="window.location.href='/index/personalcenter'">您好，<?=$user?>【个人中心】</span>
+                <span class="drop-icon"></span>
+                <ul class="user-item">
+                    <li class="en"><a href="/index/logout" class="creamy-white">退出</a></li>
+                </ul>
+            </div>
+        <?php endif; ?>
+    </div>
+</div>

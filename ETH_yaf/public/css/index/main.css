@@ -1,0 +1,97 @@
+@charset "utf-8";
+fieldset, hr, img{border: 0;}
+button, input, input[type=button]{-webkit-appearance: none;outline: 0;}
+a, body, html{-webkit-touch-callout: none;}
+a, a:hover{text-decoration: none;}
+:focus, a, a:focus, button, input{outline: 0;}
+body, html{-webkit-tap-highlight-color: transparent;-webkit-overflow-scrolling: touch;-moz-overflow-scrolling: touch;-o-overflow-scrolling: touch;overflow-scrolling: touch;}
+.clear, .clearfix:after{clear: both}
+.clearfix, .zoom{zoom: 1}
+.clear, .clearfix:after{overflow: hidden}
+.clearfix:before, .clearfix:after{content: " ";display: table;clear: both}
+article, aside, blockquote, body, button, code, dd, details, div, dl, dt, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, hr, input, legend, li, menu, nav, ol, p, pre, section, td, textarea, th, ul{margin: 0;padding: 0}
+body, button, input, select, textarea{font-family:"Microsoft Yahei", sans-serif;color: #666;background-color: #fff;}
+h1, h2, h3, h4, h5, h6{font-weight: 400;}
+textarea{resize: none;}
+table{border-collapse: collapse;border-spacing: 0;}
+th{text-align: inherit;}
+img{vertical-align: middle;}
+abbr, acronym{border: none;font-variant: normal;}
+del{text-decoration: line-through;}
+hr{height: 1px;background-color: #D9D9D9;}
+li, ol, ul{list-style: none;}
+input, select, textarea{font-family: inherit;font-size: inherit;font-weight: inherit;}
+button, input{border: 0;background: 0;}
+a{color: #666;-webkit-tap-highlight-color: rgba(0, 0, 0, .1);}
+em, i{font-style: normal;}
+.f0{font-size: 0;}
+body, html{font-size: 16px;line-height: 1;margin: 0 auto;min-width: 1170px;}
+.fl{float: left;}
+.fr{float: right;}
+.ov{overflow: hidden;}
+.pr{position: relative;}
+.warp-1200{width: 1170px;margin: 0 auto;}
+::-webkit-scrollbar{display:none;}
+
+/*  head  */
+.nav-bar{position: relative;top: 0;left: 0;width: 100%;z-index: 999;height: 100px;background: #091928;}
+.main{width: 1170px;position: absolute;left: 50%;top: 23.5px;z-index: 100;margin-left: -585px;}
+.logo{display: block;float: left;line-height: 54px;padding-left: 223px;text-indent: -9999px;background: url(/public/images/index/logo.png) no-repeat left top/223px 54px;}
+.login-box{float: right;margin-top: 7px;}
+.login-box li {position: relative;display: inline-block;margin-left: 14px;width: 102px;height: 36px;line-height: 36px;text-align: center;}
+.login-box li a{display: block;color: #fff;font-size: 16px;font-weight: 400;}
+.login-box .select a{color: #17BF98;border: 1px solid #17BF98;border-radius: 19px;}
+
+/*  logged in  */
+.logged-in{float: right;color: #fff;font-size:16px;line-height: 36px;position: relative;cursor: pointer;margin-top: 9px;}
+.drop-icon{width: 12px;height: 36px;background: url(/public/images/index/dropdown_w.png) no-repeat center;display: inline-block;float: right;}
+.user-item{width: 100px;position: absolute;right: 4px;top: 36px;z-index: 100;background-color: #f3f4f8;line-height: 30px;text-align: center;overflow: hidden;display: none;}
+.user-item li{line-height: 30px;border-top: #f3f4f8 1px solid;margin-top: -1px;padding: 0 12px;}
+.user-item a{color: #6a76b5;font-size: 14px;display: block;}
+.logged-in:hover .user-item{display: block;}
+.user-item a:hover{color: #4e5b85;}
+.user-item li:hover{background: #c7cce6;}
+
+/*  个人中心公共导航  */
+.per-c-nav{background: #0E2648;}
+.per-c-nav .warp-1200{width: 1170px;margin: 0 auto;border-bottom: 1px solid #4e6b94;}
+.per-c-nav ul li a{display: inline-block;padding: 40px;font-size: 18px;color: #5580A9;font-weight: 400;}
+.per-c-nav ul .per-active .per-online{height: 2px;width: 26px;display: inline-block;position: absolute;left: 50%;margin-left: -13px;background: #fff;top: 70px;}
+.per-c-nav ul .per-active a{color: #fff;}
+
+/*  打折活动显示隐藏  */
+.nav-btn{margin-top: 9px;}
+.nav-btn .nav-li{margin-right: 28px;height: 36px;line-height: 36px;}
+.nav-btn .nav-li .nav-li-a{display: inline-block;color: #fff;font-size: 14px;}
+.nav-btn .nav-li .pactive{border-bottom: 1px solid #b5b5b5;}
+.discount-li{margin-right: 0;}
+.fomo-logo{width: 21px;height: 36px;background: url(/public/images/website/fomoxyt-logo-small.png) no-repeat center;display: inline-block;margin-right: 6px;}
+.discount-icon-small{width: 21px;height: 36px;background: url(/public/images/website/discount-icon.png) no-repeat center;display: inline-block;margin-right: 6px;background-size: 16px;}
+.hot-icon-small{width: 21px;height: 21px;background: url(/public/images/website/hot-icon.png) no-repeat center;display: inline-block;vertical-align: top;background-size: 12px;}
+.dis-ul{width: 151px;position: absolute;right: 4px;top: 34px;z-index: 100;background-color: #f3f4f8;line-height: 30px;text-align: left;display: none;overflow: hidden;}
+.discount-li .en{line-height: 30px;border-top: #f3f4f8 1px solid;margin-top: -1px;padding: 0 12px;}
+.discount-li .creamy-white{color: #6a76b5;font-size: 14px;display: block;}
+.discount-li:hover .dis-ul{display: block;}
+.discount-li .creamy-white:hover{color: #4e5b85;}
+.discount-li .en:hover{background: #c7cce6;}
+.offering-icon{width: 18px;height: 36px;background: url(/public/images/website/offering-icon.png) no-repeat center;display: inline-block;margin-right: 6px;}
+.ba-icon{width: 18px;height: 36px;background: url(/public/images/website/ba-icon.png) no-repeat center;display: inline-block;margin-right: 6px;}
+
+.fomo-ul{width: 100px;position: absolute;right: 4px;top: 34px;z-index: 100;background-color: #f3f4f8;line-height: 30px;text-align: center;display: none;overflow: hidden;}
+.fomo-ul .en{line-height: 30px;border-top: #f3f4f8 1px solid;margin-top: -1px;padding: 0 12px;}
+.fomo-ul .creamy-white{color: #6a76b5;font-size: 14px;display: block;}
+.fomoxyt-li:hover .fomo-ul{display: block;}
+.fomoxyt-li .creamy-white:hover{color: #4e5b85;}
+.fomoxyt-li .en:hover{background: #c7cce6;}
+
+
+/*  分页样式  */
+.page-box{text-align: center;margin-bottom: 100px;}
+.page-box a{border: solid 1px #e6e6e6;border-right: none;display: inline-block;text-decoration: none;padding: 10px 20px;height: 20px;line-height: 20px;font-size: 14px;color: #666;}
+.page-box ul{overflow: hidden;display: inline-block;}
+.page-box ul li{float: left;}
+
+
+
+
+

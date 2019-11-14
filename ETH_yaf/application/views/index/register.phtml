@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>xcoinpay</title>
+    <meta name="keywords" content="FomoXYT官网，FomoXYT，预约活动，区块链">
+    <meta name="description" content="FomoXYT，区块链，交易所，虚拟币交易">
+    <link rel="shortcut icon" href="/public/images/xcoinpay.ico">
+    <link rel="stylesheet" href="/public/css/index/main.css">
+    <link rel="stylesheet" href="/public/css/index/register.css">
+</head>
+<body>
+    <div class="box">
+        <!--  head  -->
+        <div class="nav-bar">
+            <div class="main">
+                <a href="/website/index" class="logo">云翻</a>
+                <ul class="login-box">
+                    <li><a href="/index/login">登录</a></li>
+                    <li class="select"><a href="/index/register">注册</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!--  form  -->
+        <div class="form-box">
+            <div class="form-warp">
+                <i class="login-logo"></i>
+                <form class="data-box" action="/index/register" method="post">
+                    <div><input id="username" type="text" placeholder="请输入手机号" name="username" autofocus value=""></div>
+                    <div><input type="password" id="pwd" placeholder="请输入密码" name="userpass"  value=""></div>
+                    <div><input type="password" id="repwd" placeholder="请再次输入密码" value=""></div>
+                    <div class="verification-box">
+                        <input type="number" id="codesms" class="verification fl" placeholder="请输入短信验证码" ceb0000817f>
+                        <button type="button" class="ver-code feachBtn fr" id="feachBtn">获取验证码</button>
+                    </div>
+                    <div><input type="text" id="sign" placeholder="请输入邀请码" name="sign" value="<?=$code?>"></div>
+                    <div class="forget-box">
+                        <img class="agreement-btn" src="/public/images/index/unchecked-btn.png" alt="" id="remember">
+                        <a class="num-register" href="javascript:void(0);">我已阅读并接受<span class="user-agreement">《用户协议》</span></a>
+                    </div>
+                    <input id="hidden" type="hidden" value="0" />
+                    <button id="btn" class="submit-btn" type="btn" disabled >注册</button>
+                    <p class="have-num">已有账号，<a class="right-login" href="/index/login">马上登录</a></p>
+                </form>
+            </div>
+        </div>
+
+        <!--  cp  -->
+        <!--<div class="cp"><p>2019 © FomoXYT.com 声明官方不参与活动币   合约Github开源代码  开发者@狗狗币微博  平台微信  测试</p></div>-->
+    </div>
+
+
+    <script type="text/javascript" src="/public/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/public/js/layer.js" charset="utf-8"></script>
+    <script>
+        $(function(){
+            // 记住密码功能
+            var remFlag=false;
+            $(".agreement-btn").click(function(){
+                remFlag=!remFlag;
+                if(remFlag){
+                    $("#hidden").val(1);
+                    $("#remember").attr("src", "/public/images/index/checked-btn.png");
+                    $("#btn").attr("style","background: #17BF98;border: 1px solid #17BF98;");
+                    $("#btn").removeAttr("disabled");
+                }else{
+                    $("#hidden").val(0);
+                    $("#remember").attr("src", "/public/images/index/unchecked-btn.png");
+                    $("#btn").attr("style","background: #17BF98;border: 1px solid #17BF98;");
+                    $("#btn").attr("disabled","disabled");
+                }
+            });
+
+            //点击获取验证码和倒计时
+            $('#feachBtn').click(function() {
+                let user = $("#username").val();
+                let exp = /^1[3-9]\d{9}$/;
+                if(exp.test(user)){
+                    let count = 60;
+                    const countDown = setInterval(() => {
+                        if (count === 0) {
+                            $('.feachBtn').text('重新发送').removeAttr('disabled');
+                            $('.feachBtn').css({
+                                background: '#0faf8a',
+                                color: '#fff',
+                            });
+                            clearInterval(countDown);
+                        } else {
+                            $('.feachBtn').attr('disabled', true);
+                            $('.feachBtn').css({
+                                background: '#d8d8d8',
+                                color: '#707070',
+                            });
+                            $('.feachBtn').text('重新获取'+'('+count+')');
+                        }
+                        count--;
+                    }, 1000);
+                    $.post("/index/telcode",{tel:user},function (msg) {
+                        layer.msg(msg.message);
+                    },"json");
+                }else{
+                    layer.msg('请输入正确的手机号');
+                    return false;
+                }
+            });
+
+            $("#codesms").change(function () {
+                let tel = $("#username").val();
+                let codesms = $(this).val();
+                $.post("/index/ajaxsms",{tel:tel,lockcode:codesms},function (msg) {
+                    if(msg.code == 0){
+                        layer.msg(msg.message);
+                        $(".verification-box").remove();
+                    }else{
+                        layer.msg(msg.message);
+                    }
+                },"json");
+            });
+
+            $("#btn").click(function () {
+                let tel = $("#username").val();
+                if(tel == ""){
+                    layer.msg('手机号不能为空');
+                    return false;
+                }
+                let pwd = $("#pwd").val();
+                if(pwd == ""){
+                    layer.msg('密码不能为空');
+                    return false;
+                }
+                let repwd = $("#repwd").val();
+                if(pwd != repwd){
+                    layer.msg('两次密码不一致');
+                    return false;
+                }
+                let sign = $("#sign").val();
+                if(pwd == ""){
+                    layer.msg('邀请码不能为空');
+                    return false;
+                }
+                $(".data-box").submit();
+            });
+        })
+
+
+    </script>
+</body>
+</html>

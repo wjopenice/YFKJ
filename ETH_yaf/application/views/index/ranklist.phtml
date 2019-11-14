@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>xcoinpay</title>
+    <meta name="keywords" content="FomoXYT官网，FomoXYT，预约活动，区块链">
+    <meta name="description" content="FomoXYT，区块链，交易所，虚拟币交易">
+    <link rel="shortcut icon" href="/public/images/xcoinpay.ico">
+    <link rel="stylesheet" href="/public/css/index/main.css">
+    <link rel="stylesheet" href="/public/css/index/ranklist.css">
+</head>
+<body>
+    <div class="box">
+
+        <!--  head  -->
+        <?php load_view("inc/pc_nav");?>
+
+        <!--  nav  -->
+        <div class="transaction-box">
+            <div class="warp-1200">
+                <ul class="tran-ul">
+                    <li>DYX持币排名排行榜</li>
+                </ul>
+                <div class="tran-b">
+                    <!--  定存记录  -->
+                    <div class="record-box">
+                        <table class="reference">
+                            <tbody>
+                            <tr>
+                                <th>综合排名</th>　　
+                                <th>用户ID</th>
+                                <th>个人持币数量与排名</th>
+                                <th>团队持币数量与排名（三级内）</th>
+                            </tr>
+                            <?php foreach($arrdata as $k=>$v):?>
+                            <tr>
+                                <?php
+                                $page = isset($_GET['page'])?$_GET['page']:1;
+                                $top =  (($page-1)*10)+($k+1);
+                                $userinfo = get_user_order($v['guid']);
+                                ?>
+                                <td>第<?=$top?>名</td>
+                                <td class="phonetd"><?=substr_replace($userinfo['tel'],"****",3,4)?></td>
+                                <td><?=$userinfo['dyx']?>DYX，第<?=$userinfo['order']?>名</td>
+                                <td><?=$v['money_total']?>DYX，第<?=$top?>名</td>
+                            </tr>
+                            <?php endforeach; ?>
+                            </tbody>
+                        </table>
+
+                    </div>
+                    <div class="page-box">
+                        <?=$showstr?>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="/public/js/jquery.min.js"></script>
+</body>
+</html>

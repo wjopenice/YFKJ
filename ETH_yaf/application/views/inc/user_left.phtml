@@ -1,0 +1,21 @@
+<?php
+$urltype = !empty($_GET['type'])?$_GET['type']:"personalcenter";
+?>
+<div class="per-c-nav">
+    <div class="warp-1200">
+        <ul class="ov">
+            <li class="fl pr <?php if($urltype == 'personalcenter'){echo 'per-active';} ?>"><a href="/user/personalcenter?type=personalcenter">资金管理</a><span class="per-online"></span></li>
+            <?php if(get_new_user($_SESSION['user'])== 0): ?>
+                <li class="fl pr <?php if($urltype == 'olduser'){echo 'per-active';} ?>"><a href="/user/olduser?type=olduser">硬件钱包与理财信息</a><span class="per-online"></span></li>
+            <?php else: ?>
+                <li class="fl pr <?php if($urltype == 'olduser'){echo 'per-active';} ?>"><a href="/user/olduser?type=olduser">硬件钱包与理财信息</a><span class="per-online"></span></li>
+            <?php endif; ?>
+            <!--<li class="fl pr"><a href="/index/partnerslogin">合作方</a><span class="per-online"></span></li>-->
+            <li class="fl pr <?php if($urltype == 'xinbaping'){echo 'per-active';} ?>"><a href="/user/xinbaping?type=xinbaping">领取任务</a><span class="per-online"></span></li>
+            <li class="fl pr <?php if($urltype == 'youinvitation'){echo 'per-active';} ?>"><a href="/user/youinvitation?type=youinvitation">我的邀请</a><span class="per-online"></span></li>
+            <li class="fl pr <?php if($urltype == 'userad'){echo 'per-active';} ?>"><a href="/user/userad?type=userad">基本信息</a><span class="per-online"></span></li>
+            <li class="fl pr <?php if($urltype == 'flashbuy'){echo 'per-active';} ?>"><a href="/user/flashbuy?type=flashbuy">币闪购</a><span class="per-online"></span></li>
+        </ul>
+    </div>
+</div>
+<!--/user/olduser?type=olduser-->

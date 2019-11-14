@@ -1,0 +1,265 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>xcoinpay</title>
+    <meta name="keywords" content="FomoXYT官网，FomoXYT，预约活动，区块链">
+    <meta name="description" content="FomoXYT，区块链，交易所，虚拟币交易">
+    <link rel="shortcut icon" href="/public/images/xcoinpay.ico">
+    <link rel="stylesheet" href="/public/css/index/main.css">
+    <link rel="stylesheet" href="/public/css/index/index.css">
+</head>
+<body>
+    <div class="box">
+        <!--  head  -->
+        <?php load_view("inc/pc_nav");?>
+
+        <!--  swiper后期轮播  -->
+        <div class="swiper-box">
+            <p><i class="icon-sale"></i></p>
+            <p class="index-text"></p>
+            <p class="profit-text">DYX拼多多模式以交易所现价的85折抢购DYX代币，保本盈利！</p>
+            <p class="profit-text" style="margin-top: 10px;">每期收益率最低7.06%！每周进行1—3期，胜在稳定！</p>
+        </div>
+
+        <!--  Technological process  -->
+        <div class="flow-box">
+            <p><i class="flow-icon"></i></p>
+            <p class="flow-text">参与流程</p>
+            <div class="flow-chart">
+                <div class="flow-one pr-online1"><i class="block-icon">1</i><p class="block-text">用户预约85折购买打折币</p><span class="online1"></span></div>
+                <div class="flow-one pr-online2"><i class="block-icon">2</i><p class="block-text">官方确定本期放出的额度、锁定打折价</p><span class="online2"></span></div>
+                <div class="flow-one pr-online3"><i class="block-icon">3</i><p class="block-text">本期预约结束</p><span class="online3"></span></div>
+                <div class="flow-one"><i class="block-icon">4</i><p class="block-text">下期预约开始</p></div>
+            </div>
+        </div>
+
+        <!--  Successful Purchase  -->
+        <div class="successful-box">
+            <p><i class="successful-icon"></i></p>
+            <p class="flow-text">当您成功购买打折币后</p>
+            <div class="explain">
+                <p>10%代币立即解锁，您可以提现到交易所卖掉，这部分盈利率为<span class="succ-color">17.65%</span>。</p>
+                <p>90%的代币由系统api卖掉，卖掉后结算给您USDT，这部分盈利率为<span class="succ-color">5.88%</span>。</p>
+            </div>
+        </div>
+
+        <!--  Capital-guaranteed mechanism  -->
+        <div class="successful-box">
+            <p><i class="money-icon"></i></p>
+            <p class="flow-text">保本机制</p>
+            <div class="explain"><p>如果价格下跌，在45天之内无法通过api接口卖出，那么系统将退还您投入的本金。</p></div>
+        </div>
+
+        <!--  Ranking mechanism  -->
+        <div class="successful-box">
+            <p><i class="rank-icon"></i></p>
+            <p class="flow-text">DYX持币排名制度</p>
+            <div class="explain">
+                <p>持有的DYX代币越多，排名越高，抢到打折币的额度越大。</p>
+                <p>持有的DYX代币越少，排名越低，抢到打折币的额度也就越小。</p>
+                <p>建议您预约拼团购买打折币之后，马上通过邀请好友参加拼团，以提升您的排名，这样您抢到打折币的额度就越大。</p>
+            </div>
+        </div>
+        <!--  Immediate participation  -->
+        <div class="immediate"><a class="partake" href="/index/activity">立即参与</a></div>
+        <!--  排名计算与额度发放规则  -->
+        <div class="subscribe-statistics" style="margin-top: 100px;">
+            <!--<div class="rank"><p class="rank-title">排名计算与额度发放规则</p></div>
+            <p class="rule-text">排名计算规则</p>
+            <i class="icon-down"></i>-->
+            <p class="dsc-rule">排名越高，抢到打折币的几率和额度就越大，排名计算详情如下</p>
+            <p class="you-rank-list">您的当前排名：暂无数据</p>
+            <!--<table class="reference rank-distribution">
+                <tbody>
+                <tr class="th">
+                    <th>类别</th>
+                    <th>您的排名</th>
+                    <th>您的数量</th>
+                    <th>预计可成功抢购的额度比例：5%（根据您当前的排名动态变化） </th>
+                </tr>
+                <tr>
+                    <td>个人持币排名</td>
+                    <td><?/*=$user_order*/?>名</td>
+                    <td>个人持币<?/*=$user_usdt*/?>个</td>
+                    <td rowspan="3" class="rowspan">例如本期额度100个币，按照当前排名，您可以抢到5个币，排名越高，抢到的越多</td>
+                </tr>
+                <tr>
+                    <td>团队持币排名</td>
+                    <td><?/*=$group_num*/?>名</td>
+                    <td>团队持币<?/*=$user_team_usdt*/?>个</td>
+                </tr>
+                <tr>
+                    <td>邀请抢购排名</td>
+                    <td><?/*=$inviteid_num*/?>名</td>
+                    <td>本期您目前邀请了<?/*=$user_invite_num*/?>个人参与了抢购活动</td>
+                </tr>
+                </tbody>
+            </table>-->
+            <table class="reference rank-distribution" style="margin-bottom: 140px;">
+                <tbody>
+                <tr class="th">
+                    <th>类别</th>
+                    <th>您的排名</th>
+                    <th>您的数量</th>
+                   <!-- <th>预计可成功抢购的额度比例：暂无数据（根据您当前的排名动态变化） </th>-->
+                </tr>
+                <tr>
+                    <td>个人持币排名</td>
+                    <td>暂无数据</td>
+                    <td>暂无数据</td>
+                    <!--<td rowspan="2" class="rowspan">暂无数据</td>-->
+                </tr>
+                <tr>
+                    <td>团队持币排名</td>
+                    <td>暂无数据</td>
+                    <td>暂无数据</td>
+                </tr>
+               <!-- <tr>
+                    <td>邀请抢购排名</td>
+                    <td>暂无数据</td>
+                    <td>暂无数据</td>
+                </tr>-->
+                </tbody>
+            </table>
+        </div>
+
+        <!--  额度分配与发放规则  -->
+        <!--<div class="subscribe-statistics">
+            <div>
+                <p class="rule-text">额度分配与发放规则</p>
+                <i class="icon-down"></i>
+            </div>
+            <table class="reference distribution">
+                <tbody>
+                <tr class="th">
+                    <th>类别</th>
+                    <th>分配额度</th>
+                </tr>
+                <tr>
+                    <td>个人持币排名</td>
+                    <td>30%</td>
+                </tr>
+                <tr>
+                    <td>团队持币排名（三级内）</td>
+                    <td>30%</td>
+                </tr>
+                <tr>
+                    <td>邀请抢购排名（三级内）</td>
+                    <td>30%</td>
+                </tr>
+                <tr>
+                    <td>普通用户</td>
+                    <td>10%</td>
+                </tr>
+                </tbody>
+            </table>
+            <div class="more-box" onclick="window.location.href='/index/ranklist'"><span class="text-time r-list">查看排名排行榜</span></div>
+        </div>-->
+
+        <!--  注释  -->
+        <!--<div class="subscribe-statistics note-box">
+            <p class="note">
+                例如：本期额度100个币，分配到个人持币排名、团队持币排名、邀请抢购排名的都是30个币，普通用户10个币。
+                个人持币排名一共有4个人，分别是A B C D，排名分别是1 2 3 4 ，那么1+2+3+4=10，A分到10/1=10个，B分到10除以2=5个，C分到10除以3=3.33个，D分到10除以4=2.5个。假设A和B，没有出那么多的预约资金，那么本来应该分配给A和B的额度，就往下延伸分配，分配给C和D。
+            </p>
+        </div>-->
+
+
+        <!--  Detailed Rules  -->
+        <div class="detail-rule">
+            <i class="detail-icon">活动详细规则</i>
+            <div class="detail-big">
+                <div class="detail-small">
+                    <div class="detail-text">
+                        <p>
+                            <span></span>
+                            1、预约活动开始后，您可以预约以交易所价格的85折购买打折币，最终官方会根据用户的预约数据，来确定本期发放的打折币额度（每期活动官方放出的打折币额度都会不同），同时锁定打折价，用户提前预约的本金将以锁定打折价进行置换。
+                        </p>
+                        <p>例如：第一期有100人，每人预约了100usdt的额度，总共10000usdt的额度，实际官方放出4000usdt的额度，所以理论上每个人得到40usdt的购买额度，系统将退还每个人多余的60usdt。
+                            而放出额度时，代币在交易所的价格为1usdt，那么锁定打折价为0.85usdt，用户提前预约的本金将以0.85usdt/枚的价格进行置换。</p>
+                        <p style="margin-bottom: 10px;">
+                            <span></span>
+                            2、置换后，10%的代币立刻解锁，这10%的代币可以立刻提现到交易所卖掉。90%的代币将锁定在官网内，等交易所的价格和深度达到条件的时候，通过api接口自动在交易所卖出，以锁定交易所价格为卖出价，卖出后，系统会抽取10%的资金，作为官方盈利，其余资金会结算给您。
+                        </p>
+                        <p style="margin-bottom: 10px;">例如：放出额度的时候，锁定交易所价格1代币=1usdt，锁定打折价1代币=0.85usdt的价格，您购买了100个代币，花费85usdt，您马上可以提现走10个代币，以1代币=1usdt的价格，在交易所卖出，这部分共赚取1.5usdt，这部分盈利率为17.65%。
+                            剩下的90个代币将由系统在锁定交易所价格1代币=1usdt时候进行卖出，卖出得到90usdt，而系统会抽取卖出盈利资金的10%共计9usdt，作为官方盈利，最终结算给您90-9=81个usdt，这部分您共赚取4.5usdt，这部分盈利率为5.88%。 您总共赚取1.5usdt+4.5usdt=6usdt，整体盈利率为7.06%。
+                        </p>
+                        <p style="margin-bottom: 4px;">备注：</p>
+                        <p style="margin-bottom: 4px;">* 这90%的代币固定以每期的锁定交易所价格为卖出价</p>
+                        <p>* 这90%的代币结算周期一般为1~7天</p>
+                        <p>
+                            <span></span>
+                            3、所以每期的打折活动，收益率固定为最低7.06%。
+                        </p>
+                        <p>
+                            <span></span>
+                            4、如果价格下跌，在45天之内无法通过api接口卖出，那么系统将退还您投入的本金。
+                        </p>
+                        <p>
+                            <span></span>
+                            5、打折活动会长期举行，每次活动开始前，可以提前开始预约，每次活动开始前将通过手机短信、QQ邮箱通知您。
+                        </p>
+                        <p>
+                            <span></span>
+                            6、您的排名越高，抢到打折币的额度越大，排名太低，抢到打折币的额度也就越小。建议您预约打折币之后，马上通过邀请好友等等操作提升您的排名，这样您抢到打折币的额度就越大。
+                        </p>
+                        <p>
+                            <span></span>
+                            7、锁定交易所价格和85折价格，以官方放额度瞬间，取流动性和深度最好的交易所的DYX价格为准，进行锁定。
+                        </p>
+                        <p>
+                            <span></span>
+                            8、如果您持有DYX数量过低，只拿大量的usdt来预约拼团，那么也无法拿到额度。 您需要持有一定数量的DYX，再拿usdt来预约拼团，才能抢得到额度。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--  cp  -->
+        <!--<div class="cp">
+            <p>2019 © FomoXYT.com 声明官方不参与活动币   合约Github开源代码  开发者@狗狗币微博  平台微信  测试</p>
+        </div>-->
+
+    </div>
+
+    <!--  打折活动结束，额度已经放出弹窗，从后台控制  -->
+    <div class="popup">
+        <div class="popup-title"><span>消息通知</span></div>
+        <div class="popup-body">
+            <div class="p-pwd-box">第x期的打折活动预约已经结束，额度已经放出，请到活动页查看您得到的实际额度</div>
+            <div class="r-foot address-f ov">
+                <div class="fr">
+                    <a class="withdraw-btn" href="javascript:void(0);">保存</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--  打折活动结束，官方已经结算，从后台控制  -->
+
+    <div class="popup-f">
+        <div class="popup-title"><span>消息通知</span></div>
+        <div class="popup-body">
+            <div class="p-pwd-box">第x期的打折活动已经结束，官方已经结算所有人的收益，收益已经发放到您的账户，请到个人资产界面查看您得到的收益</div>
+            <div class="r-foot address-f ov">
+                <div class="fr">
+                    <a class="withdraw-btn" href="javascript:void(0);">保存</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="/public/js/jquery.min.js"></script>
+    <!--<script type="text/javascript" src="/public/js/layer.js" charset="utf-8"></script>-->
+    <script>
+        //打折活动结束，额度已经放出弹窗，从后台控制
+        //layer.alert('第x期的打折活动预约已经结束，额度已经放出，请到活动页查看您得到的实际额度');
+
+        //打折活动结束，官方已经结算，从后台控制
+        //layer.alert('第x期的打折活动已经结束，官方已经结算所有人的收益，收益已经发放到您的账户，请到个人资产界面查看您得到的收益');
+    </script>
+</body>
+</html>

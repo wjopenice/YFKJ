@@ -1,0 +1,47 @@
+INFO [09-01|11:18:00.797] Maximum peer count                       ETH=25 LES=0 total=25
+INFO [09-01|11:18:03.463] Using developer account                  address=0xE1D81604a42e765441289d1F7fEC4aa84A034235
+INFO [09-01|11:18:03.464] Starting peer-to-peer node               instance=Geth/v1.8.27-stable-4bcc0a37/linux-amd64/go1.11.5
+INFO [09-01|11:18:03.464] Allocated cache and file handles         database=/home/wwwroot/ETH_yaf/DataDir/geth/chaindata cache=512 handles=32767
+INFO [09-01|11:18:03.485] Writing custom genesis block 
+INFO [09-01|11:18:03.485] Persisted trie from memory database      nodes=12 size=1.79kB time=94.257µs gcnodes=0 gcsize=0.00B gctime=0s livenodes=1 livesize=0.00B
+INFO [09-01|11:18:03.485] Initialised chain configuration          config="{ChainID: 1337 Homestead: 0 DAO: <nil> DAOSupport: false EIP150: 0 EIP155: 0 EIP158: 0 Byzantium: 0 Constantinople: 0  ConstantinopleFix: 0 Engine: clique}"
+INFO [09-01|11:18:03.485] Initialising Ethereum protocol           versions="[63 62]" network=1337
+INFO [09-01|11:18:03.511] Loaded most recent local header          number=0 hash=f5e878…f4e30e td=1 age=50y4mo2w
+INFO [09-01|11:18:03.511] Loaded most recent local full block      number=0 hash=f5e878…f4e30e td=1 age=50y4mo2w
+INFO [09-01|11:18:03.511] Loaded most recent local fast block      number=0 hash=f5e878…f4e30e td=1 age=50y4mo2w
+INFO [09-01|11:18:03.511] Regenerated local transaction journal    transactions=0 accounts=0
+INFO [09-01|11:18:03.512] Stored checkpoint snapshot to disk       number=0 hash=f5e878…f4e30e
+INFO [09-01|11:18:03.521] started whisper v.6.0 
+INFO [09-01|11:18:03.522] New local node record                    seq=1 id=19ea4d58353676ff ip=127.0.0.1 udp=0 tcp=41238
+INFO [09-01|11:18:03.523] Started P2P networking                   self="enode://f33c494fc341675ba1733af1d1693c4db7e82bb941d31d57c8d1b1ddb36d7f584dfbb2d987b0534a6b9ce031a0cc3fdb82f59489340fdaf08f1e1671f004c890@127.0.0.1:41238?discport=0"
+INFO [09-01|11:18:03.524] IPC endpoint opened                      url=/home/wwwroot/ETH_yaf/DataDir/geth.ipc
+INFO [09-01|11:18:03.524] HTTP endpoint opened                     url=http://127.0.0.1:8545                  cors= vhosts=localhost
+INFO [09-01|11:18:03.524] Transaction pool price threshold updated price=1000000000
+INFO [09-01|11:18:03.524] Transaction pool price threshold updated price=1
+INFO [09-01|11:18:03.524] Etherbase automatically configured       address=0xE1D81604a42e765441289d1F7fEC4aa84A034235
+INFO [09-01|11:18:03.524] Commit new mining work                   number=1 sealhash=a11fc5…13e37b uncles=0 txs=0 gas=0 fees=0 elapsed=89.723µs
+INFO [09-01|11:18:03.525] Sealing paused, waiting for transactions 
+WARN [09-01|11:33:53.782] Failed account unlock attempt            address=0xE1D81604a42e765441289d1F7fEC4aa84A034235 err="could not decrypt key with given passphrase"
+WARN [09-01|11:35:46.986] Failed account unlock attempt            address=0xE1D81604a42e765441289d1F7fEC4aa84A034235 err="could not decrypt key with given passphrase"
+INFO [09-01|11:42:24.090] Old wallet dropped                       url=keystore:///home/wwwroot/ETH_ya…
+INFO [09-01|11:42:24.090] Old wallet dropped                       url=keystore:///home/wwwroot/ETH_ya…
+INFO [09-01|11:42:24.090] Old wallet dropped                       url=keystore:///home/wwwroot/ETH_ya…
+INFO [09-01|12:18:03.512] Regenerated local transaction journal    transactions=0 accounts=0
+INFO [09-01|13:18:03.512] Regenerated local transaction journal    transactions=0 accounts=0
+INFO [09-01|14:18:03.512] Regenerated local transaction journal    transactions=0 accounts=0
+INFO [09-01|15:18:03.512] Regenerated local transaction journal    transactions=0 accounts=0
+INFO [09-01|16:18:03.512] Regenerated local transaction journal    transactions=0 accounts=0
+INFO [09-01|17:18:03.512] Regenerated local transaction journal    transactions=0 accounts=0
+INFO [09-01|18:18:03.512] Regenerated local transaction journal    transactions=0 accounts=0
+INFO [09-01|19:18:03.512] Regenerated local transaction journal    transactions=0 accounts=0
+INFO [09-01|20:18:03.512] Regenerated local transaction journal    transactions=0 accounts=0
+INFO [09-01|21:18:03.512] Regenerated local transaction journal    transactions=0 accounts=0
+INFO [09-01|22:18:03.512] Regenerated local transaction journal    transactions=0 accounts=0
+INFO [09-01|22:30:50.772] HTTP endpoint closed                     url=http://127.0.0.1:8545
+INFO [09-01|22:30:50.772] IPC endpoint closed                      url=/home/wwwroot/ETH_yaf/DataDir/geth.ipc
+INFO [09-01|22:30:50.772] Blockchain manager stopped 
+INFO [09-01|22:30:50.772] Stopping Ethereum protocol 
+INFO [09-01|22:30:50.772] Ethereum protocol stopped 
+INFO [09-01|22:30:50.772] Transaction pool stopped 
+INFO [09-01|22:30:50.772] Database closed                          database=/home/wwwroot/ETH_yaf/DataDir/geth/chaindata
+INFO [09-01|22:30:50.772] whisper stopped 

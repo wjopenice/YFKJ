@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>xcoinpay</title>
+    <meta name="keywords" content="FomoXYT官网，FomoXYT，预约活动，区块链">
+    <meta name="description" content="FomoXYT，区块链，交易所，虚拟币交易">
+    <link rel="shortcut icon" href="/public/images/xcoinpay.ico">
+    <link rel="stylesheet" href="/public/css/index/main.css">
+    <link rel="stylesheet" href="/public/css/index/partners.css">
+</head>
+<body>
+    <div class="box">
+        <!--  head  -->
+        <?php load_view("inc/pc_nav");?>
+        <!--  个人中心导航  -->
+        <?php load_view("inc/user_left");?>
+
+        <!--  老用户钱包与理财信息  -->
+        <div class="partners-box">
+            <div class="warp-1200">
+                <div class="per-title"><span class="p-online"></span><span class="p-text">合作方</span></div>
+                <div class="u-box u-info ov">
+                    <div class="u-pad-box fl">
+                        <p class="logon-record">您的DYX数量：100</p>
+                        <p class="logon-record">冻结数量：0</p>
+                        <div class="pro-bar ov"><span class="bar-text fl">可用余额：100</span><span class="select-text fl">提现</span></div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--  提现  -->
+    <div class="reflect">
+        <div class="popup-title"><span>提现</span><i class="cancel"></i></div>
+        <div class="r-body">
+            <p class="r-title">选择提币地址</p>
+            <div class="currency-box">
+                <div id="select">
+                    <div class="c-select-box">
+                        <i class="down"></i>
+                        <span class="checkspan">请选择币种</span>
+                    </div>
+                    <ul>
+                        <li class="ov"><p class="fl">地址1，125ghe25ed66UJ21ikDGF52DX255E5H663</p><i class="del-icon fr"></i></li>
+                        <li class="ov"><p class="fl">地址1，125ghe25ed66UJ21ikDGF52DX255E5H663</p><i class="del-icon fr"></i></li>
+                        <li class="ov"><p class="fl">地址1，125ghe25ed66UJ21ikDGF52DX255E5H663</p><i class="del-icon fr"></i></li>
+                        <!--<li class="add-addr">+ 增加新地址</li>-->
+                        <p class="add-addr">+ 增加新地址</p>
+                    </ul>
+                </div>
+            </div>
+            <p class="r-title">请输入数量</p>
+            <div class="curr-box ov">
+                <div class="input-box fl ov"><input type="number" class="curr-num fl" placeholder="0"><span class="all-reflect fr">全部提取</span></div><p class="ident fr">DYX</p>
+            </div>
+            <p class="available">可用：0 DYX</p>
+            <p class="r-title">实际到账</p>
+            <div class="curr-box ov actual">
+                <div class="input-box fl ov" id="actual"></div><p class="ident fr">DYX</p>
+            </div>
+            <p class="available">手续费：0.5%</p>
+        </div>
+        <div class="r-foot ov">
+            <div class="fr">
+                <a class="call-off" href="javascript:void(0);">取消</a>
+                <a class="withdraw-btn" href="javascript:void(0);">确认提币</a>
+            </div>
+        </div>
+    </div>
+
+    <!--  添加地址弹窗  -->
+    <div class="address-reflect">
+        <div class="popup-title"><span>新增提币地址</span><i class="r-cancel"></i></div>
+        <div class="r-body">
+            <p class="r-title address-ti">请输入提币地址</p>
+            <div class="curr-box"><div class="input-box address-i"><input type="text"></div></div>
+            <p class="r-title address-ti">请输入备注</p>
+            <div class="curr-box"><div class="input-box address-i"><input type="text"></div></div>
+        </div>
+        <div class="r-foot address-f ov">
+            <div class="fr">
+                <a class="call-btn" href="javascript:void(0);">取消</a>
+                <a class="withdraw-btn" href="javascript:void(0);">确认提币</a>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="/public/js/jquery.min.js"></script>
+    <script>
+        $(function(){
+            //点击提现
+            $(".select-text").click(function(){
+                $(".reflect").fadeIn();
+            });
+            $(".cancel ,.call-off").click(function(){
+                $(".reflect").fadeOut();
+            });
+
+            //点击提币地址
+            $(".add-addr").click(function(){
+                $(".address-reflect").fadeIn();
+            });
+            $(".r-cancel ,.call-btn").click(function(){
+                $(".address-reflect").fadeOut();
+            });
+
+            //提币地址删除
+            $(".del-icon").click(function(){
+                $(this).parent("li").remove();
+            });
+
+            //输入提取数量计算实际到账
+            $(document).on("keyup",'.curr-num',function(){
+                let usdt = $(".curr-num").val();
+                let acnum = usdt-usdt*0.005;
+                $("#actual").html(acnum);
+            });
+
+            //选择提币地址
+            $(".c-select-box").bind("click",function(){
+                var ul = $(this).siblings('ul')
+                if(ul.is(":hidden")){
+                    ul.slideDown('400', function() {
+                        $(this).find("li").bind("click",function(){
+                            var selectLi=$(this).text();
+                            $("#select span").text(selectLi);
+                            $("#select ul").slideUp(200);
+                        });
+                        ul.mouseleave(function() {
+                            $('#select ul').slideUp(200)
+                        });
+                    });
+                }else{
+                    $(this).siblings('ul').slideUp(200)
+                }
+
+            });
+        })
+    </script>
+</body>
+</html>

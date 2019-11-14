@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html class="x-admin-sm">
+    <head>
+        <meta charset="UTF-8">
+        <title>欢迎页面-X-admin2.2</title>
+        <meta name="renderer" content="webkit">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width,user-scalable=yes, minimum-scale=0.4, initial-scale=0.8,target-densitydpi=low-dpi" />
+        <link rel="stylesheet" href="/public/css/font.css">
+        <link rel="stylesheet" href="/public/css/xadmin.css">
+        <script src="/public/lib/layui/layui.js" charset="utf-8"></script>
+        <script type="text/javascript" src="/public/js/xadmin.js"></script>
+    </head>
+    <body>
+        <div class="layui-fluid">
+            <div class="layui-row layui-col-space15">
+                <div class="layui-col-md12">
+                    <div class="layui-card" style="padding-bottom: 0px !important;">
+                        <div class="layui-card-body ">
+                            <blockquote class="layui-elem-quote">欢迎管理员：
+                                <span class="x-red"><?=$username?></span>！当前时间:<?=date("Y-m-d H:i:s",time()+0)?>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-col-md12">
+                    <div class="layui-card">
+                        <div class="layui-card-header layui-h">数据统计</div>
+                        <div class="layui-card-body ">
+                            <ul class="layui-row layui-col-space10 layui-this x-admin-carousel x-admin-backlog">
+                                <li class="layui-col-md3 layui-col-xs6">
+                                    <a href="javascript:;" class="x-admin-backlog-body">
+                                        <h3>总用户数</h3>
+                                        <p><cite><?=$data['user_total']?></cite></p>
+                                    </a>
+                                </li>
+                                <li class="layui-col-md3 layui-col-xs6">
+                                    <a href="javascript:;" class="x-admin-backlog-body">
+                                        <h3>每周新增用户数</h3>
+                                        <p><cite><?=$data['user_week_total']?></cite></p>
+                                    </a>
+                                </li>
+                                <li class="layui-col-md3 layui-col-xs6">
+                                    <a href="javascript:;" class="x-admin-backlog-body">
+                                        <h3>每日新增用户数</h3>
+                                        <p><cite><?=$data['user_day_total']?></cite></p>
+                                    </a>
+                                </li>
+                                <li class="layui-col-md3 layui-col-xs6">
+                                    <a href="javascript:;" class="x-admin-backlog-body">
+                                        <h3>新用户累计数量</h3>
+                                        <p><cite><?=$data['user_new_total']?></cite></p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-col-sm6 layui-col-md3">
+                    <div class="layui-card">
+                        <div class="layui-card-header layui-h">总充值</div>
+                        <div class="layui-card-body">
+                            <div class="layuiadmin-big-font" style="overflow: hidden;margin: 20px 0;"><p style="float: left;width: 120px;"><span style="float: left;font-size: 18px;padding: 4px 10px;" class="layui-badge layui-bg-cyan layuiadmin-badge">USDT</span></p><span style="float: left;height: 18px;line-height: 20px;font-size: 18px;padding: 4px 10px;"><?=$data['usdt_recharge_total']?></span></div>
+                            <div class="layuiadmin-big-font" style="overflow: hidden;margin: 20px 0;"><p style="float: left;width: 120px;"><span style="float: left;font-size: 18px;padding: 4px 10px;" class="layui-badge layui-bg-cyan layuiadmin-badge">DYX</span></p><span style="float: left;height: 18px;line-height: 20px;font-size: 18px;padding: 4px 10px;"><?=$data['dyx_recharge_total']?></span></div>
+                            <div class="layuiadmin-big-font" style="overflow: hidden;margin: 20px 0;"><p style="float: left;width: 120px;"><span style="float: left;font-size: 18px;padding: 4px 10px;" class="layui-badge layui-bg-cyan layuiadmin-badge">XYT</span></p><span style="float: left;height: 18px;line-height: 20px;font-size: 18px;padding: 4px 10px;"><?=$data['xyt_recharge_total']?></span></div>
+                            <div class="layuiadmin-big-font" style="overflow: hidden;margin: 20px 0;"><p style="float: left;width: 120px;"><span style="float: left;font-size: 18px;padding: 4px 10px;" class="layui-badge layui-bg-cyan layuiadmin-badge">提现手续费</span></p><span style="float: left;height: 18px;line-height: 20px;font-size: 18px;padding: 4px 10px;"><?=$data['tx_recharge_total']?></span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-col-sm6 layui-col-md3">
+                    <div class="layui-card">
+                        <div class="layui-card-header layui-h">今日充值</div>
+                        <div class="layui-card-body ">
+                            <div class="layuiadmin-big-font" style="overflow: hidden;margin: 20px 0;"><p style="float: left;width: 120px;"><span style="float: left;font-size: 18px;padding: 4px 10px;" class="layui-badge layui-bg-cyan layuiadmin-badge">USDT</span></p><span style="float: left;height: 18px;line-height: 20px;font-size: 18px;padding: 4px 10px;"><?=$data['usdt_day_recharge_total']?></span></div>
+                            <div class="layuiadmin-big-font" style="overflow: hidden;margin: 20px 0;"><p style="float: left;width: 120px;"><span style="float: left;font-size: 18px;padding: 4px 10px;" class="layui-badge layui-bg-cyan layuiadmin-badge">DYX</span></p><span style="float: left;height: 18px;line-height: 20px;font-size: 18px;padding: 4px 10px;"><?=$data['dyx_day_recharge_total']?></span></div>
+                            <div class="layuiadmin-big-font" style="overflow: hidden;margin: 20px 0;"><p style="float: left;width: 120px;"><span style="float: left;font-size: 18px;padding: 4px 10px;" class="layui-badge layui-bg-cyan layuiadmin-badge">XYT</span></p><span style="float: left;height: 18px;line-height: 20px;font-size: 18px;padding: 4px 10px;"><?=$data['xyt_day_recharge_total']?></span></div>
+                            <div class="layuiadmin-big-font" style="overflow: hidden;margin: 20px 0;"><p style="float: left;width: 120px;"><span style="float: left;font-size: 18px;padding: 4px 10px;" class="layui-badge layui-bg-cyan layuiadmin-badge">提现手续费</span></p><span style="float: left;height: 18px;line-height: 20px;font-size: 18px;padding: 4px 10px;">0</span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-col-sm6 layui-col-md3">
+                    <div class="layui-card">
+                        <div class="layui-card-header layui-h">总提现</div>
+                        <div class="layui-card-body ">
+                            <div class="layuiadmin-big-font" style="overflow: hidden;margin: 20px 0;"><p style="float: left;width: 120px;"><span style="float: left;font-size: 18px;padding: 4px 10px;" class="layui-badge layui-bg-cyan layuiadmin-badge">USDT</span></p><span style="float: left;height: 18px;line-height: 20px;font-size: 18px;padding: 4px 10px;"><?=$data['usdt_tx_total']?></span></div>
+                            <div class="layuiadmin-big-font" style="overflow: hidden;margin: 20px 0;"><p style="float: left;width: 120px;"><span style="float: left;font-size: 18px;padding: 4px 10px;" class="layui-badge layui-bg-cyan layuiadmin-badge">DYX</span></p><span style="float: left;height: 18px;line-height: 20px;font-size: 18px;padding: 4px 10px;"><?=$data['dyx_tx_total']?></span></div>
+                            <div class="layuiadmin-big-font" style="overflow: hidden;margin: 20px 0;"><p style="float: left;width: 120px;"><span style="float: left;font-size: 18px;padding: 4px 10px;" class="layui-badge layui-bg-cyan layuiadmin-badge">XYT</span></p><span style="float: left;height: 18px;line-height: 20px;font-size: 18px;padding: 4px 10px;"><?=$data['xyt_tx_total']?></span></div>
+                            <div class="layuiadmin-big-font" style="overflow: hidden;margin: 20px 0;"><p style="float: left;width: 120px;"><span style="float: left;font-size: 18px;padding: 4px 10px;" class="layui-badge layui-bg-cyan layuiadmin-badge">BTC</span></p><span style="float: left;height: 18px;line-height: 20px;font-size: 18px;padding: 4px 10px;"><?=$data['btc_tx_total']?></span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-col-sm6 layui-col-md3">
+                    <div class="layui-card">
+                        <div class="layui-card-header layui-h">每日提现</div>
+                        <div class="layui-card-body ">
+                            <div class="layuiadmin-big-font" style="overflow: hidden;margin: 20px 0;"><p style="float: left;width: 120px;"><span style="float: left;font-size: 18px;padding: 4px 10px;" class="layui-badge layui-bg-cyan layuiadmin-badge">USDT</span></p><span style="float: left;height: 18px;line-height: 20px;font-size: 18px;padding: 4px 10px;"><?=$data['usdt_day_tx_total']?></span></div>
+                            <div class="layuiadmin-big-font" style="overflow: hidden;margin: 20px 0;"><p style="float: left;width: 120px;"><span style="float: left;font-size: 18px;padding: 4px 10px;" class="layui-badge layui-bg-cyan layuiadmin-badge">DYX</span></p><span style="float: left;height: 18px;line-height: 20px;font-size: 18px;padding: 4px 10px;"><?=$data['dyx_day_tx_total']?></span></div>
+                            <div class="layuiadmin-big-font" style="overflow: hidden;margin: 20px 0;"><p style="float: left;width: 120px;"><span style="float: left;font-size: 18px;padding: 4px 10px;" class="layui-badge layui-bg-cyan layuiadmin-badge">XYT</span></p><span style="float: left;height: 18px;line-height: 20px;font-size: 18px;padding: 4px 10px;"><?=$data['xyt_day_tx_total']?></span></div>
+                            <div class="layuiadmin-big-font" style="overflow: hidden;margin: 20px 0;"><p style="float: left;width: 120px;"><span style="float: left;font-size: 18px;padding: 4px 10px;" class="layui-badge layui-bg-cyan layuiadmin-badge">BTC</span></p><span style="float: left;height: 18px;line-height: 20px;font-size: 18px;padding: 4px 10px;"><?=$data['btc_day_tx_total']?></span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-col-sm6 layui-col-md2">
+                    <div class="layui-card">
+                        <div class="layui-card-header layui-h">总预约</div>
+                        <div class="layui-card-body ">
+                            <div class="layuiadmin-big-font" style="overflow: hidden;margin: 20px 0;"><p style="float: left;width: 120px;"><span style="float: left;font-size: 18px;padding: 4px 10px;" class="layui-badge layui-bg-cyan layuiadmin-badge">USDT</span></p><span style="float: left;height: 18px;line-height: 20px;font-size: 18px;padding: 4px 10px;"><?=$data['reserve_total']['price']?></span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-col-sm6 layui-col-md2">
+                    <div class="layui-card">
+                        <div class="layui-card-header layui-h">总连续预约</div>
+                        <div class="layui-card-body ">
+                            <div class="layuiadmin-big-font" style="overflow: hidden;margin: 20px 0;"><p style="float: left;width: 120px;"><span style="float: left;font-size: 18px;padding: 4px 10px;" class="layui-badge layui-bg-cyan layuiadmin-badge">USDT</span></p><span style="float: left;height: 18px;line-height: 20px;font-size: 18px;padding: 4px 10px;"><?=$data['reserve_link_total']['price']?></span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-col-sm6 layui-col-md2">
+                    <div class="layui-card">
+                        <div class="layui-card-header layui-h">总手动预约</div>
+                        <div class="layui-card-body ">
+                            <div class="layuiadmin-big-font" style="overflow: hidden;margin: 20px 0;"><p style="float: left;width: 120px;"><span style="float: left;font-size: 18px;padding: 4px 10px;" class="layui-badge layui-bg-cyan layuiadmin-badge">USDT</span></p><span style="float: left;height: 18px;line-height: 20px;font-size: 18px;padding: 4px 10px;"><?=$data['reserve_dis_total']['price']?></span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-col-sm6 layui-col-md2">
+                    <div class="layui-card">
+                        <div class="layui-card-header layui-h">第<?=$data['dis_id']?>期总预约</div>
+                        <div class="layui-card-body ">
+                            <div class="layuiadmin-big-font" style="overflow: hidden;margin: 20px 0;"><p style="float: left;width: 120px;"><span style="float: left;font-size: 18px;padding: 4px 10px;" class="layui-badge layui-bg-cyan layuiadmin-badge">USDT</span></p><span style="float: left;height: 18px;line-height: 20px;font-size: 18px;padding: 4px 10px;"><?=$data['x_reserve_total']['price']?></span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-col-sm6 layui-col-md2">
+                    <div class="layui-card">
+                        <div class="layui-card-header layui-h">第<?=$data['dis_id']?>期连续预约</div>
+                        <div class="layui-card-body ">
+                            <div class="layuiadmin-big-font" style="overflow: hidden;margin: 20px 0;"><p style="float: left;width: 120px;"><span style="float: left;font-size: 18px;padding: 4px 10px;" class="layui-badge layui-bg-cyan layuiadmin-badge">USDT</span></p><span style="float: left;height: 18px;line-height: 20px;font-size: 18px;padding: 4px 10px;"><?=$data['x_reserve_link_total']['price']?></span></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-col-sm6 layui-col-md2">
+                    <div class="layui-card">
+                        <div class="layui-card-header layui-h">第<?=$data['dis_id']?>期手动预约</div>
+                        <div class="layui-card-body ">
+                            <div class="layuiadmin-big-font" style="overflow: hidden;margin: 20px 0;"><p style="float: left;width: 120px;"><span style="float: left;font-size: 18px;padding: 4px 10px;" class="layui-badge layui-bg-cyan layuiadmin-badge">USDT</span></p><span style="float: left;height: 18px;line-height: 20px;font-size: 18px;padding: 4px 10px;"><?=$data['x_reserve_dis_total']['price']?></span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </body>
+</html>

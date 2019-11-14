@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>xcoinpay</title>
+    <meta name="keywords" content="FomoXYT官网，FomoXYT，预约活动，区块链">
+    <meta name="description" content="FomoXYT，区块链，交易所，虚拟币交易">
+    <link rel="shortcut icon" href="/public/images/xcoinpay.ico">
+    <link rel="stylesheet" href="/public/css/index/main.css">
+    <link rel="stylesheet" href="/public/css/index/taskrecord.css">
+</head>
+<body>
+    <div class="box">
+        <!--  head  -->
+        <!--  个人中心导航  -->
+
+        <div class="transaction-box">
+            <div class="warp-1200">
+                <ul class="ov tran-ul" style="background: #091928;">
+                    <li class="fl tran-active" style="margin-left: 70px;">待审核</li>
+                    <li class="fl">审核通过</li>
+                    <li class="fl">审核驳回</li>
+                </ul>
+                <div class="tran-b">
+                    <!--  待审核  -->
+                    <div class="record-box t-active" style="height: 490px;">
+                        <?php if($resultwrite['status1'] == 0 && !is_null($resultwrite['status1'])): ?>
+                        <ul style="margin-top: 10px;">
+                            <li><span>任务次数：</span><span>第一条任务</span></li>
+                            <li><span>任务状态：</span><span style="color: #f75050;">待审核</span></li>
+                            <li><span>开始时间：</span><span><?=$resultwrite['create_time']?></span></li>
+                            <li><span>审核结果：</span><span>暂无收益</span></li>
+                        </ul>
+                        <?php endif; ?>
+                        <?php if($resultwrite['status2'] == 0 && !is_null($resultwrite['status2'])): ?>
+                            <ul style="margin-top: 10px;">
+                                <li><span>任务次数：</span><span>第二条任务</span></li>
+                                <li><span>任务状态：</span><span style="color: #f75050;">待审核</span></li>
+                                <li><span>开始时间：</span><span><?=$resultwrite['create_time']?></span></li>
+                                <li><span>审核结果：</span><span>暂无收益</span></li>
+                            </ul>
+                        <?php endif; ?>
+                    </div>
+                    <!--  审核通过  -->
+                    <div class="record-box" style="height: 490px; ">
+                        <?php if($resultwrite['status1'] == 1): ?>
+                        <ul style="margin-top: 10px;">
+                            <li><span>任务次数：</span><span>第一条任务</span></li>
+                            <li><span>任务状态：</span><span style="color: #50f7d2;">审核通过</span></li>
+                            <li><span>时间：</span><span><?=$resultwrite['create_time']?></span></li>
+                            <li><span>审核结果：</span><span>审核通过</span></li>
+                            <li><span>收益：</span><span>奖励1个DYX</span></li>
+                        </ul>
+                        <?php endif; ?>
+                        <?php if($resultwrite['status2'] == 1): ?>
+                        <ul style="margin-top: 10px;">
+                            <li><span>任务次数：</span><span>第二条任务</span></li>
+                            <li><span>任务状态：</span><span style="color: #50f7d2;">审核通过</span></li>
+                            <li><span>时间：</span><span><?=$resultwrite['create_time']?></span></li>
+                            <li><span>审核结果：</span><span>审核通过</span></li>
+                            <li><span>收益：</span><span>奖励1个DYX</span></li>
+                        </ul>
+                        <?php endif; ?>
+                    </div>
+                    <!--  审核驳回  -->
+                    <div class="record-box" style="height: 490px;">
+                        <?php if($resultwrite['status1'] == 2): ?>
+                        <ul style="margin-top: 10px;">
+                            <li><span>任务次数：</span><span>第一条任务</span></li>
+                            <li><span>任务状态：</span><span style="color: #f75050;">未通过</span></li>
+                            <li><span>时间：</span><span><?=$resultwrite['create_time']?></span></li>
+                            <li><span>审核结果：</span><span>暂无收益</span></li>
+                            <li><span>审核员备注：</span><span style="width: 800px;display: inline-block;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;"><?=$resultwrite['auditors_note1']?></span></li>
+                        </ul>
+                        <?php endif; ?>
+                        <?php if($resultwrite['status2'] == 2): ?>
+                        <ul style="margin-top: 10px;">
+                            <li><span>任务次数：</span><span>第二条任务</span></li>
+                            <li><span>任务状态：</span><span style="color: #f75050;">未通过</span></li>
+                            <li><span>时间：</span><span><?=$resultwrite['create_time']?></span></li>
+                            <li><span>审核结果：</span><span>暂无收益</span></li>
+                            <li><span>审核员备注：</span><span style="width: 800px;display: inline-block;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;"><?=$resultwrite['auditors_note2']?></span></li>
+                        </ul>
+                        <?php endif; ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="/public/js/jquery.min.js"></script>
+    <script>
+        $(function (){
+            $(".tran-ul li").click(function (){
+                //获取点击的元素给其添加样式，讲其兄弟元素的样式移除
+                $(this).addClass("tran-active").siblings().removeClass("tran-active");
+                //获取选中元素的下标
+                var index = $(this).index();
+                $(".record-box").eq(index).addClass("t-active").siblings().removeClass("t-active");
+            });
+        });
+    </script>
+</body>
+</html>

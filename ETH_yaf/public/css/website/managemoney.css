@@ -1,0 +1,46 @@
+.divBg{background: url("/public/images/managemoney/divbg.png") no-repeat center;width: 100%;height: 1535px;}
+.title{background: url("/public/images/managemoney/title.png") no-repeat center;width: 1170px;height: 355px;display: inline-block;position: absolute;left: 50%;margin-left: -585px;top: 40px;}
+.profit{width: 300px;height: 60px;line-height: 58px;text-align: center;color: #fff;background: #916828;font-size:40px;letter-spacing: 10px;display: inline-block;position: absolute;left: 50%;margin-left: -150px;top: 320px;}
+.everyday{width:716px;height:170px;border:1px solid rgba(144,105,38,1);position: absolute;left: 50%;margin-left: -358px;top: 430px;text-align: center;}
+.everyday img{margin-top: 38px;}
+.everyday p{margin-top: 31px;font-size:18px;color: #fff;}
+.month{width:716px;height:170px;border:1px solid rgba(144,105,38,1);position: absolute;left: 50%;margin-left: -358px;top: 670px;text-align: center;}
+.month img{margin-top: 38px;}
+.month p{margin-top: 31px;font-size:18px;color: #fff;}
+.art{font-size:14px;color:rgba(144,105,38,1);position: absolute;left: 50%;margin-left: -250px;top: 870px;}
+.btn{width:226px;height:60px;line-height: 58px;text-align: center;background:rgba(144,105,38,1);border-radius:30px;font-size:24px;color:rgba(255,255,255,1);letter-spacing: 8px;display: inline-block;position: absolute;left: 50%;margin-left: -113px;top: 921px;}
+.threeLevel{position: absolute;left: 50%;margin-left: -373.5px;top: 1094px;text-align: center;}
+.threeLevel .threeArt{margin-top: 30px;font-size:18px;color: #fff;}
+.threeLevel .threeArt1{margin-top: 10px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

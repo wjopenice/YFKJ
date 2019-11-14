@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html class="x-admin-sm">
+<head>
+    <meta charset="UTF-8">
+    <title>DXY新霸屏任务未通过</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,user-scalable=yes, minimum-scale=0.4, initial-scale=0.8,target-densitydpi=low-dpi" />
+    <link rel="stylesheet" href="/public/css/font.css">
+    <link rel="stylesheet" href="/public/css/xadmin.css">
+    <script src="/public/js/jquery.min.js"></script>
+    <script src="/public/lib/layui/layui.js" charset="utf-8"></script>
+    <script type="text/javascript" src="/public/js/xadmin.js"></script>
+</head>
+
+<body>
+<div class="x-nav">
+            <span class="layui-breadcrumb">
+                <a href="">首页</a>
+                <a href="">审核管理</a>
+                <a><cite>DXY新霸屏任务未通过</cite></a>
+            </span>
+    <a class="layui-btn layui-btn-small" style="line-height:1.6em;margin-top:3px;float:right" onclick="location.reload()" title="刷新">
+        <i class="layui-icon layui-icon-refresh" style="line-height:30px"></i>
+    </a>
+</div>
+<div class="layui-fluid">
+    <div class="layui-row layui-col-space15">
+
+        <div class="layui-col-md12">
+
+            <div class="layui-card">
+                <div class="layui-card-body ">
+                    <table class="layui-table layui-form">
+                        <thead>
+                        <tr>
+                            <th>用户ID</th>
+                            <th>上传时间</th>
+                            <th style="color:red;">图片1(点击图片查看大图)</th>
+                            <th style="color:red;">图片2</th>
+                            <th style="color:red;">图片3</th>
+                            <th style="color:red;">图片4</th>
+                            <th style="color:red;">图片5</th>
+                            <th style="color:red;">图片6</th>
+                            <th>图片2审核员备注</th>
+                            <th>图片2操作</th>
+                        </thead>
+                        <tbody>
+                        <?php foreach($arrdata as $k=>$v): ?>
+                        <tr>
+                            <td><?=user_id_name($v['u_id'])?></td>
+                            <td><?=$v['create_time']?></td>
+                            <td class="thisImg"><img style="height: 50px;" src="<?=$v['pic1']?>" alt=""></td>
+                            <td class="thisImg"><img style="height: 50px;" src="<?=$v['pic2']?>" alt=""></td>
+                            <td class="thisImg"><img style="height: 50px;" src="<?=$v['pic3']?>" alt=""></td>
+                            <td class="thisImg"><img style="height: 50px;" src="<?=$v['pic4']?>" alt=""></td>
+                            <td class="thisImg"><img style="height: 50px;" src="<?=$v['pic5']?>" alt=""></td>
+                            <td class="thisImg"><img style="height: 50px;" src="<?=$v['pic6']?>" alt=""></td>
+                            <td><textarea style="width: 100%;height: 60px;" id="pic2text" type="text" placeholder="如审核驳回请填写备注" readonly><?=$v['auditors_note']?></textarea></td>
+                            <td class="td-manage">
+                                <?php if($v['status'] == 1): ?>
+                                    <a title="已通过" href="javascript:void(0);" class="layui-btn layui-btn-xs">已通过</a>
+                                <?php endif;?>
+                            </td>
+                        </tr>
+                        <?php endforeach; ?>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="layui-card-body ">
+                    <?=$showstr?>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="mask" style="display: none;height: 500px;position: fixed;top: 50%;left: 50%;margin-left: -400px;margin-top: -350px;z-index: 9999;width: 800px;overflow-y: scroll;padding: 20px;border: 1px solid #bdbdbd;">
+    <img src="" width="100%" alt="">
+</div>
+
+<script>
+
+    $(function(){
+        $(".mask").click(function(){
+            $(".mask").hide(500)
+        });
+
+        $(".thisImg img").click(function(){
+            var imgurl = $(this).attr('src');
+            if(imgurl != ''){
+                $(".mask").show(500);
+                $(".mask img").attr('src',imgurl);
+            }
+        });
+    })
+
+</script>
+
+</body>
+</html>

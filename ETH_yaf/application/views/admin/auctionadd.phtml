@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html class="x-admin-sm">
+    
+    <head>
+        <meta charset="UTF-8">
+        <title>添加打折活动</title>
+        <meta name="renderer" content="webkit">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width,user-scalable=yes, minimum-scale=0.4, initial-scale=0.8,target-densitydpi=low-dpi" />
+        <link rel="stylesheet" href="/public/css/font.css">
+        <link rel="stylesheet" href="/public/css/xadmin.css">
+        <style>
+            .layui-form-label{width: 200px;padding: 5px 15px;}
+            .x-admin-sm .layui-btn{padding: 0 30px;}
+            .layui-form-label, .layui-form-mid, .layui-form-select, .layui-input-block, .layui-input-inline, .layui-textarea{margin-left: 0;}
+            .layui-form input[type=checkbox], .layui-form input[type=radio], .layui-form select{display: inline-block;}
+        </style>
+    </head>
+    <body>
+    <div class="x-nav">
+            <span class="layui-breadcrumb">
+                <a href="">首页</a>
+                <a href="/admin/discount">活动管理</a>
+                <a>
+                    <cite>添加打折活动</cite></a>
+            </span>
+        <a class="layui-btn layui-btn-small" style="line-height:1.6em;margin-top:3px;float:right" onclick="location.reload()" title="刷新">
+            <i class="layui-icon layui-icon-refresh" style="line-height:30px"></i>
+        </a>
+    </div>
+    <div class="layui-fluid">
+        <div class="layui-row layui-col-space15">
+            <div class="layui-col-md12">
+                <div class="layui-card">
+                    <div class="layui-card-body ">
+
+                        <div class="layui-fluid">
+                            <div class="layui-row">
+                                <form class="layui-form" action="/admin/auctionadd" method="post">
+                                    <div class="layui-form-item">
+                                        <label for="phone" class="layui-form-label">
+                                            <span class="x-red">*</span>打折活动礼包
+                                        </label>
+                                        <div class="layui-input-inline" style="width: 400px;">
+                                            <input type="text" placeholder="请输入代币数量" name="award_dyx" lay-verify="award_dyx" class="layui-input" style="margin-right: 10px;width: 190px;float: left;">
+                                            <div style="line-height: 30px;"><span class="x-red">*</span>(DYX)</div>
+                                            <input type="text" placeholder="请输入usdt数量" name="award_usdt" lay-verify="award_usdt"  class="layui-input" style="margin-right: 10px;width: 190px;float: left;margin-top: 20px;">
+                                            <div style="line-height: 30px;margin-top: 20px;"><span class="x-red">*</span>(USDT)</div>
+                                            <input type="text" placeholder="请输入xyt数量" name="award_xyt" lay-verify="award_xyt"  class="layui-input" style="margin-right: 10px;width: 190px;float: left;margin-top: 20px;">
+                                            <div style="line-height: 30px;margin-top: 20px;"><span class="x-red">*</span>(XYT)</div>
+                                            <input type="text" placeholder="请输入BTC数量" name="award_btc" lay-verify="award_btc"  class="layui-input" style="margin-right: 10px;width: 190px;float: left;margin-top: 20px;">
+                                            <div style="line-height: 30px;margin-top: 20px;"><span class="x-red">*</span>(BTC)</div>
+                                            <input type="text" placeholder="请输入RNTP数量" name="award_rntp" lay-verify="award_rntp"  class="layui-input" style="margin-right: 10px;width: 190px;float: left;margin-top: 20px;">
+                                            <div style="line-height: 30px;margin-top: 20px;"><span class="x-red">*</span>(RNTP)</div>
+                                            <input type="text" placeholder="请输入分红股" name="award_stock" lay-verify="award_stock"  class="layui-input" style="margin-right: 10px;width: 190px;float: left;margin-top: 20px;">
+                                            <div style="line-height: 30px;margin-top: 20px;"><span class="x-red">*</span>(分红股)</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="layui-form-item">
+                                        <label for="phone" class="layui-form-label">
+                                            <span class="x-red">*</span>开启时间
+                                        </label>
+                                        <div class="layui-input-inline" style="width: 400px;">
+                                            <input type="datetime"  name="start_time" lay-verify="start_time" class="layui-input" style="margin-right: 10px;width: 190px;float: left;">
+                                        </div>
+                                    </div>
+
+                                    <div class="layui-form-item">
+                                        <label for="phone" class="layui-form-label">
+                                            <span class="x-red">*</span>结束时间
+                                        </label>
+                                        <div class="layui-input-inline" style="width: 400px;">
+                                            <input type="datetime" name="end_time" lay-verify="end_time" class="layui-input" style="margin-right: 10px;width: 190px;float: left;">
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <label style="width: 200px;padding: 5px 15px;display: inline-block;text-align: right;">
+                                            <span class="x-red">*</span>买单者
+                                        </label>
+                                        <div id="payer" style="display: inline-block;">
+                                            <input type="radio" name="payer" value="1" title="第1名">第1名
+                                            <input type="radio" name="payer" value="2" title="第2名">第2名
+                                            <input type="radio" name="payer" value="3" title="第3名">第3名
+                                            <input type="radio" name="payer" value="4" title="第4名">第4名
+                                            <input type="radio" name="payer" value="5" title="第5名">第5名
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <label style="width: 200px;padding: 5px 15px;display: inline-block;text-align: right;">
+                                            <span class="x-red">*</span>获胜者
+                                        </label>
+                                        <div id="winner" style="display: inline-block;">
+                                            <input type="radio" name="winner" value="1" title="第1名">第1名
+                                            <input type="radio" name="winner" value="2" title="第2名">第2名
+                                            <input type="radio" name="winner" value="3" title="第3名">第3名
+                                            <input type="radio" name="winner" value="4" title="第4名">第4名
+                                            <input type="radio" name="winner" value="5" title="第5名">第5名
+                                        </div>
+                                    </div>
+
+                                    <div class="layui-form-item">
+                                        <label for="L_repass" class="layui-form-label">
+                                        </label>
+                                        <a class="layui-btn layui-btn-normal" href="/admin/auction">返回</a>
+                                        <button type="submit"  class="layui-btn">添加</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="/public/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/public/js/layer.js" charset="utf-8"></script>
+    <script type="text/javascript" src="/public/lib/layui/layui.js" charset="utf-8"></script>
+    <script type="text/javascript" src="/public/js/xadmin.js"></script>
+    <script>
+        $(function(){
+            $("#winner input[name='winner']:checked").click(function () {
+                alert(111)
+                var index = $(this).index();
+                alert(index);
+                // $("#payer input").eq(index).attr("disabled","disabled");
+            });
+            $("#payer input").click(function () {
+                var index = $(this).index();
+                $("#winner input").eq(index).attr("disabled","disabled");
+            });
+
+        });
+    </script>
+
+    </body>
+</html>

@@ -1,0 +1,50 @@
+INFO [09-03|14:43:44.856] Maximum peer count                       ETH=50 LES=0 total=50
+INFO [09-03|14:43:44.857] Starting peer-to-peer node               instance=Geth/v1.8.27-stable-4bcc0a37/linux-amd64/go1.11.5
+INFO [09-03|14:43:44.857] Allocated cache and file handles         database=/home/wwwroot/ETH_yaf/ethereum/geth/chaindata cache=256 handles=32767
+INFO [09-03|14:43:44.877] Initialised chain configuration          config="{ChainID: 1337 Homestead: 0 DAO: <nil> DAOSupport: false EIP150: <nil> EIP155: 155 EIP158: 158 Byzantium: <nil> Constantinople: <nil>  ConstantinopleFix: <nil> Engine: unknown}"
+INFO [09-03|14:43:44.877] Disk storage enabled for ethash caches   dir=/home/wwwroot/ETH_yaf/ethereum/geth/ethash count=3
+INFO [09-03|14:43:44.877] Disk storage enabled for ethash DAGs     dir=/root/.ethash                              count=2
+INFO [09-03|14:43:44.877] Initialising Ethereum protocol           versions="[63 62]" network=1
+INFO [09-03|14:43:44.905] Loaded most recent local header          number=1433 hash=192099…4f1013 td=264539684 age=18m43s
+INFO [09-03|14:43:44.905] Loaded most recent local full block      number=1433 hash=192099…4f1013 td=264539684 age=18m43s
+INFO [09-03|14:43:44.905] Loaded most recent local fast block      number=1433 hash=192099…4f1013 td=264539684 age=18m43s
+INFO [09-03|14:43:44.913] Loaded local transaction journal         transactions=34 dropped=34
+INFO [09-03|14:43:44.914] Regenerated local transaction journal    transactions=0  accounts=0
+INFO [09-03|14:43:44.988] New local node record                    seq=25 id=47eb74eae659b538 ip=127.0.0.1 udp=30303 tcp=30303
+INFO [09-03|14:43:44.989] Started P2P networking                   self=enode://bed284fcda615d7996e840e7d1fd8f98282eaf31639e67d540b8df662e2d47b8cec78eaba4e9b50c1709d4d124a6bf7184f581b5aae983eb1a0a37838f3d836b@127.0.0.1:30303
+INFO [09-03|14:43:44.991] IPC endpoint opened                      url=/home/wwwroot/ETH_yaf/ethereum/geth.ipc
+INFO [09-03|14:43:59.017] New local node record                    seq=26 id=47eb74eae659b538 ip=47.75.122.1 udp=30303 tcp=30303
+INFO [09-03|14:50:17.721] Maximum peer count                       ETH=50 LES=0 total=50
+INFO [09-03|14:50:17.723] Starting peer-to-peer node               instance=Geth/v1.8.27-stable-4bcc0a37/linux-amd64/go1.11.5
+INFO [09-03|14:50:17.723] Allocated cache and file handles         database=/data1/eth-sync/online/geth/chaindata cache=256 handles=32767
+INFO [09-03|14:50:17.735] Writing default main-net genesis block 
+INFO [09-03|14:50:18.067] Persisted trie from memory database      nodes=12356 size=1.88mB time=70.300542ms gcnodes=0 gcsize=0.00B gctime=0s livenodes=1 livesize=0.00B
+INFO [09-03|14:50:18.068] Initialised chain configuration          config="{ChainID: 1 Homestead: 1150000 DAO: 1920000 DAOSupport: true EIP150: 2463000 EIP155: 2675000 EIP158: 2675000 Byzantium: 4370000 Constantinople: 7280000  ConstantinopleFix: 7280000 Engine: ethash}"
+INFO [09-03|14:50:18.068] Disk storage enabled for ethash caches   dir=/data1/eth-sync/online/geth/ethash count=3
+INFO [09-03|14:50:18.068] Disk storage enabled for ethash DAGs     dir=/root/.ethash                      count=2
+INFO [09-03|14:50:18.068] Initialising Ethereum protocol           versions="[63 62]" network=1
+INFO [09-03|14:50:18.080] Loaded most recent local header          number=0 hash=d4e567…cb8fa3 td=17179869184 age=50y4mo3w
+INFO [09-03|14:50:18.080] Loaded most recent local full block      number=0 hash=d4e567…cb8fa3 td=17179869184 age=50y4mo3w
+INFO [09-03|14:50:18.080] Loaded most recent local fast block      number=0 hash=d4e567…cb8fa3 td=17179869184 age=50y4mo3w
+INFO [09-03|14:50:18.080] Regenerated local transaction journal    transactions=0 accounts=0
+INFO [09-03|14:50:18.090] New local node record                    seq=1 id=16eb0a841903fe16 ip=127.0.0.1 udp=30303 tcp=30303
+INFO [09-03|14:50:18.090] Started P2P networking                   self=enode://66ff142852e047c5e84621fe707f75ac0dcd63e26626562a2e90fb326b0751489f3fb3a476f9ac05d4a42afaca14256976374b7285e8eedf6a115770325404b2@127.0.0.1:30303
+INFO [09-03|14:50:18.091] IPC endpoint opened                      url=/data1/eth-sync/online/geth.ipc
+INFO [09-03|14:50:43.791] New local node record                    seq=2 id=16eb0a841903fe16 ip=47.75.122.1 udp=30303 tcp=30303
+INFO [09-03|14:50:48.090] Block synchronisation started 
+INFO [09-03|14:50:56.538] Imported new chain segment               blocks=2 txs=0 mgas=0.000 elapsed=789.203ms mgasps=0.000 number=2 hash=b495a1…4698c9 age=4y1mo3w  cache=4.45kB
+INFO [09-03|14:50:56.715] Imported new chain segment               blocks=80 txs=0 mgas=0.000 elapsed=175.139ms mgasps=0.000 number=82 hash=861461…3f3d8c age=4y1mo3w  cache=209.94kB
+INFO [09-03|14:50:57.604] Imported new chain segment               blocks=324 txs=0 mgas=0.000 elapsed=885.533ms mgasps=0.000 number=406 hash=30786a…d8d95f age=4y1mo3w  cache=386.88kB
+INFO [09-03|14:50:58.852] Got interrupt, shutting down... 
+INFO [09-03|14:50:58.852] IPC endpoint closed                      url=/data1/eth-sync/online/geth.ipc
+INFO [09-03|14:50:58.853] Writing cached state to disk             block=1043 hash=232725…13b9ca root=335ffe…a18600
+INFO [09-03|14:50:58.856] Persisted trie from memory database      nodes=299   size=78.46kB time=3.681284ms  gcnodes=5218 gcsize=2.03mB gctime=14.511279ms livenodes=734 livesize=283.53kB
+INFO [09-03|14:50:58.856] Writing cached state to disk             block=1042 hash=08e94d…440018 root=9f7563…b77a3d
+INFO [09-03|14:50:58.857] Persisted trie from memory database      nodes=5     size=1.99kB  time=77.54µs     gcnodes=0    gcsize=0.00B  gctime=0s          livenodes=729 livesize=281.54kB
+INFO [09-03|14:50:58.857] Writing cached state to disk             block=916  hash=98dda1…a7e56d root=202dc7…fd6f8c
+INFO [09-03|14:50:58.858] Persisted trie from memory database      nodes=120   size=37.17kB time=1.106547ms  gcnodes=0    gcsize=0.00B  gctime=0s          livenodes=609 livesize=244.38kB
+INFO [09-03|14:50:58.860] Blockchain manager stopped 
+INFO [09-03|14:50:58.860] Stopping Ethereum protocol 
+INFO [09-03|14:50:58.860] Ethereum protocol stopped 
+INFO [09-03|14:50:58.860] Transaction pool stopped 
+INFO [09-03|14:50:58.860] Database closed                          database=/data1/eth-sync/online/geth/chaindata

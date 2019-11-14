@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>xcoinpay</title>
+    <meta name="keywords" content="FomoXYT官网，FomoXYT，预约活动，区块链">
+    <meta name="description" content="FomoXYT，区块链，交易所，虚拟币交易">
+    <link rel="shortcut icon" href="/public/images/xcoinpay.ico">
+    <link rel="stylesheet" href="/public/css/index/main.css">
+    <link rel="stylesheet" href="/public/css/index/activity.css">
+</head>
+<body>
+    <div class="box">
+        <!--  nav box  -->
+        <?php load_view("inc/pc_nav");?>
+        <div class="head">
+            <!--  subscribe box  -->
+            <div class="sale-box warp-1200">
+                <i class="icon-sale"></i>
+                <p class="activity-text">第2期DYX拼多多模式<i class="hot-icon"></i>，暂未开放！</p>
+                <p class="profit-text">DYX拼多多模式以交易所现价的85折抢购DYX代币，保本盈利！</p>
+                <p class="profit-text" style="margin-top: 10px;">每期收益率最低7.06%！每周进行1—3期，胜在稳定！</p>
+                <p class="usdt-num"><i class="gold-icon"></i><span>目前已预约USDT数量：0</span><i class="bar-icon"></i></p>
+                <?php //if(!is_null($discount_id)): ?>
+<!--                    <a class="im-subscribe" href="/index/activity" id="popup">预约拼团</a>-->
+                <?php //else: ?>
+                    <a class="im-subscribe" id="popup" onclick="javascript:alert('第2期暂未开启');">预约拼团</a>
+                <?php //endif; ?>
+                
+                <p class="introduce-box"><!--<i class="icon-introduce"></i>--><span class="introduce-text" onclick="window.location.href='/index/index'">活动规则详解</span></p>
+            </div>
+            <div style="text-align: center;" class="warp-1200">
+                <p style="margin-top: 80px;color: #FEC04E;font-size: 26px;">本期个人最低持币标准：暂无数据 DYX</p>
+                <p style="width: 600px;display: inline-block;text-align: left;padding: 30px 0 50px;font-size: 12px;color: #efefef;line-height: 20px;">注：如果个人持币数量低于最低持币标准，将无法发起拼团，因为就算可以拼团，低于最低持币标准的用户也无法抢到额度，或者只能获得0.000001这样的极小额度。所以您需要及时提升持币标准，低于持币标准的将不能参与这个活动。 如果您的下级成员有人低于持币标准，将不能参与这个活动，这个下级将不会给您带来任何收益。</p>
+            </div>
+
+        </div>
+
+        <!--  拼团  -->
+        <div class="assemble warp-1200">
+            <div class="you-subscribe">您的当前综合排名：暂无数据</div>
+            <div class="you-subscribe">您的拼团抢购成功率：暂无数据</div>
+            <button class="yaoqing" style="padding: 16px 76px;background: #17BF98;color: #fff;font-size: 24px;font-weight: 500;letter-spacing: 2px;border-radius: 50px;margin: 30px 0;box-shadow: 0 6px 0 0 rgb(32, 154, 126);cursor: pointer;" onclick="alert('暂未开放')">喊好友参加拼团</button>
+            <div class="more-box"><div class="you-subscribe">您的拼团记录<span class="online"></span></div></div>
+            <div class="appointment-body">
+                <table class="appointment-ref app-date">
+                    <tbody>
+                    <tr><td>拼团活动，您暂无拼团数据</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!--  你的预约 -->
+        <div class="subscribe-statistics warp-1200">
+            <p class="su-title">第1期85折抢购活动，额度未放出，请查看下列数据</p>
+            <div class="you-subscribe">您的预约<span class="online"></span></div>
+            <table class="reference you-s">
+                <tbody>
+                <tr class="th">
+                    <th>期次</th>
+                    <th>锁定交易所价格</th>
+                    <th>锁定85折价格</th>
+                    <!--<th>本期放出额度</th>
+                    <th>折合代币数量</th>-->
+                    <th>您预约的额度</th>
+                    <th>最终获得额度和代币数量</th>
+                    <th>系统卖出价格(xx usdt)和币数量</th>
+                    <th>最终收益率</th>
+                    <th>状态</th>
+                </tr>
+                <tr>
+                    <td>暂无数据</td>
+                    <td>暂无数据</td>
+                    <td>暂无数据</td>
+                    <!--<td>暂无数据</td>
+                    <td>暂无数据</td>-->
+                    <td>暂无数据</td>
+                    <td>暂无数据</td>
+                    <td>暂无数据</td>
+                    <td>暂无数据</td>
+                    <td>暂无数据</td>
+                </tr>
+                </tbody>
+            </table>
+            <p style="font-size: 16px;color: #657788;margin: 30px 0;">注：锁定交易所价格和85折价格，以官方放额度瞬间，取流动性和深度最好的交易所的DYX价格为准，进行锁定。</p>
+            <div class="more-box"><i class="icon-time"></i><span class="text-time you-time">您的预约历史记录</span><i class="r-more-icon"></i></div>
+        </div>
+
+        <!--  排名计算与额度发放规则  -->
+        <div class="subscribe-statistics warp-1200" style="margin-top: 100px;">
+            <div class="you-subscribe">您的当前排名：暂无数据<span class="online"></span></div>
+            <p class="dsc-rule" style="margin-top: 30px;">排名越高，抢到打折币的几率和额度就越大，排名计算详情如下</p>
+            <!--<table class="reference rank-distribution">
+                <tbody>
+                <tr class="th">
+                    <th>类别</th>
+                    <th>您的排名</th>
+                    <th>您的数量</th>
+                    <th>预计可成功抢购的额度比例：5%（根据您当前的排名动态变化） </th>
+                </tr>
+                <tr>
+                    <td>个人持币排名</td>
+                    <td><?/*=$user_order*/?>名</td>
+                    <td>个人持币<?/*=$user_usdt*/?>个</td>
+                    <td rowspan="3" class="rowspan">例如本期额度100个币，按照当前排名，您可以抢到5个币，排名越高，抢到的越多</td>
+                </tr>
+                <tr>
+                    <td>团队持币排名</td>
+                    <td><?/*=$group_num*/?>名</td>
+                    <td>团队持币<?/*=$user_team_usdt*/?>个</td>
+                </tr>
+                <tr>
+                    <td>邀请抢购排名</td>
+                    <td><?/*=$inviteid_num*/?>名</td>
+                    <td>本期您目前邀请了<?/*=$user_invite_num*/?>个人参与了抢购活动</td>
+                </tr>
+                </tbody>
+            </table>-->
+            <table class="reference rank-distribution">
+                <tbody>
+                <tr class="th">
+                    <th>类别</th>
+                    <th>您的排名</th>
+                    <th>您的数量</th>
+                    <!--<th>预计可成功抢购的额度比例：暂无数据（根据您当前的排名动态变化） </th>-->
+                </tr>
+                <tr>
+                    <td>个人持币排名</td>
+                    <td>暂无数据</td>
+                    <td>暂无数据</td>
+                    <!--<td rowspan="2" class="rowspan">暂无数据</td>-->
+                </tr>
+                <tr>
+                    <td>团队持币排名</td>
+                    <td>暂无数据</td>
+                    <td>暂无数据</td>
+                </tr>
+                <!--<tr>
+                    <td>邀请抢购排名</td>
+                    <td>暂无数据</td>
+                    <td>暂无数据</td>
+                </tr>-->
+                </tbody>
+            </table>
+        </div>
+
+
+        <!--  官方历史活动  -->
+        <div class="subscribe-statistics warp-1200">
+            <div class="you-subscribe">官方历史活动记录<span class="online"></span></div>
+            <table class="reference official-r">
+                <tbody>
+                <tr class="th">
+                    <th>期次</th>
+                    <th>锁定交易所价格</th>
+                    <th>锁定85折价格</th>
+                    <!--<th>总放出额度</th>
+                    <th>折合代币数量</th>-->
+                    <th>系统卖出价格(xx usdt)和币数量</th>
+                    <th>最终收益率</th>
+                    <th>状态</th>
+                </tr>
+                <tr>
+                    <td>暂无数据</td>
+                    <td>暂无数据</td>
+                    <td>暂无数据</td>
+                    <!--<td>暂无数据</td>
+                    <td>暂无数据</td>-->
+                    <td>暂无数据</td>
+                    <td>暂无数据</td>
+                    <td>暂无数据</td>
+                </tr>
+                </tbody>
+            </table>
+            <div class="more-box"><i class="icon-time"></i><span class="text-time official-time">更多官方历史活动记录</span><i class="r-more-icon"></i></div>
+        </div>
+
+
+        <!--  decorate  -->
+        <!--<div class="decorate">
+            <i class="polygon1"></i>
+            <i class="polygon2"></i>
+            <i class="polygon3"></i>
+            <i class="polygon4"></i>
+            <i class="polygon5"></i>
+        </div>-->
+    </div>
+
+
+    <!--  预约历史记录弹窗  -->
+    <div class="appointment-box">
+        <div class="appointment-title"><span>您的预约历史记录</span><i class="cancel"></i></div>
+        <div class="appointment-body">
+            <table class="appointment-ref">
+                <tbody>
+                <tr class="th">
+                    <th>期次</th>
+                    <th>锁定交易所价格</th>
+                    <th>锁定85折价格</th>
+                    <th>您预约的额度</th>
+                    <th>最终获得额度和代币数量</th>
+                    <th>系统卖出价格(xx usdt)和币数量</th>
+                    <th>最终收益率</th>
+                    <th>状态</th>
+                </tr>
+                <tr>
+                    <td>暂无数据</td>
+                    <td>暂无数据</td>
+                    <td>暂无数据</td>
+                    <td>暂无数据</td>
+                    <td>暂无数据</td>
+                    <td>暂无数据</td>
+                    <td>暂无数据</td>
+                    <td>暂无数据</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!--  官方历史预约活动  -->
+    <style>
+        table.appointment-ref .th th {
+            width: 198px;
+        }
+    </style>
+    <div class="official-box">
+        <div class="appointment-title"><span>官方历史活动记录</span><i class="cancel"></i></div>
+        <div class="appointment-body">
+            <table class="appointment-ref">
+                <tbody>
+                <tr class="th">
+                    <th>期次</th>
+                    <th>锁定交易所价格</th>
+                    <th>锁定85折价格</th>
+                    <th>系统卖出价格(xx usdt)和币数量</th>
+                    <th>最终收益率</th>
+                    <th>状态</th>
+                </tr>
+                <tr>
+                    <td>暂无数据</td>
+                    <td>暂无数据</td>
+                    <td>暂无数据</td>
+                    <td>暂无数据</td>
+                    <td>暂无数据</td>
+                    <td>暂无数据</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!--  邀请好友  -->
+    <!--<div class="warp-1200 yaoqingBox">
+        <div class="my-code-box">
+            <div class="appointment-title"><span>喊好友来一起拼团吧！</span><i class="cancel"></i></div>
+            <div style="padding: 0 20px;">
+                <p class="c-pwd-text" style="margin-top: 16px;">我的邀请码</p>
+                <div class="code-t-box ov"><p class="code-text fl"><input type="text" id="linkVal" value="<?/*=$userdata['sign']*/?>" readonly></p><p class="fl copy-btn pr" id="copyBoard">复制</p></div>
+                <p class="c-pwd-text" style="margin-top: 16px;">邀请链接</p>
+                <div class="code-t-box ov"><p class="code-text fl"><input type="text" id="linkVal2" value="http://www.xcoinpay.io/index/register?invitation_code=<?/*=$userdata['sign']*/?>" readonly></p><p class="fl copy-btn pr" id="copyBoard2">复制</p></div>
+            </div>
+        </div>
+    </div>-->
+
+
+    <script type="text/javascript" src="/public/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/public/js/layer.js" charset="utf-8"></script>
+    <script>
+        $(function() {
+            //邀请码复制
+            $("#copyBoard").click(function(){
+                var Url1 = $("#linkVal");
+                Url1.select();//选择对象
+                document.execCommand("Copy"); // 执行浏览器复制命令
+                layer.msg("已复制好，去粘贴吧");
+            });
+
+            //邀请链接复制
+            $("#copyBoard2").click(function(){
+                var Url1 = $("#linkVal2");
+                Url1.select();//选择对象
+                document.execCommand("Copy"); // 执行浏览器复制命令
+                layer.msg("已复制好，去粘贴吧");
+            });
+
+            $(".tran-ul li").click(function (){
+                //获取点击的元素给其添加样式，讲其兄弟元素的样式移除
+                $(this).addClass("tran-active").siblings().removeClass("tran-active");
+                //获取选中元素的下标
+                var index = $(this).index();
+                $(".act").eq(index).addClass("current").siblings().removeClass("current");
+            });
+
+            //您的预约历史记录
+            $(".you-time").click(function(){
+                $(".appointment-box").fadeIn();
+            });
+            $(".cancel").click(function(){
+                $(".appointment-box").fadeOut();
+            });
+            //官方历史活动
+            $(".official-time").click(function(){
+                $(".official-box").fadeIn();
+            });
+            $(".cancel").click(function(){
+                $(".official-box").fadeOut();
+            });
+
+            //点击喊好友参加拼团
+            /*$(".yaoqing").click(function(){
+                $(".yaoqingBox").fadeIn();
+            });
+            $(".cancel").click(function(){
+                $(".yaoqingBox").fadeOut();
+            });*/
+
+        });
+        //判断用户首次登陆提示
+        $(document).ready(function() {
+            var newVisitor = isNewVisitor();// 如果是新访客
+            if(newVisitor === true) {
+                // 动画弹出消息框
+                layer.alert("第1期的打折活动已经结束，收益结算中，结算完成后自动发放到您的账户，请到个人资产界面查看您得到的收益", {
+                    skin: 'layui-layer-molv', //样式类名
+                    closeBtn: 0,
+                    title: '通知'
+                });
+                // 标记：已经向该访客弹出过消息。1天之内不要再弹
+                setCookie("yf_xsw","true", 1);
+            }else{
+                console.log(2222)
+            }
+        });
+
+        function isNewVisitor() {
+            // 从cookie读取“已经向访客提示过消息”的标志位
+            var flg = getCookie("yf_xsw");
+            if (flg === "") {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        // 写字段到cookie
+        function setCookie(cname, cvalue, exdays) {
+            var d = new Date();
+            d.setTime(d.getTime() + (exdays*24*60*60*1000));
+            var expires = "expires="+d.toUTCString();
+            document.cookie = cname + "=" + cvalue + "; " + expires +";path=/";
+        }
+        // 读cookie
+        function getCookie(cname) {
+            var name = cname + "=";
+            var ca = document.cookie.split(';');
+            for(var i=0; i<ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0)==' ') c = c.substring(1);
+                if (c.indexOf(name) == 0) return c.substring(name.length,c.length);
+            }
+            return "";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+html,body ,.box{height: 120vh;background: #091928;}
+.form-box{text-align: center;background: url(/public/images/index/login-bg-l.png) no-repeat center;height: 640px;}
+.form-warp{width: 460px;background: #fff;display: inline-block;border-radius: 4px;margin-top: 38px;position: relative;}
+.login-logo{display: inline-block;background: url(/public/images/index/login-logo.png) no-repeat;width: 199px;height: 60px;position: absolute;top: -30px;left: 50%;margin-left: -100px;}
+.data-box{padding: 70px 60px;}
+.data-box input{width: 328px;background: #F3F4F8;height: 46px;padding-left: 10px;font-size: 14px;border-radius: 4px;margin-bottom: 24px;border: 1px solid #F3F4F8;}
+.data-box input:hover{border: 1px solid #17BF98;}
+.forget-box{overflow: hidden;margin-bottom: 20px;}
+.num-register{float: left;}
+.forget-pwd{float: right;}
+.forget-box a{font-size: 14px;color: #999;}
+.submit-btn{width: 338px;height: 46px;background: #17BF98;border: 1px solid #17BF98;color: #fff;font-size: 18px;border-radius: 4px;cursor: pointer;}
+.submit-btn:hover{background: #0faf8a;border: 1px solid #0faf8a;}
+.verification-box{overflow: hidden;}
+.data-box .verification{width: 190px;}
+.ver-code{width: 120px;height: 46px;border-radius: 4px;cursor: pointer;border: 1px solid #F3F4F8;line-height: 46px;font-size: 14px;color: #666;}
+.ver-code img{width: 100%;display: inline-block;margin-top: 6.5px;}
+.user-agreement{color: #17BF98;}
+.agreement-btn{display: inline-block;width: 16px;height: 16px;float: left;margin-right: 10px;cursor: pointer;}
+.have-num{color: #999;font-size: 14px;font-weight: 400;margin-top: 19px;}
+.right-login{color: #17BF98;}
+
+/*.cp{font-size:14px;color:rgba(54,80,104,1);font-weight:400;margin: 69px 0;text-align: center;}*/
+
+
+
+

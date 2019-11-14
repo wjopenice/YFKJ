@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>xcoinpay</title>
+    <meta name="keywords" content="FomoXYT官网，FomoXYT，预约活动，区块链">
+    <meta name="description" content="FomoXYT，区块链，交易所，虚拟币交易">
+    <link rel="shortcut icon" href="/public/images/xcoinpay.ico">
+    <link rel="stylesheet" href="/public/css/index/main.css">
+    <link rel="stylesheet" href="/public/css/index/userads.css">
+</head>
+<body>
+<div class="box">
+    <!--  head  -->
+    <?php load_view("inc/pc_nav");?>
+
+    <!--  个人中心导航  -->
+    <?php load_view("inc/user_left");?>
+
+    <!--  user administration  -->
+    <div class="userad-box">
+        <div class="warp-1200">
+            <div class="per-title"><span class="p-online"></span><span class="p-text">用户管理</span></div>
+            <div class="ov">
+                <div class="u-box u-info fl">
+                    <div class="u-pad-box">
+                        <p class="head-img"><img src="" alt=""></p>
+                        <p class="logon-record">上次登录：<?=date("Y-m-d H:i:s",$userdata['login_time'])?></p>
+                        <div class="pro-bar ov"><span class="bar-text fl">安全等级：</span><div class="fl bar-box"><p class="select-bar-box" style="width: 66%;"></p></div><span class="select-text fl">较好</span></div>
+                        <p class="logon-record">登录IP：<?=$userdata['ip']?></p>
+                    </div>
+                </div>
+                <div class="u-box u-changepwd pr fl">
+                    <div class="u-pad-box">
+                        <p><img src="/public/images/index/pwd-icon.png" width="48" height="48" alt=""></p>
+                        <p class="c-pwd-text">修改密码</p>
+                        <p class="c-btn">修改</p>
+                    </div>
+                </div>
+                <!--<div class="u-box u-code fl">
+                    <div class="u-pad-box">
+                        <p><img src="/public/images/index/code-icon.png" width="46" height="46" alt=""></p>
+                        <p class="c-pwd-text" style="margin-top: 16px;">我的邀请码</p>
+                        <div class="code-t-box ov"><p class="code-text fl"><input type="text" id="linkVal" value="<?/*=$userdata['sign']*/?>" readonly></p><p class="fl copy-btn pr" id="copyBoard"><i class="copy-icon"></i>复制</p></div>
+                        <p class="c-pwd-text" style="margin-top: 16px;">邀请链接</p>
+                        <div class="code-t-box ov"><p class="code-text fl"><input type="text" id="linkVal2" value="http://www.xcoinpay.io/index/register?invitation_code=<?/*=$userdata['sign']*/?>" readonly></p><p class="fl copy-btn pr" id="copyBoard2"><i class="copy-icon"></i>复制</p></div>
+                    </div>
+                </div>-->
+            </div>
+        </div>
+    </div>
+
+    <!--  footer  -->
+    <!--<div class="user-foot"></div>-->
+</div>
+
+<!--  修改密码  -->
+<div class="pwd-popup">
+    <div class="popup-title"><span>修改密码</span></div>
+    <div class="popup-body">
+        <form class="form_user" action="/index/userad" method="post">
+            <div class="p-pwd-box ov" id="locapass"><label class="fl">原密码</label><input type="password" id="pass" class="fl"></div>
+            <div class="p-pwd-box ov"><label class="fl">新密码</label><input type="password" id="newpass" class="fl"></div>
+            <div class="p-pwd-box ov"><label class="fl">确认新密码</label><input type="password" id="repass" name="pass" class="fl"></div>
+            <div class="r-foot address-f ov">
+                <div class="fr">
+                    <a class="call-btn" href="javascript:void(0);">取消</a>
+                    <input type="hidden" name="tel" value="<?=$user?>">
+                    <input class="withdraw-btn" id="btn" type="button" value="保存">
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script type="text/javascript" src="/public/js/jquery.min.js"></script>
+<script type="text/javascript" src="/public/js/layer.js" charset="utf-8"></script>
+<script>
+    $(function () {
+        //点击修改密码弹窗
+        $(".c-btn").click(function(){
+            $(".pwd-popup").fadeIn();
+        });
+        $(".call-btn").click(function(){
+            $(".pwd-popup").fadeOut();
+        });
+
+        //邀请码复制
+        /*$("#copyBoard").click(function(){
+            var Url1 = $("#linkVal");
+            Url1.select();//选择对象
+            document.execCommand("Copy"); // 执行浏览器复制命令
+            layer.msg("已复制好，去粘贴吧");
+        });*/
+
+        $("#pass").change(function () {
+            let tel = $("#pass").val();
+            $.post("/index/ajaxpwd",{tel:'<?=$user?>',locapass:tel},function(msg){
+                if(msg.code == 1){
+                    $("#locapass").remove();
+                }else{
+                    $("#pass").css("border","solid 1px red");
+                }
+            },"json");
+        });
+
+        $("#btn").click(function () {
+            let tel = $("#pass").val();
+            if(tel == ""){
+                layer.msg('原密码不能为空');
+                return false;
+            }
+            let newpass = $("#newpass").val();
+            if(newpass == ""){
+                layer.msg('新密码不能为空');
+                return false;
+            }
+            let repass = $("#repass").val();
+            if(newpass != repass){
+                layer.msg('两次密码不一致');
+                return false;
+            }
+            $(".form_user").submit();
+        });
+
+        //邀请链接复制
+        /*$("#copyBoard2").click(function(){
+            var Url1 = $("#linkVal2");
+            Url1.select();//选择对象
+            document.execCommand("Copy"); // 执行浏览器复制命令
+            layer.msg("已复制好，去粘贴吧");
+        });*/
+
+    })
+</script>
+</body>
+</html>

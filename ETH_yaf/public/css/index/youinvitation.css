@@ -1,0 +1,61 @@
+html,body ,.box{height: 120vh;background: #0E2648;}
+
+.per-title{height: 70px;line-height: 70px;position: relative;margin-top: 20px;}
+.p-online{display: inline-block;width: 4px;height: 16px;background: #51A0EB;position: absolute;left: 0;top: 28px;}
+
+table.reference{border-collapse: collapse;display: inline-block;background: #091928;width: 1170px;margin-top: -15px;height: 330px;overflow: hidden;overflow-y: scroll;}
+table.reference tr{background: rgba(101,119,136,0);}
+table.reference td{max-width: 400px;height: 60px;font-size: 14px;color: #BAC7D9;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;text-align: left;padding: 0 40px;}
+table.reference th{width: 400px;height: 60px;font-size: 14px;color: #BAC7D9;text-align: left;padding: 0 40px;}
+.fund-box{margin-bottom: 100px;}
+
+.yq-rule{margin-top: 10px;font-size: 20px;color: #BAC7D9;margin-bottom: 10px;}
+.gf-reward{font-size: 14px;color: #BAC7D9;line-height: 24px;}
+.b-example{font-size: 14px;color: #BAC7D9;line-height: 24px;text-indent: 2em;}
+.yq-rule-box{padding: 10px 40px;margin-top: 50px;background: #0a3777;}
+
+.tran-ul li{width: 381px;height: 40px;border: 1px solid #4e6b94;line-height: 40px;text-align: center;margin: 0px 10px 30px 0;font-size: 15px;color: #4e6b94;cursor: pointer;}
+.tran-ul li:last-child{margin-right: 0;}
+.tran-ul .tran-active{border: 1px solid #2b67a0;background: #2b67a0;color: #8dbdff;}
+
+.act .reference{display: none;}
+.current .reference{display: block;}
+
+
+.my-code-box{padding: 10px 40px 40px;background: #091928;}
+.per-title {height: 70px;line-height: 70px;position: relative;margin-top: 20px;}
+.per-title .p-online {display: inline-block;width: 4px;height: 16px;background: #51A0EB;position: absolute;left: 0;top: 28px;}
+.per-title .p-text {font-size: 20px;color: #fff;margin-left: 13px;}
+.c-pwd-text{color: #BAC7D9;font-size: 20px;margin-top: 20px;margin-bottom: 4px;}
+.c-btn{position: absolute;bottom: 30px;right: 30px;width: 100px;height: 34px;background: #17BF98;font-size: 14px;color: #fff;text-align: center;line-height: 34px;cursor: pointer;}
+.code-text input{font-size: 18px;color: #17BF98;margin-right: 20px;width: 600px;height: 34px;}
+.copy-btn{font-size: 16px;color: #51A0EB;width: 74px;height: 34px;background: #25405A;text-align: center;line-height: 34px;cursor: pointer;}
+.copy-icon{width: 12px;height: 16px;background: url(/public/images/index/copy-icon.png) no-repeat center;display: inline-block;position: relative;top: 2px;margin-right: 4px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

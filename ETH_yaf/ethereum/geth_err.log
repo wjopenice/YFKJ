@@ -1,0 +1,248 @@
+INFO [09-03|13:46:48.656] Maximum peer count                       ETH=25 LES=0 total=25
+INFO [09-03|13:46:48.657] Starting peer-to-peer node               instance=Geth/v1.8.27-stable-4bcc0a37/linux-amd64/go1.11.5
+INFO [09-03|13:46:48.657] Allocated cache and file handles         database=/home/wwwroot/ETH_yaf/ethereum/geth/chaindata cache=512 handles=32767
+INFO [09-03|13:46:48.706] Initialised chain configuration          config="{ChainID: 1337 Homestead: 0 DAO: <nil> DAOSupport: false EIP150: <nil> EIP155: 155 EIP158: 158 Byzantium: <nil> Constantinople: <nil>  ConstantinopleFix: <nil> Engine: unknown}"
+INFO [09-03|13:46:48.706] Disk storage enabled for ethash caches   dir=/home/wwwroot/ETH_yaf/ethereum/geth/ethash count=3
+INFO [09-03|13:46:48.706] Disk storage enabled for ethash DAGs     dir=/root/.ethash                              count=2
+INFO [09-03|13:46:48.706] Initialising Ethereum protocol           versions="[63 62]" network=57598955
+INFO [09-03|13:46:48.758] Loaded most recent local header          number=1420 hash=f76d79…8afeca td=261513034 age=2mo1w6d
+INFO [09-03|13:46:48.758] Loaded most recent local full block      number=1420 hash=f76d79…8afeca td=261513034 age=2mo1w6d
+INFO [09-03|13:46:48.758] Loaded most recent local fast block      number=1420 hash=f76d79…8afeca td=261513034 age=2mo1w6d
+INFO [09-03|13:46:48.759] Loaded local transaction journal         transactions=0 dropped=0
+INFO [09-03|13:46:48.759] Regenerated local transaction journal    transactions=0 accounts=0
+WARN [09-03|13:46:48.759] Blockchain not empty, fast sync disabled 
+INFO [09-03|13:46:48.797] New local node record                    seq=23 id=47eb74eae659b538 ip=127.0.0.1 udp=30303 tcp=30303
+INFO [09-03|13:46:48.798] Started P2P networking                   self=enode://bed284fcda615d7996e840e7d1fd8f98282eaf31639e67d540b8df662e2d47b8cec78eaba4e9b50c1709d4d124a6bf7184f581b5aae983eb1a0a37838f3d836b@127.0.0.1:30303
+INFO [09-03|13:46:48.799] IPC endpoint opened                      url=/home/wwwroot/ETH_yaf/ethereum/geth.ipc
+INFO [09-03|13:46:48.800] HTTP endpoint opened                     url=http://0.0.0.0:8545                     cors=* vhosts=localhost
+INFO [09-03|13:46:48.880] Etherbase automatically configured       address=0xB0Bccc869C02F56EaAeF4ff7BCB4bcD3985Bf050
+INFO [09-03|13:47:21.401] New local node record                    seq=24 id=47eb74eae659b538 ip=47.75.122.1 udp=30303 tcp=30303
+INFO [09-03|14:20:19.838] Updated mining threads                   threads=1
+INFO [09-03|14:20:19.838] Transaction pool price threshold updated price=1000000000
+INFO [09-03|14:20:19.838] Commit new mining work                   number=1421 sealhash=9f272b…231853 uncles=0 txs=0 gas=0 fees=0 elapsed=160.669µs
+INFO [09-03|14:20:29.692] Updated mining threads                   threads=0
+INFO [09-03|14:21:04.575] Updated mining threads                   threads=1
+INFO [09-03|14:21:06.717] Successfully sealed new block            number=1421 sealhash=9f272b…231853 hash=4c7f4c…bd8eee elapsed=46.878s
+INFO [09-03|14:21:06.717] 🔨 mined potential block                  number=1421 hash=4c7f4c…bd8eee
+INFO [09-03|14:21:06.717] Commit new mining work                   number=1422 sealhash=2891ad…fb765f uncles=0 txs=0 gas=0 fees=0 elapsed=184.932µs
+INFO [09-03|14:21:07.294] Updated mining threads                   threads=0
+INFO [09-03|14:22:03.772] Updated mining threads                   threads=0
+INFO [09-03|14:22:04.956] Updated mining threads                   threads=0
+INFO [09-03|14:22:05.598] Updated mining threads                   threads=0
+INFO [09-03|14:22:06.222] Updated mining threads                   threads=0
+INFO [09-03|14:22:06.796] Updated mining threads                   threads=0
+INFO [09-03|14:22:07.343] Updated mining threads                   threads=0
+INFO [09-03|14:22:07.887] Updated mining threads                   threads=0
+INFO [09-03|14:22:08.476] Updated mining threads                   threads=0
+INFO [09-03|14:22:08.988] Updated mining threads                   threads=0
+INFO [09-03|14:22:09.535] Updated mining threads                   threads=0
+INFO [09-03|14:23:09.676] Updated mining threads                   threads=1
+INFO [09-03|14:23:10.770] Successfully sealed new block            number=1422 sealhash=2891ad…fb765f hash=8910c7…2128f1 elapsed=2m4.052s
+INFO [09-03|14:23:10.770] 🔨 mined potential block                  number=1422 hash=8910c7…2128f1
+INFO [09-03|14:23:10.770] Commit new mining work                   number=1423 sealhash=521d17…aa2cf6 uncles=0 txs=0 gas=0 fees=0 elapsed=197.423µs
+INFO [09-03|14:24:17.581] Updated mining threads                   threads=1
+INFO [09-03|14:24:17.581] Transaction pool price threshold updated price=1000000000
+INFO [09-03|14:24:17.581] Commit new mining work                   number=1423 sealhash=0d0d1a…5e52fd uncles=0 txs=0 gas=0 fees=0 elapsed=152.423µs
+INFO [09-03|14:24:23.393] Successfully sealed new block            number=1423 sealhash=0d0d1a…5e52fd hash=cdccf3…128405 elapsed=5.811s
+INFO [09-03|14:24:23.393] 🔨 mined potential block                  number=1423 hash=cdccf3…128405
+INFO [09-03|14:24:23.393] Commit new mining work                   number=1424 sealhash=db1681…1c739b uncles=0 txs=0 gas=0 fees=0 elapsed=244.306µs
+INFO [09-03|14:24:23.679] Successfully sealed new block            number=1424 sealhash=db1681…1c739b hash=dd9a90…c885b9 elapsed=286.163ms
+INFO [09-03|14:24:23.679] 🔨 mined potential block                  number=1424 hash=dd9a90…c885b9
+INFO [09-03|14:24:23.680] Commit new mining work                   number=1425 sealhash=2b7f8b…f017df uncles=0 txs=0 gas=0 fees=0 elapsed=117.977µs
+INFO [09-03|14:24:23.790] Successfully sealed new block            number=1425 sealhash=2b7f8b…f017df hash=6a8e40…b843db elapsed=110.275ms
+INFO [09-03|14:24:23.790] 🔨 mined potential block                  number=1425 hash=6a8e40…b843db
+INFO [09-03|14:24:23.790] Mining too far in the future             wait=2s
+INFO [09-03|14:24:25.790] Commit new mining work                   number=1426 sealhash=712d7e…225492 uncles=0 txs=0 gas=0 fees=0 elapsed=2.000s
+INFO [09-03|14:24:44.868] Successfully sealed new block            number=1426 sealhash=712d7e…225492 hash=cf1af2…53b098 elapsed=19.077s
+INFO [09-03|14:24:44.868] 🔨 mined potential block                  number=1426 hash=cf1af2…53b098
+INFO [09-03|14:24:44.868] Commit new mining work                   number=1427 sealhash=6b3cdd…609ace uncles=0 txs=0 gas=0 fees=0 elapsed=186.696µs
+INFO [09-03|14:24:49.651] Successfully sealed new block            number=1427 sealhash=6b3cdd…609ace hash=838f0a…da1fd0 elapsed=4.783s
+INFO [09-03|14:24:49.651] 🔨 mined potential block                  number=1427 hash=838f0a…da1fd0
+INFO [09-03|14:24:49.652] Commit new mining work                   number=1428 sealhash=f42482…6dae0d uncles=0 txs=0 gas=0 fees=0 elapsed=186.799µs
+INFO [09-03|14:24:49.781] Successfully sealed new block            number=1428 sealhash=f42482…6dae0d hash=e14ad2…63896b elapsed=129.683ms
+INFO [09-03|14:24:49.781] 🔗 block reached canonical chain          number=1421 hash=4c7f4c…bd8eee
+INFO [09-03|14:24:49.782] 🔨 mined potential block                  number=1428 hash=e14ad2…63896b
+INFO [09-03|14:24:49.782] Commit new mining work                   number=1429 sealhash=267bf5…2ca161 uncles=0 txs=0 gas=0 fees=0 elapsed=155.143µs
+INFO [09-03|14:24:54.492] Successfully sealed new block            number=1429 sealhash=267bf5…2ca161 hash=7c355a…26d904 elapsed=4.710s
+INFO [09-03|14:24:54.493] 🔗 block reached canonical chain          number=1422 hash=8910c7…2128f1
+INFO [09-03|14:24:54.493] 🔨 mined potential block                  number=1429 hash=7c355a…26d904
+INFO [09-03|14:24:54.493] Commit new mining work                   number=1430 sealhash=80ffec…e06829 uncles=0 txs=0 gas=0 fees=0 elapsed=191.549µs
+INFO [09-03|14:24:55.718] Successfully sealed new block            number=1430 sealhash=80ffec…e06829 hash=af48f8…8acb6e elapsed=1.224s
+INFO [09-03|14:24:55.718] 🔗 block reached canonical chain          number=1423 hash=cdccf3…128405
+INFO [09-03|14:24:55.718] 🔨 mined potential block                  number=1430 hash=af48f8…8acb6e
+INFO [09-03|14:24:55.718] Commit new mining work                   number=1431 sealhash=16f813…93f138 uncles=0 txs=0 gas=0 fees=0 elapsed=181.659µs
+INFO [09-03|14:24:59.272] Successfully sealed new block            number=1431 sealhash=16f813…93f138 hash=546ce7…387981 elapsed=3.554s
+INFO [09-03|14:24:59.273] 🔗 block reached canonical chain          number=1424 hash=dd9a90…c885b9
+INFO [09-03|14:24:59.273] 🔨 mined potential block                  number=1431 hash=546ce7…387981
+INFO [09-03|14:24:59.273] Commit new mining work                   number=1432 sealhash=cdb3b6…d9050a uncles=0 txs=0 gas=0 fees=0 elapsed=157.98µs
+INFO [09-03|14:25:01.367] Successfully sealed new block            number=1432 sealhash=cdb3b6…d9050a hash=3b6aa5…2061c5 elapsed=2.093s
+INFO [09-03|14:25:01.367] 🔗 block reached canonical chain          number=1425 hash=6a8e40…b843db
+INFO [09-03|14:25:01.367] 🔨 mined potential block                  number=1432 hash=3b6aa5…2061c5
+INFO [09-03|14:25:01.367] Commit new mining work                   number=1433 sealhash=9d51f7…d14dd4 uncles=0 txs=0 gas=0 fees=0 elapsed=179.418µs
+INFO [09-03|14:25:05.085] Updated mining threads                   threads=0
+INFO [09-03|14:25:19.797] Setting new local account                address=0xB0Bccc869C02F56EaAeF4ff7BCB4bcD3985Bf050
+INFO [09-03|14:25:19.797] Submitted transaction                    fullhash=0x796eed25625f1d879de25b5f5a543f954cd86d82594a1b6b3fd5fc01d0461539 recipient=0xD55dD90136fCAf46d21d1512Bc744A204B3a4bC4
+INFO [09-03|14:25:22.368] Commit new mining work                   number=1433 sealhash=51c163…843d35 uncles=0 txs=1 gas=21000 fees=2.1e-05 elapsed=453.209µs
+INFO [09-03|14:25:58.899] Submitted transaction                    fullhash=0xc6ce4899214ab6143a66de6910c0d666781cc2a363f475690ed6c8eb9fddb9cb recipient=0x093A0Ed738B65ed34f2A37a2D44c5e3Cd0D0DD45
+INFO [09-03|14:25:59.140] Submitted transaction                    fullhash=0xfdb3b091ad87a710001995493f62ff7ea9f659304743f2705c9cb0c54c7fe2fa recipient=0x093A0Ed738B65ed34f2A37a2D44c5e3Cd0D0DD45
+INFO [09-03|14:25:59.521] Submitted transaction                    fullhash=0x6ff735ce63dd9e10e8ad629bc7cbd13da1c14ad888a93bb7fc53c0475c93990d recipient=0x093A0Ed738B65ed34f2A37a2D44c5e3Cd0D0DD45
+INFO [09-03|14:25:59.946] Submitted transaction                    fullhash=0xc6483d1101bfc9a77d7e6a857330392e4239b3913a41a9b1a5282d6a80199229 recipient=0x093A0Ed738B65ed34f2A37a2D44c5e3Cd0D0DD45
+INFO [09-03|14:25:59.947] Submitted transaction                    fullhash=0x37bbb62938f0b914bad6bd84e0b63000e9a7cc991f8cb621739ecc782c5cf707 recipient=0x093A0Ed738B65ed34f2A37a2D44c5e3Cd0D0DD45
+INFO [09-03|14:26:00.247] Submitted transaction                    fullhash=0x4334eaa3955afad9319b53d05c401208ddb26780927bda960d3878b1c76855db recipient=0x093A0Ed738B65ed34f2A37a2D44c5e3Cd0D0DD45
+INFO [09-03|14:26:00.321] Submitted transaction                    fullhash=0x262e174b9d88f2606e185a148d05ecdbc8260c767b147945ff36d7924878ac73 recipient=0x093A0Ed738B65ed34f2A37a2D44c5e3Cd0D0DD45
+INFO [09-03|14:26:00.431] Submitted transaction                    fullhash=0x02c9d2356ed76635b4299eb8cae047134cb85cbc1de0ba585f247dcf1ad8b5d8 recipient=0x093A0Ed738B65ed34f2A37a2D44c5e3Cd0D0DD45
+INFO [09-03|14:26:00.440] Submitted transaction                    fullhash=0xd52cf4315c04069f7f95c792a243c70863c818c4be37cef7377ed2800f226a88 recipient=0x093A0Ed738B65ed34f2A37a2D44c5e3Cd0D0DD45
+INFO [09-03|14:26:00.484] Submitted transaction                    fullhash=0xa6db07a6359638a18cae503025af6fad72e76ff6245382c8fa1cc0d415469621 recipient=0x093A0Ed738B65ed34f2A37a2D44c5e3Cd0D0DD45
+INFO [09-03|14:26:00.485] Submitted transaction                    fullhash=0x53da4afea6d5cfd875d0b7dfec0e0f8357f0be7762d227b26b8bdf5ad5465379 recipient=0x093A0Ed738B65ed34f2A37a2D44c5e3Cd0D0DD45
+INFO [09-03|14:26:00.486] Submitted transaction                    fullhash=0x42ced122f9ff01eee7e590815d204e33c8faf7be6d9c6504f3ab71d5becbb656 recipient=0x093A0Ed738B65ed34f2A37a2D44c5e3Cd0D0DD45
+INFO [09-03|14:26:00.490] Submitted transaction                    fullhash=0x56af5af8bd6c396bb7701e5efb3fb89651ab7bf987bc7683a569de638ec5c340 recipient=0x093A0Ed738B65ed34f2A37a2D44c5e3Cd0D0DD45
+INFO [09-03|14:26:00.491] Submitted transaction                    fullhash=0xe283bda77921b13cd0768d498dfebcc285859b7fc683027dada80779d83744e6 recipient=0x093A0Ed738B65ed34f2A37a2D44c5e3Cd0D0DD45
+INFO [09-03|14:26:00.492] Submitted transaction                    fullhash=0x37d7a07d849b8ec9f10069a8d9c2c80a5c5e6dd846d0709533fc1e6a7b035772 recipient=0x093A0Ed738B65ed34f2A37a2D44c5e3Cd0D0DD45
+INFO [09-03|14:26:00.492] Submitted transaction                    fullhash=0xa084db2b544d05c99bea17063ece92057c64969b92d13dea567a95ca490347d7 recipient=0x093A0Ed738B65ed34f2A37a2D44c5e3Cd0D0DD45
+INFO [09-03|14:26:00.493] Submitted transaction                    fullhash=0x53b83dc25ec8834b9fbd8764e2e8fc1687d537eb367ab8ddb2c673abe16b03dd recipient=0x093A0Ed738B65ed34f2A37a2D44c5e3Cd0D0DD45
+INFO [09-03|14:26:00.493] Submitted transaction                    fullhash=0x83b83a7e36d2a9d2e1685ac3864c28b041b45b389e77d4a1bc6e81bb231a6b05 recipient=0x093A0Ed738B65ed34f2A37a2D44c5e3Cd0D0DD45
+INFO [09-03|14:26:00.494] Submitted transaction                    fullhash=0xc58574b5c54a343638a085eed72dea21af16e11a6ce68d9d6f3e5a1be267c72b recipient=0x093A0Ed738B65ed34f2A37a2D44c5e3Cd0D0DD45
+INFO [09-03|14:26:00.494] Submitted transaction                    fullhash=0xe22fc9182ad30668b6a1a7458c86e370d11a2fdaebeb156e5b79f6905e7350b3 recipient=0x093A0Ed738B65ed34f2A37a2D44c5e3Cd0D0DD45
+INFO [09-03|14:26:00.495] Submitted transaction                    fullhash=0x9101ab2c0ba5eb8bb83337c7d8c26c214fdd562aff251c335fe17b92d3fba08b recipient=0x093A0Ed738B65ed34f2A37a2D44c5e3Cd0D0DD45
+INFO [09-03|14:26:00.495] Submitted transaction                    fullhash=0xf305457cf31c2e4593a828731d4ef49cf703cc2cdc75a9a58994448dce8e0740 recipient=0x093A0Ed738B65ed34f2A37a2D44c5e3Cd0D0DD45
+INFO [09-03|14:26:00.496] Submitted transaction                    fullhash=0xc24ee91700588638a59fcad7ad441f07ccbaba4e232844e281d4efb60bbba26b recipient=0x093A0Ed738B65ed34f2A37a2D44c5e3Cd0D0DD45
+INFO [09-03|14:26:00.497] Submitted transaction                    fullhash=0xef6a29f0396b0b0c115bbaa73c373e7ecf29a99005f8defe94a07e7cde08e5b0 recipient=0x093A0Ed738B65ed34f2A37a2D44c5e3Cd0D0DD45
+INFO [09-03|14:26:00.497] Submitted transaction                    fullhash=0x33ac5c0e9b5810664762c906dc4c65a56570a5061a6b0b0ff9f7fd8773ad7cda recipient=0x093A0Ed738B65ed34f2A37a2D44c5e3Cd0D0DD45
+INFO [09-03|14:26:00.498] Submitted transaction                    fullhash=0x551a475ce582d70818c50becc7f2f41ea6a1f1bbdbbf2e0ebe36f75fb8653946 recipient=0x093A0Ed738B65ed34f2A37a2D44c5e3Cd0D0DD45
+INFO [09-03|14:26:00.498] Submitted transaction                    fullhash=0xcb058d6c581d864598311a357d68183e71d08a492ff8f061bed514a46641f148 recipient=0x093A0Ed738B65ed34f2A37a2D44c5e3Cd0D0DD45
+INFO [09-03|14:26:00.499] Submitted transaction                    fullhash=0xd3cef0751969d0b9b8c9b3e21348cce4ead1e3e65ff7ddf8298ce731a00e86fb recipient=0x093A0Ed738B65ed34f2A37a2D44c5e3Cd0D0DD45
+INFO [09-03|14:26:00.499] Submitted transaction                    fullhash=0x4f35d9f3c056d45a776cafa7101c905ae0a3ec089bef5f3ee148feb558bcdf05 recipient=0x093A0Ed738B65ed34f2A37a2D44c5e3Cd0D0DD45
+INFO [09-03|14:26:00.502] Submitted transaction                    fullhash=0xbd64763022c5f053eeb5c9ca51465d64da69003327d943239d907c6d1db20da4 recipient=0x093A0Ed738B65ed34f2A37a2D44c5e3Cd0D0DD45
+INFO [09-03|14:26:00.503] Submitted transaction                    fullhash=0x93898ee40835f91d47a1175559208e82ab0d9cb7b8eeeb892bba3b90f7fae93b recipient=0x093A0Ed738B65ed34f2A37a2D44c5e3Cd0D0DD45
+INFO [09-03|14:26:00.522] Submitted transaction                    fullhash=0xa0260632fa36c9d0d3e69fd41fe12bf6eb213b8633a8f741e34e245c2e94ac72 recipient=0x093A0Ed738B65ed34f2A37a2D44c5e3Cd0D0DD45
+INFO [09-03|14:26:00.720] Submitted transaction                    fullhash=0xcb55fa5e07fbae03594cb52523ec2cc28d2a848f3041d5c5f417f7f4fc95b78f recipient=0x093A0Ed738B65ed34f2A37a2D44c5e3Cd0D0DD45
+INFO [09-03|14:26:00.846] Updated mining threads                   threads=1
+INFO [09-03|14:26:01.370] Commit new mining work                   number=1433 sealhash=51c163…843d35 uncles=0 txs=1 gas=21000 fees=2.1e-05 elapsed=350.844µs
+INFO [09-03|14:26:02.504] Successfully sealed new block            number=1433 sealhash=51c163…843d35 hash=192099…4f1013 elapsed=40.136s
+INFO [09-03|14:26:02.504] 🔗 block reached canonical chain          number=1426 hash=cf1af2…53b098
+INFO [09-03|14:26:02.504] 🔨 mined potential block                  number=1433 hash=192099…4f1013
+INFO [09-03|14:26:02.504] Commit new mining work                   number=1434 sealhash=a5a6e4…545c30 uncles=0 txs=0 gas=0     fees=0       elapsed=166.569µs
+INFO [09-03|14:43:41.715] HTTP endpoint closed                     url=http://0.0.0.0:8545
+INFO [09-03|14:43:41.715] IPC endpoint closed                      url=/home/wwwroot/ETH_yaf/ethereum/geth.ipc
+INFO [09-03|14:43:41.715] Writing cached state to disk             block=1433 hash=192099…4f1013 root=38d8b0…d77250
+INFO [09-03|14:43:41.715] Persisted trie from memory database      nodes=4 size=591.00B time=115.374µs gcnodes=0 gcsize=0.00B gctime=0s livenodes=25 livesize=3.15kB
+INFO [09-03|14:43:41.715] Writing cached state to disk             block=1432 hash=3b6aa5…2061c5 root=76f6c7…accf63
+INFO [09-03|14:43:41.715] Persisted trie from memory database      nodes=2 size=263.00B time=23.974µs  gcnodes=0 gcsize=0.00B gctime=0s livenodes=23 livesize=2.89kB
+INFO [09-03|14:43:41.715] Writing cached state to disk             block=1306 hash=5c117f…811565 root=21eafd…b949b8
+INFO [09-03|14:43:41.715] Persisted trie from memory database      nodes=0 size=0.00B   time=1.783µs   gcnodes=0 gcsize=0.00B gctime=0s livenodes=23 livesize=2.89kB
+INFO [09-03|14:43:41.715] Blockchain manager stopped 
+INFO [09-03|14:43:41.715] Stopping Ethereum protocol 
+INFO [09-03|14:43:41.715] Ethereum protocol stopped 
+INFO [09-03|14:43:41.716] Transaction pool stopped 
+INFO [09-03|14:43:41.716] Database closed                          database=/home/wwwroot/ETH_yaf/ethereum/geth/chaindata
+INFO [09-03|14:44:48.758] Maximum peer count                       ETH=25 LES=0 total=25
+Fatal: Error starting protocol stack: datadir already used by another process
+INFO [09-03|14:45:03.624] Maximum peer count                       ETH=25 LES=0 total=25
+Fatal: Error starting protocol stack: datadir already used by another process
+INFO [09-03|14:45:24.150] Maximum peer count                       ETH=25 LES=0 total=25
+Fatal: Error starting protocol stack: datadir already used by another process
+INFO [09-03|14:45:50.199] Maximum peer count                       ETH=25 LES=0 total=25
+Fatal: Error starting protocol stack: datadir already used by another process
+INFO [09-03|14:47:53.128] Maximum peer count                       ETH=25 LES=0 total=25
+INFO [09-03|14:47:53.130] Starting peer-to-peer node               instance=Geth/v1.8.27-stable-4bcc0a37/linux-amd64/go1.11.5
+INFO [09-03|14:47:53.130] Allocated cache and file handles         database=/home/wwwroot/ETH_yaf/ethereum/geth/chaindata cache=512 handles=32767
+INFO [09-03|14:47:53.144] Initialised chain configuration          config="{ChainID: 1337 Homestead: 0 DAO: <nil> DAOSupport: false EIP150: <nil> EIP155: 155 EIP158: 158 Byzantium: <nil> Constantinople: <nil>  ConstantinopleFix: <nil> Engine: unknown}"
+INFO [09-03|14:47:53.144] Disk storage enabled for ethash caches   dir=/home/wwwroot/ETH_yaf/ethereum/geth/ethash count=3
+INFO [09-03|14:47:53.144] Disk storage enabled for ethash DAGs     dir=/root/.ethash                              count=2
+INFO [09-03|14:47:53.144] Initialising Ethereum protocol           versions="[63 62]" network=57598955
+INFO [09-03|14:47:53.197] Loaded most recent local header          number=1433 hash=192099…4f1013 td=264539684 age=22m52s
+INFO [09-03|14:47:53.198] Loaded most recent local full block      number=1433 hash=192099…4f1013 td=264539684 age=22m52s
+INFO [09-03|14:47:53.198] Loaded most recent local fast block      number=1433 hash=192099…4f1013 td=264539684 age=22m52s
+INFO [09-03|14:47:53.198] Loaded local transaction journal         transactions=0 dropped=0
+INFO [09-03|14:47:53.198] Regenerated local transaction journal    transactions=0 accounts=0
+WARN [09-03|14:47:53.198] Blockchain not empty, fast sync disabled 
+INFO [09-03|14:47:53.217] New local node record                    seq=27 id=47eb74eae659b538 ip=127.0.0.1 udp=30303 tcp=30303
+INFO [09-03|14:47:53.217] Started P2P networking                   self=enode://bed284fcda615d7996e840e7d1fd8f98282eaf31639e67d540b8df662e2d47b8cec78eaba4e9b50c1709d4d124a6bf7184f581b5aae983eb1a0a37838f3d836b@127.0.0.1:30303
+INFO [09-03|14:47:53.219] IPC endpoint opened                      url=/home/wwwroot/ETH_yaf/ethereum/geth.ipc
+INFO [09-03|14:47:53.219] HTTP endpoint opened                     url=http://0.0.0.0:8545                     cors=* vhosts=localhost
+INFO [09-03|14:47:53.298] Etherbase automatically configured       address=0xB0Bccc869C02F56EaAeF4ff7BCB4bcD3985Bf050
+INFO [09-03|14:49:25.722] New local node record                    seq=28 id=47eb74eae659b538 ip=47.75.122.1 udp=30303 tcp=30303
+INFO [09-03|14:50:06.371] HTTP endpoint closed                     url=http://0.0.0.0:8545
+INFO [09-03|14:50:06.371] IPC endpoint closed                      url=/home/wwwroot/ETH_yaf/ethereum/geth.ipc
+INFO [09-03|14:50:06.371] Writing cached state to disk             block=1433 hash=192099…4f1013 root=38d8b0…d77250
+INFO [09-03|14:50:06.372] Persisted trie from memory database      nodes=0 size=0.00B time=7.555µs gcnodes=0 gcsize=0.00B gctime=0s livenodes=1 livesize=0.00B
+INFO [09-03|14:50:06.372] Writing cached state to disk             block=1432 hash=3b6aa5…2061c5 root=76f6c7…accf63
+INFO [09-03|14:50:06.372] Persisted trie from memory database      nodes=0 size=0.00B time=1.397µs gcnodes=0 gcsize=0.00B gctime=0s livenodes=1 livesize=0.00B
+INFO [09-03|14:50:06.372] Writing cached state to disk             block=1306 hash=5c117f…811565 root=21eafd…b949b8
+INFO [09-03|14:50:06.372] Persisted trie from memory database      nodes=0 size=0.00B time=1.316µs gcnodes=0 gcsize=0.00B gctime=0s livenodes=1 livesize=0.00B
+INFO [09-03|14:50:06.372] Blockchain manager stopped 
+INFO [09-03|14:50:06.372] Stopping Ethereum protocol 
+INFO [09-03|14:50:06.396] Ethereum protocol stopped 
+INFO [09-03|14:50:06.396] Transaction pool stopped 
+INFO [09-03|14:50:06.396] Database closed                          database=/home/wwwroot/ETH_yaf/ethereum/geth/chaindata
+INFO [09-03|14:50:47.466] Maximum peer count                       ETH=25 LES=0 total=25
+INFO [09-03|14:50:47.467] Starting peer-to-peer node               instance=Geth/v1.8.27-stable-4bcc0a37/linux-amd64/go1.11.5
+INFO [09-03|14:50:47.467] Allocated cache and file handles         database=/home/wwwroot/ETH_yaf/ethereum/geth/chaindata cache=512 handles=32767
+INFO [09-03|14:50:47.483] Initialised chain configuration          config="{ChainID: 1337 Homestead: 0 DAO: <nil> DAOSupport: false EIP150: <nil> EIP155: 155 EIP158: 158 Byzantium: <nil> Constantinople: <nil>  ConstantinopleFix: <nil> Engine: unknown}"
+INFO [09-03|14:50:47.483] Disk storage enabled for ethash caches   dir=/home/wwwroot/ETH_yaf/ethereum/geth/ethash count=3
+INFO [09-03|14:50:47.483] Disk storage enabled for ethash DAGs     dir=/root/.ethash                              count=2
+INFO [09-03|14:50:47.483] Initialising Ethereum protocol           versions="[63 62]" network=57598955
+INFO [09-03|14:50:47.532] Loaded most recent local header          number=1433 hash=192099…4f1013 td=264539684 age=25m46s
+INFO [09-03|14:50:47.532] Loaded most recent local full block      number=1433 hash=192099…4f1013 td=264539684 age=25m46s
+INFO [09-03|14:50:47.532] Loaded most recent local fast block      number=1433 hash=192099…4f1013 td=264539684 age=25m46s
+INFO [09-03|14:50:47.532] Loaded local transaction journal         transactions=0 dropped=0
+INFO [09-03|14:50:47.532] Regenerated local transaction journal    transactions=0 accounts=0
+WARN [09-03|14:50:47.532] Blockchain not empty, fast sync disabled 
+Fatal: Error starting protocol stack: listen tcp :30303: bind: address already in use
+INFO [09-03|14:51:08.327] Maximum peer count                       ETH=25 LES=0 total=25
+INFO [09-03|14:51:08.329] Starting peer-to-peer node               instance=Geth/v1.8.27-stable-4bcc0a37/linux-amd64/go1.11.5
+INFO [09-03|14:51:08.329] Allocated cache and file handles         database=/home/wwwroot/ETH_yaf/ethereum/geth/chaindata cache=512 handles=32767
+INFO [09-03|14:51:08.343] Initialised chain configuration          config="{ChainID: 1337 Homestead: 0 DAO: <nil> DAOSupport: false EIP150: <nil> EIP155: 155 EIP158: 158 Byzantium: <nil> Constantinople: <nil>  ConstantinopleFix: <nil> Engine: unknown}"
+INFO [09-03|14:51:08.343] Disk storage enabled for ethash caches   dir=/home/wwwroot/ETH_yaf/ethereum/geth/ethash count=3
+INFO [09-03|14:51:08.343] Disk storage enabled for ethash DAGs     dir=/root/.ethash                              count=2
+INFO [09-03|14:51:08.343] Initialising Ethereum protocol           versions="[63 62]" network=57598955
+INFO [09-03|14:51:08.391] Loaded most recent local header          number=1433 hash=192099…4f1013 td=264539684 age=26m7s
+INFO [09-03|14:51:08.391] Loaded most recent local full block      number=1433 hash=192099…4f1013 td=264539684 age=26m7s
+INFO [09-03|14:51:08.391] Loaded most recent local fast block      number=1433 hash=192099…4f1013 td=264539684 age=26m7s
+INFO [09-03|14:51:08.391] Loaded local transaction journal         transactions=0 dropped=0
+INFO [09-03|14:51:08.391] Regenerated local transaction journal    transactions=0 accounts=0
+WARN [09-03|14:51:08.391] Blockchain not empty, fast sync disabled 
+INFO [09-03|14:51:08.409] New local node record                    seq=29 id=47eb74eae659b538 ip=127.0.0.1 udp=30303 tcp=30303
+INFO [09-03|14:51:08.410] Started P2P networking                   self=enode://bed284fcda615d7996e840e7d1fd8f98282eaf31639e67d540b8df662e2d47b8cec78eaba4e9b50c1709d4d124a6bf7184f581b5aae983eb1a0a37838f3d836b@127.0.0.1:30303
+INFO [09-03|14:51:08.412] IPC endpoint opened                      url=/home/wwwroot/ETH_yaf/ethereum/geth.ipc
+INFO [09-03|14:51:08.412] HTTP endpoint opened                     url=http://0.0.0.0:8545                     cors=* vhosts=localhost
+INFO [09-03|14:51:08.498] Etherbase automatically configured       address=0xB0Bccc869C02F56EaAeF4ff7BCB4bcD3985Bf050
+INFO [09-03|14:51:13.473] HTTP endpoint closed                     url=http://0.0.0.0:8545
+INFO [09-03|14:51:13.473] IPC endpoint closed                      url=/home/wwwroot/ETH_yaf/ethereum/geth.ipc
+INFO [09-03|14:51:13.473] Writing cached state to disk             block=1433 hash=192099…4f1013 root=38d8b0…d77250
+INFO [09-03|14:51:13.473] Persisted trie from memory database      nodes=0 size=0.00B time=6.87µs gcnodes=0 gcsize=0.00B gctime=0s livenodes=1 livesize=0.00B
+INFO [09-03|14:51:13.473] Writing cached state to disk             block=1432 hash=3b6aa5…2061c5 root=76f6c7…accf63
+INFO [09-03|14:51:13.473] Persisted trie from memory database      nodes=0 size=0.00B time=1.242µs gcnodes=0 gcsize=0.00B gctime=0s livenodes=1 livesize=0.00B
+INFO [09-03|14:51:13.473] Writing cached state to disk             block=1306 hash=5c117f…811565 root=21eafd…b949b8
+INFO [09-03|14:51:13.473] Persisted trie from memory database      nodes=0 size=0.00B time=1.431µs gcnodes=0 gcsize=0.00B gctime=0s livenodes=1 livesize=0.00B
+INFO [09-03|14:51:13.473] Blockchain manager stopped 
+INFO [09-03|14:51:13.473] Stopping Ethereum protocol 
+INFO [09-03|14:51:13.473] Ethereum protocol stopped 
+INFO [09-03|14:51:13.473] Transaction pool stopped 
+INFO [09-03|14:51:13.474] Database closed                          database=/home/wwwroot/ETH_yaf/ethereum/geth/chaindata
+INFO [09-03|14:51:22.375] Maximum peer count                       ETH=25 LES=0 total=25
+INFO [09-03|14:51:22.377] Starting peer-to-peer node               instance=Geth/v1.8.27-stable-4bcc0a37/linux-amd64/go1.11.5
+INFO [09-03|14:51:22.377] Allocated cache and file handles         database=/home/wwwroot/ETH_yaf/ethereum/geth/chaindata cache=512 handles=32767
+INFO [09-03|14:51:22.392] Initialised chain configuration          config="{ChainID: 1337 Homestead: 0 DAO: <nil> DAOSupport: false EIP150: <nil> EIP155: 155 EIP158: 158 Byzantium: <nil> Constantinople: <nil>  ConstantinopleFix: <nil> Engine: unknown}"
+INFO [09-03|14:51:22.392] Disk storage enabled for ethash caches   dir=/home/wwwroot/ETH_yaf/ethereum/geth/ethash count=3
+INFO [09-03|14:51:22.392] Disk storage enabled for ethash DAGs     dir=/root/.ethash                              count=2
+INFO [09-03|14:51:22.392] Initialising Ethereum protocol           versions="[63 62]" network=57598955
+INFO [09-03|14:51:22.444] Loaded most recent local header          number=1433 hash=192099…4f1013 td=264539684 age=26m21s
+INFO [09-03|14:51:22.444] Loaded most recent local full block      number=1433 hash=192099…4f1013 td=264539684 age=26m21s
+INFO [09-03|14:51:22.444] Loaded most recent local fast block      number=1433 hash=192099…4f1013 td=264539684 age=26m21s
+INFO [09-03|14:51:22.445] Loaded local transaction journal         transactions=0 dropped=0
+INFO [09-03|14:51:22.445] Regenerated local transaction journal    transactions=0 accounts=0
+WARN [09-03|14:51:22.445] Blockchain not empty, fast sync disabled 
+INFO [09-03|14:51:22.462] New local node record                    seq=30 id=47eb74eae659b538 ip=127.0.0.1 udp=30303 tcp=30303
+INFO [09-03|14:51:22.462] Started P2P networking                   self=enode://bed284fcda615d7996e840e7d1fd8f98282eaf31639e67d540b8df662e2d47b8cec78eaba4e9b50c1709d4d124a6bf7184f581b5aae983eb1a0a37838f3d836b@127.0.0.1:30303
+INFO [09-03|14:51:22.464] IPC endpoint opened                      url=/home/wwwroot/ETH_yaf/ethereum/geth.ipc
+INFO [09-03|14:51:22.464] HTTP endpoint opened                     url=http://0.0.0.0:8545                     cors=* vhosts=localhost
+INFO [09-03|14:51:22.544] Etherbase automatically configured       address=0xB0Bccc869C02F56EaAeF4ff7BCB4bcD3985Bf050
+INFO [09-03|14:51:41.764] New local node record                    seq=31 id=47eb74eae659b538 ip=47.75.122.1 udp=30303 tcp=30303
+INFO [09-03|15:51:22.445] Regenerated local transaction journal    transactions=0 accounts=0
+INFO [09-03|16:51:22.446] Regenerated local transaction journal    transactions=0 accounts=0
+INFO [09-03|17:51:22.445] Regenerated local transaction journal    transactions=0 accounts=0
+INFO [09-03|18:51:22.445] Regenerated local transaction journal    transactions=0 accounts=0
+INFO [09-03|19:44:06.676] HTTP endpoint closed                     url=http://0.0.0.0:8545
+INFO [09-03|19:44:06.676] IPC endpoint closed                      url=/home/wwwroot/ETH_yaf/ethereum/geth.ipc
+INFO [09-03|19:44:06.676] Writing cached state to disk             block=1433 hash=192099…4f1013 root=38d8b0…d77250
