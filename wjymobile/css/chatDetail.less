@@ -1,0 +1,149 @@
+@import "style";
+.appBox{
+  background: #F5F5F5;
+  height: 100vh;
+  .content{
+    ul{
+      overflow: hidden;
+      li{
+        float: left;
+        width: 20%;
+        a{
+          display: block;
+          padding: .15rem 0 .05rem;
+          text-align: center;
+          img{
+            width: .4rem;
+            height: .4rem;
+            display: block;
+            margin: auto;
+          }
+          p{
+            font-size: @font-size24px;
+            color: #444444;
+            margin-top: .06rem;
+            padding: 0 .06rem;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+          }
+        }
+      }
+    }
+    .moreBtn{
+      text-align: center;
+      margin: .15rem 0 .2rem;
+      a{
+        font-size: @font-size28px;
+        color: #898989;
+        vertical-align: middle;
+        margin-right: .1rem;
+      }
+      i{
+        width: .12rem;
+        height: .12rem;
+        background: url('../images/my/btn_more_gray.png') no-repeat center;
+        background-size: 100%;
+        display: inline-block;
+        vertical-align: middle;
+      }
+    }
+  }
+  .myList{
+    background: #fff;
+    li{
+      height: .5rem;
+      line-height: .5rem;
+      border-bottom: .01rem solid #f5f5f5;
+      position: relative;
+      a{
+        display: block;
+        margin-left: .15rem;
+        padding-right: .15rem;
+        overflow: hidden;
+        p{
+          float: left;
+          font-size: @font-size30px;
+          color: #121212;
+        }
+        .groupName{
+          float: right;
+          i{
+            font-size: @font-size28px;
+            color: #727272;
+          }
+          span{
+            width: .12rem;
+            height: .12rem;
+            background: url('../images/my/btn_more_gray.png') no-repeat center;
+            background-size: 100%;
+            display: inline-block;
+            margin-top: .2rem;
+            margin-left: .1rem;
+          }
+        }
+        span{
+          width: .12rem;
+          height: .12rem;
+          background: url('../images/my/btn_more_gray.png') no-repeat center;
+          background-size: 100%;
+          display: inline-block;
+          float: right;
+          margin-top: .2rem;
+        }
+        .switch {
+          position: absolute;
+          left: 3.2rem;
+          top: 0.16rem;
+          width: 0.4rem;
+          height: 0.18rem;
+          background: rgba(80, 209, 89, 1);
+          border-radius: 0.09rem;
+          i {
+            position: absolute;
+            left: 0.24rem;
+            top: 0.015rem;
+            width: 0.15rem;
+            height: 0.15rem;
+            background: rgba(255, 255, 255, 1);
+            border-radius: 50%;
+          }
+        }
+        .noSwitch {
+          position: absolute;
+          left: 3.2rem;
+          top: 0.16rem;
+          width: 0.4rem;
+          height: 0.18rem;
+          background: rgb(255, 255, 255);
+          box-shadow: 0rem 0rem 0.03rem 0.01rem rgba(0, 0, 0, 0.22);
+          border-radius: 0.09rem;
+          i {
+            position: absolute;
+            left: 0;
+            top: 0.015rem;
+            width: 0.15rem;
+            height: 0.15rem;
+            background: rgba(255, 255, 255, 1);
+            box-shadow: 0rem 0rem 0.03rem 0.01rem rgba(0, 0, 0, 0.22);
+            border-radius: 50%;
+          }
+        }
+      }
+    }
+    li:last-child{
+      border-bottom: 0;
+      border-top: .09rem solid #F5F5F5;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+

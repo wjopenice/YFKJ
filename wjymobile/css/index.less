@@ -1,0 +1,399 @@
+@import "style";
+.app{
+  .searchBox{
+    width: 100%;
+    padding: .15rem 0;
+    .select{
+      margin-left: .15rem;
+      a{
+        display: block;
+        font-size: @font-size34px;
+        color: #333;
+        height: .34rem;
+        line-height: .34rem;
+        i{
+          width: .1rem;
+          height: .1rem;
+          background: url('../images/index/btn_open.png') no-repeat center;
+          background-size: .1rem;
+          display: inline-block;
+        }
+      }
+    }
+    .search{
+      border: .01rem solid #ddd;
+      border-radius: .02rem;
+      width: 2.67rem;
+      margin-right: .15rem;
+      i{
+        width: .16rem;
+        height: .16rem;
+        background: url('../images/index/home_search.png') no-repeat center;
+        background-size: .15rem;
+        display: inline-block;
+        position: absolute;
+        top: .08rem;
+        left: .08rem;
+      }
+      input{
+        color: #333;
+        font-size: @font-size28px;
+        height: .34rem;
+        width: 90%;
+        padding: 0 0 0 .1rem;
+      }
+      input::-webkit-input-placeholder { /* WebKit browsers */
+        color: #333;
+      }
+      input::-moz-placeholder { /* Mozilla Firefox 19+ */
+        color: #333;
+      }
+      input:-ms-input-placeholder { /* Internet Explorer 10+ */
+        color: #333;
+      }
+    }
+  }
+  .swiper-container{
+    a{
+      display: block;
+      img{
+        width: 100%;
+        height: 1.2rem;
+        display: block;
+        margin: auto;
+      }
+    }
+    .swiper-pagination-bullets{
+      bottom: 0;
+    }
+    .swiper-pagination-bullet-active{
+      background: #fff;
+    }
+  }
+  .listBox{
+    .wealthTree{
+      width: 3.45rem;
+      height: 1.3rem;
+      background: #fff;
+      position: absolute;
+      left: 50%;
+      margin-left: -1.725rem;
+      top: .15rem;
+      z-index: 10;
+      border-radius: .02rem;
+      box-shadow: 0 0 0.09rem 0 rgba(0, 0, 0, 0.15);
+      i{
+        width: .58rem;
+        height: .52rem;
+        background: url('../images/index/home_logo.png') no-repeat center;
+        background-size: 100% 100%;
+        display: block;
+        margin: .13rem auto;
+      }
+      .wealthTreePwd{
+        padding: 0 .17rem;
+        input{
+          width: 2.16rem;
+          height: .34rem;
+          border: .01rem solid #DDD;
+          font-size: @font-size28px;
+          color: #333;
+          border-radius: .02rem;
+          padding: 0 0 0 .1rem;
+        }
+        input::-webkit-input-placeholder { /* WebKit browsers */
+          color: #333;
+        }
+        input::-moz-placeholder { /* Mozilla Firefox 19+ */
+          color: #333;
+        }
+        input:-ms-input-placeholder { /* Internet Explorer 10+ */
+          color: #333;
+        }
+        button{
+          height: .35rem;
+          width: .65rem;
+          background: #E33C3D;
+          font-size: @font-size28px;
+          border: .01rem solid #E33C3D;
+          color: #fff;
+          border-radius: .02rem;
+        }
+      }
+    }
+    .usdtTitle {
+      padding-top: 1.65rem;
+      p {
+        margin-left: .15rem;
+        font-size: @font-size30px;
+        font-weight: bold;
+        color: rgba(0, 0, 0, 1);
+      }
+      a {
+        margin: .03rem .15rem 0 0;
+        font-size: @font-size24px;
+        color: rgba(139, 139, 139, 1);
+      }
+    }
+    .listUl {
+      width: 100%;
+      height: 100%;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      overflow: hidden;
+      li {
+        list-style: none;
+        width: 25%;
+        margin-top: .15rem;
+        text-align: center;
+        float: left;
+        a {
+          position: relative;
+          top: 0;
+          left: 0;
+          display: block;
+          width: 100%;
+          height: 100%;
+          &:active{
+            -webkit-tap-highlight-color: transparent;
+          }
+          img {
+            width: 0.4rem;
+            display: block;
+            font-size: 0;
+            margin: auto;
+          }
+          span {
+            display: block;
+            font-size: 0.11rem;
+            color: rgba(64, 64, 64, 1);
+            margin-top: .06rem;
+          }
+        }
+      }
+    }
+    .hotTitle{
+      padding-top: .21rem;
+    }
+  }
+}
+/* 底部tabBar */
+.tabBar{
+  width: 100%;
+  height: .48rem;
+  background: #fff;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.24);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  ul{
+    overflow: hidden;
+    li{
+      width: 20%;
+      float: left;
+      text-align: center;
+      .showHide{
+        width: 100%;
+        background: #fff;
+        position:fixed;
+        bottom: .48rem;
+        left: 0;
+        z-index: 1000;
+        display: none;
+        box-shadow: 0 -6px 10px 0 rgba(0, 0, 0, 0.1);
+        border-radius: .12rem .12rem 0 0;
+        a{
+          display: block;
+          padding: .14rem 0;
+          border-bottom: .01rem solid #f5f5f5;
+          font-size: @font-size30px;
+          color: #131313;
+          span{
+            vertical-align: middle;
+          }
+          img{
+            width: .3rem;
+            height: .3rem;
+            margin-right: .14rem;
+            vertical-align: middle;
+          }
+        }
+      }
+      a{
+        display: block;
+        padding: .05rem 0;
+        i{
+
+        }
+
+      }
+    }
+    .tabHome{
+      a{
+        i{
+          width: .2rem;
+          height: .2rem;
+          display: block;
+          margin: auto;
+          background: url('../images/tab/un_tabar_home.png') no-repeat center;
+          background-size: 100% 100%;
+        }
+        p{
+          font-size: @font-size24px;
+          color: #979797;
+          margin-top: .02rem;
+        }
+      }
+    }
+    .tabHome.active{
+      a{
+        i{
+          width: .2rem;
+          height: .2rem;
+          display: block;
+          margin: auto;
+          background: url('../images/tab/tabar_home.png') no-repeat center;
+          background-size: 100% 100%;
+        }
+        p{
+          color: #E75C52;
+          font-size: @font-size24px;
+          margin-top: .02rem;
+        }
+      }
+    }
+    .tabHb{
+      a{
+        i{
+          width: .2rem;
+          height: .2rem;
+          display: block;
+          margin: auto;
+          background: url('../images/tab/un_tabar_hb.png') no-repeat center;
+          background-size: 100% 100%;
+        }
+        p{
+          font-size: @font-size24px;
+          color: #979797;
+          margin-top: .02rem;
+        }
+      }
+    }
+    .tabHb.active{
+      a{
+        i{
+          width: .2rem;
+          height: .2rem;
+          display: block;
+          margin: auto;
+          background: url('../images/tab/tabar_hb.png') no-repeat center;
+          background-size: 100% 100%;
+        }
+        p{
+          color: #E75C52;
+        }
+      }
+    }
+    .tabAdd{
+      a{
+        i{
+          width: .36rem;
+          height: .36rem;
+          background: url('../images/tab/tabar_add.png') no-repeat center;
+          background-size: 100% 100%;
+          display: block;
+          margin: auto;
+        }
+      }
+    }
+    .tabCash{
+      a{
+        i{
+          width: .2rem;
+          height: .2rem;
+          display: block;
+          margin: auto;
+          background: url('../images/tab/un_tabar_cash.png') no-repeat center;
+          background-size: 100% 100%;
+        }
+        p{
+          font-size: @font-size24px;
+          color: #979797;
+          margin-top: .02rem;
+        }
+      }
+    }
+    .tabCash.active{
+      a{
+        i{
+          width: .2rem;
+          height: .2rem;
+          display: block;
+          margin: auto;
+          background: url('../images/tab/tabar_cash.png') no-repeat center;
+          background-size: 100% 100%;
+        }
+        p{
+          color: #E75C52;
+        }
+      }
+    }
+    .tabMy{
+      a{
+        i{
+          width: .2rem;
+          height: .2rem;
+          display: block;
+          margin: auto;
+          background: url('../images/tab/un_tabar_my.png') no-repeat center;
+          background-size: 100% 100%;
+        }
+        p{
+          font-size: @font-size24px;
+          color: #979797;
+          margin-top: .02rem;
+        }
+      }
+    }
+    .tabMy.active{
+      a{
+        i{
+          width: .2rem;
+          height: .2rem;
+          display: block;
+          margin: auto;
+          background: url('../images/tab/tabar_my.png') no-repeat center;
+          background-size: 100% 100%;
+        }
+        p{
+          color: #E75C52;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

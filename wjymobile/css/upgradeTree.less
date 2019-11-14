@@ -1,0 +1,238 @@
+@import "style";
+.appBox{
+  height: 100vh;
+  text-align: center;
+  .bg{
+    width: 3.75rem;
+    height: 2.07rem;
+    background: url('../images/tree/medal_background.png') no-repeat;
+    background-size: cover;
+    margin-top: -.2rem;
+  }
+  .grade{
+    margin-top: .1rem;
+    font-size: @font-size34px;
+    color: #232323;
+  }
+  .balanceBox{
+    width: 2.15rem;
+    background: #fff;
+    box-shadow:0 3px 16px 2px rgba(0, 0, 0, 0.1);
+    border-radius: .04rem;
+    display: inline-block;
+    margin-top: .3rem;
+    padding: .2rem .15rem;
+    .usdtBalance{
+      font-size: @font-size30px;
+      color: #222222;
+      margin-bottom: .15rem;
+    }
+    .state{
+      font-size: @font-size28px;
+      color: #E33C3D;
+    }
+    .stateBox{
+      margin-bottom: .16rem;
+      display: inline-block;
+      p{
+        margin-right: .1rem;
+        .line{
+          width: 1.61rem;
+          height: .06rem;
+          display: block;
+          background: #e33b3c;
+          margin-top: .05rem;
+        }
+        .vg1{
+          position: absolute;
+          left: 0;
+          top: 0;
+          font-size: .12rem;
+          color: #FFFFFF;
+          background: #e33b3c;
+          padding: 0 .04rem;
+          border-radius: .06rem;
+        }
+        .vg2{
+          position: absolute;
+          right: 0;
+          top: 0;
+          font-size: .12rem;
+          color: #FFFFFF;
+          background: #e33b3c;
+          padding: 0 .04rem;
+          border-radius: .06rem;
+        }
+      }
+      i{
+        width: .18rem;
+        height: .18rem;
+        display: block;
+        margin: auto;
+        background: url("../images/tree/plus_icon.png") no-repeat center;
+        background-size: cover;
+      }
+    }
+    .fast{
+      span{
+        font-size: @font-size26px;
+        color: #404040;
+      }
+      p{
+        background: #FDA418;
+        font-size: @font-size28px;
+        color: #FFFFFF;
+        margin-top: .1rem;
+        width: .8rem;
+        height: .26rem;
+        line-height: .26rem;
+        display: inline-block;
+        border-radius: .02rem;
+      }
+    }
+  }
+  /*  公共导航  */
+  .navigation{
+    position: fixed;
+    right: .16rem;
+    top: 50%;
+    margin-top: -1.6rem;
+    z-index: 99;
+    text-align: center;
+    li{
+      a{
+        display: block;
+        margin-bottom: .2rem;
+        i{
+          width: .25rem;
+          height: .25rem;
+          display: block;
+          margin: auto;
+        }
+        p{
+          font-size: @font-size24px;
+          color: #666666;
+          margin-top: .02rem;
+        }
+      }
+    }
+    div{
+      a{
+        display: block;
+        img{
+          width: .35rem;
+          height: .35rem;
+          border-radius: 50%;
+          margin-bottom: .16rem;
+        }
+      }
+    }
+    .sj{
+      a{
+        i{
+          background: url("../images/tree/rocket_icon_normal.png") no-repeat center;
+          background-size: cover;
+        }
+      }
+    }
+    .td{
+      a{
+        i{
+          background: url("../images/tree/team_icon_normal.png") no-repeat center;
+          background-size: cover;
+        }
+      }
+    }
+    .yq{
+      a{
+        i{
+          background: url("../images/tree/addfriend_icon_normal.png") no-repeat center;
+          background-size: cover;
+        }
+      }
+    }
+    .cw{
+      a{
+        i{
+          background: url("../images/tree/calculator_icon_normal.png") no-repeat center;
+          background-size: cover;
+        }
+      }
+    }
+    .xx{
+      a{
+        i{
+          background: url("../images/tree/news_icon_normal.png") no-repeat center;
+          background-size: cover;
+        }
+      }
+    }
+    .active{
+      a{
+        i{
+          background: url("../images/tree/rocket_icon_click.png") no-repeat center;
+          background-size: cover;
+        }
+        p{
+          color: #E75C52;
+        }
+      }
+    }
+  }
+
+  .homeBtn{
+    box-shadow: 0 3px 16px 2px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.16);
+    width: .6rem;
+    height: .6rem;
+    border-radius: 50%;
+    font-size: .14rem;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 9999;
+    div{
+      height: .4rem;
+      width: .4rem;
+      background-color: rgba(0, 0, 0, 0.3);
+      border-radius: 50%;
+      display: inline-block;
+      text-align: center;
+      margin-top: .1rem;
+      p{
+        height: .3rem;
+        width: .3rem;
+        background-color: rgba(0, 0, 0, 0.46);
+        border-radius: 50%;
+        display: inline-block;
+        text-align: center;
+        margin-top: .05rem;
+        span{
+          font-size: .11rem;
+          color: #fff;
+          line-height: .3rem;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

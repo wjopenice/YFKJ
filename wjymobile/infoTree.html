@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>财富树信息</title>
+    <link rel="stylesheet/less" type="text/css" href="css/infoTree.less">
+    <script src="js/less.min.js"></script>
+</head>
+<body>
+    <div class="app">
+        <p class="bg"><img src="images/tree/xinxi_background.png" alt=""></p>
+        <ul class="infoBox">
+            <li>
+                <img src="images/tree/bizhong_icon.png" alt="">
+                <p>
+                    <span>消费使用币种</span>
+                    <span>USDT</span>
+                </p>
+            </li>
+            <li>
+                <img src="images/tree/cengji_icon.png" alt="">
+                <p>
+                    <span>层级</span>
+                    <span>8</span>
+                </p>
+            </li>
+            <!--<li>
+                <img src="images/tree/jiner_icon.png" alt="">
+                <p>
+                    <span>金额</span>
+                    <span class="open">升一级x币、升二级x个币、升三级x个币升一级x币、升二级x个币、升三级x个币升一级x币、升二级x个币、升三级x个币升一级x币、升二级x个币、升三级x个币</span>
+                    <i id="toggle">展开全部</i>
+                    <span id="content" style="display: none;">升一级x币、升二级x个币、升三级x个币升一级x币、升二级x个币、升三级x个币升一级x币、升二级x个币、升三级x个币升一级x币、升二级x个币、升三级x个币</span>
+                </p>
+            </li>-->
+            <li>
+                <img src="images/tree/zhidu_icon.png" alt="">
+                <p>
+                    <span>推广制度</span>
+                    <span>一推x，太阳线推广（无推广限制）</span>
+                </p>
+            </li>
+            <li>
+                <img src="images/tree/dengji_icon.png" alt="">
+                <p>
+                    <span>当前成长级</span>
+                    <span>xx级</span>
+                </p>
+            </li>
+            <li>
+                <img src="images/tree/renshu_icon.png" alt="">
+                <p>
+                    <span>当前参与人数</span>
+                    <span>xx人数</span>
+                </p>
+            </li>
+        </ul>
+        <div class="statistics">
+            <div class="holderNum pr"><p>本财富树构架</p></div>
+            <div class="profitBox">
+                <p class="pTitle">您的支出</p>
+                <p class="pArt">往上1—8层付款8次，总花费xxxx个币</p>
+                <ul class="profitList">
+                    <li><p>升8级：给上面第8级xxxx个币</p></li>
+                    <li><p>升7级：给上面第7级xxxx个币</p></li>
+                    <li><p>升6级：给上面第6级xxxx个币</p></li>
+                    <li><p>升5级：给上面第5级xxxx个币</p></li>
+                    <li><p>升4级：给上面第4级xxxx个币</p></li>
+                    <li><p>升3级：给上面第3级xxxx个币</p></li>
+                    <li><p>升2级：给上面第2级xxxx个币</p></li>
+                    <li><p>升1级：给上面第1级xxxx个币</p></li>
+                </ul>
+            </div>
+            <div class="profitBox">
+                <p class="pTitle">您的收入</p>
+                <p class="pArt">往下1—8层收款xxx次，总收款xxxx个币</p>
+                <ul class="profitList">
+                    <li><p>下1级收取：2人 x 200 = 400</p></li>
+                    <li><p>下2级收取：4人 x 600 = 2400</p></li>
+                    <li><p>下3级收取：8人 x 1000 = 8000</p></li>
+                    <li><p>下4级收取：16人 x 1400 = 1000</p></li>
+                    <li><p>下5级收取：32人 x 1000 = 1000</p></li>
+                    <li><p>下6级收取：64人 x 1000 = 1000</p></li>
+                    <li><p>下7级收取：128人 x 1000 = 1000</p></li>
+                    <li><p>下8级收取：256人 x 1000 = 1000</p></li>
+                </ul>
+            </div>
+        </div>
+        <div class="button">
+            <button>立即开通</button>
+        </div>
+
+
+        <!--  公共组件  -->
+        <ul class="navigation">
+            <div><a href="javascript:void(0);"><img src="images/tree/image_yuan.png" alt=""><p></p></a></div>
+            <li class="sj"><a href="upgradeTree.html"><i></i><p>升级</p></a></li>
+            <li class="td"><a href="teamAdTree.html"><i></i><p>团队</p></a></li>
+            <li class="yq"><a href="invitationTree.html"><i></i><p>邀请</p></a></li>
+            <li class="cw"><a href="financeTree.html"><i></i><p>财务</p></a></li>
+            <li class="xx active"><a href="infoTree.html"><i></i><p>信息</p></a></li>
+        </ul>
+
+    </div>
+
+
+    <script src="js/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            $("#toggle").click(function() {
+                $(this).text($("#content").is(":hidden") ? "收起全部" : "展开全部");
+                $("#content").slideToggle();
+            });
+        });
+    </script>
+</body>
+</html>

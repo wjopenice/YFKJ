@@ -1,0 +1,605 @@
+html {
+  font-size: 26.66667vw;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "PingFang SC";
+}
+body {
+  font-size: 0.16rem;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #000000;
+}
+ul,
+p,
+span,
+li,
+button,
+img {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: 0;
+  list-style: none;
+}
+a,
+a:hover,
+a:active,
+a:visited,
+a:link,
+a:focus {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+  background: none;
+  text-decoration: none;
+}
+input,
+textarea {
+  outline: none;
+  border: none;
+  background-color: rgba(255, 255, 255, 0);
+}
+input:-webkit-autofill,
+select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px white  inset !important;
+}
+input {
+  outline-color: invert;
+  outline-style: none;
+  outline-width: 0;
+  border: none;
+  border-style: none;
+  text-shadow: none;
+  -webkit-appearance: none;
+  -webkit-user-select: text;
+  outline-color: transparent;
+  box-shadow: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  padding: 0;
+  border-radius: 0;
+  margin: 0;
+}
+button {
+  background-color: transparent;
+  border: none;
+  font-size: 0.16rem;
+  color: #f5f5f5;
+}
+i {
+  font-style: normal;
+}
+hr {
+  margin: 0;
+  height: 0;
+}
+/*  以上去掉默认样式  */
+.ov {
+  overflow: hidden;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.pr {
+  position: relative;
+}
+.app {
+  padding-bottom: 1rem;
+}
+/* 底部tabBar */
+.tabBar {
+  width: 100%;
+  height: 0.48rem;
+  background: #fff;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.24);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+}
+.tabBar ul {
+  overflow: hidden;
+}
+.tabBar ul li {
+  width: 20%;
+  float: left;
+  text-align: center;
+}
+.tabBar ul li .showHide {
+  width: 100%;
+  background: #fff;
+  position: fixed;
+  bottom: 0.48rem;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  box-shadow: 0 -6px 10px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 0.12rem 0.12rem 0 0;
+}
+.tabBar ul li .showHide a {
+  display: block;
+  padding: 0.14rem 0;
+  border-bottom: 0.01rem solid #f5f5f5;
+  font-size: 0.15rem;
+  color: #131313;
+}
+.tabBar ul li .showHide a span {
+  vertical-align: middle;
+}
+.tabBar ul li .showHide a img {
+  width: 0.3rem;
+  height: 0.3rem;
+  margin-right: 0.14rem;
+  vertical-align: middle;
+}
+.tabBar ul li a {
+  display: block;
+  padding: 0.05rem 0;
+}
+.tabBar ul .tabHome a i {
+  width: 0.2rem;
+  height: 0.2rem;
+  display: block;
+  margin: auto;
+  background: url('../images/tab/un_tabar_home.png') no-repeat center;
+  background-size: 100% 100%;
+}
+.tabBar ul .tabHome a p {
+  font-size: 0.12rem;
+  color: #979797;
+  margin-top: 0.02rem;
+}
+.tabBar ul .tabHome.active a i {
+  width: 0.2rem;
+  height: 0.2rem;
+  display: block;
+  margin: auto;
+  background: url('../images/tab/tabar_home.png') no-repeat center;
+  background-size: 100% 100%;
+}
+.tabBar ul .tabHome.active a p {
+  color: #E75C52;
+  font-size: 0.12rem;
+  margin-top: 0.02rem;
+}
+.tabBar ul .tabHb a i {
+  width: 0.2rem;
+  height: 0.2rem;
+  display: block;
+  margin: auto;
+  background: url('../images/tab/un_tabar_hb.png') no-repeat center;
+  background-size: 100% 100%;
+}
+.tabBar ul .tabHb a p {
+  font-size: 0.12rem;
+  color: #979797;
+  margin-top: 0.02rem;
+}
+.tabBar ul .tabHb.active a i {
+  width: 0.2rem;
+  height: 0.2rem;
+  display: block;
+  margin: auto;
+  background: url('../images/tab/tabar_hb.png') no-repeat center;
+  background-size: 100% 100%;
+}
+.tabBar ul .tabHb.active a p {
+  color: #E75C52;
+}
+.tabBar ul .tabAdd a i {
+  width: 0.36rem;
+  height: 0.36rem;
+  background: url('../images/tab/tabar_add.png') no-repeat center;
+  background-size: 100% 100%;
+  display: block;
+  margin: auto;
+}
+.tabBar ul .tabCash a i {
+  width: 0.2rem;
+  height: 0.2rem;
+  display: block;
+  margin: auto;
+  background: url('../images/tab/un_tabar_cash.png') no-repeat center;
+  background-size: 100% 100%;
+}
+.tabBar ul .tabCash a p {
+  font-size: 0.12rem;
+  color: #979797;
+  margin-top: 0.02rem;
+}
+.tabBar ul .tabCash.active a i {
+  width: 0.2rem;
+  height: 0.2rem;
+  display: block;
+  margin: auto;
+  background: url('../images/tab/tabar_cash.png') no-repeat center;
+  background-size: 100% 100%;
+}
+.tabBar ul .tabCash.active a p {
+  color: #E75C52;
+}
+.tabBar ul .tabMy a i {
+  width: 0.2rem;
+  height: 0.2rem;
+  display: block;
+  margin: auto;
+  background: url('../images/tab/un_tabar_my.png') no-repeat center;
+  background-size: 100% 100%;
+}
+.tabBar ul .tabMy a p {
+  font-size: 0.12rem;
+  color: #979797;
+  margin-top: 0.02rem;
+}
+.tabBar ul .tabMy.active a i {
+  width: 0.2rem;
+  height: 0.2rem;
+  display: block;
+  margin: auto;
+  background: url('../images/tab/tabar_my.png') no-repeat center;
+  background-size: 100% 100%;
+}
+.tabBar ul .tabMy.active a p {
+  color: #E75C52;
+}
+.appBox {
+  background: #f5f5f5;
+  height: 100vh;
+  /*  评论公共组件  */
+  /*  点击红包弹出  */
+  /*  公共导航  */
+}
+.appBox .online {
+  background: #EDEDED;
+  padding: 0.14rem 0.15rem;
+}
+.appBox .online p {
+  font-size: 0.14rem;
+  color: #404040;
+}
+.appBox .online .groupName {
+  width: 1rem;
+  font-size: 0.14rem;
+  color: #404040;
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  position: absolute;
+  left: 50%;
+  margin-left: -0.5rem;
+  text-align: center;
+}
+.appBox .online a {
+  display: inline-block;
+  height: 0.18rem;
+  line-height: 0.18rem;
+  padding-right: 0.01rem;
+  color: #191919;
+}
+.appBox .online a i {
+  width: 0.07rem;
+  font-size: 0.27rem;
+  letter-spacing: -1px;
+}
+.appBox .chat {
+  padding: 0 0.15rem 0;
+}
+.appBox .chat li {
+  padding-top: 0.2rem;
+}
+.appBox .chat li .headImg {
+  margin-right: 0.07rem;
+}
+.appBox .chat li .headImg img {
+  width: 0.35rem;
+  height: 0.35rem;
+  border-radius: 0.03rem;
+}
+.appBox .chat li .hbImg img {
+  width: 2.35rem;
+}
+.appBox .chat li .hbImg span {
+  position: absolute;
+  top: 0.11rem;
+  left: 0.6rem;
+  font-size: 0.16rem;
+  color: #FFFFFF;
+}
+.appBox .chat li .hbImg a {
+  position: absolute;
+  top: 0.35rem;
+  left: 0.6rem;
+  font-size: 0.12rem;
+  color: #FFFFFF;
+}
+.appBox .chat li .hbImg i {
+  position: absolute;
+  bottom: 0.09rem;
+  left: 0.18rem;
+  font-size: 0.1rem;
+  color: #919191;
+}
+.appBox .chat li .already img {
+  width: 2.35rem;
+}
+.appBox .chat li .already span {
+  position: absolute;
+  top: 0.11rem;
+  left: 0.6rem;
+  font-size: 0.16rem;
+  color: #FFFFFF;
+}
+.appBox .chat li .already a {
+  position: absolute;
+  top: 0.35rem;
+  left: 0.6rem;
+  font-size: 0.12rem;
+  color: #FFFFFF;
+}
+.appBox .chat li .already i {
+  position: absolute;
+  bottom: 0.09rem;
+  left: 0.18rem;
+  font-size: 0.1rem;
+  color: #919191;
+}
+.appBox .chat li .art {
+  display: block;
+  text-align: center;
+  width: 100%;
+  overflow: hidden;
+}
+.appBox .chat li .art span {
+  display: block;
+  font-size: 0.12rem;
+  color: #FA9D3B;
+}
+.appBox .chat li .art p {
+  font-size: 0.12rem;
+  color: #878787;
+  margin-top: 0.02rem;
+}
+.appBox .commentBox {
+  background: #fff;
+  width: 100%;
+  height: 4.3rem;
+  position: fixed;
+  bottom: 0;
+  z-index: 100;
+  box-shadow: 0 -6px 10px 0 rgba(162, 162, 162, 0.1);
+  border-radius: 0.12rem 0.12rem 0 0;
+  display: none;
+  overflow: hidden;
+}
+.appBox .commentBox .title {
+  padding: 0.12rem 0.15rem;
+  text-align: center;
+  font-size: 0.14rem;
+  color: #000000;
+  overflow: hidden;
+}
+.appBox .commentBox .title p {
+  height: 0.24rem;
+  line-height: 0.24rem;
+}
+.appBox .commentBox .title i {
+  width: 0.24rem;
+  height: 0.24rem;
+  background: url("../images/hbgroup/btn_close_gray.png") no-repeat center;
+  background-size: 0.12rem 0.12rem;
+  display: inline-block;
+  float: right;
+  margin-top: -0.24rem;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.appBox .commentBox .commentList ul {
+  height: 3rem;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.appBox .commentBox .commentList ul li {
+  padding: 0.15rem;
+  border-bottom: 0.01rem solid #F5F5F5;
+}
+.appBox .commentBox .commentList ul li img {
+  width: 0.35rem;
+  height: 0.35rem;
+  vertical-align: top;
+  margin-right: 0.05rem;
+  border-radius: 50%;
+}
+.appBox .commentBox .commentList ul li p {
+  vertical-align: sub;
+  display: inline-block;
+}
+.appBox .commentBox .commentList ul li p span {
+  display: block;
+}
+.appBox .commentBox .commentList ul li p span:first-child {
+  font-size: 0.14rem;
+  color: #000000;
+}
+.appBox .commentBox .commentList ul li p span:nth-child(2) {
+  font-size: 0.12rem;
+  color: #333333;
+  width: 2.6rem;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow: hidden;
+  margin-top: 0.03rem;
+}
+.appBox .commentBox .commentList ul li p span:last-child {
+  color: #818181;
+  font-size: 0.1rem;
+  margin-top: 0.1rem;
+}
+.appBox .commentBox .commentList ul li:last-child {
+  border-bottom: 0;
+}
+.appBox .commentBox .inputBox {
+  border-top: 0.01rem solid #F5F5F5;
+  padding: 0.15rem;
+  margin-top: 0.25rem;
+  width: 3.45rem;
+}
+.appBox .commentBox .inputBox input {
+  width: 100%;
+  font-size: 0.14rem;
+  color: #838383;
+}
+.appBox .hbBox {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 102;
+  background: rgba(0, 0, 0, 0.2);
+  text-align: center;
+  display: none;
+}
+.appBox .hbBox .money {
+  display: inline-block;
+  width: 2.93rem;
+  height: 4.79rem;
+  margin-top: 0.5rem;
+  background: url("../images/hbgroup/image_redpacket_normal.png") no-repeat center;
+  background-size: 100%;
+}
+.appBox .hbBox .money .moneyTitle {
+  margin-top: 1.1rem;
+}
+.appBox .hbBox .money .moneyTitle img {
+  width: 0.22rem;
+  height: 0.22rem;
+  vertical-align: middle;
+  border-radius: 50%;
+  margin-right: 0.06rem;
+}
+.appBox .hbBox .money .moneyTitle span {
+  font-size: 0.17rem;
+  color: #FFECB8;
+  vertical-align: middle;
+  font-weight: 500;
+}
+.appBox .hbBox .money .moneyArt {
+  font-size: 0.22rem;
+  color: #FFF3BE;
+  font-weight: 500;
+  margin-top: 0.25rem;
+}
+.appBox .hbBox .nullMoney {
+  display: inline-block;
+  width: 2.93rem;
+  height: 4.79rem;
+  margin-top: 0.5rem;
+  background: url("../images/hbgroup/imgHb.png") no-repeat center;
+  background-size: 100%;
+}
+.appBox .hbBox .nullMoney .moneyTitle {
+  margin-top: 1.1rem;
+}
+.appBox .hbBox .nullMoney .moneyTitle img {
+  width: 0.22rem;
+  height: 0.22rem;
+  vertical-align: middle;
+  border-radius: 50%;
+  margin-right: 0.06rem;
+}
+.appBox .hbBox .nullMoney .moneyTitle span {
+  font-size: 0.17rem;
+  color: #FFECB8;
+  vertical-align: middle;
+  font-weight: 500;
+}
+.appBox .hbBox .nullMoney .moneyArt {
+  font-size: 0.22rem;
+  color: #FFF3BE;
+  font-weight: 500;
+  margin-top: 0.25rem;
+}
+.appBox .hbBox .nullMoney .lookDetail span {
+  font-size: 0.14rem;
+  color: #FFF7C1;
+}
+.appBox .hbBox .nullMoney .lookDetail i {
+  width: 0.09rem;
+  height: 0.09rem;
+  background: url("../images/hbgroup/btn_more_yellow.png") no-repeat center;
+  background-size: 100%;
+  display: inline-block;
+  margin-left: 0.02rem;
+  margin-top: 2.5rem;
+}
+.appBox .hbBox p {
+  margin-top: 0.4rem;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.appBox .hbBox p img {
+  width: 0.36rem;
+  height: 0.36rem;
+  display: block;
+  margin: auto;
+}
+.appBox .navigation {
+  position: fixed;
+  right: 0.16rem;
+  top: 50%;
+  margin-top: -1.6rem;
+  z-index: 99;
+  text-align: center;
+}
+.appBox .navigation li a {
+  display: block;
+  margin-bottom: 0.2rem;
+}
+.appBox .navigation li a i {
+  width: 0.25rem;
+  height: 0.25rem;
+  display: block;
+  margin: auto;
+}
+.appBox .navigation li a p {
+  font-size: 0.12rem;
+  color: #666666;
+  margin-top: 0.02rem;
+}
+.appBox .navigation div a {
+  display: block;
+}
+.appBox .navigation div a img {
+  width: 0.35rem;
+  height: 0.35rem;
+  border-radius: 50%;
+  margin-bottom: 0.16rem;
+}
+.appBox .navigation .sc a i {
+  background: url("../images/hbgroup/btn_like_normal.png") no-repeat center;
+  background-size: cover;
+}
+.appBox .navigation .pl a i {
+  background: url("../images/hbgroup/pinglun_btn.png") no-repeat center;
+  background-size: cover;
+}
+.appBox .navigation .zf a i {
+  background: url("../images/hbgroup/fenxiang_btn.png") no-repeat center;
+  background-size: cover;
+}
+.appBox .navigation .xyg a {
+  margin-top: 0.58rem;
+}
+.appBox .navigation .xyg a i {
+  background: url("../images/hbgroup/btn_next.png") no-repeat center;
+  background-size: cover;
+}
+.appBox .navigation .active a i {
+  background: url("../images/hbgroup/btn_like_click.png") no-repeat center;
+  background-size: cover;
+}
+/*# sourceMappingURL=groupDetail.css.map */

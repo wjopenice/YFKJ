@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>财富自由之树团队管理</title>
+    <link rel="stylesheet/less" type="text/css" href="css/teamAdTree.less">
+    <script src="js/less.min.js"></script>
+</head>
+<body>
+    <div class="app">
+        <div class="art">
+            <p>这里的一级会员指的是“等级”尚在一级的会员。</p>
+            <p>例如:A升级到2级，那么A就会变动到您的二级会员之内。</p>
+            <p>以此类推，所以请及时提醒等级较低的用户，完成升级任务。</p>
+            <div>您的下级会员共计：xx人</div>
+        </div>
+        <ul class="listUl">
+            <li><div class="listMember"><i></i><a href="javascript:void(0);">一级会员</a><p>（500人）</p><span></span></div></li>
+            <li><div class="listMember"><i></i><a href="javascript:void(0);">二级会员</a><p>（500人）</p><span></span></div></li>
+            <li><div class="listMember"><i></i><a href="javascript:void(0);">三级会员</a><p>（500人）</p><span></span></div></li>
+            <li>
+                <div class="listMember" id="listM"><i></i><a href="javascript:void(0);">四级会员</a><p>（500人）</p><span></span></div>
+                <div class="conUlList">
+                    <p class="conTitle"><span>注册时间</span><span>微信二维码</span></p>
+                    <div class="bodyList">
+                        <p><span>2019-07-05</span><img src="images/tree/erweim_caiwu_image.png" alt=""></p>
+                        <p><span>2019-07-05</span><img src="images/tree/erweim_caiwu_image.png" alt=""></p>
+                        <p><span>2019-07-05</span><img src="images/tree/erweim_caiwu_image.png" alt=""></p>
+                        <p><span>2019-07-05</span><img src="images/tree/erweim_caiwu_image.png" alt=""></p>
+                    </div>
+                </div>
+            </li>
+        </ul>
+
+
+        <!--  公共组件  -->
+        <ul class="navigation">
+            <div><a href="javascript:void(0);"><img src="images/tree/image_yuan.png" alt=""><p></p></a></div>
+            <li class="sj"><a href="upgradeTree.html"><i></i><p>升级</p></a></li>
+            <li class="td active"><a href="teamAdTree.html"><i></i><p>团队</p></a></li>
+            <li class="yq"><a href="invitationTree.html"><i></i><p>邀请</p></a></li>
+            <li class="cw"><a href="financeTree.html"><i></i><p>财务</p></a></li>
+            <li class="xx"><a href="infoTree.html"><i></i><p>信息</p></a></li>
+        </ul>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("#listM").click(function(){
+                $(".conUlList").toggle();
+            });
+        });
+    </script>
+</body>
+</html>

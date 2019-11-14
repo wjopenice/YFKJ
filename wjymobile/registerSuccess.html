@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>注册成功</title>
+    <link rel="stylesheet/less" type="text/css" href="css/registerSuccess.less">
+    <script src="js/less.min.js"></script>
+</head>
+<body>
+    <div class="appbox">
+        <div class="popup">
+            <p class="tip">请截图或者使用文本，妥善备份您的账号密码，账户一旦丢失，账户内的资产永久不可找回。</p>
+            <div class="main">
+                <p class="top">您的账号</p>
+                <p class="bottom" id="counterText">12321252</p>
+                <button @click="copyCounter">复制账号</button>
+            </div>
+            <div class="main pwd">
+                <p class="top">您的密码</p>
+                <p class="bottom" id="psdText">12321252</p>
+                <button @click="copyPsd">复制密码</button>
+            </div>
+        </div>
+        <button class="verify" onclick="window.location.href='successNext.html'">我已经备份好，立刻验证</button>
+    </div>
+</body>
+</html>
