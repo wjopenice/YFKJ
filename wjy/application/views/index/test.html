@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试ajax</title>
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+</head>
+<body>
+
+<div>
+
+</div>
+</body>
+<script>
+    $(function(){
+        $.ajax({
+            url:'http://dbf4.top/zydsg.php?keyword=牙膏',
+            type:'get',
+            success:function (res) {
+               console.log(res)
+            }
+        })
+    });
+</script>
+</html>
