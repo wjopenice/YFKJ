@@ -1,0 +1,8 @@
+{
+
+    "require": {
+        "alibabacloud/client": "^1.5",
+        "bitwasp/bitcoin": "^1.0",
+        "web3p/ethereum-util": "^0.1.1"
+    }
+}
