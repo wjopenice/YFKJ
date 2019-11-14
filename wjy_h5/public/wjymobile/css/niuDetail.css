@@ -1,0 +1,623 @@
+html {
+  font-size: 26.66667vw;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "PingFang SC";
+}
+body {
+  font-size: 0.16rem;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #000000;
+}
+ul,
+p,
+span,
+li,
+button,
+img {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: 0;
+  list-style: none;
+}
+a,
+a:hover,
+a:active,
+a:visited,
+a:link,
+a:focus {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+  background: none;
+  text-decoration: none;
+}
+input,
+textarea {
+  outline: none;
+  border: none;
+  background-color: rgba(255, 255, 255, 0);
+}
+input:-webkit-autofill,
+select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px white  inset !important;
+}
+input {
+  outline-color: invert;
+  outline-style: none;
+  outline-width: 0;
+  border: none;
+  border-style: none;
+  text-shadow: none;
+  -webkit-appearance: none;
+  -webkit-user-select: text;
+  outline-color: transparent;
+  box-shadow: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  padding: 0;
+  border-radius: 0;
+  margin: 0;
+}
+button {
+  background-color: transparent;
+  border: none;
+  font-size: 0.16rem;
+  color: #f5f5f5;
+}
+i {
+  font-style: normal;
+}
+hr {
+  margin: 0;
+  height: 0;
+}
+/*  以上去掉默认样式  */
+.ov {
+  overflow: hidden;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.pr {
+  position: relative;
+}
+.app {
+  padding-bottom: 1rem;
+}
+/* 底部tabBar */
+.tabBar {
+  width: 100%;
+  height: 0.48rem;
+  background: #fff;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.24);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+}
+.tabBar ul {
+  overflow: hidden;
+}
+.tabBar ul li {
+  width: 20%;
+  float: left;
+  text-align: center;
+}
+.tabBar ul li .showHide {
+  width: 100%;
+  background: #fff;
+  position: fixed;
+  bottom: 0.48rem;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  box-shadow: 0 -6px 10px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 0.12rem 0.12rem 0 0;
+}
+.tabBar ul li .showHide a {
+  display: block;
+  padding: 0.14rem 0;
+  border-bottom: 0.01rem solid #f5f5f5;
+  font-size: 0.15rem;
+  color: #131313;
+}
+.tabBar ul li .showHide a span {
+  vertical-align: middle;
+}
+.tabBar ul li .showHide a img {
+  width: 0.3rem;
+  height: 0.3rem;
+  margin-right: 0.14rem;
+  vertical-align: middle;
+}
+.tabBar ul li a {
+  display: block;
+  padding: 0.05rem 0;
+}
+.tabBar ul .tabHome a i {
+  width: 0.2rem;
+  height: 0.2rem;
+  display: block;
+  margin: auto;
+  background: url('../images/tab/un_tabar_home.png') no-repeat center;
+  background-size: 100% 100%;
+}
+.tabBar ul .tabHome a p {
+  font-size: 0.12rem;
+  color: #979797;
+  margin-top: 0.02rem;
+}
+.tabBar ul .tabHome.active a i {
+  width: 0.2rem;
+  height: 0.2rem;
+  display: block;
+  margin: auto;
+  background: url('../images/tab/tabar_home.png') no-repeat center;
+  background-size: 100% 100%;
+}
+.tabBar ul .tabHome.active a p {
+  color: #E75C52;
+  font-size: 0.12rem;
+  margin-top: 0.02rem;
+}
+.tabBar ul .tabHb a i {
+  width: 0.2rem;
+  height: 0.2rem;
+  display: block;
+  margin: auto;
+  background: url('../images/tab/un_tabar_hb.png') no-repeat center;
+  background-size: 100% 100%;
+}
+.tabBar ul .tabHb a p {
+  font-size: 0.12rem;
+  color: #979797;
+  margin-top: 0.02rem;
+}
+.tabBar ul .tabHb.active a i {
+  width: 0.2rem;
+  height: 0.2rem;
+  display: block;
+  margin: auto;
+  background: url('../images/tab/tabar_hb.png') no-repeat center;
+  background-size: 100% 100%;
+}
+.tabBar ul .tabHb.active a p {
+  color: #E75C52;
+}
+.tabBar ul .tabAdd a i {
+  width: 0.36rem;
+  height: 0.36rem;
+  background: url('../images/tab/tabar_add.png') no-repeat center;
+  background-size: 100% 100%;
+  display: block;
+  margin: auto;
+}
+.tabBar ul .tabCash a i {
+  width: 0.2rem;
+  height: 0.2rem;
+  display: block;
+  margin: auto;
+  background: url('../images/tab/un_tabar_cash.png') no-repeat center;
+  background-size: 100% 100%;
+}
+.tabBar ul .tabCash a p {
+  font-size: 0.12rem;
+  color: #979797;
+  margin-top: 0.02rem;
+}
+.tabBar ul .tabCash.active a i {
+  width: 0.2rem;
+  height: 0.2rem;
+  display: block;
+  margin: auto;
+  background: url('../images/tab/tabar_cash.png') no-repeat center;
+  background-size: 100% 100%;
+}
+.tabBar ul .tabCash.active a p {
+  color: #E75C52;
+}
+.tabBar ul .tabMy a i {
+  width: 0.2rem;
+  height: 0.2rem;
+  display: block;
+  margin: auto;
+  background: url('../images/tab/un_tabar_my.png') no-repeat center;
+  background-size: 100% 100%;
+}
+.tabBar ul .tabMy a p {
+  font-size: 0.12rem;
+  color: #979797;
+  margin-top: 0.02rem;
+}
+.tabBar ul .tabMy.active a i {
+  width: 0.2rem;
+  height: 0.2rem;
+  display: block;
+  margin: auto;
+  background: url('../images/tab/tabar_my.png') no-repeat center;
+  background-size: 100% 100%;
+}
+.tabBar ul .tabMy.active a p {
+  color: #E75C52;
+}
+.appBox {
+  background: #f5f5f5;
+  height: 100vh;
+  /*  点击红包弹出  */
+  /*  公共导航  */
+}
+.appBox .online {
+  background: #ededed;
+  padding: 0.14rem 0.15rem;
+}
+.appBox .online .groupName {
+  width: 3.14rem;
+  font-size: 0.14rem;
+  color: #404040;
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  position: absolute;
+  left: 50%;
+  margin-left: -1.57rem;
+  text-align: center;
+}
+.appBox .online a {
+  display: inline-block;
+  height: 0.18rem;
+  line-height: 0.18rem;
+  padding-right: 0.01rem;
+  color: #191919;
+}
+.appBox .online a i {
+  width: 0.07rem;
+  font-size: 0.27rem;
+  letter-spacing: -1px;
+}
+.appBox .chat {
+  padding: 0 0.15rem 0;
+}
+.appBox .chat li {
+  padding-top: 0.3rem;
+}
+.appBox .chat li .headImg {
+  margin-right: 0.07rem;
+}
+.appBox .chat li .headImg img {
+  width: 0.35rem;
+  height: 0.35rem;
+  border-radius: 0.03rem;
+}
+.appBox .chat li .hbImg {
+  margin-bottom: 0.08rem;
+}
+.appBox .chat li .hbImg img {
+  width: 2.35rem;
+}
+.appBox .chat li .hbImg span {
+  position: absolute;
+  top: 0.11rem;
+  left: 0.6rem;
+  font-size: 0.16rem;
+  color: #FFFFFF;
+}
+.appBox .chat li .hbImg a {
+  position: absolute;
+  top: 0.35rem;
+  left: 0.6rem;
+  font-size: 0.12rem;
+  color: #FFFFFF;
+}
+.appBox .chat li .hbImg i {
+  position: absolute;
+  bottom: 0.09rem;
+  left: 0.18rem;
+  font-size: 0.1rem;
+  color: #919191;
+}
+.appBox .chat li .already img {
+  width: 2.35rem;
+}
+.appBox .chat li .already span {
+  position: absolute;
+  top: 0.11rem;
+  left: 0.6rem;
+  font-size: 0.16rem;
+  color: #FFFFFF;
+}
+.appBox .chat li .already a {
+  position: absolute;
+  top: 0.35rem;
+  left: 0.6rem;
+  font-size: 0.12rem;
+  color: #FFFFFF;
+}
+.appBox .chat li .already i {
+  position: absolute;
+  bottom: 0.09rem;
+  left: 0.18rem;
+  font-size: 0.1rem;
+  color: #919191;
+}
+.appBox .chat li .art {
+  display: block;
+  text-align: center;
+  width: 2.63rem;
+  height: 1.74rem;
+  overflow: hidden;
+  margin-left: 0.42rem;
+  background: url("../images/newadd/kapian_bg.png") no-repeat center top #fff;
+  background-size: 2.63rem 1.2rem;
+  border-radius: 0.08rem 0.08rem 0 0;
+  position: relative;
+}
+.appBox .chat li .art .score {
+  height: 100%;
+}
+.appBox .chat li .art .score p .zytext {
+  color: #333333;
+  font-size: 0.16rem;
+  font-weight: bold;
+}
+.appBox .chat li .art .score p .nuntext {
+  display: inline-block;
+  color: #F62212;
+  font-size: 0.16rem;
+  font-weight: bold;
+  margin-left: 0.04rem;
+}
+.appBox .chat li .art .score .scorezhuan {
+  position: absolute;
+  left: 0.43rem;
+  bottom: 0.57rem;
+}
+.appBox .chat li .art .score .scorexian {
+  position: absolute;
+  right: 0.43rem;
+  bottom: 0.57rem;
+}
+.appBox .chat li .art .score i {
+  display: inline-block;
+  width: 0.02rem;
+  height: 0.17rem;
+  background: #fff;
+  position: absolute;
+  left: 50%;
+  margin-left: -0.01rem;
+  bottom: 0.59rem;
+}
+.appBox .chat li .art .niuInfo {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  width: 100%;
+}
+.appBox .chat li .art .niuInfo .niuimg {
+  width: 0.35rem;
+  height: 0.35rem;
+  border-radius: 0.03rem;
+  float: left;
+  margin-left: 0.1rem;
+  margin-bottom: 0.1rem;
+}
+.appBox .chat li .art .niuInfo .niuBox {
+  float: left;
+  margin-left: 0.09rem;
+}
+.appBox .chat li .art .niuInfo .niuBox .niuName {
+  overflow: hidden;
+  margin-top: -0.03rem;
+}
+.appBox .chat li .art .niuInfo .niuBox .niuName span {
+  font-size: 0.14rem;
+  color: #222222;
+  float: left;
+}
+.appBox .chat li .art .niuInfo .niuBox .niuName i {
+  float: right;
+  display: inline-block;
+  width: 0.4rem;
+  height: 0.17rem;
+  text-align: center;
+  line-height: 0.17rem;
+  font-size: 0.12rem;
+  color: #fff;
+  border-radius: 0.08rem;
+  background: #FA9E3B;
+  margin-top: 0.03rem;
+  margin-left: 0.1rem;
+  position: absolute;
+  right: 0.09rem;
+}
+.appBox .chat li .art .niuInfo .niuBox .niuxinxi i {
+  display: inline-block;
+  width: 0.25rem;
+  height: 0.2rem;
+  background: url(../images/newadd/niu_icon.png) no-repeat center;
+  background-size: 100% 100%;
+  font-size: 0.1rem;
+  color: #fff;
+  line-height: 0.22rem;
+  float: left;
+}
+.appBox .chat li .art .niuInfo .niuBox .niuxinxi .niude {
+  position: absolute;
+  right: 0.09rem;
+  bottom: 0.06rem;
+}
+.appBox .chat li .art .niuInfo .niuBox .niuxinxi .niude span {
+  color: #666666;
+  font-size: 0.12rem;
+}
+.appBox .chat li .art .niuInfo .niuBox .niuxinxi .niude img {
+  display: inline-block;
+  width: 0.12rem;
+  height: 0.12rem;
+  vertical-align: middle;
+}
+.appBox .chat li:last-child {
+  margin-bottom: 0.2rem;
+}
+.appBox .hbBox {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 102;
+  background: rgba(0, 0, 0, 0.2);
+  text-align: center;
+  display: none;
+}
+.appBox .hbBox .money {
+  display: inline-block;
+  width: 2.93rem;
+  height: 4.79rem;
+  margin-top: 0.5rem;
+  background: url("../images/hbgroup/image_redpacket_normal.png") no-repeat center;
+  background-size: 100%;
+}
+.appBox .hbBox .money .moneyTitle {
+  margin-top: 1.1rem;
+}
+.appBox .hbBox .money .moneyTitle img {
+  width: 0.22rem;
+  height: 0.22rem;
+  vertical-align: middle;
+  border-radius: 50%;
+  margin-right: 0.06rem;
+}
+.appBox .hbBox .money .moneyTitle span {
+  font-size: 0.17rem;
+  color: #FFECB8;
+  vertical-align: middle;
+  font-weight: 500;
+}
+.appBox .hbBox .money .moneyArt {
+  font-size: 0.22rem;
+  color: #FFF3BE;
+  font-weight: 500;
+  margin-top: 0.25rem;
+}
+.appBox .hbBox .nullMoney {
+  display: inline-block;
+  width: 2.93rem;
+  height: 4.79rem;
+  margin-top: 0.5rem;
+  background: url("../images/hbgroup/imgHb.png") no-repeat center;
+  background-size: 100%;
+}
+.appBox .hbBox .nullMoney .moneyTitle {
+  margin-top: 1.1rem;
+}
+.appBox .hbBox .nullMoney .moneyTitle img {
+  width: 0.22rem;
+  height: 0.22rem;
+  vertical-align: middle;
+  border-radius: 50%;
+  margin-right: 0.06rem;
+}
+.appBox .hbBox .nullMoney .moneyTitle span {
+  font-size: 0.17rem;
+  color: #FFECB8;
+  vertical-align: middle;
+  font-weight: 500;
+}
+.appBox .hbBox .nullMoney .moneyArt {
+  font-size: 0.22rem;
+  color: #FFF3BE;
+  font-weight: 500;
+  margin-top: 0.25rem;
+}
+.appBox .hbBox .nullMoney .lookDetail span {
+  font-size: 0.14rem;
+  color: #FFF7C1;
+}
+.appBox .hbBox .nullMoney .lookDetail i {
+  width: 0.09rem;
+  height: 0.09rem;
+  background: url("../images/hbgroup/btn_more_yellow.png") no-repeat center;
+  background-size: 100%;
+  display: inline-block;
+  margin-left: 0.02rem;
+  margin-top: 2.5rem;
+}
+.appBox .hbBox p {
+  margin-top: 0.4rem;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.appBox .hbBox p img {
+  width: 0.36rem;
+  height: 0.36rem;
+  display: block;
+  margin: auto;
+}
+.appBox .navigation {
+  position: fixed;
+  right: 0.16rem;
+  top: 50%;
+  margin-top: -2rem;
+  z-index: 99;
+  text-align: center;
+}
+.appBox .navigation li a {
+  display: block;
+  margin-bottom: 0.2rem;
+}
+.appBox .navigation li a i {
+  width: 0.25rem;
+  height: 0.25rem;
+  display: block;
+  margin: auto;
+}
+.appBox .navigation li a p {
+  font-size: 0.12rem;
+  color: #666666;
+  margin-top: 0.02rem;
+}
+.appBox .navigation div a {
+  display: block;
+}
+.appBox .navigation div a img {
+  width: 0.35rem;
+  height: 0.35rem;
+  border-radius: 50%;
+  margin-bottom: 0.16rem;
+}
+.appBox .navigation .sc a i {
+  background: url("../images/hbgroup/btn_like_normal.png") no-repeat center;
+  background-size: cover;
+}
+.appBox .navigation .wf a i {
+  background: url("../images/newadd/wanfa_icon.png") no-repeat center;
+  background-size: cover;
+}
+.appBox .navigation .pl a i {
+  background: url("../images/newadd/dangzhuang_icon.png") no-repeat center;
+  background-size: cover;
+}
+.appBox .navigation .zf a i {
+  background: url("../images/hbgroup/fenxiang_btn.png") no-repeat center;
+  background-size: cover;
+}
+.appBox .navigation .xyg a {
+  margin-top: 0.58rem;
+}
+.appBox .navigation .xyg a i {
+  background: url("../images/hbgroup/btn_next.png") no-repeat center;
+  background-size: cover;
+}
+.appBox .navigation .active a i {
+  background: url("../images/hbgroup/btn_like_click.png") no-repeat center;
+  background-size: cover;
+}
+/*# sourceMappingURL=niuDetail.css.map */

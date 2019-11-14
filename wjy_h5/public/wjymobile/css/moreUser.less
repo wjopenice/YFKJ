@@ -1,0 +1,72 @@
+@import "style";
+.app{
+  .searchBox{
+    overflow: hidden;
+    padding: .1rem .15rem;
+    background: #f5f5f5;
+    .searchInputBox{
+      float: left;
+      background: #fff;
+      width: 3.45rem;
+      border-radius: .02rem;
+      position: relative;
+      input{
+        height: .34rem;
+        margin-left: .1rem;
+        float: left;
+        width: 80%;
+        font-size: @font-size28px;
+        color: #8E8E93;
+      }
+    }
+    .searchButtonBox{
+      float: right;
+      height: .34rem;
+      line-height: .34rem;
+      i{
+        background: url("../images/my/icon_yangjing.png");
+        background-size: 100%;
+        width: .2rem;
+        height: .2rem;
+        display: inline-block;
+        vertical-align: middle;
+      }
+      span{
+        color: #969696;
+        font-size: @font-size26px;
+        vertical-align: middle;
+      }
+    }
+  }
+  .content{
+    ul{
+      overflow: hidden;
+      li{
+        float: left;
+        width: 20%;
+        a{
+          display: block;
+          padding: .15rem 0 .05rem;
+          text-align: center;
+          img{
+            width: .4rem;
+            height: .4rem;
+            display: block;
+            margin: auto;
+          }
+          p{
+            font-size: @font-size24px;
+            color: #444444;
+            margin-top: .06rem;
+            padding: 0 .06rem;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+          }
+        }
+      }
+    }
+  }
+}
+
+

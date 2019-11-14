@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="9346acd4-f4f7-4ed0-97ed-7ee3cbdc5d55" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1QifAKogyAoXg24ibNqBWUVTxic" />
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../vue/wjy_app" />
+    <property name="settings.editor.selected.configurable" value="watcher.settings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\ProjectWord\yf\yf-project\wjy\public\wjymobile\images\my" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\xs-work\wjy\public\wjymobile\images\newadd" />
+      <recent name="F:\xs-work\wjy\public\wjymobile\images\modify" />
+      <recent name="F:\xs-work\wjy\public\wjymobile\images\index" />
+      <recent name="F:\xs-work\wjy\public\wjymobile\images\tab" />
+      <recent name="F:\xs-work\wjy\public\wjymobile\images\hbgroup" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9346acd4-f4f7-4ed0-97ed-7ee3cbdc5d55" name="Default Changelist" comment="" />
+      <created>1568258192301</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1568258192301</updated>
+      <workItem from="1568258193818" duration="3741000" />
+      <workItem from="1568267904740" duration="26498000" />
+      <workItem from="1568308096996" duration="9213000" />
+      <workItem from="1568345793017" duration="3805000" />
+      <workItem from="1568593464760" duration="122199000" />
+      <workItem from="1569204689245" duration="15369000" />
+      <workItem from="1570436826656" duration="11352000" />
+      <workItem from="1570848986859" duration="3181000" />
+      <workItem from="1571035036756" duration="17315000" />
+      <workItem from="1571643874999" duration="38311000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+</project>

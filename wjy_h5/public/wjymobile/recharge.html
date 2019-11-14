@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>充值资金</title>
+    <link rel="stylesheet/less" type="text/css" href="css/recharge.less">
+    <script src="js/less.min.js"></script>
+</head>
+<body>
+    <div class="app">
+        <!--  账号信息  -->
+        <div class="accountBox">
+            <p class="usdLogo"><img src="images/my/usd_logo.png" alt=""></p>
+            <p class="type">USDT</p>
+            <p class="holder">Tether</p>
+            <div class="holderNum pr"><p>持有数</p></div>
+            <p class="balance">0</p>
+            <div class="content">
+                <div class="left">
+                    <p class="top">可用余额</p>
+                    <p class="bottom">5210</p>
+                </div>
+                <div class="right">
+                    <p class="top">冻结金额</p>
+                    <p class="bottom">5210</p>
+                </div>
+            </div>
+            <div class="cashRecord">
+                <a href="rechargeRecord.html">
+                    <img src="images/my/btn_cwjl.png" alt />
+                    <span>财务记录</span>
+                </a>
+            </div>
+        </div>
+
+        <!--  充值地址  -->
+        <p class="mainTip">充值地址</p>
+        <div class="erBox">
+            <img src="images/my/erweima_image.png" alt class="mainEr" />
+        </div>
+        <div class="erCode">
+            <span id='erCode'>adve2egs22c58exd58e5x47e6xg5yj2k7sxv</span>
+            <img src="images/my/btn_copy_red.png" alt @click="copyErcode"/>
+        </div>
+        <div class="withdrawal"><a href="withdRawal.html">提现</a></div>
+    </div>
+</body>
+</html>

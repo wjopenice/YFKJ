@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>免费创建财富树</title>
+    <link rel="stylesheet/less" type="text/css" href="css/createTree.less">
+    <script src="js/less.min.js"></script>
+</head>
+<body>
+    <div class="app">
+        <div class="currencyName">
+            <label for="name">选择财富树币种区：</label>
+            <input type="text" id="name" placeholder="请输入币种名称">
+            <a href="javascript:void(0);">切换币种</a>
+        </div>
+        <div class="hierarchy ov">
+            <p class="fl">层级：</p>
+            <div class="fr add">
+                <img src="images/tree/icon_cut.png" alt="">
+                <span>1</span>
+                <img src="images/tree/icon_add.png" alt="">
+            </div>
+        </div>
+        <div class="currencyName">
+            <label for="money">第一层金额：</label>
+            <input type="text" id="money" placeholder="xxxxEOS">
+        </div>
+        <div class="moneyBox">
+            <div class="moneyAdd">
+                <img src="images/tree/icon_cut.png" alt="">
+                <span>1%</span>
+                <img src="images/tree/icon_add.png" alt="">
+            </div>
+            <p>每层金额递增率</p>
+        </div>
+        <div class="getRedpack">
+            <div class="getredTag">推广限制：</div>
+            <div class="minGet">
+                <input type="radio" id="minlab" name="extension" />
+                <label for="minlab">
+                    <div class="number">
+                        <img src="images/tree/icon_cut.png" alt />
+                        <span>一推2</span>
+                        <img src="images/tree/icon_add.png" alt />
+                    </div>
+                </label>
+            </div>
+            <div class="maxGet">
+                <input type="radio" id="maxlab" name="extension" />
+                <label for="maxlab">一推无数</label>
+            </div>
+        </div>
+        <div class="artBox">
+            <p>创建此财富树需要缴纳xx个币的押金，创立成功后，您的位置属于金字塔顶端。</p>
+            <p>押金退还机制：您创立的财富树收入超过押金金额后，可以申请退还您的押金。</p>
+        </div>
+        <div class="sBtn"><button>创建</button></div>
+    </div>
+</body>
+</html>

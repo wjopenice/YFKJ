@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>财富自由之树升级</title>
+    <link rel="stylesheet/less" type="text/css" href="css/upgradeTree.less">
+    <script src="js/less.min.js"></script>
+</head>
+<body>
+    <div class="appBox">
+        <div class="bg"></div>
+        <p class="grade">Ⅰ级</p>
+        <div class="balanceBox">
+            <p class="usdtBalance">USDT余额：55SDT</p>
+            <p class="state">升级到</p>
+            <div class="stateBox ov">
+                <p class="fl pr">
+                    <span class="line"></span>
+                    <span class="vg1">v1</span>
+                    <span class="vg2">v99</span>
+                </p>
+                <i class="fl"></i>
+            </div>
+            <div class="fast">
+                <span>升到2级需要缴纳：10USDT </span>
+                <p>立即升级</p>
+            </div>
+        </div>
+        <!--  公共组件  -->
+        <ul class="navigation">
+            <div><a href="javascript:void(0);"><img src="images/tree/image_yuan.png" alt=""><p></p></a></div>
+            <li class="sj active"><a href="upgradeTree.html"><i></i><p>升级</p></a></li>
+            <li class="td"><a href="teamAdTree.html"><i></i><p>团队</p></a></li>
+            <li class="yq"><a href="invitationTree.html"><i></i><p>邀请</p></a></li>
+            <li class="cw"><a href="financeTree.html"><i></i><p>财务</p></a></li>
+            <li class="xx"><a href="infoTree.html"><i></i><p>信息</p></a></li>
+        </ul>
+        <div class="homeBtn" id="HomeBtn">
+            <div>
+                <p>
+                    <span>主页</span>
+                </p>
+            </div>
+        </div>
+    </div>
+    <script>
+        var homeBtn = document.getElementById("HomeBtn");
+        var width = document.documentElement.clientWidth;
+        var height = document.documentElement.clientHeight;
+        homeBtn.addEventListener('touchmove', function (event) {
+            event.preventDefault();
+            if (event.targetTouches.length == 1) {
+                var touch = event.targetTouches[0];
+                moveleft = touch.pageX-22;
+                movetop = touch.pageY-25;
+                if(moveleft<0){moveleft=0;}
+                if(moveleft>(width-43)){ moveleft = width - 43}
+                if (movetop < 0) {movetop = 0;}
+                if (movetop > (height-50)) { movetop = height - 50; }
+                homeBtn.style.top = movetop+'px';
+                homeBtn.style.left = moveleft + 'px';
+            };
+        });
+    </script>
+</body>
+</html>

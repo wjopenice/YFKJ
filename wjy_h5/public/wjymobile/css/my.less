@@ -1,0 +1,344 @@
+@import "style";
+.app{
+  .myHead{
+    width: 100%;
+    height: 1.08rem;
+    background: #E33C3D;
+    .imgBox{
+      position: absolute;
+      bottom: .11rem;
+      left: 0;
+      img{
+        width: .59rem;
+        height: .59rem;
+        border-radius: 50%;
+        margin-left: .15rem;
+        vertical-align: middle;
+      }
+      span{
+        font-size: @font-size36px;
+        color: #F2B8B3;
+        margin-left: .1rem;
+        vertical-align: middle;
+      }
+    }
+  }
+  .myList{
+    background: #fff;
+    li{
+      height: .5rem;
+      line-height: .5rem;
+      a{
+        display: block;
+        margin-left: .15rem;
+        padding-right: .15rem;
+        border-bottom: .01rem solid #f5f5f5;
+        overflow: hidden;
+        i{
+          width: .2rem;
+          height: .2rem;
+          display: inline-block;
+          float: left;
+          margin-top: .14rem;
+        }
+        .zijin{
+          background: url('../images/my/per_icon_zijin.png') no-repeat center;
+          background-size: 100%;
+        }
+        .hbsy{
+          background: url('../images/my/per_icon_hbsy.png') no-repeat center;
+          background-size: 100%;
+        }
+        .cfsy{
+          background: url('../images/my/per_icon_cfsy.png') no-repeat center;
+          background-size: 100%;
+        }
+        .pwd{
+          background: url('../images/my/per_icon_password.png') no-repeat center;
+          background-size: 100%;
+        }
+        .wxcode{
+          background: url('../images/my/per_icon_code.png') no-repeat center;
+          background-size: 100%;
+        }
+        .friend{
+          background: url('../images/my/per_icon_friend.png') no-repeat center;
+          background-size: 100%;
+        }
+        .feedback{
+          background: url('../images/my/per_icon_feedback.png') no-repeat center;
+          background-size: 100%;
+        }
+        .notice{
+          background: url('../images/my/per_icon_notice.png') no-repeat center;
+          background-size: 100%;
+        }
+        p{
+          float: left;
+          font-size: @font-size28px;
+          color: #3F3F3F;
+          margin-left: .15rem;
+        }
+        span{
+          width: .12rem;
+          height: .12rem;
+          background: url('../images/my/btn_more_gray.png') no-repeat center;
+          background-size: 100%;
+          display: inline-block;
+          float: right;
+          margin-top: .19rem;
+        }
+      }
+    }
+  }
+  .signOutBox{
+    padding: .25rem .15rem;
+    button{
+      width: 100%;
+      height: .45rem;
+      background: #E33C3D;
+      color: #fff;
+      font-size: @font-size34px;
+      letter-spacing: 1px;
+      border-radius: .02rem;
+    }
+  }
+}
+/* 底部tabBar */
+.tabBar{
+  width: 100%;
+  height: .48rem;
+  background: #fff;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.24);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  ul{
+    overflow: hidden;
+    li{
+      width: 20%;
+      float: left;
+      text-align: center;
+      .showHide{
+        width: 100%;
+        background: #fff;
+        position:fixed;
+        bottom: .48rem;
+        left: 0;
+        z-index: 1000;
+        display: none;
+        box-shadow: 0 -6px 10px 0 rgba(0, 0, 0, 0.1);
+        border-radius: .12rem .12rem 0 0;
+        a{
+          display: block;
+          padding: .14rem 0;
+          border-bottom: .01rem solid #f5f5f5;
+          font-size: @font-size30px;
+          color: #131313;
+          span{
+            vertical-align: middle;
+          }
+          img{
+            width: .3rem;
+            height: .3rem;
+            margin-right: .14rem;
+            vertical-align: middle;
+          }
+        }
+      }
+      a{
+        display: block;
+        padding: .05rem 0;
+        i{
+
+        }
+
+      }
+    }
+    .tabHome{
+      a{
+        i{
+          width: .2rem;
+          height: .2rem;
+          display: block;
+          margin: auto;
+          background: url('../images/tab/un_tabar_home.png') no-repeat center;
+          background-size: 100% 100%;
+        }
+        p{
+          font-size: @font-size24px;
+          color: #979797;
+          margin-top: .02rem;
+        }
+      }
+    }
+    .tabHome.active{
+      a{
+        i{
+          width: .2rem;
+          height: .2rem;
+          display: block;
+          margin: auto;
+          background: url('../images/tab/tabar_home.png') no-repeat center;
+          background-size: 100% 100%;
+        }
+        p{
+          color: #E75C52;
+          font-size: @font-size24px;
+          margin-top: .02rem;
+        }
+      }
+    }
+    .tabHb{
+      a{
+        i{
+          width: .2rem;
+          height: .2rem;
+          display: block;
+          margin: auto;
+          background: url('../images/tab/un_tabar_hb.png') no-repeat center;
+          background-size: 100% 100%;
+        }
+        p{
+          font-size: @font-size24px;
+          color: #979797;
+          margin-top: .02rem;
+        }
+      }
+    }
+    .tabHb.active{
+      a{
+        i{
+          width: .2rem;
+          height: .2rem;
+          display: block;
+          margin: auto;
+          background: url('../images/tab/tabar_hb.png') no-repeat center;
+          background-size: 100% 100%;
+        }
+        p{
+          color: #E75C52;
+        }
+      }
+    }
+    .tabAdd{
+      a{
+        i{
+          width: .36rem;
+          height: .36rem;
+          background: url('../images/tab/tabar_add.png') no-repeat center;
+          background-size: 100% 100%;
+          display: block;
+          margin: auto;
+        }
+      }
+    }
+    .tabCash{
+      a{
+        i{
+          width: .2rem;
+          height: .2rem;
+          display: block;
+          margin: auto;
+          background: url('../images/tab/un_tabar_cash.png') no-repeat center;
+          background-size: 100% 100%;
+        }
+        p{
+          font-size: @font-size24px;
+          color: #979797;
+          margin-top: .02rem;
+        }
+      }
+    }
+    .tabCash.active{
+      a{
+        i{
+          width: .2rem;
+          height: .2rem;
+          display: block;
+          margin: auto;
+          background: url('../images/tab/tabar_cash.png') no-repeat center;
+          background-size: 100% 100%;
+        }
+        p{
+          color: #E75C52;
+        }
+      }
+    }
+    .tabMy{
+      a{
+        i{
+          width: .2rem;
+          height: .2rem;
+          display: block;
+          margin: auto;
+          background: url('../images/tab/un_tabar_my.png') no-repeat center;
+          background-size: 100% 100%;
+        }
+        p{
+          font-size: @font-size24px;
+          color: #979797;
+          margin-top: .02rem;
+        }
+      }
+    }
+    .tabMy.active{
+      a{
+        i{
+          width: .2rem;
+          height: .2rem;
+          display: block;
+          margin: auto;
+          background: url('../images/tab/tabar_my.png') no-repeat center;
+          background-size: 100% 100%;
+        }
+        p{
+          color: #E75C52;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

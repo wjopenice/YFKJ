@@ -1,0 +1,341 @@
+@import "style";
+.app{
+  .ad{
+    padding: .06rem .06rem 0;
+    .swiper-wrapper{
+      .swiper-slide{
+        a{
+          display: block;
+          img{
+            width: 100%;
+            height: 1.07rem;
+          }
+        }
+      }
+    }
+  }
+  .tapNav{
+    overflow: hidden;
+    border-bottom: 1px solid #ececec;
+    margin-bottom: .15rem;
+    li{
+      float: left;
+      text-align: center;
+      width: 33.33%;
+      margin-bottom: .15rem;
+      position: relative;
+      a{
+        display: block;
+        img{
+          width: .5rem;
+          height: .5rem;
+        }
+        p{
+          color: #050505;
+          font-size: .16rem;
+          margin-top: .1rem;
+        }
+      }
+    }
+    .navActive{
+      span{
+        position: absolute;
+        width: .9rem;
+        height: .02rem;
+        display: inline-block;
+        background: #E33C3D;
+        left: 50%;
+        margin-left: -.45rem;
+        bottom: -.15rem;
+      }
+    }
+  }
+  .hbTitle{
+    padding: 0 .15rem .2rem;
+    img{
+      width: .23rem;
+      height: .21rem;
+      vertical-align: middle;
+      margin-right: .1rem;
+    }
+    span{
+      font-size: .16rem;
+      color: #333333;
+      vertical-align: middle;
+    }
+  }
+  .list {
+    padding: 0 0.15rem 0 0.15rem;
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    li {
+      width: 100%;
+      background-color: #fff;
+      text-align: center;
+      a {
+        display: block;
+        padding: .13rem .15rem;
+        position: relative;
+        font-size: .11rem;
+        overflow: hidden;
+        border-bottom: 1px solid #F7F7F7;
+        img {
+          width: 0.4rem;
+          height: 0.4rem;
+          display: block;
+          margin: auto;
+          float: left;
+          border-radius: .03rem;
+        }
+        p{
+          float: left;
+          margin-left: .1rem;
+          span{
+            display: block;
+            text-align: left;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            width: 2.6rem;
+          }
+          .niuTitle{
+            color: #404040;
+            font-size: .14rem;
+          }
+          .niuS{
+            color: #999999;
+            font-size: .11rem;
+            margin-top: .02rem;
+          }
+        }
+      }
+    }
+  }
+}
+/* 底部tabBar */
+.tabBar{
+  width: 100%;
+  height: .48rem;
+  background: #fff;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.24);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  ul{
+    overflow: hidden;
+    li{
+      width: 20%;
+      float: left;
+      text-align: center;
+      .showHide{
+        width: 100%;
+        background: #fff;
+        position:fixed;
+        bottom: .48rem;
+        left: 0;
+        z-index: 1000;
+        display: none;
+        box-shadow: 0 -6px 10px 0 rgba(0, 0, 0, 0.1);
+        border-radius: .12rem .12rem 0 0;
+        a{
+          display: block;
+          padding: .14rem 0;
+          border-bottom: .01rem solid #f5f5f5;
+          font-size: @font-size30px;
+          color: #131313;
+          span{
+            vertical-align: middle;
+          }
+          img{
+            width: .3rem;
+            height: .3rem;
+            margin-right: .14rem;
+            vertical-align: middle;
+          }
+        }
+      }
+      a{
+        display: block;
+        padding: .05rem 0;
+        i{
+
+        }
+
+      }
+    }
+    .tabHome{
+      a{
+        i{
+          width: .2rem;
+          height: .2rem;
+          display: block;
+          margin: auto;
+          background: url('../images/tab/un_tabar_home.png') no-repeat center;
+          background-size: 100% 100%;
+        }
+        p{
+          font-size: @font-size24px;
+          color: #979797;
+          margin-top: .02rem;
+        }
+      }
+    }
+    .tabHome.active{
+      a{
+        i{
+          width: .2rem;
+          height: .2rem;
+          display: block;
+          margin: auto;
+          background: url('../images/tab/tabar_home.png') no-repeat center;
+          background-size: 100% 100%;
+        }
+        p{
+          color: #E75C52;
+          font-size: @font-size24px;
+          margin-top: .02rem;
+        }
+      }
+    }
+    .tabHb{
+      a{
+        i{
+          width: .2rem;
+          height: .2rem;
+          display: block;
+          margin: auto;
+          background: url('../images/tab/un_tabar_hb.png') no-repeat center;
+          background-size: 100% 100%;
+        }
+        p{
+          font-size: @font-size24px;
+          color: #979797;
+          margin-top: .02rem;
+        }
+      }
+    }
+    .tabHb.active{
+      a{
+        i{
+          width: .2rem;
+          height: .2rem;
+          display: block;
+          margin: auto;
+          background: url('../images/tab/tabar_hb.png') no-repeat center;
+          background-size: 100% 100%;
+        }
+        p{
+          color: #E75C52;
+        }
+      }
+    }
+    .tabAdd{
+      a{
+        i{
+          width: .36rem;
+          height: .36rem;
+          background: url('../images/tab/tabar_add.png') no-repeat center;
+          background-size: 100% 100%;
+          display: block;
+          margin: auto;
+        }
+      }
+    }
+    .tabCash{
+      a{
+        i{
+          width: .2rem;
+          height: .2rem;
+          display: block;
+          margin: auto;
+          background: url('../images/tab/un_tabar_cash.png') no-repeat center;
+          background-size: 100% 100%;
+        }
+        p{
+          font-size: @font-size24px;
+          color: #979797;
+          margin-top: .02rem;
+        }
+      }
+    }
+    .tabCash.active{
+      a{
+        i{
+          width: .2rem;
+          height: .2rem;
+          display: block;
+          margin: auto;
+          background: url('../images/tab/tabar_cash.png') no-repeat center;
+          background-size: 100% 100%;
+        }
+        p{
+          color: #E75C52;
+        }
+      }
+    }
+    .tabMy{
+      a{
+        i{
+          width: .2rem;
+          height: .2rem;
+          display: block;
+          margin: auto;
+          background: url('../images/tab/un_tabar_my.png') no-repeat center;
+          background-size: 100% 100%;
+        }
+        p{
+          font-size: @font-size24px;
+          color: #979797;
+          margin-top: .02rem;
+        }
+      }
+    }
+    .tabMy.active{
+      a{
+        i{
+          width: .2rem;
+          height: .2rem;
+          display: block;
+          margin: auto;
+          background: url('../images/tab/tabar_my.png') no-repeat center;
+          background-size: 100% 100%;
+        }
+        p{
+          color: #E75C52;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

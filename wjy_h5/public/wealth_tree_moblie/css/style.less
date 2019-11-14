@@ -1,0 +1,360 @@
+html {
+  font-size: 26.66667vw;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "PingFang SC";
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  font-size: .16rem;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: rgba(0, 0, 0, 1);
+}
+
+ul,
+p,
+span,
+li,
+button,
+img {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: 0;
+  list-style: none;
+}
+a,a:hover,a:active,a:visited,a:link,a:focus{
+  -webkit-tap-highlight-color:rgba(0,0,0,0);
+  -webkit-tap-highlight-color: transparent;
+  outline:none;
+  background: none;
+  text-decoration: none;
+}
+
+input, textarea {
+  outline: none;
+  border: none;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+input:-webkit-autofill,select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px white  inset !important;
+}
+
+input {
+  outline-color: invert;
+  outline-style: none;
+  outline-width: 0;
+  border: none;
+  border-style: none;
+  text-shadow: none;
+  -webkit-appearance: none;
+  -webkit-user-select: text;
+  outline-color: transparent;
+  box-shadow: none;
+  -webkit-tap-highlight-color:rgba(0,0,0,0);
+  padding: 0;
+  border-radius: 0;
+  margin: 0;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  font-size: .16rem;
+  color: rgba(245, 245, 245, 1);
+}
+
+i {
+  font-style: normal;
+}
+
+hr {
+  margin: 0;
+  height: 0;
+}
+
+/*  以上去掉默认样式  */
+
+@font-size22px: .1rem;
+@font-size28px: .14rem;
+@font-size34px: .17rem;
+@font-size26px: .13rem;
+@font-size30px: .15rem;
+@font-size62px: .31rem;
+@font-size38px: .19rem;
+@font-size24px: .12rem;
+@font-size60px: .3rem;
+@font-size36px: .18rem;
+
+.ov{
+  overflow: hidden;
+}
+.fl{
+  float: left;
+}
+.fr{
+  float: right;
+}
+.pr{
+  position: relative;
+}
+.app{
+  padding-bottom: .5rem;
+}
+
+/* 底部tabBar */
+.tabBar{
+  width: 100%;
+  height: .48rem;
+  background: #fff;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.24);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  ul{
+    overflow: hidden;
+    li{
+      width: 25%;
+      float: left;
+      text-align: center;
+      .showHide{
+        width: 100%;
+        background: #fff;
+        position:fixed;
+        bottom: .48rem;
+        left: 0;
+        z-index: 1000;
+        display: none;
+        box-shadow: 0 -6px 10px 0 rgba(0, 0, 0, 0.1);
+        border-radius: .12rem .12rem 0 0;
+        a{
+          display: block;
+          padding: .14rem 0;
+          border-bottom: .01rem solid #f5f5f5;
+          font-size: @font-size30px;
+          color: #131313;
+          span{
+            vertical-align: middle;
+          }
+          img{
+            width: .3rem;
+            height: .3rem;
+            margin-right: .14rem;
+            vertical-align: middle;
+          }
+        }
+      }
+      a{
+        display: block;
+        padding: .05rem 0;
+        i{
+
+        }
+
+      }
+    }
+    .tabHome{
+      a{
+        i{
+          width: .2rem;
+          height: .2rem;
+          display: block;
+          margin: auto;
+          background: url('../images/tab/shouye_icon_normal@2x.png') no-repeat center;
+          background-size: 100% 100%;
+        }
+        p{
+          font-size: @font-size24px;
+          color: #979797;
+          margin-top: .02rem;
+        }
+      }
+    }
+    .tabHome.active{
+      a{
+        i{
+          width: .2rem;
+          height: .2rem;
+          display: block;
+          margin: auto;
+          background: url('../images/tab/shouye_icon_cilck@2x.png') no-repeat center;
+          background-size: 100% 100%;
+        }
+        p{
+          color: #4B89E7;
+          font-size: @font-size24px;
+          margin-top: .02rem;
+        }
+      }
+    }
+    .tabHb{
+      a{
+        i{
+          width: .2rem;
+          height: .2rem;
+          display: block;
+          margin: auto;
+
+          background: url('../images/tab/shuidi_icon_normal@2x.png') no-repeat center;
+          background-size: 100% 100%;
+        }
+        p{
+          font-size: @font-size24px;
+          color: #979797;
+          margin-top: .02rem;
+        }
+      }
+    }
+    .tabHb.active{
+      a{
+        i{
+          width: .2rem;
+          height: .2rem;
+          display: block;
+          margin: auto;
+          background: url('../images/tab/shuidi_icon_cilck@2x.png') no-repeat center;
+          background-size: 100% 100%;
+        }
+        p{
+          color: #4B89E7;
+        }
+      }
+    }
+    .tabCash{
+      a{
+        i{
+          width: .2rem;
+          height: .2rem;
+          display: block;
+          margin: auto;
+          background: url('../images/tab/guize_icon_normal@2x.png') no-repeat center;
+          background-size: 100% 100%;
+        }
+        p{
+          font-size: @font-size24px;
+          color: #979797;
+          margin-top: .02rem;
+        }
+      }
+    }
+    .tabCash.active{
+      a{
+        i{
+          width: .2rem;
+          height: .2rem;
+          display: block;
+          margin: auto;
+          background: url('../images/tab/guize_icon_click@2x.png') no-repeat center;
+          background-size: 100% 100%;
+        }
+        p{
+          color: #4B89E7;
+        }
+      }
+    }
+    .tabMy{
+      a{
+        i{
+          width: .2rem;
+          height: .2rem;
+          display: block;
+          margin: auto;
+          background: url('../images/tab/person_icon_normal@2x.png') no-repeat center;
+          background-size: 100% 100%;
+        }
+        p{
+          font-size: @font-size24px;
+          color: #979797;
+          margin-top: .02rem;
+        }
+      }
+    }
+    .tabMy.active{
+      a{
+        i{
+          width: .2rem;
+          height: .2rem;
+          display: block;
+          margin: auto;
+          background: url('../images/tab/person_icon_click@2x.png') no-repeat center;
+          background-size: 100% 100%;
+        }
+        p{
+          color: #4B89E7;
+        }
+      }
+    }
+  }
+}
+
+.navBox{
+  height: .44rem;
+  line-height: .44rem;
+  background: #fff;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  p{
+    text-align: center;
+    color: #304A61;
+    font-size: .16rem;
+    font-weight:bold;
+  }
+  i{
+    position: absolute;
+    background: url("../images/index/ret.png") no-repeat center;
+    background-size: .17rem .17rem;
+    width: .4rem;
+    height: .4rem;
+    display: inline-block;
+    left: 0;
+    top: .02rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

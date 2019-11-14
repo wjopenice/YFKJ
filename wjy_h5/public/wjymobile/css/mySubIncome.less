@@ -1,0 +1,168 @@
+@import "style";
+.app{
+  .accountBox{
+    background: #24292E;
+    .usdLogo{
+      padding-top: .25rem;
+      img{
+        width: .4rem;
+        height: .4rem;
+        display: block;
+        margin: auto;
+      }
+    }
+  }
+  .type{
+    color: #fff;
+    font-size: @font-size30px;
+    margin-top: .06rem;
+    text-align: center;
+  }
+  .holder{
+    padding-top: .05rem;
+    img{
+      width: .18rem;
+      height: .14rem;
+      display: block;
+      margin: auto;
+    }
+  }
+  .holderNum{
+    text-align: center;
+    padding-top: .17rem;
+    span{
+      font-size: @font-size26px;
+      color: #CDCDCF;
+      vertical-align: middle;
+    }
+    img{
+      width: .14rem;
+      height: .14rem;
+      vertical-align: middle;
+      margin-left: .1rem;
+    }
+  }
+  .balance{
+    font-size: @font-size60px;
+    color: #FFF;
+    text-align: center;
+    margin: .1rem 0 .2rem;
+  }
+  .titleNav{
+    padding-bottom: .08rem;
+    li{
+      width: 25%;
+      text-align: center;
+      a{
+        display: block;
+        font-size: @font-size26px;
+        color: #CDCDCF;
+        height: .26rem;
+        span{
+          width: .12rem;
+          height: .04rem;
+          border-radius: .02rem;
+          position: absolute;
+          left: 50%;
+          margin-left: -.06rem;
+          bottom: .01rem;
+        }
+      }
+      .extension{
+        span{
+          background: #3ACFFF;
+        }
+      }
+      .group{
+        span{
+          background: #F94824;
+        }
+      }
+      .rob{
+        span{
+          background: #DFBA8E;
+        }
+      }
+      .mySub{
+        span{
+          background: #DF8E8E;
+        }
+      }
+      .active{
+        span{
+          width: .4rem;
+          margin-left: -.2rem;
+        }
+      }
+    }
+  }
+
+  /*  切换选项卡  */
+  .bodyBox{
+    .bodyTitle{
+      height: .4rem;
+      line-height: .4rem;
+      background: #F8F8F8;
+      font-size: @font-size28px;
+      color: #050505;
+      text-align: center;
+    }
+    .levelUser{
+      background: #F8F8F8;
+      li{
+        width: 33.33%;
+        text-align: center;
+        height: .4rem;
+        line-height: .4rem;
+        a{
+          display: block;
+          font-size: @font-size26px;
+          color: #515254;
+        }
+        .active{
+          span{
+            width: .3rem;
+            height: .02rem;
+            background: #E33C3D;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            margin-left: -.15rem;
+          }
+        }
+      }
+    }
+    .bodyNav{
+      background: #f8f8f8;
+      height: .4rem;
+      line-height: .4rem;
+      font-size: @font-size26px;
+      color: #515254;
+      p{
+        width: 33.33%;
+        text-align: center;
+      }
+    }
+    .conList{
+      li{
+        height: .45rem;
+        line-height: .45rem;
+        border-bottom: .01rem solid #f5f5f5;
+        font-size: @font-size24px;
+        color: #666;
+        overflow: hidden;
+        span{
+          width: 33.33%;
+          text-align: center;
+          display: inline-block;
+          float: left;
+          img{
+            margin-top: .08rem;
+            width: .29rem;
+            height: .29rem;
+          }
+        }
+      }
+    }
+  }
+}

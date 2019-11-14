@@ -1,0 +1,62 @@
+.app .firstPage {
+    padding: 0 0.15rem;
+    border-radius: 0.1rem;
+    width: 3.45rem;
+    display: inline-block;
+    margin-bottom: 0.1rem;
+}
+.app .firstPage ul {
+    overflow: hidden;
+}
+.app .firstPage ul li {
+    width: 1.45rem;
+    margin-right: 0.15rem;
+    height: 1.84rem;
+    padding: 0 0.1rem;
+    text-align: center;
+    box-shadow: 0 0 0.04rem 0 rgba(0, 0, 0, 0.1);
+    float: left;
+    margin-top: 0.15rem;
+    border-radius: 0.06rem;
+}
+.app .firstPage ul li img {
+    width: 0.9rem;
+    height: 0.65rem;
+    display: inline-block;
+    margin-top: 0.18rem;
+    margin-bottom: 0.1rem;
+}
+.app .firstPage ul li .tit {
+    font-weight: bold;
+    font-size: 0.14rem;
+    color: #111;
+    margin-bottom: 0.14rem;
+}
+.app .firstPage ul li p {
+    font-size: 0.13rem;
+    color: #444444;
+    font-weight: 400;
+    line-height: 0.17rem;
+    text-align: center;
+}
+.app .firstPage ul li:nth-child(1) {
+    background: #CFFBFB;
+}
+.app .firstPage ul li:nth-child(2) {
+    background: #DAEBFF;
+    margin-right: 0;
+}
+.app .firstPage ul li:nth-child(3) {
+    background: #FFD4E6;
+}
+.app .firstPage ul li:nth-child(4) {
+    background: #FEF4C5;
+    margin-right: 0;
+}
+.app .firstPage ul li:nth-child(5) {
+    background: #C9E2FF;
+}
+.app .firstPage ul li:nth-child(6) {
+    background: #FFD4FB;
+    margin-right: 0;
+}

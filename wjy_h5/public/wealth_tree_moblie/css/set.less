@@ -1,0 +1,52 @@
+@import "style";
+html{
+  height: 100%;
+  background: #f5f5f5;
+}
+.app{
+  text-align: center;
+  .myList{
+    background: #fff;
+    li{
+      height: .5rem;
+      line-height: .5rem;
+      a{
+        display: block;
+        margin-left: .15rem;
+        padding-right: .15rem;
+        border-bottom: .01rem solid #f5f5f5;
+        overflow: hidden;
+        i{
+          width: .19rem;
+          height: .19rem;
+          display: inline-block;
+          float: left;
+          margin-top: .14rem;
+        }
+        p{
+          float: left;
+          font-size: @font-size28px;
+          color: #3F3F3F;
+        }
+        span{
+          width: .14rem;
+          height: .14rem;
+          background: url('../images/my/gray_youjiantou@2x.png') no-repeat center;
+          background-size: 100%;
+          display: inline-block;
+          float: right;
+          margin-top: .19rem;
+        }
+      }
+    }
+  }
+  .verify {
+    font-size: .17rem;
+    color: rgba(245, 245, 245, 1);
+    line-height: .45rem;
+    width: 3.45rem;
+    margin-top: .6rem;
+    background: linear-gradient(90deg, #665fee, #27c2de);
+    border-radius: .02rem;
+  }
+}

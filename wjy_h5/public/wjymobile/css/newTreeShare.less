@@ -1,0 +1,128 @@
+@import "style";
+.appBox {
+  width: 100%;
+  height: 8rem;
+  background: url("../images/modify/treebg.png") no-repeat center;
+  background-size: 100% 100%;
+  position: relative;
+  .header {
+    position: relative;
+    .img1 {
+      position: absolute;
+      left: 50%;
+      margin-left: -1.35rem;
+      top: .29rem;
+      width: 2.69rem;
+      height: 1.03rem;
+      z-index: 1;
+    }
+    .img2{
+      position: absolute;
+      right: 0;
+      top: .33rem;
+      width: .92rem;
+      height: .94rem;
+    }
+  }
+  .activeRule {
+    padding-bottom: .1rem;
+    background: #fff;
+    box-shadow:0px 0px 20px 0px rgba(41,87,0,0.2);
+    position: absolute;
+    left: .2rem;
+    top: 1.44rem;
+    width: 3.35rem;
+    text-align: center;
+    .title{
+      display: inline-block;
+      font-size: .14rem;
+      font-weight:bold;
+      color: #fff;
+      padding: 0 .28rem;
+      height: .21rem;
+      background: #FF9F01;
+      border-radius: 0 .12rem 0 .12rem;
+      margin-top: .07rem;
+    }
+    .rule {
+      width: 3.05rem;
+      margin: auto;
+      margin-top: .07rem;
+      background: #BFDAF1;
+      overflow: hidden;
+      text-align: center;
+      border-radius: 0 .1rem 0 .1rem;
+      .ruTitle {
+        font-size: .15rem;
+        font-weight: bold;
+        margin-top: .08rem;
+        color: #432A00;
+      }
+      p {
+        font-size: @font-size24px;
+        color: #6C472F;
+        line-height: .2rem;
+        text-align: left;
+        padding: .15rem;
+      }
+    }
+    .rule1{
+      width: 3.05rem;
+      margin: auto;
+      margin-top: .07rem;
+      background: #BFDAF1;
+      overflow: hidden;
+      text-align: center;
+      border-radius: 0 .1rem 0 .1rem;
+      .treepwd{
+        padding: .15rem .06rem;
+        p{
+          font-size: .14rem;
+          color: #000;
+          font-weight:bold;
+        }
+        span{
+          display: block;
+          font-size: .13rem;
+          color: #E33C3D;
+          margin-top: .04rem;
+        }
+        button{
+          width: .63rem;
+          height: .2rem;
+          font-size: .13rem;
+          color: #fff;
+          background: #E33C3D;
+          border-radius: .03rem;
+          margin-top: .08rem;
+          line-height: .22rem;
+        }
+      }
+      .treepwd1{
+        padding: .15rem .15rem .15rem .06rem;
+        text-align: right;
+        img{
+          width: .53rem;
+          height: .53rem;
+          border: 0;
+          background: #ccc;
+          display: inline-block;
+        }
+        p{
+          font-size: .1rem;
+          color: #404040;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+

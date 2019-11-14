@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>注册</title>
+    <link rel="stylesheet/less" type="text/css" href="css/register.less">
+    <script src="js/less.min.js"></script>
+</head>
+<body>
+<div class="signin">
+    <img src="images/login/logo@2x.png" alt class="logo" />
+    <ul class="list">
+        <li>
+            <img src="images/login/login_user_icon.png" alt="" />
+            <input type="text" placeholder="请输入手机号" />
+        </li>
+        <li>
+            <img src="images/login/login_password_icon.png" alt="" />
+            <input type="password" placeholder="请输入密码" />
+        </li>
+        <li>
+            <img src="images/login/login_yaoqing_icon.png" alt />
+            <input type="text" placeholder="请输入邀请码" v-model="invCode" />
+        </li>
+    </ul>
+    <div class="reg_box"><button onclick="window.location.href='registerSuccess.html'">立即注册</button></div>
+</div>
+</body>
+</html>

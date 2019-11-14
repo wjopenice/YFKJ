@@ -1,0 +1,69 @@
+@import "style";
+html{
+  height: 100%;
+  background: #f5f5f5;
+}
+.app{
+  text-align: center;
+  form {
+    overflow: hidden;
+    padding: .15rem 0;
+    label {
+      border-left: .02rem solid #665fee;
+      line-height: .16rem;
+      font-size: .15rem;
+      color: rgba(51, 51, 51, 1);
+      display: block;
+      text-align: left;
+      margin: .1rem 0 .1rem .15rem;
+      padding-left: .1rem;
+    }
+    textarea {
+      height: 1.5rem;
+      background: rgba(240, 240, 240, 1);
+      width: 3.25rem;
+      padding: .1rem;
+      color: #222222;
+      font-size: @font-size28px;
+      border-radius: 0;
+    }
+    textarea::-webkit-input-placeholder {
+      color: #666666;
+      font-size: @font-size28px;
+      font-family: "PingFang SC";
+    }
+    textarea:-moz-placeholder {
+      color: #666666;
+      font-size: @font-size28px;
+      font-family: "PingFang SC";
+    }
+    textarea::-moz-placeholder {
+      color: #666666;
+      font-size: @font-size28px;
+      font-family: "PingFang SC";
+    }
+    textarea::-ms-input-placeholder {
+      color: #666666;
+      font-size: @font-size28px;
+      font-family: "PingFang SC";
+    }
+    input[type="email"] {
+      height: .32rem;
+      padding-left: .1rem;
+      background: rgba(240, 240, 240, 1);
+      width: 3.35rem;
+      border-radius: 0;
+      font-size: @font-size28px;
+      color: #222222;
+    }
+  }
+  .verify {
+    font-size: .17rem;
+    color: rgba(245, 245, 245, 1);
+    line-height: .45rem;
+    width: 3.45rem;
+    margin-top: .2rem;
+    background: linear-gradient(90deg, #665fee, #27c2de);
+    border-radius: .02rem;
+  }
+}

@@ -1,0 +1,93 @@
+.app .searchBox {
+    overflow: hidden;
+    padding: 0.1rem 0.15rem;
+    background: #f5f5f5;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+.app .searchBox .searchInputBox {
+    float: left;
+    background: #fff;
+    width: 3.45rem;
+    border-radius: 0.02rem;
+    position: relative;
+}
+.app .searchBox .searchInputBox i {
+    background: url("../images/takeGood/search.png");
+    background-size: 100%;
+    width: 0.16rem;
+    height: 0.16rem;
+    position: absolute;
+    left: 0.11rem;
+    top: 0.09rem;
+}
+.app .searchBox .searchInputBox input {
+    height: 0.34rem;
+    margin-left: 0.32rem;
+    float: left;
+    width: 80%;
+    font-size: 0.14rem;
+    color: #8E8E93;
+}
+.app .moneyList{
+    margin-top: .54rem;
+}
+.app .moneyList li {
+    border-bottom: 0.01rem solid #F5F5F5;
+    background: #fff;
+}
+.app .moneyList li:last-child{
+    border-bottom: 0;
+}
+.app .moneyList li a {
+    display: block;
+    padding: 0.15rem;
+}
+.app .moneyList li a .headImg {
+    width: 0.55rem;
+    height: 0.35rem;
+    background: #409eff;
+    border-radius: 0.02rem;
+    margin-top: .03rem;
+}
+.app .moneyList li a .headImg p {
+    text-align: center;
+    color: #fff;
+    font-size: 0.1rem;
+    line-height: 0.35rem;
+}
+.app .moneyList li a .infoList{
+    margin-left: .2rem;
+}
+.app .moneyList li a .infoBox .nameBox .name {
+    color: #000;
+    font-size: 0.14rem;
+}
+.app .moneyList li a .infoBox .time {
+    font-size: 0.1rem;
+    color: #333;
+    margin-top: 0.05rem;
+}
+.app .moneyList li a .infoBox .money{
+    background: #f56c6c;
+    text-align: center;
+    color: #fff;
+    border-radius: 0.02rem;
+    padding: 0 .01rem;
+}
+.app .moneyList li a .wan {
+    width: 0.55rem;
+    height: 0.35rem;
+    background: #fff;
+    border-radius: 0.02rem;
+    margin-top: .03rem;
+}
+.app .moneyList li a .wan p {
+    text-align: center;
+    color: #333;
+    font-size: 0.14rem;
+    line-height: 0.35rem;
+}
+

@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>创建红包群</title>
+    <link rel="stylesheet/less" type="text/css" href="../css/createNiuNiu.less">
+    <script src="../js/less.min.js"></script>
+</head>
+<body>
+<div class="app">
+    <div class="currencyName">
+        <label for="name">选择币种：</label>
+        <input type="text" id="name" placeholder="请输入币种名称">
+        <a href="javascript:void(0);">切换币种</a>
+    </div>
+    <div class="currencyName">
+        <label for="money">红包金额：</label>
+        <input type="text" id="money" placeholder="请输入总金额">
+    </div>
+    <div class="currencyName">
+        <label for="moneyNum">红包个数：</label>
+        <input type="text" id="moneyNum" placeholder="请输入红包个数">
+    </div>
+    <div class="currencyName">
+        <label for="num">设置时间：</label>
+        <input type="text" id="num" placeholder="最大值为60 s">
+    </div>
+    <div class="currencyName">
+        <label for="banlce">账户余额：</label>
+        <input type="text" id="banlce" value="125.21" readonly>
+    </div>
+    <div class="getRedpack">
+        <div class="getredTag">游戏玩法：</div>
+        <div class="minGet">
+            <input type="radio" id="minlab" name="getRedpack" />
+            <label for="minlab">不翻倍</label>
+        </div>
+        <div class="maxGet">
+            <input type="radio" id="maxlab" name="getRedpack" />
+            <label for="maxlab">经典玩法</label>
+        </div>
+    </div>
+    <div class="setPassword getRedpack">
+        <div class="getredTag">设置房间密码：</div>
+        <div class="minGet">
+            <input type="radio" id="yeslab" name="setPassword" />
+            <label for="yeslab">是</label>
+        </div>
+        <div class="maxGet">
+            <input type="radio" id="nolab" name="setPassword" />
+            <label for="nolab">否</label>
+        </div>
+    </div>
+    <input type="password" name="roomPassword" id placeholder="请输入您的房间密码" />
+    <div class="art">
+        <p>有密码的房间不会被推荐到首页，需要您自己一一邀请朋友加入</p>
+    </div>
+    <div class="art">
+        <div>创群首发红包消耗：15EOS</div>
+        <p>1、不翻倍：输赢则是1:1倍率。</p>
+        <p>2、经典玩法：牛牛翻3倍；牛7，8，9翻2倍；牛1-6为1:1倍率。</p>
+        <p>3、牛牛红包不结算红包金额，只结算输赢金额，游戏结束后将退回到账户。</p>
+        <p>4、创群需要支付50usd作为群主押金，当群主拉来30位新用户进行游戏后，平台将退回群主50usdt。</p>
+        <p>5、创群成功后，您的收益为群内每个当庄红包总额的3%。</p>
+    </div>
+    <div class="sBtn"><button>创建</button></div>
+</div>
+</body>
+</html>

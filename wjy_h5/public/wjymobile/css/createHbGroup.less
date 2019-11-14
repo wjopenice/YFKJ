@@ -1,0 +1,126 @@
+@import "style";
+.app{
+  .currencyName{
+    margin: .15rem 0 0 .15rem;
+    border-bottom: .01rem solid #F5F5F5;
+    padding: 0 .15rem .15rem 0;
+    label{
+      display: inline-block;
+      font-size: .16rem;
+      color: #222222;
+    }
+    input{
+      font-size: @font-size30px;
+      color: #ADADAD;
+      width: 45%;
+    }
+    a{
+      width: .8rem;
+      height: .2rem;
+      line-height: .2rem;
+      display: inline-block;
+      float: right;
+      background: #E33C3D;
+      text-align: center;
+      font-size: @font-size26px;
+      color: #fff;
+      border-radius: .02rem;
+    }
+  }
+  .getRedpack {
+    width: 3.75rem;
+    height: .58rem;
+    line-height: .58rem;
+    background-color: #fff;
+    border-top: .1rem solid #F5F5F5;
+    display: flex;
+    border-bottom: .01rem solid #f5f5f5;
+    .getredTag {
+      font-size: .16rem;
+      color: rgba(34, 34, 34, 1);
+      box-sizing: border-box;
+      margin-left: .15rem;
+    }
+    .minGet {
+      font-size: .12rem;
+      color: rgba(153, 153, 153, 1);
+      box-sizing: border-box;
+      margin-right: .2rem;
+    }
+    .maxGet {
+      font-size: .12rem;
+      color: rgba(153, 153, 153, 1);
+      box-sizing: border-box;
+    }
+    input[type="radio"] + label::before {
+      content: "\a0"; /*不换行空格*/
+      display: inline-block;
+      vertical-align: middle;
+      font-size: 18px;
+      width: .12rem;
+      height: .12rem;
+      margin-right: .1rem;
+      border-radius: 50%;
+      border: 1px solid rgba(184, 184, 190, 1);
+      text-indent: .15rem;
+      line-height: 1;
+      transform: translate(0rem, -.02rem);
+    }
+    input[type="radio"]:checked + label::before {
+      background-color: rgba(227, 60, 61, 1);
+      border: 1px solid rgba(227, 60, 61, 1);
+      width: .1rem;
+      height: .1rem;
+      background-clip: content-box;
+      padding: 1px;
+    }
+    input[type="radio"]:checked + label {
+      color: rgba(227, 60, 61, 1);
+    }
+    input[type="radio"] {
+      position: absolute;
+      clip: rect(0, 0, 0, 0);
+    }
+  }
+  .setPassword {
+    margin-top: 0;
+    border-top: 0;
+  }
+  input[type="password"] {
+    width: 3.75rem;
+    padding-left: .15rem;
+    box-sizing: border-box;
+    background-color: #fff;
+    font-size: .15rem;
+    color: rgba(173, 173, 173, 1);
+    transform: translateY(-.15rem);
+  }
+  .art{
+    border-top: .01rem solid #F5F5F5;
+    padding: .15rem;
+    div{
+      font-size: .16rem;
+      color: #222222;
+      margin-bottom: .1rem;
+    }
+    p{
+      font-size: @font-size24px;
+      color: #999999;
+    }
+  }
+  .sBtn{
+    text-align: center;
+    margin-top: .5rem;
+    button{
+      width: 3.45rem;
+      color: #F5F5F5;
+      font-size: @font-size34px;
+      background: #E33C3D;
+      border-radius: .02rem;
+      height: .45rem;
+    }
+  }
+}
+
+
+

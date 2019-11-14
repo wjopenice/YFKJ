@@ -1,0 +1,123 @@
+@import "style";
+.app{
+  .treeBox{
+    height: .45rem;
+    line-height: .45rem;
+    border-bottom: .01rem solid #EEEEEE;
+    li{
+      width: 50%;
+      text-align: center;
+      a{
+        display: block;
+        font-size: .15rem;
+        color: #050505;
+      }
+      .active{
+        color: #E33C3D;
+        span{
+          width: .9rem;
+          height: .02rem;
+          background: #E33C3D;
+          position: absolute;
+          left: 50%;
+          margin-left: -.45rem;
+          bottom: 0;
+        }
+      }
+    }
+  }
+
+  /*  切换选项卡  */
+  .bodyBox{
+    .bodyTitle{
+      height: .4rem;
+      line-height: .4rem;
+      background: #F8F8F8;
+      font-size: @font-size28px;
+      color: #050505;
+      text-align: center;
+    }
+    .levelUser{
+      background: #F8F8F8;
+      li{
+        width: 33.33%;
+        text-align: center;
+        height: .4rem;
+        line-height: .4rem;
+        a{
+          display: block;
+          font-size: @font-size26px;
+          color: #515254;
+        }
+        .active{
+          span{
+            width: .3rem;
+            height: .02rem;
+            background: #E33C3D;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            margin-left: -.15rem;
+          }
+        }
+      }
+    }
+    .bodyNav{
+      background: #f8f8f8;
+      height: .4rem;
+      line-height: .4rem;
+      font-size: @font-size26px;
+      color: #515254;
+      p{
+        width: 33.33%;
+        text-align: center;
+      }
+    }
+    .conList{
+      li{
+        height: .45rem;
+        line-height: .45rem;
+        border-bottom: .01rem solid #f5f5f5;
+        font-size: @font-size24px;
+        color: #666;
+        overflow: hidden;
+        span{
+          width: 33.33%;
+          text-align: center;
+          display: inline-block;
+          float: left;
+          img{
+            margin-top: .08rem;
+            width: .29rem;
+            height: .29rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

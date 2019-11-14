@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>xxx币圈群(55)</title>
+    <link rel="stylesheet/less" type="text/css" href="../css/niuDetail.less">
+    <script src="../js/less.min.js"></script>
+</head>
+<body>
+<div class="appBox">
+    <div class="online ov"><span class="groupName">深圳大爷</span><a href="../chatDetail.html" class="fr"><i class="fl">·</i><i class="fl">·</i><i class="fl">·</i></a></div>
+    <ul class="chat">
+        <li class="ov">
+            <p class="headImg fl" onclick="window.location.href='../userInfo.html'"><img src="../images/hbgroup/image_fang.png" alt=""></p>
+            <p class="hbImg fl pr"><img src="../images/hbgroup/image_hongbao_normal.png" alt=""><span>恭喜发财，大吉大利</span><a href="javascript:void(0);">100-8</a><i>牛牛红包</i></p>
+            <!--  点击后状态  -->
+            <!--<p class="already fl pr"><img src="images/hbgroup/image_hongbao_click.png" alt=""><span>恭喜发财，大吉大利</span><a href="javascript:void(0);">5EOS  6包</a><i>抢到最小的发</i></p>-->
+            <div class="art" onclick="window.location.href='../modify/niuMoneyList.html'">
+                <div class="score"><p class="scorezhuan"><span class="zytext">庄赢</span><span class="nuntext">6</span></p><i></i><p class="scorexian"><span class="zytext">闲赢</span><span class="nuntext">2</span></p></div>
+                <div class="niuInfo">
+                    <img class="niuimg" src="../images/hbgroup/image_fang.png" alt="">
+                    <div class="niuBox">
+                        <p class="niuName"><span>小小小晒</span><i>庄家</i></p>
+                        <div class="niuxinxi"><i>牛</i><p class="niude"><span>查看详情</span><img src="../images/newadd/yhoujiantou_icon.png" alt=""></p></div>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="ov">
+            <p class="headImg fl" onclick="window.location.href='../userInfo.html'"><img src="../images/hbgroup/image_fang.png" alt=""></p>
+            <p class="hbImg fl pr"><img src="../images/hbgroup/image_hongbao_normal.png" alt=""><span>恭喜发财，大吉大利</span><a href="javascript:void(0);">50-10</a><i>牛牛红包</i></p>
+            <!--  点击后状态  -->
+            <!--<p class="already fl pr"><img src="images/hbgroup/image_hongbao_click.png" alt=""><span>恭喜发财，大吉大利</span><a href="javascript:void(0);">5EOS  6包</a><i>抢到最小的发</i></p>-->
+            <div class="art" onclick="window.location.href='../modify/niuMoneyList.html'">
+                <div class="score"><p class="scorezhuan"><span class="zytext">庄赢</span><span class="nuntext">6</span></p><i></i><p class="scorexian"><span class="zytext">闲赢</span><span class="nuntext">2</span></p></div>
+                <div class="niuInfo">
+                    <img class="niuimg" src="../images/hbgroup/image_fang.png" alt="">
+                    <div class="niuBox">
+                        <p class="niuName"><span>小小小晒</span><i>庄家</i></p>
+                        <div class="niuxinxi"><i>牛</i><p class="niude"><span>查看详情</span><img src="../images/newadd/yhoujiantou_icon.png" alt=""></p></div>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+
+    <!--  点击红包展示  -->
+    <div class="hbBox">
+        <!--红包未被抢完的情况下-->
+        <a href="../moneyList.html" class="money">
+            <div class="moneyTitle"><img src="../images/hbgroup/image_fang.png" alt=""><span>小小的红包</span></div>
+            <div class="moneyArt">恭喜发财，大吉大利</div>
+        </a>
+
+        <!--  红包已被抢空的情况下  -->
+        <!--<a href="nullMoneyList.html" class="nullMoney">
+            <div class="moneyTitle"><img src="images/hbgroup/image_fang.png" alt=""><span>小小的红包</span></div>
+            <div class="moneyArt">手慢了，红包派完了</div>
+            <div class="lookDetail"><span>查看领取详情</span><i></i></div>
+        </a>-->
+        <p class="closeBtn"><img src="../images/hbgroup/btn_close_yellow.png" alt=""></p>
+    </div>
+
+
+    <!--  公共组件  -->
+    <ul class="navigation">
+        <div><a href="javascript:void(0);"><img src="../images/tree/image_yuan.png" alt=""><p></p></a></div>
+        <li class="sc active"><a href="javascript:void(0);"><i></i><p>212</p></a></li>
+        <li class="wf"><a href="playMethod.html"><i></i><p>玩法</p></a></li>
+        <li class="pl"><a href="shangZhuang.html"><i></i><p>上庄</p></a></li>
+        <li class="zf"><a href="../shareHb.html"><i></i><p>362</p></a></li>
+        <li class="xyg"><a href="javascript:void(0);"><i></i><p>下一个</p></a></li>
+    </ul>
+</div>
+
+<script src="../js/jquery.min.js"></script>
+<script>
+    //显示与隐藏
+    $(function () {
+
+        //解决微信浏览器页面卡住
+        $("input").blur(function () {
+            $("html,body").animate({scrollTop: document.documentElement.clientHeight},500);
+        });
+
+        //点击红包显示
+        $(".hbImg").click(function () {
+            $(".hbBox").show();
+        });
+
+        //点击红包关闭按钮关闭
+        $(".closeBtn").click(function () {
+            $(".hbBox").hide();
+        });
+    })
+
+</script>
+</body>
+</html>

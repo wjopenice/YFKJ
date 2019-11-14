@@ -1,0 +1,46 @@
+.box{height: 100vh;background:linear-gradient(90deg,rgba(102,95,238,1),rgba(39,194,222,1));}
+.header .nav{height: 70px;overflow: hidden;}
+.header .nav .logo {display: block;float: left;line-height: 50px;margin: 10px 0;color: rgba(255,255,255,1);padding-left: 141px;text-indent: -9999px;background: url(../images/logos.png) no-repeat left top/141px 50px;}
+.header .nav ul{float: left;overflow: hidden;margin-left: 550px;}
+.header .nav ul li{float: left;line-height: 69px;}
+.header .nav ul li a{display: block;font-size: 14px;color: #fff;padding: 0 30px;}
+.header .nav ul .cur{border-bottom: 1px solid  #1C8DFE;}
+.header .nav .login-box{float: right;line-height: 70px;}
+.header .nav .login-box a{font-size: 14px;color: #fff;padding: 3px 14px;margin: 0 10px;}
+.header .nav .login-box a:hover{background: #EAC133;border-radius:12px;}
+.header .nav .login-box a:last-child{margin-right: 0;}
+.header .nav .login-box span{color: #EAC133;font-size: 14px;}
+
+.content .log-box{height: calc(100vh - 70px)}
+.content .log-box .l-ban{position: absolute;left: 0;top: 50%;margin-top: -272px;}
+.content .log-box .login-warp{width: 300px;height: 528px;background:rgba(255,255,255,1);border-radius:10px;position: absolute;right: 0;top: 50%;margin-top: -264px;padding: 0 30px;}
+.content .log-box .login-warp .tit{font-size:15px;font-weight:400;color:rgba(29,135,255,1);margin-bottom: 30px;}
+.content .log-box .login-warp .tit span{display: inline-block;padding-right: 10px;border-left: 2px solid #1D87FF;height: 12px;margin-top: 40px;}
+.content .log-box .login-warp .input-box{position: relative;border:1px solid rgba(221,221,221,1);border-radius:4px;margin-bottom: 24px;}
+.content .log-box .login-warp .input-box i{position: absolute;width: 21px;height: 21px;background: url(../images/user.png) no-repeat center;background-size: 21px;left: 9px;top: 50%;margin-top: -11px;}
+.content .log-box .login-warp .input-box1 i{position: absolute;width: 21px;height: 21px;background: url(../images/password.png) no-repeat center;background-size: 21px;left: 9px;top: 50%;margin-top: -11px;}
+.content .log-box .login-warp .input-box2 i{position: absolute;width: 21px;height: 21px;background: url(../images/yanzhegnma.png) no-repeat center;background-size: 21px;left: 9px;top: 50%;margin-top: -11px;}
+.content .log-box .login-warp .input-box3 i{position: absolute;width: 21px;height: 21px;background: url(../images/yaoqingma.png) no-repeat center;background-size: 21px;left: 9px;top: 50%;margin-top: -11px;}
+.content .log-box .login-warp .input-box input{width: 262px;height: 40px;padding-left: 38px;font-size:14px;color:rgba(102,102,102,1);}
+.content .log-box .login-warp .input-box input{width: 162px;height: 40px;padding-left: 38px;font-size:14px;color:rgba(102,102,102,1);padding-right: 100px;}
+.content .log-box .login-warp .input-box span{position: absolute;right: 10px;top: 0;height: 40px;line-height: 40px;font-size:14px;font-weight:400;color:rgba(102,102,102,1);cursor: pointer;}
+.content .log-box .login-warp .btn{width:300px;height:40px;background:rgba(29,135,255,1);border-radius:4px;font-size:18px;color:rgba(255,255,255,1);cursor: pointer;margin-top: 22px;}
+.content .log-box .login-warp .go-to{text-align: center;margin-top: 12px;}
+.content .log-box .login-warp .go-to span{font-size:14px;color:#333333;}
+.content .log-box .login-warp .go-to a{font-size:14px;color:#1D87FF;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,179 @@
+@import "style";
+html{
+  height: 100%;
+  background: #f5f5f5;
+}
+.app{
+  padding-bottom: .7rem;
+  .myHead{
+    width: 3.55rem;
+    height: 1.443rem;
+    margin: .1rem 0 .1rem .1rem;
+    background: url("../images/my/zician_bg@2x.png") no-repeat center;
+    background-size: 3.55rem 1.443rem;
+    display: inline-block;
+    .imgBox{
+      position: absolute;
+      left: 0;
+      width: 100%;
+      top: .15rem;
+      img{
+        width: .59rem;
+        height: .59rem;
+        border-radius: 50%;
+        margin-left: .15rem;
+        vertical-align: middle;
+      }
+      span{
+        font-size: @font-size36px;
+        color: #F2B8B3;
+        margin-left: .1rem;
+        vertical-align: middle;
+      }
+      i{
+        float: right;
+        height: .14rem;
+        margin-top: .2rem;
+        margin-right: .15rem;
+        color: #fff;
+        font-size: .16rem;
+      }
+    }
+    .textBox{
+      position: absolute;
+      left: .17rem;
+      width: 100%;
+      bottom: .33rem;
+      overflow: hidden;
+      p{
+        font-size: .15rem;
+        color: #fff;
+        float: left;
+      }
+      span{
+        float: left;
+        width: .13rem;
+        height: .13rem;
+        background: url("../images/my/fuzhi_icon@2x.png") no-repeat center;
+        background-size: .13rem .13rem;
+        margin-left: .2rem;
+        margin-top: .04rem;
+      }
+      i{
+        float: left;
+        width: .16rem;
+        height: .16rem;
+        background: url("../images/my/erweima02_icon@2x.png") no-repeat center;
+        background-size: .16rem .16rem;
+        margin-left: .2rem;
+        margin-top: .02rem;
+      }
+    }
+  }
+  .myList{
+    background: #fff;
+    overflow: hidden;
+    width: 100%;
+    li{
+      height: .5rem;
+      line-height: .5rem;
+      float: left;
+      width: 33.33%;
+      text-align: center;
+      a{
+        display: block;
+        color: #CACACA;
+        font-size: .16rem;
+      }
+    }
+    .active{
+      a{
+        color: #222222;
+      }
+      span{
+        position: absolute;
+        display: inline-block;
+        height: .02rem;
+        width: .6rem;
+        background: #222;
+        bottom: 0;
+        left: 50%;
+        margin-left: -.3rem;
+      }
+    }
+  }
+  .conList{
+    padding: 0 .15rem;
+    background: #fff;
+    li{
+      width: 3.45rem;
+      height: .7rem;
+      border-bottom: 1px solid #F6F6F6;
+      img{
+        width: .3rem;
+        height: .3rem;
+        margin-top: .2rem;
+      }
+      a{
+        width: 3.15rem;
+        div{
+          margin-left: .15rem;
+          margin-top: .18rem;
+          .text1{
+            color: #333333;
+            font-size: .14rem;
+            width: 1.5rem;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+          }
+          .text2{
+            color: #AAAAAA;
+            font-size: .12rem;
+            width: 1.5rem;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+          }
+        }
+        span{
+          line-height: .7rem;
+          font-size: .16rem;
+        }
+        .tixian{
+          color: #FC7C15;
+        }
+        .zhuangzhang{
+          color: #333333;
+        }
+      }
+    }
+  }
+  .btn{
+    position: fixed;
+    bottom: .15rem;
+    z-index: 99;
+    a{
+      background: #5186FF;
+      font-size: .16rem;
+      color: #FFFFFF;
+      height: .4rem;
+      line-height: .4rem;
+      text-align: center;
+      display: inline-block;
+      width: 1.6rem;
+      border-radius:.04rem;
+    }
+    a:first-child{
+      margin-left: .15rem;
+    }
+    a:last-child{
+      margin-left: .25rem;
+    }
+  }
+}
+
+
+
+
+

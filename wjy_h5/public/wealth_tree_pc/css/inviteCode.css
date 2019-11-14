@@ -1,0 +1,40 @@
+.box{height: 100%;background: #F2F4F9;}
+.header{background:linear-gradient(90deg,rgba(102,95,238,1),rgba(39,194,222,1));}
+.header .nav{height: 70px;overflow: hidden;}
+.header .nav .logo {display: block;float: left;line-height: 50px;margin: 10px 0;color: rgba(255,255,255,1);padding-left: 141px;text-indent: -9999px;background: url(../images/logos.png) no-repeat left top/141px 50px;}
+.header .nav ul{float: left;overflow: hidden;margin-left: 550px;}
+.header .nav ul li{float: left;line-height: 69px;}
+.header .nav ul li a{display: block;font-size: 14px;color: #fff;padding: 0 30px;}
+.header .nav ul .cur{border-bottom: 1px solid  #1C8DFE;}
+.header .nav .login-box{float: right;line-height: 70px;}
+.header .nav .login-box a{font-size: 14px;color: #fff;padding: 3px 14px;margin: 0 10px;}
+.header .nav .login-box a:hover{background: #EAC133;border-radius:12px;}
+.header .nav .login-box a:last-child{margin-right: 0;}
+.header .nav .login-box span{color: #EAC133;font-size: 14px;}
+
+.content .center-box{margin-top: 30px;padding-bottom: 130px;}
+.content .center-box .left{width:184px;height:850px;background:rgba(255,255,255,1);margin-right: 10px;}
+.content .center-box .left ul li{height: 58px;line-height: 58px;cursor: pointer;}
+.content .center-box .left ul li a{font-size:16px;color:rgba(26,26,26,1);vertical-align: middle;}
+.content .center-box .left ul .active{background: #F2F8FF;border-left: 2px solid #0076FF;}
+.content .center-box .left ul .active a{color: #0076FF;display: inline-block;}
+.content .center-box .left ul .wallet i{display: inline-block;width: 18px;height: 16px;background: url(../images/wallet.png) no-repeat center;background-size: 18px 16px;vertical-align: middle;margin-right: 10px;margin-left: 35px;}
+.content .center-box .left ul .account i{display: inline-block;width: 18px;height: 16px;background: url(../images/wallet.png) no-repeat center;background-size: 18px 16px;vertical-align: middle;margin-right: 10px;margin-left: 35px;}
+.content .center-box .left ul .cash i{display: inline-block;width: 18px;height: 16px;background: url(../images/wallet.png) no-repeat center;background-size: 18px 16px;vertical-align: middle;margin-right: 10px;margin-left: 35px;}
+.content .center-box .left ul .qrCode i{display: inline-block;width: 18px;height: 16px;background: url(../images/wallet.png) no-repeat center;background-size: 18px 16px;vertical-align: middle;margin-right: 10px;margin-left: 35px;}
+.content .center-box .left ul .note i{display: inline-block;width: 18px;height: 16px;background: url(../images/wallet.png) no-repeat center;background-size: 18px 16px;vertical-align: middle;margin-right: 10px;margin-left: 35px;}
+.content .center-box .left ul .active i{display: inline-block;width: 18px;height: 16px;background: url(../images/wallet-active.png) no-repeat center;background-size: 18px 16px;vertical-align: middle;margin-right: 10px;margin-left: 35px;}
+.content .center-box .right{width:886px;height:770px;background:rgba(255,255,255,1);padding: 40px 60px;}
+.content .center-box .right .balance{margin-bottom: 20px;}
+.content .center-box .right .balance span{font-size:14px;color:rgba(68,68,68,1);display: inline-block;padding-bottom: 4px;border-bottom: 2px solid #2A82DB;}
+.content .center-box .right ul .tit{height: 60px;line-height: 60px;background: #F2F8FF;}
+.content .center-box .right ul .tit span{display: inline-block;width: 25%;text-align: center;font-size: 15px;color: #333;}
+.content .center-box .right .ba-box{width: 832px;height: 70px;border:1px solid rgba(223, 223, 223, 1);padding: 30px 26px;margin-bottom: 60px;}
+.content .center-box .right .ba-box .balance-b{margin-top: 14px;}
+.content .center-box .right .ba-box .balance-b span{font-size: 14px;color: #444444;}
+.content .center-box .right .ba-box .balance-b i{font-size: 30px;color: #FF9900;}
+.content .center-box .right .ba-box .tx-btn{text-align: center;}
+.content .center-box .right .ba-box .tx-btn p{margin-left: 30px;}
+.content .center-box .right .ba-box .tx-btn span{display: block;padding: 0 14px;height:28px;background:rgba(42,130,219,1);border-radius:5px;font-size:14px;color:rgba(255,255,255,1);line-height: 28px;margin-top: 10px;cursor: pointer;}
+
+

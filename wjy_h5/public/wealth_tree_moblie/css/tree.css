@@ -1,0 +1,680 @@
+html {
+  font-size: 26.66667vw;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "PingFang SC";
+  height: 100%;
+}
+body {
+  height: 100%;
+  font-size: 0.16rem;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #000000;
+}
+ul,
+p,
+span,
+li,
+button,
+img {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: 0;
+  list-style: none;
+}
+a,
+a:hover,
+a:active,
+a:visited,
+a:link,
+a:focus {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+  background: none;
+  text-decoration: none;
+}
+input,
+textarea {
+  outline: none;
+  border: none;
+  background-color: rgba(255, 255, 255, 0);
+}
+input:-webkit-autofill,
+select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px white  inset !important;
+}
+input {
+  outline-color: invert;
+  outline-style: none;
+  outline-width: 0;
+  border: none;
+  border-style: none;
+  text-shadow: none;
+  -webkit-appearance: none;
+  -webkit-user-select: text;
+  outline-color: transparent;
+  box-shadow: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  padding: 0;
+  border-radius: 0;
+  margin: 0;
+}
+button {
+  background-color: transparent;
+  border: none;
+  font-size: 0.16rem;
+  color: #f5f5f5;
+}
+i {
+  font-style: normal;
+}
+hr {
+  margin: 0;
+  height: 0;
+}
+/*  以上去掉默认样式  */
+.ov {
+  overflow: hidden;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.pr {
+  position: relative;
+}
+.app {
+  padding-bottom: 0.5rem;
+}
+/* 底部tabBar */
+.tabBar {
+  width: 100%;
+  height: 0.48rem;
+  background: #fff;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.24);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+}
+.tabBar ul {
+  overflow: hidden;
+}
+.tabBar ul li {
+  width: 25%;
+  float: left;
+  text-align: center;
+}
+.tabBar ul li .showHide {
+  width: 100%;
+  background: #fff;
+  position: fixed;
+  bottom: 0.48rem;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  box-shadow: 0 -6px 10px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 0.12rem 0.12rem 0 0;
+}
+.tabBar ul li .showHide a {
+  display: block;
+  padding: 0.14rem 0;
+  border-bottom: 0.01rem solid #f5f5f5;
+  font-size: 0.15rem;
+  color: #131313;
+}
+.tabBar ul li .showHide a span {
+  vertical-align: middle;
+}
+.tabBar ul li .showHide a img {
+  width: 0.3rem;
+  height: 0.3rem;
+  margin-right: 0.14rem;
+  vertical-align: middle;
+}
+.tabBar ul li a {
+  display: block;
+  padding: 0.05rem 0;
+}
+.tabBar ul .tabHome a i {
+  width: 0.2rem;
+  height: 0.2rem;
+  display: block;
+  margin: auto;
+  background: url('../images/tab/shouye_icon_normal@2x.png') no-repeat center;
+  background-size: 100% 100%;
+}
+.tabBar ul .tabHome a p {
+  font-size: 0.12rem;
+  color: #979797;
+  margin-top: 0.02rem;
+}
+.tabBar ul .tabHome.active a i {
+  width: 0.2rem;
+  height: 0.2rem;
+  display: block;
+  margin: auto;
+  background: url('../images/tab/shouye_icon_cilck@2x.png') no-repeat center;
+  background-size: 100% 100%;
+}
+.tabBar ul .tabHome.active a p {
+  color: #4B89E7;
+  font-size: 0.12rem;
+  margin-top: 0.02rem;
+}
+.tabBar ul .tabHb a i {
+  width: 0.2rem;
+  height: 0.2rem;
+  display: block;
+  margin: auto;
+  background: url('../images/tab/shuidi_icon_normal@2x.png') no-repeat center;
+  background-size: 100% 100%;
+}
+.tabBar ul .tabHb a p {
+  font-size: 0.12rem;
+  color: #979797;
+  margin-top: 0.02rem;
+}
+.tabBar ul .tabHb.active a i {
+  width: 0.2rem;
+  height: 0.2rem;
+  display: block;
+  margin: auto;
+  background: url('../images/tab/shuidi_icon_cilck@2x.png') no-repeat center;
+  background-size: 100% 100%;
+}
+.tabBar ul .tabHb.active a p {
+  color: #4B89E7;
+}
+.tabBar ul .tabCash a i {
+  width: 0.2rem;
+  height: 0.2rem;
+  display: block;
+  margin: auto;
+  background: url('../images/tab/guize_icon_normal@2x.png') no-repeat center;
+  background-size: 100% 100%;
+}
+.tabBar ul .tabCash a p {
+  font-size: 0.12rem;
+  color: #979797;
+  margin-top: 0.02rem;
+}
+.tabBar ul .tabCash.active a i {
+  width: 0.2rem;
+  height: 0.2rem;
+  display: block;
+  margin: auto;
+  background: url('../images/tab/guize_icon_click@2x.png') no-repeat center;
+  background-size: 100% 100%;
+}
+.tabBar ul .tabCash.active a p {
+  color: #4B89E7;
+}
+.tabBar ul .tabMy a i {
+  width: 0.2rem;
+  height: 0.2rem;
+  display: block;
+  margin: auto;
+  background: url('../images/tab/person_icon_normal@2x.png') no-repeat center;
+  background-size: 100% 100%;
+}
+.tabBar ul .tabMy a p {
+  font-size: 0.12rem;
+  color: #979797;
+  margin-top: 0.02rem;
+}
+.tabBar ul .tabMy.active a i {
+  width: 0.2rem;
+  height: 0.2rem;
+  display: block;
+  margin: auto;
+  background: url('../images/tab/person_icon_click@2x.png') no-repeat center;
+  background-size: 100% 100%;
+}
+.tabBar ul .tabMy.active a p {
+  color: #4B89E7;
+}
+.navBox {
+  height: 0.44rem;
+  line-height: 0.44rem;
+  background: #fff;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+}
+.navBox p {
+  text-align: center;
+  color: #304A61;
+  font-size: 0.16rem;
+  font-weight: bold;
+}
+.navBox i {
+  position: absolute;
+  background: url("../images/index/ret.png") no-repeat center;
+  background-size: 0.17rem 0.17rem;
+  width: 0.4rem;
+  height: 0.4rem;
+  display: inline-block;
+  left: 0;
+  top: 0.02rem;
+}
+html {
+  height: 100%;
+  background: #f5f5f5;
+}
+.app .firstPage {
+  background: #fff;
+  padding: 0.07rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+.app .firstPage div {
+  text-align: center;
+}
+.app .firstPage div p {
+  display: inline-block;
+  width: 2.4rem;
+  height: 0.29rem;
+  border: 0.01rem solid #8cd0f9;
+  border-radius: 0.18rem;
+  overflow: hidden;
+}
+.app .firstPage div p span {
+  width: 1.2rem;
+  float: left;
+  text-align: center;
+  color: #304A61;
+  font-size: 0.15rem;
+  font-weight: bold;
+  line-height: 0.3rem;
+}
+.app .firstPage div p .act {
+  color: #fff;
+  background: #08cbfd;
+  border-radius: 0.15rem;
+  box-shadow: 0 0 0.06rem 0 rgba(0, 0, 0, 0.1);
+}
+.app .threePage {
+  margin: 0.6rem 0.15rem 0.1rem;
+  background: #fff;
+  border-radius: 0.08rem;
+  width: 3.45rem;
+}
+.app .threePage .cengji {
+  padding: 0.25rem;
+}
+.app .threePage .cengji p span {
+  color: #000000;
+  font-size: 0.17rem;
+  display: inline-block;
+  margin-right: 0.15rem;
+}
+.app .threePage .cengji p i {
+  color: #000000;
+  font-size: 0.14rem;
+}
+.app .twoPage {
+  margin: 0.1rem 0.15rem 0.1rem;
+  background: #ffd4fb;
+  border-radius: 0.08rem;
+}
+.app .twoPage .conB .cLeft {
+  width: 48%;
+  padding: 0 1% 0.1rem;
+}
+.app .twoPage .conB .cLeft .till {
+  text-align: center;
+  color: #333333;
+  font-size: 0.14rem;
+  margin-bottom: 0.08rem;
+  padding-top: 0.08rem;
+}
+.app .twoPage .conB .cLeft .till2 {
+  text-align: left;
+  color: #04AEE5;
+  font-size: 0.12rem;
+}
+.app .twoPage .conB .cRight {
+  width: 48%;
+  padding: 0 1%;
+}
+.app .twoPage .conB .cRight .till {
+  text-align: center;
+  color: #333333;
+  font-size: 0.14rem;
+  margin-bottom: 0.08rem;
+  padding-top: 0.08rem;
+}
+.app .twoPage .conB .cRight .till2 {
+  text-align: left;
+  color: #04AEE5;
+  font-size: 0.12rem;
+}
+.app .twoPage .next div {
+  width: 48%;
+  padding: 0 1% 0.2rem;
+}
+.app .twoPage .next div p {
+  color: #666;
+  font-size: 0.12rem;
+}
+.app .fourPage {
+  width: 3.45rem;
+  background: #BEDEF4;
+  border-radius: 0.08rem;
+  margin: 0.1rem 0.15rem 0.1rem;
+  box-shadow: 0 0 0.01rem 0 rgba(0, 0, 0, 0.1);
+}
+.app .fourPage .content {
+  padding-bottom: 0.3rem;
+}
+.app .fourPage .content .icon {
+  text-align: center;
+}
+.app .fourPage .content .icon i {
+  display: inline-block;
+  width: 0.3rem;
+  height: 0.3rem;
+  background: url("../images/tree/shegnji_icon2x.png") no-repeat center;
+  background-size: 0.3rem 0.3rem;
+  margin-top: 0.23rem;
+}
+.app .fourPage .content .frameWork {
+  text-align: center;
+  color: #222222;
+  font-size: 0.17rem;
+  font-weight: bold;
+  margin-top: 0.04rem;
+  margin-bottom: 0.15rem;
+}
+.app .fourPage .content .grade {
+  margin-top: 0.11rem;
+  font-weight: bold;
+  font-size: 0.13rem;
+  color: #04b5ec;
+  text-align: center;
+}
+.app .fourPage .content .balance {
+  margin-top: 0.11rem;
+  font-weight: bold;
+  font-size: 0.13rem;
+  color: #333333;
+  text-align: center;
+}
+.app .fourPage .content .num {
+  margin-top: 0.06rem;
+  font-weight: bold;
+  font-size: 0.12rem;
+  color: #666666;
+  text-align: center;
+}
+.app .fourPage .content .online {
+  text-align: center;
+  margin-top: 0.1rem;
+}
+.app .fourPage .content .online span {
+  width: 1.25rem;
+  display: inline-block;
+  border-bottom: 1px solid #8CC5EC;
+}
+.app .fourPage .content .upTo {
+  margin-top: 0.1rem;
+  text-align: center;
+  font-size: 0.12rem;
+  color: #FE586C;
+}
+.app .fourPage .content .ste {
+  text-align: center;
+}
+.app .fourPage .content .ste .stateBox {
+  margin-bottom: 0.16rem;
+  display: inline-block;
+}
+.app .fourPage .content .ste .stateBox p {
+  margin-right: 0.1rem;
+}
+.app .fourPage .content .ste .stateBox p .line {
+  width: 1.61rem;
+  height: 0.02rem;
+  display: block;
+  background: #e33b3c;
+  margin-top: 0.07rem;
+}
+.app .fourPage .content .ste .stateBox p .vg1 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 0.12rem;
+  color: #FFFFFF;
+  background: #e33b3c;
+  padding: 0 0.04rem;
+  border-radius: 0.08rem;
+}
+.app .fourPage .content .ste .stateBox p .vg2 {
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 0.12rem;
+  color: #FFFFFF;
+  background: #e33b3c;
+  padding: 0 0.04rem;
+  border-radius: 0.08rem;
+}
+.app .fourPage .content .ste .stateBox i {
+  width: 0.18rem;
+  height: 0.18rem;
+  display: block;
+  margin: auto;
+  background: url("../images/tree/add_icon2x.png") no-repeat center;
+  background-size: cover;
+}
+.app .fourPage .content .upGrade {
+  text-align: center;
+}
+.app .fourPage .content .upGrade button {
+  width: 0.8rem;
+  height: 0.3rem;
+  border-radius: 0.2rem;
+  background: #0a6ef2;
+  color: #FFFFFF;
+  font-size: 0.12rem;
+}
+.app .fivePage {
+  width: 3.05rem;
+  background: #FFE4C8;
+  border-radius: 0.08rem;
+  margin: 0.1rem 0.15rem;
+  box-shadow: 0 0 0.01rem 0 rgba(0, 0, 0, 0.1);
+  padding: 0 0.2rem;
+}
+.app .fivePage .content {
+  padding-bottom: 0.3rem;
+}
+.app .fivePage .content .icon {
+  text-align: center;
+}
+.app .fivePage .content .icon i {
+  display: inline-block;
+  width: 0.3rem;
+  height: 0.3rem;
+  background: url("../images/tree/tuandui_icon2x.png") no-repeat center;
+  background-size: 0.3rem 0.3rem;
+  margin-top: 0.23rem;
+}
+.app .fivePage .content .frameWork {
+  text-align: center;
+  color: #222222;
+  font-size: 0.17rem;
+  font-weight: bold;
+  margin-top: 0.04rem;
+  margin-bottom: 0.15rem;
+}
+.app .fivePage .content .grade {
+  margin-top: 0.11rem;
+  font-weight: bold;
+  font-size: 0.13rem;
+  color: #04B5EC;
+  text-align: center;
+}
+.app .fivePage .content .text {
+  margin-top: 0.14rem;
+}
+.app .fivePage .content .text p {
+  font-size: 0.12rem;
+  color: #666666;
+}
+.app .fivePage .content .listUl {
+  height: 2rem;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.app .fivePage .content .listUl li .listMember {
+  height: 0.45rem;
+  line-height: 0.45rem;
+}
+.app .fivePage .content .listUl li .listMember i {
+  width: 0.2rem;
+  height: 0.16rem;
+  background: url("../images/tree/huiyuan2x.png") no-repeat center;
+  background-size: 100%;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 0.2rem;
+  margin-left: 0.2rem;
+}
+.app .fivePage .content .listUl li .listMember a {
+  font-size: 0.14rem;
+  color: #3F3F3F;
+  vertical-align: middle;
+  margin-right: 0.04rem;
+}
+.app .fivePage .content .listUl li .listMember p {
+  font-size: 0.14rem;
+  color: #999999;
+  display: inline;
+  vertical-align: middle;
+  margin-right: 0.1rem;
+}
+.app .fivePage .content .listUl li .listMember span {
+  width: 0.12rem;
+  height: 0.08rem;
+  background: url("../images/tree/xiajiantou_icon2x.png") no-repeat center;
+  background-size: 100%;
+  display: inline-block;
+  float: right;
+  margin-right: 0;
+  margin-top: 0.22rem;
+}
+.app .fivePage .content .listUl li .conUlList {
+  background: #04b5ec;
+  height: 0.3rem;
+  line-height: 0.3rem;
+  display: block;
+}
+.app .fivePage .content .listUl li .conUlList .conTitle span {
+  margin-left: 0.5rem;
+  font-size: 0.13rem;
+  color: #fff;
+}
+.app .fivePage .content .listUl li .conUlList .bodyList p {
+  padding: 0.06rem 0;
+}
+.app .fivePage .content .listUl li .conUlList .bodyList p span {
+  font-size: 0.12rem;
+  color: #666666;
+  vertical-align: middle;
+  margin-left: 0.4rem;
+}
+.app .fivePage .content .listUl li .conUlList .bodyList p img {
+  width: 0.25rem;
+  height: 0.25rem;
+  vertical-align: middle;
+  margin-left: 0.64rem;
+}
+.app .sixPage {
+  width: 3.05rem;
+  background: #BEDEF4;
+  border-radius: 0.08rem;
+  margin: 0.1rem 0.15rem;
+  padding: 0 0.2rem;
+  box-shadow: 0 0 0.01rem 0 rgba(0, 0, 0, 0.1);
+}
+.app .sixPage .content {
+  padding-bottom: 0.3rem;
+}
+.app .sixPage .content .icon {
+  text-align: center;
+}
+.app .sixPage .content .icon i {
+  display: inline-block;
+  width: 0.3rem;
+  height: 0.3rem;
+  background: url("../images/tree/shegnji_icon2x.png") no-repeat center;
+  background-size: 0.3rem 0.3rem;
+  margin-top: 0.23rem;
+}
+.app .sixPage .content .frameWork {
+  text-align: center;
+  color: #222222;
+  font-size: 0.17rem;
+  font-weight: bold;
+  margin-top: 0.04rem;
+  margin-bottom: 0.15rem;
+}
+.app .sixPage .content .totalPay {
+  margin-top: 0.13rem;
+  color: #666666;
+  font-size: 0.14rem;
+}
+.app .sixPage .content .totalPay .tText {
+  color: #04B5EC;
+  font-size: 0.12rem;
+  line-height: 0.18rem;
+}
+.app .sixPage .content .record p {
+  margin-top: 0.2rem;
+}
+.app .sixPage .content .record p img {
+  vertical-align: middle;
+  width: 0.12rem;
+  height: 0.12rem;
+  margin-right: 0.06rem;
+}
+.app .sixPage .content .record p span {
+  color: #F39800;
+  font-size: 0.13rem;
+  vertical-align: middle;
+}
+.app .sixPage .content .record .recordList {
+  height: 2rem;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.app .sixPage .content .record .recordList .recordP {
+  margin-top: 0.12rem;
+}
+.app .sixPage .content .record .recordList .recordP span {
+  font-size: 0.12rem;
+  color: #666666;
+  width: 33.33%;
+  display: inline-block;
+  text-align: center;
+}
+.app .sixPage .content .record .recordList .recordP span:first-child {
+  text-align: left;
+}
+.app .sixPage .content .record .recordList .recordP span:last-child {
+  text-align: right;
+}
+/*# sourceMappingURL=tree.css.map */

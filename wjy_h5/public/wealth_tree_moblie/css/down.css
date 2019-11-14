@@ -1,0 +1,329 @@
+html {
+  font-size: 26.66667vw;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "PingFang SC";
+  height: 100%;
+}
+body {
+  height: 100%;
+  font-size: 0.16rem;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #000000;
+}
+ul,
+p,
+span,
+li,
+button,
+img {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: 0;
+  list-style: none;
+}
+a,
+a:hover,
+a:active,
+a:visited,
+a:link,
+a:focus {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+  background: none;
+  text-decoration: none;
+}
+input,
+textarea {
+  outline: none;
+  border: none;
+  background-color: rgba(255, 255, 255, 0);
+}
+input:-webkit-autofill,
+select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px white  inset !important;
+}
+input {
+  outline-color: invert;
+  outline-style: none;
+  outline-width: 0;
+  border: none;
+  border-style: none;
+  text-shadow: none;
+  -webkit-appearance: none;
+  -webkit-user-select: text;
+  outline-color: transparent;
+  box-shadow: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  padding: 0;
+  border-radius: 0;
+  margin: 0;
+}
+button {
+  background-color: transparent;
+  border: none;
+  font-size: 0.16rem;
+  color: #f5f5f5;
+}
+i {
+  font-style: normal;
+}
+hr {
+  margin: 0;
+  height: 0;
+}
+/*  以上去掉默认样式  */
+.ov {
+  overflow: hidden;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.pr {
+  position: relative;
+}
+.app {
+  padding-bottom: 0.5rem;
+}
+/* 底部tabBar */
+.tabBar {
+  width: 100%;
+  height: 0.48rem;
+  background: #fff;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.24);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+}
+.tabBar ul {
+  overflow: hidden;
+}
+.tabBar ul li {
+  width: 25%;
+  float: left;
+  text-align: center;
+}
+.tabBar ul li .showHide {
+  width: 100%;
+  background: #fff;
+  position: fixed;
+  bottom: 0.48rem;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  box-shadow: 0 -6px 10px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 0.12rem 0.12rem 0 0;
+}
+.tabBar ul li .showHide a {
+  display: block;
+  padding: 0.14rem 0;
+  border-bottom: 0.01rem solid #f5f5f5;
+  font-size: 0.15rem;
+  color: #131313;
+}
+.tabBar ul li .showHide a span {
+  vertical-align: middle;
+}
+.tabBar ul li .showHide a img {
+  width: 0.3rem;
+  height: 0.3rem;
+  margin-right: 0.14rem;
+  vertical-align: middle;
+}
+.tabBar ul li a {
+  display: block;
+  padding: 0.05rem 0;
+}
+.tabBar ul .tabHome a i {
+  width: 0.2rem;
+  height: 0.2rem;
+  display: block;
+  margin: auto;
+  background: url('../images/tab/shouye_icon_normal@2x.png') no-repeat center;
+  background-size: 100% 100%;
+}
+.tabBar ul .tabHome a p {
+  font-size: 0.12rem;
+  color: #979797;
+  margin-top: 0.02rem;
+}
+.tabBar ul .tabHome.active a i {
+  width: 0.2rem;
+  height: 0.2rem;
+  display: block;
+  margin: auto;
+  background: url('../images/tab/shouye_icon_cilck@2x.png') no-repeat center;
+  background-size: 100% 100%;
+}
+.tabBar ul .tabHome.active a p {
+  color: #4B89E7;
+  font-size: 0.12rem;
+  margin-top: 0.02rem;
+}
+.tabBar ul .tabHb a i {
+  width: 0.2rem;
+  height: 0.2rem;
+  display: block;
+  margin: auto;
+  background: url('../images/tab/shuidi_icon_normal@2x.png') no-repeat center;
+  background-size: 100% 100%;
+}
+.tabBar ul .tabHb a p {
+  font-size: 0.12rem;
+  color: #979797;
+  margin-top: 0.02rem;
+}
+.tabBar ul .tabHb.active a i {
+  width: 0.2rem;
+  height: 0.2rem;
+  display: block;
+  margin: auto;
+  background: url('../images/tab/shuidi_icon_cilck@2x.png') no-repeat center;
+  background-size: 100% 100%;
+}
+.tabBar ul .tabHb.active a p {
+  color: #4B89E7;
+}
+.tabBar ul .tabCash a i {
+  width: 0.2rem;
+  height: 0.2rem;
+  display: block;
+  margin: auto;
+  background: url('../images/tab/guize_icon_normal@2x.png') no-repeat center;
+  background-size: 100% 100%;
+}
+.tabBar ul .tabCash a p {
+  font-size: 0.12rem;
+  color: #979797;
+  margin-top: 0.02rem;
+}
+.tabBar ul .tabCash.active a i {
+  width: 0.2rem;
+  height: 0.2rem;
+  display: block;
+  margin: auto;
+  background: url('../images/tab/guize_icon_click@2x.png') no-repeat center;
+  background-size: 100% 100%;
+}
+.tabBar ul .tabCash.active a p {
+  color: #4B89E7;
+}
+.tabBar ul .tabMy a i {
+  width: 0.2rem;
+  height: 0.2rem;
+  display: block;
+  margin: auto;
+  background: url('../images/tab/person_icon_normal@2x.png') no-repeat center;
+  background-size: 100% 100%;
+}
+.tabBar ul .tabMy a p {
+  font-size: 0.12rem;
+  color: #979797;
+  margin-top: 0.02rem;
+}
+.tabBar ul .tabMy.active a i {
+  width: 0.2rem;
+  height: 0.2rem;
+  display: block;
+  margin: auto;
+  background: url('../images/tab/person_icon_click@2x.png') no-repeat center;
+  background-size: 100% 100%;
+}
+.tabBar ul .tabMy.active a p {
+  color: #4B89E7;
+}
+.navBox {
+  height: 0.44rem;
+  line-height: 0.44rem;
+  background: #fff;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+}
+.navBox p {
+  text-align: center;
+  color: #304A61;
+  font-size: 0.16rem;
+  font-weight: bold;
+}
+.navBox i {
+  position: absolute;
+  background: url("../images/index/ret.png") no-repeat center;
+  background-size: 0.17rem 0.17rem;
+  width: 0.4rem;
+  height: 0.4rem;
+  display: inline-block;
+  left: 0;
+  top: 0.02rem;
+}
+.app {
+  background: linear-gradient(90deg, #665fee, #27c2de);
+  text-align: center;
+  height: 100vh;
+  padding-bottom: 0;
+}
+.app p .img1 {
+  width: 1.99rem;
+  height: 0.72rem;
+  margin-top: 0.6rem;
+  display: inline-block;
+}
+.app p .img2 {
+  width: 2.35rem;
+  height: 2.62rem;
+  margin-top: 0.49rem;
+  display: inline-block;
+}
+.app .btn {
+  display: inline-block;
+  height: 0.44rem;
+  width: 1.88rem;
+  text-align: center;
+  background: #ffffff;
+  box-shadow: 0 2px 4px 0 rgba(14, 44, 140, 0.4);
+  border-radius: 0.02rem;
+  line-height: 0.44rem;
+  margin-top: 0.51rem;
+}
+.app .btn img {
+  width: 0.15rem;
+  height: 0.15rem;
+  margin-right: 0.06rem;
+  vertical-align: middle;
+}
+.app .btn span {
+  color: #5186FF;
+  font-size: 0.16rem;
+  vertical-align: middle;
+}
+.app p .img3 {
+  width: 1.23rem;
+  height: 0.13rem;
+  margin-top: 0.14rem;
+  display: inline-block;
+}
+.wechat {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2001;
+  display: none;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+.wechat img {
+  width: 100%;
+}
+/*# sourceMappingURL=down.css.map */

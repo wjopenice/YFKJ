@@ -1,0 +1,386 @@
+html {
+  font-size: 26.66667vw;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "PingFang SC";
+}
+body {
+  font-size: 0.16rem;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #000000;
+}
+ul,
+p,
+span,
+li,
+button,
+img {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: 0;
+  list-style: none;
+}
+a,
+a:hover,
+a:active,
+a:visited,
+a:link,
+a:focus {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+  background: none;
+  text-decoration: none;
+}
+input,
+textarea {
+  outline: none;
+  border: none;
+  background-color: rgba(255, 255, 255, 0);
+}
+input:-webkit-autofill,
+select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px white  inset !important;
+}
+input {
+  outline-color: invert;
+  outline-style: none;
+  outline-width: 0;
+  border: none;
+  border-style: none;
+  text-shadow: none;
+  -webkit-appearance: none;
+  -webkit-user-select: text;
+  outline-color: transparent;
+  box-shadow: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  padding: 0;
+  border-radius: 0;
+  margin: 0;
+}
+button {
+  background-color: transparent;
+  border: none;
+  font-size: 0.16rem;
+  color: #f5f5f5;
+}
+i {
+  font-style: normal;
+}
+hr {
+  margin: 0;
+  height: 0;
+}
+/*  以上去掉默认样式  */
+.ov {
+  overflow: hidden;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.pr {
+  position: relative;
+}
+.app {
+  padding-bottom: 1rem;
+}
+/* 底部tabBar */
+.tabBar {
+  width: 100%;
+  height: 0.48rem;
+  background: #fff;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.24);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+}
+.tabBar ul {
+  overflow: hidden;
+}
+.tabBar ul li {
+  width: 20%;
+  float: left;
+  text-align: center;
+}
+.tabBar ul li .showHide {
+  width: 100%;
+  background: #fff;
+  position: fixed;
+  bottom: 0.48rem;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  box-shadow: 0 -6px 10px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 0.12rem 0.12rem 0 0;
+}
+.tabBar ul li .showHide a {
+  display: block;
+  padding: 0.14rem 0;
+  border-bottom: 0.01rem solid #f5f5f5;
+  font-size: 0.15rem;
+  color: #131313;
+}
+.tabBar ul li .showHide a span {
+  vertical-align: middle;
+}
+.tabBar ul li .showHide a img {
+  width: 0.3rem;
+  height: 0.3rem;
+  margin-right: 0.14rem;
+  vertical-align: middle;
+}
+.tabBar ul li a {
+  display: block;
+  padding: 0.05rem 0;
+}
+.tabBar ul .tabHome a i {
+  width: 0.2rem;
+  height: 0.2rem;
+  display: block;
+  margin: auto;
+  background: url('../images/tab/un_tabar_home.png') no-repeat center;
+  background-size: 100% 100%;
+}
+.tabBar ul .tabHome a p {
+  font-size: 0.12rem;
+  color: #979797;
+  margin-top: 0.02rem;
+}
+.tabBar ul .tabHome.active a i {
+  width: 0.2rem;
+  height: 0.2rem;
+  display: block;
+  margin: auto;
+  background: url('../images/tab/tabar_home.png') no-repeat center;
+  background-size: 100% 100%;
+}
+.tabBar ul .tabHome.active a p {
+  color: #E75C52;
+  font-size: 0.12rem;
+  margin-top: 0.02rem;
+}
+.tabBar ul .tabHb a i {
+  width: 0.2rem;
+  height: 0.2rem;
+  display: block;
+  margin: auto;
+  background: url('../images/tab/un_tabar_hb.png') no-repeat center;
+  background-size: 100% 100%;
+}
+.tabBar ul .tabHb a p {
+  font-size: 0.12rem;
+  color: #979797;
+  margin-top: 0.02rem;
+}
+.tabBar ul .tabHb.active a i {
+  width: 0.2rem;
+  height: 0.2rem;
+  display: block;
+  margin: auto;
+  background: url('../images/tab/tabar_hb.png') no-repeat center;
+  background-size: 100% 100%;
+}
+.tabBar ul .tabHb.active a p {
+  color: #E75C52;
+}
+.tabBar ul .tabAdd a i {
+  width: 0.36rem;
+  height: 0.36rem;
+  background: url('../images/tab/tabar_add.png') no-repeat center;
+  background-size: 100% 100%;
+  display: block;
+  margin: auto;
+}
+.tabBar ul .tabCash a i {
+  width: 0.2rem;
+  height: 0.2rem;
+  display: block;
+  margin: auto;
+  background: url('../images/tab/un_tabar_cash.png') no-repeat center;
+  background-size: 100% 100%;
+}
+.tabBar ul .tabCash a p {
+  font-size: 0.12rem;
+  color: #979797;
+  margin-top: 0.02rem;
+}
+.tabBar ul .tabCash.active a i {
+  width: 0.2rem;
+  height: 0.2rem;
+  display: block;
+  margin: auto;
+  background: url('../images/tab/tabar_cash.png') no-repeat center;
+  background-size: 100% 100%;
+}
+.tabBar ul .tabCash.active a p {
+  color: #E75C52;
+}
+.tabBar ul .tabMy a i {
+  width: 0.2rem;
+  height: 0.2rem;
+  display: block;
+  margin: auto;
+  background: url('../images/tab/un_tabar_my.png') no-repeat center;
+  background-size: 100% 100%;
+}
+.tabBar ul .tabMy a p {
+  font-size: 0.12rem;
+  color: #979797;
+  margin-top: 0.02rem;
+}
+.tabBar ul .tabMy.active a i {
+  width: 0.2rem;
+  height: 0.2rem;
+  display: block;
+  margin: auto;
+  background: url('../images/tab/tabar_my.png') no-repeat center;
+  background-size: 100% 100%;
+}
+.tabBar ul .tabMy.active a p {
+  color: #E75C52;
+}
+.appBox {
+  background: #F5F5F5;
+  height: 100vh;
+}
+.appBox .content ul {
+  overflow: hidden;
+}
+.appBox .content ul li {
+  float: left;
+  width: 20%;
+}
+.appBox .content ul li a {
+  display: block;
+  padding: 0.15rem 0 0.05rem;
+  text-align: center;
+}
+.appBox .content ul li a img {
+  width: 0.4rem;
+  height: 0.4rem;
+  display: block;
+  margin: auto;
+}
+.appBox .content ul li a p {
+  font-size: 0.12rem;
+  color: #444444;
+  margin-top: 0.06rem;
+  padding: 0 0.06rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.appBox .content .moreBtn {
+  text-align: center;
+  margin: 0.15rem 0 0.2rem;
+}
+.appBox .content .moreBtn a {
+  font-size: 0.14rem;
+  color: #898989;
+  vertical-align: middle;
+  margin-right: 0.1rem;
+}
+.appBox .content .moreBtn i {
+  width: 0.12rem;
+  height: 0.12rem;
+  background: url('../images/my/btn_more_gray.png') no-repeat center;
+  background-size: 100%;
+  display: inline-block;
+  vertical-align: middle;
+}
+.appBox .myList {
+  background: #fff;
+}
+.appBox .myList li {
+  height: 0.5rem;
+  line-height: 0.5rem;
+  border-bottom: 0.01rem solid #f5f5f5;
+  position: relative;
+}
+.appBox .myList li a {
+  display: block;
+  margin-left: 0.15rem;
+  padding-right: 0.15rem;
+  overflow: hidden;
+}
+.appBox .myList li a p {
+  float: left;
+  font-size: 0.15rem;
+  color: #121212;
+}
+.appBox .myList li a .groupName {
+  float: right;
+}
+.appBox .myList li a .groupName i {
+  font-size: 0.14rem;
+  color: #727272;
+}
+.appBox .myList li a .groupName span {
+  width: 0.12rem;
+  height: 0.12rem;
+  background: url('../images/my/btn_more_gray.png') no-repeat center;
+  background-size: 100%;
+  display: inline-block;
+  margin-top: 0.2rem;
+  margin-left: 0.1rem;
+}
+.appBox .myList li a span {
+  width: 0.12rem;
+  height: 0.12rem;
+  background: url('../images/my/btn_more_gray.png') no-repeat center;
+  background-size: 100%;
+  display: inline-block;
+  float: right;
+  margin-top: 0.2rem;
+}
+.appBox .myList li a .switch {
+  position: absolute;
+  left: 3.2rem;
+  top: 0.16rem;
+  width: 0.4rem;
+  height: 0.18rem;
+  background: #50d159;
+  border-radius: 0.09rem;
+}
+.appBox .myList li a .switch i {
+  position: absolute;
+  left: 0.24rem;
+  top: 0.015rem;
+  width: 0.15rem;
+  height: 0.15rem;
+  background: #ffffff;
+  border-radius: 50%;
+}
+.appBox .myList li a .noSwitch {
+  position: absolute;
+  left: 3.2rem;
+  top: 0.16rem;
+  width: 0.4rem;
+  height: 0.18rem;
+  background: #ffffff;
+  box-shadow: 0rem 0rem 0.03rem 0.01rem rgba(0, 0, 0, 0.22);
+  border-radius: 0.09rem;
+}
+.appBox .myList li a .noSwitch i {
+  position: absolute;
+  left: 0;
+  top: 0.015rem;
+  width: 0.15rem;
+  height: 0.15rem;
+  background: #ffffff;
+  box-shadow: 0rem 0rem 0.03rem 0.01rem rgba(0, 0, 0, 0.22);
+  border-radius: 50%;
+}
+.appBox .myList li:last-child {
+  border-bottom: 0;
+  border-top: 0.09rem solid #F5F5F5;
+}
+/*# sourceMappingURL=chatDetail.css.map */
