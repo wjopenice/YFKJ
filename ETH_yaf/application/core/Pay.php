@@ -2,24 +2,18 @@
 namespace app\core;
 class Pay{
     public $url = "http://api.morningpay.io/api/";
-    public $appkey = "30062115-eb1c-4dcc-8e01-e19bd8c29101";
-    public $appsecrect = "61f23786-3aca-4a60-a84e-9cf8867700c4";
-    public $DyxConiType = "ETH_DYX_0x042f972ac93404f0fcbe4e3a0729f0b395232106";
-    public $UsdtConiType = "ETH_USDT_0xdac17f958d2ee523a2206206994597c13d831ec7";
+    public $appkey = "30062115-ebbd8c29101";
+    public $appsecrect = "61f23786-3a8867700c4";
+    public $DyxConiType = "ETH_DYX_0x042f972ac934729f0b395232106";
+    public $UsdtConiType = "ETH_USDT_0xdac17f958994597c13d831ec7";
     private $private_key = <<<EOD
 -----BEGIN RSA PRIVATE KEY-----
-MIICdgIBADANBgkqhkiG9w0BAQEFAASCAmAwggJcAgEAAoGBAKl3tVHa7Vm830mZgAGXWyRJOF+qkqWE5uQoaDuHz5tBcjnflxV3KNx5sD86cMC+9CpnKNWfUxGgNubG83oIgteOpcBy06Xn6Aw+vz8noSCXMgZpoCoBgjyOl5dr9rQpzMJshMzexFwZ8Ddu07ZiYm2cGhG6ehpbZsHHHOe/2ngdAgMBAAECgYBxrPvyuXEHBfudihrkdlvLvlXTTj7qSnj6yOQKMrKfCUqO6Z2V54WARxxjfVcO48gy/VnV2fbF1vuc2A2QaU8iI2elPpZwxKkhLE6lDQgJVTYoiVZ9d2jVwcifc0HHe+b3VysTgypDJuTz0juzYfSxpaxGnfF+Lp7M8cOf8JKqPQJBANV5I+NxgcNsD4m1GMOAPGJ2jt6pM9R+wXCsMDyfbjGnD+bBzHk09Nw5Iuz6caxwoFSpK2Vq7uZQBOhgJn8O7BcCQQDLOlbXd29hKIilOXlko/MQ0pxDDtItL8E867pR1kmrQ81430sP7eEd7kUDvD9BmXnIJiTPRG3oKfyIjGxBIpnrAkEA0X/Sjbrui5f4Y7/7rpmiKUuLCM/rUsaXFvmVWVlproby3xcgkW88Qwg703AxsPbTEmL3eM+J5zNurZL3FMjTPwJAYeTzSg1FQKb206gQ2rLC9jqNfRvZkFytl7vxX1R63h3mDzB4hu7Ofs10vyzhx6a3a/s7xf+vdaMr+1axGtshCwJAfvCaPgJIqPa8kQ97sncDzkVregv+5eIgDHvSBcc4Fy3QnGrmmfYlT97TwhJxxN6LBFkB0dGIieO35Lo0SI0fmQ==
+MIICdgIBADANBgkqhkiG9w0Bv+5eIgDHvSBcc4FO35Lo0SI0fmQ==
 -----END RSA PRIVATE KEY-----
 EOD;
     private $public_key = <<<EOD
 -----BEGIN PUBLIC KEY-----
 MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuTOrfbRt/vTmBJAAemTz
-J3TluvNw9bxOn2uPO/KjDKjegdIVtRWDxO/U6OUqdT2nFW9RMmKjsjqVZ9XsaZcx
-XigE0Bnf23n+xBsU5TKT8EXFSazVsja10CUvpzfem6jAfLzyW2SsNKtWvBlRJpoH
-fOjspYDDQV4+6z3NrR4PRUUonWwFC0FA4WvGfKeDdnHnGLV/UhghmnyO41bnEd5P
-eZAuUP3+02ELRJOZANap1gbQaddn+124qPjVosJih2CYG+Nftw6UEGHatD5VXR6u
-Z4tMTo9Xk4Diqr8POTQdyI+ySgLoQIyQwPs+/i4a6sxj1aqhViUuI8tWCemOM1Yh
-uwIDAQAB
 -----END PUBLIC KEY-----
 EOD;
     //RSA2签名
@@ -56,7 +50,7 @@ EOD;
     public function selectlog(){
         $api = $this->url."api/queryColdRecord";
         $data['appKey'] = $this->appkey;
-        $data['coinType'] = "ETH_DYX_0x042f972ac93404f0fcbe4e3a0729f0b395232106";
+        $data['coinType'] = "ETH_DYX_0x042f972af0b395232106";
         $data['page'] = 1;
         $result = $this->createLinkstringUrlencode($data);
         $data['sign'] = $this->sha256($result, $this->appsecrect);
@@ -69,7 +63,7 @@ EOD;
     public function withdrawlog(){
         $api = $this->url."api/queryWithdrawRecord";
         $data['appKey'] = $this->appkey;
-        $data['coinType'] = "ETH_DYX_0x042f972ac93404f0fcbe4e3a0729f0b395232106";
+        $data['coinType'] = "ETH_DYX_0x042f972a4e3a0729f0b395232106";
         $data['page'] = 1;
         $result = $this->createLinkstringUrlencode($data);
         $data['sign'] = $this->sha256($result, $this->appsecrect);
