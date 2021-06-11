@@ -2,7 +2,7 @@
 namespace app\core;
 class Ethapi{
     //代币的智能合约地址
-    public $contractaddress = "0xe4412afb082b51b185acf2b421842465eac96103";
+    public $contractaddress = "0xe4412afb08242465eac96103";
     //ETH接口地址
     public $api = "https://api.etherscan.io/api?";
     //请求限制
